@@ -4317,13 +4317,15 @@ async def main():
             try:
                 orders = mt5.orders_get()
                 if orders:
-                    from datetime import timezone as _tz
-                    now = datetime.now(_tz.utc)
                     for order in orders:
                         if order.magic != MAGIC_NUMBER:
                             continue
-                        age_hours = (now - datetime.fromtimestamp(
-                            order.time_setup, tz=timezone.utc)).total_seconds() / 3600
+                        # Alter in SERVERZEIT rechnen: order.time_setup und tick.time
+                        # kommen beide vom Broker -> kein Zeitzonen-Versatz moeglich.
+                        _tk = mt5.symbol_info_tick(order.symbol)
+                        if not _tk:
+                            continue
+                        age_hours = (_tk.time - order.time_setup) / 3600.0
                         if age_hours > PENDING_EXPIRY_H:
                             req = {
                                 "action": mt5.TRADE_ACTION_REMOVE,
@@ -4338,6 +4340,10 @@ async def main():
                                     f"#{order.ticket} {order.symbol} "
                                     f"({age_hours:.0f}h alt)"
                                 )
+                            else:
+                                log.error("Pending-Loeschung FEHLGESCHLAGEN #" +
+                                          str(order.ticket) + " retcode=" +
+                                          str(getattr(result, "retcode", None)))
             except Exception as e:
                 log.error(f"Pending-Cleanup Fehler: {e}")
             await asyncio.sleep(1800)  # alle 30 Min prüfen
