@@ -2428,6 +2428,17 @@ def tfxc_lock_after_tp1(channel_name: str, symbol: str = None) -> tuple:
     return (locked, be_set, closed)
 
 
+def _hold_lowest_skipped(channel_name: str) -> bool:
+    """True, wenn fuer diesen Kanal KEIN Hold-Lowest ausgefuehrt werden soll.
+    Diese Kanaele haben verlaessliche feste TPs - ein Eingriff zum Marktpreis
+    auf eine 'TP hit'-Jubelmeldung hin schliesst gesunde Layer zu frueh.
+    Konfigurierbar: HOLD_LOWEST_SKIP_CHANNELS (kommagetrennt, leer = keiner)."""
+    raw = os.getenv("HOLD_LOWEST_SKIP_CHANNELS", "tfxc,gtmo")
+    keys = [k.strip().lower() for k in raw.split(",") if k.strip()]
+    ch = (channel_name or "").lower()
+    return any(k in ch for k in keys)
+
+
 def hold_lowest_layer(symbol: str = None) -> int:
     """
     Schliesst alle Positionen AUSSER der profitabelsten (= niedrigste P&L bei SELL,
@@ -3274,9 +3285,9 @@ async def handle_phase_command(text: str) -> bool:
                 adj, fb = set_breakeven(channel_name, sym)
                 await send_notification("Breakeven: " + str(adj) + " gesetzt (" + str(fb) + " Fallback)")
             elif action == "HOLD_LOWEST":
-                if "tfxc" in (channel_name or "").lower():
-                    log.info("TFXC: HOLD_LOWEST ignoriert - feste TPs arbeiten selbst")
-                    await send_notification("TFXC: TP-Hit erkannt - feste TPs bleiben aktiv (kein Hold-Lowest)")
+                if _hold_lowest_skipped(channel_name):
+                    log.info("HOLD_LOWEST ignoriert (" + str(channel_name)[:20] + ")")
+                    await send_notification("TP-Hit erkannt - feste TPs bleiben aktiv (kein Hold-Lowest)")
                 else:
                     hold_lowest_layer(sym)
                     await send_notification("Hold-Lowest ausgefuehrt")
@@ -4854,9 +4865,10 @@ async def main():
                 return
 
             if action == "HOLD_LOWEST":
-                if "tfxc" in (channel_name or "").lower():
-                    log.info("TFXC: HOLD_LOWEST ignoriert - feste TPs arbeiten selbst")
-                    await send_notification("TFXC: TP-Hit erkannt - feste TPs bleiben aktiv (kein Hold-Lowest)")
+                if _hold_lowest_skipped(channel_name):
+                    log.info("HOLD_LOWEST ignoriert (" + str(channel_name)[:20] +
+                             ") - feste TPs arbeiten selbst")
+                    await send_notification("TP-Hit erkannt - feste TPs bleiben aktiv (kein Hold-Lowest)")
                     return
                 log.info(f"🔒 Hold-Lowest | Symbol: {symbol or 'alle'}")
                 closed = hold_lowest_layer(symbol)
