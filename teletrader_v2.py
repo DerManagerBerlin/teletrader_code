@@ -179,6 +179,12 @@ else:
 BTC_SYMBOL = "BTCUSD"
 TRAILING_STOP_ENABLED    = os.getenv("TRAILING_STOP_ENABLED", "false").lower() == "true"
 TRAILING_STOP_PIPS       = float(os.getenv("TRAILING_STOP_PIPS", "20"))
+# Text-Trigger fuer Teilgewinnmitnahme (Klartext des Kanals, unabhaengig von der KI-Action)
+PARTIAL_TEXT_WORDS = [w.strip().lower() for w in os.getenv(
+    "PARTIAL_TEXT_WORDS",
+    "take some profit,take some more profit,take more profit,take profits,"
+    "take half,half profits,take partial,more partials,can take partials,"
+    "taking profits,take more partials").split(",") if w.strip()]
 TRAILING_STOP_MIN_PROFIT = float(os.getenv("TRAILING_STOP_MIN_PROFIT_PIPS", "15"))
 
 # KI-Interpreter (wird lazy initialisiert beim ersten Signal)
@@ -246,6 +252,7 @@ class BotState:
         self.MAX_HISTORY       = 5
         self.CONTEXT_WINDOW    = int(os.getenv("URGENT_ATTACH_WINDOW", "120"))
         self.daily_stats       = {"trades": 0, "cancelled": 0, "skipped": 0, "profit": 0.0}
+        self.last_partial      = {}   # channel -> timestamp letzter Teilschluss
         self.last_summary_date = ""
         self.symbol_owner      = {}
         self.sl_cooldowns      = {}
@@ -4849,6 +4856,25 @@ async def main():
                 else:
                     await send_notification("TFXC SECURE PROFITS erkannt - keine offene TFXC-Position")
                 return
+            # -- Text-Trigger "Take Profits": VOR der Action-Verzweigung, ohne return,
+            #    damit kombinierte Anweisungen (BE + Partial) beides ausloesen.
+            if any(w in text.lower() for w in PARTIAL_TEXT_WORDS):
+                import time as _t
+                _cd = float(os.getenv("PARTIAL_COOLDOWN_SEC", "180"))
+                if (_t.time() - state.last_partial.get(channel_name, 0.0)) < _cd:
+                    log.info("Take-Profits erkannt - Cooldown aktiv, uebersprungen")
+                else:
+                    _frac = float(os.getenv("PARTIAL_FRACTION", "0.5"))
+                    log.info("Take-Profits erkannt (Text) -> partial_close frac=" +
+                             str(_frac) + " | " + str(channel_name)[:20])
+                    _pc = partial_close(channel_name=channel_name, fraction=_frac)
+                    if _pc:
+                        state.last_partial[channel_name] = _t.time()
+                        await send_notification("Take Profits -> " + str(_pc) +
+                                                " Position(en) geschlossen")
+                    else:
+                        log.info("Take-Profits: keine offene Position dieses Kanals")
+
             if action == "NOISE":
                 log.info(f"🔇 NOISE: {result.get('reasoning', '')}")
                 return
