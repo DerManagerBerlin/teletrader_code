@@ -1838,7 +1838,7 @@ async def execute_urgent(symbol: str, direction: str, raw_text: str, channel_nam
             "tp":           0.0,
             "deviation":    30,
             "magic":        MAGIC_NUMBER,
-            "comment":      f"TeleTrader-Urgent-L{i+1}",
+            "comment":      f"TT-{_channel_code(channel_name)}-U{i+1}",
             "type_time":    mt5.ORDER_TIME_GTC,
             "type_filling": mt5.ORDER_FILLING_IOC,
         }
