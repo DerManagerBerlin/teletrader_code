@@ -4145,6 +4145,9 @@ async def main():
                             if profit_pips < min_profit:
                                 continue
                             new_sl = round(current - trail_dist, sym_info.digits)
+                            # NIE schlechter als Entry: sonst schreibt der Trail
+                            # einen Verlust fest, obwohl die Position im Plus ist.
+                            new_sl = max(new_sl, round(pos.price_open, sym_info.digits))
                             if pos.sl and new_sl <= pos.sl:
                                 continue
                         else:
@@ -4153,6 +4156,7 @@ async def main():
                             if profit_pips < min_profit:
                                 continue
                             new_sl = round(current + trail_dist, sym_info.digits)
+                            new_sl = min(new_sl, round(pos.price_open, sym_info.digits))
                             if pos.sl and new_sl >= pos.sl:
                                 continue
                         req = {"action": mt5.TRADE_ACTION_SLTP, "symbol": pos.symbol,
@@ -4686,7 +4690,12 @@ async def main():
 
                         # BE-Schwelle: TFXC frueh (~TP2-Bereich), sonst 1.5x SL-Distanz
                         sl_dist    = abs(entry - current_sl) if current_sl > 0 else 10
-                        _be_factor = float(os.getenv("TFXC_BE_FACTOR", "0.3")) if is_tfxc else 1.5
+                        if is_tfxc:
+                            _be_factor = float(os.getenv("TFXC_BE_FACTOR", "0.3"))
+                        elif is_gtmo:
+                            _be_factor = float(os.getenv("GTMO_BE_FACTOR", "0.5"))
+                        else:
+                            _be_factor = float(os.getenv("DEFAULT_BE_FACTOR", "1.5"))
                         min_profit = sl_dist * _be_factor
 
                         is_profit = (
