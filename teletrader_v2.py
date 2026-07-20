@@ -4733,6 +4733,7 @@ async def main():
             await asyncio.sleep(60)
 
     @user_client.on(events.NewMessage(chats=channel_entities))
+    @user_client.on(events.MessageEdited(chats=channel_entities))
     async def on_signal_message(event):
         global _daily_audit, _channel_streak, _channel_open_tickets, _active_levels
         try:
