@@ -244,6 +244,7 @@ class BotState:
     def __init__(self):
         self.phase             = 3
         self.seen_hashes       = {}
+        self.missed_processed  = {}   # msg_id -> ts: im Nachhol-Lauf ABGESCHLOSSEN behandelt
         self.pending_signals   = {}
         self.open_orders       = {}
         self.pending_context   = {}
@@ -3735,8 +3736,18 @@ async def main():
                             msgs_to_process.append(msg)
                 await asyncio.wait_for(_fetch(), timeout=8.0)
 
+                # Aufraeumen: IDs aelter als 2h vergessen (Speicher begrenzen)
+                _now_ts = datetime.now().timestamp()
+                for _mid in [m for m, t in state.missed_processed.items()
+                             if _now_ts - t > 7200]:
+                    del state.missed_processed[_mid]
+
                 # Chronologisch verarbeiten (älteste zuerst)
                 for msg in reversed(msgs_to_process):
+                    # Dedup (Variante A): nur ueberspringen, was bereits ABGESCHLOSSEN
+                    # behandelt wurde. Unvollstaendige Signale bleiben offen (Edit-Fall).
+                    if msg.id in state.missed_processed:
+                        continue
                     text = msg.text.strip()
                     tl   = text.lower()
                     ts   = msg.date.strftime("%H:%M")
@@ -3745,11 +3756,13 @@ async def main():
                     if is_close_signal(text):
                         log.info(f"⏮ Verpasst [{channel_name}] {ts}: CLOSE → {text[:60]}")
                         found_any = True
+                        state.missed_processed[msg.id] = datetime.now().timestamp()
                         continue
 
                     if any(w in tl for w in BREAKEVEN_WORDS):
                         log.info(f"⏮ Verpasst [{channel_name}] {ts}: BREAKEVEN → {text[:60]}")
                         found_any = True
+                        state.missed_processed[msg.id] = datetime.now().timestamp()
                         continue
 
                     # TRADE: durch Interpreter jagen und ausführen
@@ -3787,6 +3800,8 @@ async def main():
                             sym = resolve_symbol(result.get("symbol") or "")
                             direction = str(result.get("direction") or "").upper()
                             if sym and direction in ("BUY", "SELL") and result.get("sl"):
+                                # Ab hier final -> als abgeschlossen merken.
+                                state.missed_processed[msg.id] = datetime.now().timestamp()
                                 # Bereits offene Positionen? → nicht nochmal ausführen
                                 _existing = mt5.positions_get(symbol=sym)
                                 if _existing and len(_existing) > 0:
