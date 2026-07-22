@@ -2671,9 +2671,12 @@ def panic_close_all() -> tuple:
     return closed, cancelled
 
 
-def _positions_safe(retries: int = 3, pause: float = 0.15):
+def _positions_safe(retries: int = 5, pause: float = 0.25, fallback_tickets=None):
     """positions_get() mit Retry - Wine liefert sporadisch leer trotz offener
-    Positionen. Gibt Liste zurueck (nie None)."""
+    Positionen. Gibt Liste zurueck (nie None).
+    fallback_tickets: bekannte Ticket-IDs; wenn der Sammelabruf leer bleibt,
+    werden diese einzeln abgefragt (funktioniert oft, wenn positions_get()
+    als Ganzes versagt) - kritisch fuer CLOSE, das nicht scheitern darf."""
     import time as _t
     p = None
     for attempt in range(retries):
@@ -2684,6 +2687,19 @@ def _positions_safe(retries: int = 3, pause: float = 0.15):
             return p
         if attempt < retries - 1:
             _t.sleep(pause)
+    if fallback_tickets:
+        einzeln = []
+        for _tk in fallback_tickets:
+            try:
+                r = mt5.positions_get(ticket=_tk)
+                if r:
+                    einzeln.extend(r)
+            except Exception:
+                pass
+        if einzeln:
+            log.info("positions_get: Sammelabruf leer, " + str(len(einzeln)) +
+                     " Position(en) ueber Ticket-Fallback gefunden")
+            return einzeln
     return p if p is not None else []
 
 
@@ -2693,10 +2709,11 @@ def close_positions_by_channel(channel_name: str, symbol: str = None) -> int:
     Gibt Anzahl erfolgreich geschlossener Positionen zurueck.
     """
     closed = 0
-    positions = _positions_safe()
+    _known = _channel_open_tickets.get(channel_name, set())
+    positions = _positions_safe(fallback_tickets=_known)
     if not positions:
         log.info("Close [" + str(channel_name) +
-                 "]: positions_get leer nach Retry - nichts zu schliessen")
+                 "]: positions_get leer nach Retry+Fallback - nichts zu schliessen")
         return 0
 
     # Nur eigene Bot-Positionen (Magic) - nie fremde/manuelle Trades anfassen
