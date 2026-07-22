@@ -1,78 +1,3 @@
-2026-07-22 07:08:54,160 [INFO] Risk-Cap: SL=10pts → Lot auf 0.01 reduziert (5% Max)
-2026-07-22 07:08:54,173 [INFO] Pending Order: 2 @ 4017.5 (Markt: 4113.93)
-2026-07-22 07:08:54,179 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-07-22 07:08:54,588 [INFO] Layer 1/3 Ticket #303836183 TP=4022
-2026-07-22 07:08:54,590 [INFO] Pending Order: 2 @ 4017.5 (Markt: 4113.93)
-2026-07-22 07:08:54,591 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-07-22 07:08:54,992 [INFO] Layer 2/3 Ticket #303836187 TP=4027
-2026-07-22 07:08:54,994 [INFO] Pending Order: 2 @ 4017.5 (Markt: 4113.93)
-2026-07-22 07:08:54,995 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-07-22 07:08:55,405 [INFO] Runner markiert #303836190 -> runners.json
-2026-07-22 07:08:55,405 [INFO] Layer 3/3 Ticket #303836190 TP=0
-2026-07-22 07:08:55,406 [INFO] TP-Layer Map: {'tp1': [303836190], 'tp2': [303836183], 'tp3': [303836187]}
-2026-07-22 07:08:55,406 [INFO] Phase 3: Auto-Trade XAUUSD.s | 3 Tickets
-2026-07-22 07:08:55,408 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:08:57,047 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-22 07:08:57,050 [INFO] KI-V2 [GHP 🦁 VIP-JACKPOT INDICES & CRYPTO🇳🇱 FX]: WAIT | conf=55% | The new message 'SL 4007' is identical to message [5] in history, which was the 
-2026-07-22 07:08:57,051 [WARNING] Signal unvollständig: {'action': 'WAIT', 'direction': None, 'symbol': None, 'entry': None, 'entry_low': None, 'sl': 4007, 'tp1': None, 'tp2': None, 'tp3': None, 'tp4': None, 'tp5': None, 'tp6': None, 'tp7': None, 'is_limit': False, 'is_backup': False, 'new_sl': None, 'new_tp': None, 'confidence': 55, 'reasoning': "The new message 'SL 4007' is identical to message [5] in history, which was the SL completion for the trade signal in [4]. However, there are no open positions to apply this SL to. The trade signal in [4] has entry=4017, TPs defined, and SL=4007, but since there are no open positions, this appears to be a duplicate/repeat of an already-seen SL message. Waiting as there is no active position to act upon.", 'small_lot': False}
-2026-07-22 07:08:59,053 [INFO] prune_runners: 1 verwaiste entfernt
-2026-07-22 07:09:01,789 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:09:05,353 [INFO] Prioritaet freigegeben: XAUUSD.s (GHP 🦁 VIP-JACKPOT INDICES & CRYPTO🇳🇱 FX)
-2026-07-22 07:09:08,209 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:09:14,645 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:09:21,020 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:09:27,504 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:09:33,981 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:09:40,452 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:09:46,853 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:09:53,237 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:09:59,681 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:10:06,214 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:10:12,582 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:10:19,058 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:10:25,467 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:10:31,836 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:10:38,172 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:10:44,679 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:10:51,086 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:10:52,199 [INFO] Got difference for account updates
-2026-07-22 07:10:57,550 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:11:03,998 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:11:10,391 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:11:16,818 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:11:23,182 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:11:29,612 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:11:35,928 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:11:42,362 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:11:47,714 [INFO] 🔁 Duplikat ignoriert aus: GHP 🦁 VIP-JACKPOT INDICES & CRYPTO🇳🇱 FX
-2026-07-22 07:11:48,780 [INFO] Telethon Wakeup-Ping
-2026-07-22 07:11:48,783 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:11:49,190 [INFO] 📨 Neue Nachricht aus GHP 🦁 VIP-JACKPOT 🇳🇱 FX: '-100 pips'
-2026-07-22 07:11:49,939 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-22 07:11:49,946 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-07-22 07:11:53,752 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-22 07:11:53,754 [INFO] KI-V2 [GHP 🦁 VIP-JACKPOT 🇳🇱 FX]: NOISE | conf=90% | '-100 pips' is a status update/commentary about current drawdown, not an actiona
-2026-07-22 07:11:53,755 [INFO] 🔇 NOISE: '-100 pips' is a status update/commentary about current drawdown, not an actionable trading instruction. No direction, entry, SL, or TP provided. Just reporting current P&L situation.
-2026-07-22 07:11:55,404 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:12:00,065 [INFO] 🔁 Duplikat ignoriert aus: GHP 🦁 VIP-JACKPOT 🇳🇱 FX
-2026-07-22 07:12:01,761 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:12:03,825 [INFO] 📨 Neue Nachricht aus GHP 🦁 VIP-JACKPOT 🇳🇱 FX: 'If failed we wait lower buy zone 97 and 76'
-2026-07-22 07:12:04,695 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-22 07:12:04,712 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-07-22 07:12:08,139 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:12:10,121 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-22 07:12:10,124 [INFO] KI-V2 [GHP 🦁 VIP-JACKPOT 🇳🇱 FX]: NOISE | conf=90% | This is a conditional/hypothetical statement: 'If failed we wait lower buy zone 
-2026-07-22 07:12:10,124 [INFO] 🔇 NOISE: This is a conditional/hypothetical statement: 'If failed we wait lower buy zone 97 and 76'. The 'if failed' prefix makes this a future conditional scenario, not an actionable instruction. Per Rule 4 (hypothetical/conditional = NOISE) and Rule 6 ('watch for'/'prepare for' style), the bot should wait for an explicit trade signal if and when the lower zone is reached. No immediate action required.
-2026-07-22 07:12:14,567 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:12:20,944 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:12:27,414 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:12:33,780 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322740&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-22 07:12:35,685 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-07-22 07:12:36,483 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-22 07:12:36,485 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: New trading dayyy, who is ready and excited ?💪🏽
-2026-07-22 07:12:37,844 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-22 07:12:37,846 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: I‘ve forgot this last night I fell asleep, will pi
-2026-07-22 07:12:39,183 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
 2026-07-22 07:12:39,185 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: I picked one winner make sure you follow me on ins
 2026-07-22 07:12:40,031 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
 2026-07-22 07:12:40,043 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
@@ -7998,3 +7923,78 @@ Move sl to BE**
 2026-07-22 17:10:01,031 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
 2026-07-22 17:10:01,035 [INFO] Pre-filter NOISE [GHP 🦁 VIP-JACKPOT 🇳🇱 FX]: Wait for tomorrow let gold fall more
 2026-07-22 17:10:01,035 [INFO] 🔇 NOISE: Pre-filter: NOISE
+2026-07-22 17:10:01,251 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:10:07,680 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:10:07,830 [INFO] 📨 Neue Nachricht aus GHP 🦁 VIP-JACKPOT 🇳🇱 FX: 'For more precisely entry'
+2026-07-22 17:10:08,542 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-22 17:10:08,544 [INFO] Pre-filter NOISE [GHP 🦁 VIP-JACKPOT 🇳🇱 FX]: For more precisely entry
+2026-07-22 17:10:08,545 [INFO] 🔇 NOISE: Pre-filter: NOISE
+2026-07-22 17:10:14,031 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:10:20,480 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:10:26,949 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:10:26,989 [INFO] 🔁 Duplikat ignoriert aus: GHP 🦁 VIP-JACKPOT 🇳🇱 FX
+2026-07-22 17:10:27,672 [INFO] 🔁 Duplikat ignoriert aus: GHP 🦁 VIP-JACKPOT 🇳🇱 FX
+2026-07-22 17:10:28,436 [INFO] 🔁 Duplikat ignoriert aus: GHP 🦁 VIP-JACKPOT 🇳🇱 FX
+2026-07-22 17:10:28,940 [INFO] 🔁 Duplikat ignoriert aus: GHP 🦁 VIP-JACKPOT 🇳🇱 FX
+2026-07-22 17:10:33,394 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:10:39,757 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:10:46,175 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:10:52,670 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:10:59,070 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:11:05,392 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:11:11,762 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:11:18,123 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:11:24,495 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:11:30,819 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:11:37,162 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:11:43,503 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:11:49,831 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:11:56,322 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:12:02,686 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:12:09,082 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:12:15,488 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:12:21,827 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:12:28,194 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:12:34,505 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:12:41,519 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:12:47,867 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:12:54,305 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:13:00,632 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:13:06,989 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:13:13,352 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:13:17,995 [INFO] 📨 Neue Nachricht aus GTMO VIP 🤴🏽: 'https://www.instagram.com/reel/Da_fyWRtN-J/'
+2026-07-22 17:13:18,522 [INFO] Got difference for channel 2495224665 updates
+2026-07-22 17:13:18,767 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-22 17:13:18,770 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: https://www.instagram.com/reel/Da_fyWRtN-J/
+2026-07-22 17:13:18,770 [INFO] 🔇 NOISE: Pre-filter: NOISE
+2026-07-22 17:13:19,662 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:13:26,047 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:13:32,387 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:13:38,704 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:13:45,100 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:13:51,422 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:13:53,784 [INFO] Telethon Wakeup-Ping
+2026-07-22 17:13:57,808 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:14:03,105 [INFO] 📨 Neue Nachricht aus GHP 🦁 VIP-JACKPOT INDICES & CRYPTO🇳🇱 FX: '**GER40.s — SELL\xa0 25204 (used risk management)\n\nSL: 25360**\n'
+2026-07-22 17:14:03,749 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-22 17:14:03,761 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-07-22 17:14:04,147 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:14:08,597 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-22 17:14:08,600 [INFO] KI-V2 [GHP 🦁 VIP-JACKPOT INDICES & CRYPTO🇳🇱 FX]: TRADE | conf=95% | Clear SELL signal on GER40 with entry at 25204, SL at 25360, and four TP levels.
+2026-07-22 17:14:08,605 [INFO] Lot-Sizing: Balance=614.0$  Lot=0.06  Kanal=GHP 🦁 VIP-JA
+
+⚡ SIGNAL [17:14:08] aus: GHP 🦁 VIP-JACKPOT INDICES & CRYPTO🇳🇱 FX
+  SELL GER40 | 3 Layer à 0.01 Lot
+  SL: 25360 | TPs: [25150, 25050, 24970, 24880]
+  Verteilung: {25150: 1, 25050: 1, 0: 1}
+2026-07-22 17:14:08,606 [WARNING] Symbol-Gate: GER40 nicht freigegeben (erlaubt: BTCUSD,XAUUSD) -> uebersprungen
+2026-07-22 17:14:10,485 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:14:16,871 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:14:23,248 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:14:23,349 [INFO] Prioritaet freigegeben: GER40 (GHP 🦁 VIP-JACKPOT INDICES & CRYPTO🇳🇱 FX)
+2026-07-22 17:14:29,614 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:14:35,965 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:14:42,307 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:14:48,647 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:14:55,308 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-22 17:15:01,636 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322742&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
