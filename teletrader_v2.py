@@ -1771,6 +1771,15 @@ async def execute_urgent(symbol: str, direction: str, raw_text: str, channel_nam
     balance = info.balance
     # Urgent: kein SL bekannt → Fallback-Sizing, Watchdog setzt SL nach 5 Min
     num_layers, lot_per_layer = calculate_layers(balance, channel_name)
+    # Urgent = Blindeinstieg ohne Limits -> eigenes, konservativeres Sizing.
+    # Default 0.005 = 0.01 Lot je 200$ Kontostand. Risk-Cap greift zusaetzlich.
+    _u_per100 = float(os.getenv("URGENT_LOT_PER_100", "0.005"))
+    if _u_per100 > 0:
+        _u_lot = round(max(0.01, _u_per100 * (balance / 100.0)), 2)
+        if _u_lot < lot_per_layer:
+            log.info("Urgent-Sizing: Lot " + str(lot_per_layer) + " -> " + str(_u_lot) +
+                     " (" + str(_u_per100) + " je 100$)")
+            lot_per_layer = _u_lot
     tick = mt5.symbol_info_tick(symbol)
     sym_info = mt5.symbol_info(symbol)
 
@@ -1827,6 +1836,16 @@ async def execute_urgent(symbol: str, direction: str, raw_text: str, channel_nam
     else:
         urgent_sl = round(price + urgent_sl_dist, _digits)
 
+    # TP1 sofort auf Layer 1 setzen (Default 20 Pips). Layer 2+ bleiben offen,
+    # Layer 3 ist der Runner. So haengt der erste Teilgewinn beim Broker und
+    # ueberlebt auch einen Bot-Neustart.
+    _tp1_pips = float(os.getenv("URGENT_TP1_PIPS", "20"))
+    _tp1_dist = _pt * 10 * _tp1_pips
+    if direction == "BUY":
+        _urgent_tp1 = float(round(price + _tp1_dist, _digits))
+    else:
+        _urgent_tp1 = float(round(price - _tp1_dist, _digits))
+
     tickets = []
     for i in range(num_layers):
         request = {
@@ -1836,7 +1855,7 @@ async def execute_urgent(symbol: str, direction: str, raw_text: str, channel_nam
             "type":         order_type,
             "price":        price,
             "sl":           urgent_sl,
-            "tp":           0.0,
+            "tp":           (_urgent_tp1 if i == 0 and _tp1_pips > 0 else 0.0),
             "deviation":    30,
             "magic":        MAGIC_NUMBER,
             "comment":      f"TT-{_channel_code(channel_name)}-U{i+1}",
@@ -4844,9 +4863,13 @@ async def main():
                 result["action"] = "TRADE"
                 result["is_limit"] = True
 
-            # Confidence-Schwelle für URGENT: mind. 75%
-            if action == "URGENT" and result.get("confidence", 100) < 75:
-                log.info("URGENT blockiert: conf=" + str(result.get("confidence")) + "% < 75%")
+            # Confidence-Schwelle fuer URGENT (konfigurierbar, Default 70).
+            # Beobachtete echte Signale lagen bei 72-82%; nur mehrdeutige
+            # Faelle ("Symbol ambiguous") kamen mit 65% - die bleiben blockiert.
+            _urg_min = float(os.getenv("URGENT_MIN_CONF", "70"))
+            if action == "URGENT" and result.get("confidence", 100) < _urg_min:
+                log.info("URGENT blockiert: conf=" + str(result.get("confidence")) +
+                         "% < " + str(int(_urg_min)) + "%")
                 action = "NOISE"
 
             # ── Action Router ─────────────────────────────────────────────────────
