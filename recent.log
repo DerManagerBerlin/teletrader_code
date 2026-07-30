@@ -1,74 +1,3 @@
-2026-07-29 18:03:51,979 [INFO] Lot-Sizing: Balance=606.0$  Lot=0.06  Kanal=GTMO VIP 🤴🏽
-
-⚡ SIGNAL [18:03:51] aus: GTMO VIP 🤴🏽
-  SELL XAUUSD.s | 3 Layer à 0.01 Lot
-  SL: 4086 | TPs: [4070, 4068, 4066]
-  Verteilung: {4070: 1, 4068: 1, 0: 1}
-2026-07-29 18:03:51,985 [INFO] Lot-Sizing: Balance=606.0$  Lot=0.06  Kanal=GTMO VIP 🤴🏽
-2026-07-29 18:03:51,990 [INFO] Risk-Cap: SL=5pts → Lot auf 0.02 reduziert (5% Max)
-2026-07-29 18:03:51,998 [INFO] Pending Order: 3 @ 4080.5 (Markt: 4070.12)
-2026-07-29 18:03:52,003 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-07-29 18:03:52,315 [ERROR] Layer 1 retcode=10027 AutoTrading disabled by client – Bot laeuft weiter
-2026-07-29 18:03:52,317 [INFO] Pending Order: 3 @ 4080.5 (Markt: 4070.12)
-2026-07-29 18:03:52,318 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-07-29 18:03:52,623 [ERROR] Layer 2 retcode=10027 AutoTrading disabled by client – Bot laeuft weiter
-2026-07-29 18:03:52,625 [INFO] Pending Order: 3 @ 4080.5 (Markt: 4070.12)
-2026-07-29 18:03:52,626 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-07-29 18:03:52,931 [ERROR] Layer 3 retcode=10027 AutoTrading disabled by client – Bot laeuft weiter
-2026-07-29 18:03:53,674 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:04:00,166 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:04:06,627 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:04:13,094 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:04:18,398 [INFO] Prioritaet freigegeben: XAUUSD.s (GTMO VIP 🤴🏽)
-2026-07-29 18:04:19,507 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:04:25,954 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:04:32,359 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:04:38,755 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:04:42,984 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
-2026-07-29 18:04:45,126 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:04:48,639 [INFO] 📨 Neue Nachricht aus GTMO VIP 🤴🏽: 'ALL 3 TP‘s HIT FOMC SMASSHED!! \n\nTP1✅\nTP2✅✅\nTP3✅✅✅'
-2026-07-29 18:04:49,357 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-29 18:04:49,366 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-07-29 18:04:51,573 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:04:54,482 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-29 18:04:54,486 [INFO] KI-V2 [GTMO VIP 🤴🏽]: HOLD_LOWEST | conf=90% | All 3 TPs hit on the prior SELL signal (4077-4081, SL 4086). TP1/TP2/TP3 all con
-2026-07-29 18:04:54,486 [INFO] HOLD_LOWEST ignoriert (GTMO VIP 🤴🏽) - feste TPs arbeiten selbst
-2026-07-29 18:04:57,280 [INFO] 📨 Neue Nachricht aus GTMO VIP 🤴🏽: 'SET BREAKEVEN FOR ZERO RISK TEAM VIP!!!!'
-2026-07-29 18:04:57,960 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:04:58,293 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-29 18:04:58,301 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-07-29 18:05:02,504 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-29 18:05:02,512 [INFO] KI-V2 [GTMO VIP 🤴🏽]: BREAKEVEN | conf=97% | Explicit breakeven instruction: 'SET BREAKEVEN FOR ZERO RISK TEAM VIP!!!!' — mov
-2026-07-29 18:05:02,512 [INFO] BE | Symbol: XAUUSD.s
-2026-07-29 18:05:04,420 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:05:11,014 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:05:18,091 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:05:24,600 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:05:29,969 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-07-29 18:05:30,952 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-29 18:05:30,954 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: Seems like the resistance is being respected still
-2026-07-29 18:05:31,038 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:05:31,588 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-29 18:05:31,592 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: I don‘t like to send a signal cause it can move 20
-2026-07-29 18:05:32,277 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-29 18:05:32,284 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-07-29 18:05:37,057 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-29 18:05:37,060 [INFO] KI-V2 [GTMO VIP 🤴🏽]: NOISE | conf=95% | The operator explicitly states they will trade by themselves and will NOT send a
-2026-07-29 18:05:37,493 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:05:37,848 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-29 18:05:37,851 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: FOMC is no joke
-2026-07-29 18:05:38,531 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-29 18:05:38,535 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: Last few seconds
-2026-07-29 18:05:39,155 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-29 18:05:39,157 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: wwuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
-2026-07-29 18:05:40,020 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-29 18:05:40,023 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: 🔔Ready Signal this is no financial advice. Trade a
-2026-07-29 18:05:43,956 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:05:45,702 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-07-29 18:05:45,718 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-07-29 18:05:50,028 [WARNING] Interpreter [GTMO VIP 🤴🏽]: 
-2026-07-29 18:05:50,386 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322759&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-07-29 18:05:50,784 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
 2026-07-29 18:05:50,786 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: Carefully ok
 2026-07-29 18:05:51,415 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
 2026-07-29 18:05:51,441 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
@@ -7998,3 +7927,74 @@ Main
 2026-07-30 06:54:46,013 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
 2026-07-30 06:54:52,321 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
 2026-07-30 06:54:58,670 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:55:05,083 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:55:11,492 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:55:17,863 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:55:24,218 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:55:30,539 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:55:36,853 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:55:41,019 [INFO] 📨 Neue Nachricht aus GTMO VIP 🤴🏽: 'Yes on the charts'
+2026-07-30 06:55:41,747 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-30 06:55:41,749 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: Yes on the charts
+2026-07-30 06:55:41,749 [INFO] 🔇 NOISE: Pre-filter: NOISE
+2026-07-30 06:55:43,158 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:55:49,470 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:55:50,073 [INFO] 📨 Neue Nachricht aus GTMO VIP 🤴🏽: 'Yes..'
+2026-07-30 06:55:50,076 [INFO] 📨 Neue Nachricht aus GTMO VIP 🤴🏽: 'On it!'
+2026-07-30 06:55:50,899 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-30 06:55:50,901 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: Yes..
+2026-07-30 06:55:50,902 [INFO] 🔇 NOISE: Pre-filter: NOISE
+2026-07-30 06:55:50,912 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-30 06:55:50,915 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: On it!
+2026-07-30 06:55:50,915 [INFO] 🔇 NOISE: Pre-filter: NOISE
+2026-07-30 06:55:55,833 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:56:02,128 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:56:08,441 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:56:11,037 [INFO] 📨 Neue Nachricht aus GTMO VIP 🤴🏽: 'Show me some of your zones and chart views🔥'
+2026-07-30 06:56:11,892 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-30 06:56:11,894 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: Show me some of your zones and chart views🔥
+2026-07-30 06:56:11,895 [INFO] 🔇 NOISE: Pre-filter: NOISE
+2026-07-30 06:56:14,801 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:56:21,108 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:56:27,479 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:56:33,777 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:56:40,108 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:56:46,442 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:56:52,802 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:56:59,160 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:57:05,500 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:57:11,853 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:57:18,219 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:57:24,574 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:57:30,892 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:57:37,195 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:57:43,540 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:57:49,848 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:57:56,221 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:58:02,545 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:58:08,849 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:58:15,196 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:58:21,520 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:58:27,858 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:58:34,281 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:58:37,007 [INFO] 📨 Neue Nachricht aus GTMO VIP 🤴🏽: 'We will miss you while you travel Mo'
+2026-07-30 06:58:38,158 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-30 06:58:38,161 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: We will miss you while you travel Mo
+2026-07-30 06:58:38,161 [INFO] 🔇 NOISE: Pre-filter: NOISE
+2026-07-30 06:58:40,599 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:58:46,915 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:58:53,234 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:58:57,522 [INFO] 📨 Neue Nachricht aus GTMO VIP 🤴🏽: 'what do you think about it? 😊'
+2026-07-30 06:58:58,336 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-30 06:58:58,338 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: what do you think about it? 😊
+2026-07-30 06:58:58,338 [INFO] 🔇 NOISE: Pre-filter: NOISE
+2026-07-30 06:58:59,540 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:59:05,854 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:59:12,208 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:59:18,541 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:59:24,914 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:59:31,242 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:59:37,562 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:59:43,898 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:59:50,193 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-07-30 06:59:56,535 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322761&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
