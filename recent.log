@@ -1,62 +1,3 @@
-2026-08-10 09:02:32,144 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 09:02:38,461 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 09:02:44,818 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 09:02:51,193 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 09:02:57,606 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 09:03:04,068 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 09:03:10,835 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 09:03:12,576 [INFO] 📨 Neue Nachricht aus GTMO VIP 🤴🏽: 'Wowwww'
-2026-08-10 09:03:12,943 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
-2026-08-10 09:03:12,947 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
-2026-08-10 09:03:12,951 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-08-10 09:03:13,166 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
-2026-08-10 09:03:13,171 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
-2026-08-10 09:03:13,171 [INFO] 🔇 NOISE: Pre-filter: NOISE
-2026-08-10 09:03:17,197 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 09:03:19,309 [INFO] 📨 Neue Nachricht aus GTMO VIP 🤴🏽: 'we soo manyyyyy!'
-2026-08-10 09:03:19,531 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
-2026-08-10 09:03:19,535 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
-2026-08-10 09:03:19,543 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-08-10 09:03:19,655 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
-2026-08-10 09:03:19,808 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
-2026-08-10 09:03:19,812 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
-2026-08-10 09:03:19,812 [INFO] 🔇 NOISE: Pre-filter: NOISE
-2026-08-10 09:03:23,661 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 09:03:30,019 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 09:03:36,556 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 09:03:43,061 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 09:03:49,451 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 09:03:55,873 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 09:03:59,423 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-08-10 09:03:59,941 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
-2026-08-10 09:03:59,945 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
-2026-08-10 09:03:59,950 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-08-10 09:04:00,143 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
-2026-08-10 09:04:00,148 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
-2026-08-10 09:04:00,686 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
-2026-08-10 09:04:00,690 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
-2026-08-10 09:04:00,698 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-08-10 09:04:01,125 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
-2026-08-10 09:04:01,131 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
-2026-08-10 09:04:01,378 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
-2026-08-10 09:04:01,381 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
-2026-08-10 09:04:01,389 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-08-10 09:04:01,585 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
-2026-08-10 09:04:01,588 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
-2026-08-10 09:04:01,791 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
-2026-08-10 09:04:01,794 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
-2026-08-10 09:04:01,800 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
 2026-08-10 09:04:02,170 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
 2026-08-10 09:04:02,174 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
 For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
@@ -7998,3 +7939,62 @@ Maybe will add position**🙌
 2026-08-10 18:49:46,110 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
 2026-08-10 18:49:52,420 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
 2026-08-10 18:49:58,799 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:50:05,221 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:50:11,583 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:50:17,973 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:50:24,426 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:50:26,359 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
+2026-08-10 18:50:30,805 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:50:37,157 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:50:43,541 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:50:49,875 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:50:56,279 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:51:02,614 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:51:09,033 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:51:15,421 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:51:21,789 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:51:28,147 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:51:34,486 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:51:40,832 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:51:44,367 [INFO] Telethon Wakeup-Ping
+2026-08-10 18:51:47,187 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:51:51,615 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
+2026-08-10 18:51:54,805 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:52:01,146 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:52:07,481 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:52:13,873 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:52:20,260 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:52:26,647 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:52:32,991 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:52:39,336 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:52:45,648 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:52:51,996 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:52:58,410 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:53:04,801 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:53:11,158 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:53:15,954 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
+2026-08-10 18:53:17,541 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:53:23,932 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:53:30,308 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:53:36,390 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-08-10 18:53:36,512 [WARNING] Kanal GHP 🦁 VIP-JACKPOT 🇳🇱 FX Fehler: The channel specified is private and you lack permission to access it. Another reason may be that you were banned from it (caused by GetHistoryRequest)
+2026-08-10 18:53:36,702 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:53:37,370 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-08-10 18:53:37,377 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-08-10 18:53:41,954 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-08-10 18:53:41,956 [INFO] KI-V2 [GHP 🦁 VIP-JACKPOT INDICES & CRYPTO🇳🇱 FX]: NOISE | conf=95% | This is a performance update/celebration message about GER40 being up 560 pips. 
+2026-08-10 18:53:41,957 [INFO] ✅ Keine verpassten Signale
+2026-08-10 18:53:43,070 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:53:49,392 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:53:55,788 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:54:02,114 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:54:08,442 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:54:14,837 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:54:21,150 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:54:27,556 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:54:33,920 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:54:40,253 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:54:40,255 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
+2026-08-10 18:54:46,624 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:54:52,978 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-08-10 18:54:59,344 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322764&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
