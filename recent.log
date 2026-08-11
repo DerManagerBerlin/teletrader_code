@@ -1,95 +1,3 @@
-2026-08-10 11:16:39,743 [INFO] KI-V2 [GTMO VIP 🤴🏽]: HOLD_LOWEST | conf=82% | TP3 hit announcement. Normally this would trigger HOLD_LOWEST, but there are no 
-2026-08-10 11:16:40,419 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:16:40,421 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: also getting closer to our zone now
-2026-08-10 11:16:41,068 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:16:41,074 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-08-10 11:16:43,609 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
-2026-08-10 11:16:45,252 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:16:46,009 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:16:46,012 [INFO] KI-V2 [GTMO VIP 🤴🏽]: PARTIAL_CLOSE | conf=78% | Operator reports closing some profits ('I closed some more Profits here'), which
-2026-08-10 11:16:46,607 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:16:46,619 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-08-10 11:16:51,048 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:16:51,052 [INFO] KI-V2 [GTMO VIP 🤴🏽]: HOLD_LOWEST | conf=82% | TP4 about to hit announcement follows a series of TP hits (TP3 checked, partial 
-2026-08-10 11:16:51,648 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:16:51,660 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-08-10 11:16:51,666 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:16:56,640 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:16:56,642 [INFO] KI-V2 [GTMO VIP 🤴🏽]: PARTIAL_CLOSE | conf=82% | Operator explicitly states they are continuing to close partial profits ('keep c
-2026-08-10 11:16:57,495 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:16:57,497 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: I can see TakeProfit 4 👀
-2026-08-10 11:16:58,001 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:16:58,119 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:16:58,121 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: 🔔Ready Signal this is no financial advice. Trade a
-2026-08-10 11:16:58,744 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:16:58,750 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-08-10 11:17:03,522 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:17:03,525 [INFO] KI-V2 [GTMO VIP 🤴🏽]: URGENT | conf=82% | Message says 'Gold buy now' with no entry price, SL, or TP levels. Context shows
-2026-08-10 11:17:03,526 [INFO] Verpasstes Signal ausfuehren [GTMO VIP 🤴🏽] 11:07: URGENT conf=82%
-2026-08-10 11:17:04,387 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:17:04,655 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:17:04,659 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: Slowly for this one ok
-2026-08-10 11:17:05,235 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:17:05,242 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-08-10 11:17:10,403 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:17:10,405 [INFO] KI-V2 [GTMO VIP 🤴🏽]: TRADE | conf=96% | Clear BUY signal with zone entry 4329-4334.5, SL 4324, four TPs and an open fina
-2026-08-10 11:17:10,406 [INFO] Verpasstes Signal ausfuehren [GTMO VIP 🤴🏽] 11:09: TRADE conf=96%
-2026-08-10 11:17:10,408 [INFO] Lot-Sizing: Balance=2.0$  Lot=0.01  Kanal=GTMO VIP 🤴🏽
-2026-08-10 11:17:10,410 [INFO] Risk-Cap: SL=10.5pts → Lot auf 0.01 reduziert (5% Max)
-2026-08-10 11:17:10,410 [INFO] Kleinkonto-Cap: Layer reduziert auf 1 (Mindestlot-Boden, 5% Max)
-2026-08-10 11:17:10,410 [INFO] Kleinkonto-Cap: Layer reduziert auf 1 (Mindestlot-Boden, 5% Max)
-2026-08-10 11:17:10,412 [INFO] Total-Heat-Cap: offen=0.0$ Headroom=0.5$ -> Lot auf 0.01 reduziert
-2026-08-10 11:17:10,412 [WARNING] Total-Heat: selbst Mindestlot passt nicht -> uebersprungen
-2026-08-10 11:17:10,761 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:17:10,954 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:17:10,960 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-08-10 11:17:16,251 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:17:16,254 [INFO] KI-V2 [GTMO VIP 🤴🏽]: HOLD_LOWEST | conf=90% | All 4 TPs confirmed hit. This is a TP announcement indicating targets reached. H
-2026-08-10 11:17:16,849 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:17:16,863 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-08-10 11:17:17,107 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:17:21,157 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-08-10 11:17:21,160 [INFO] KI-V2 [GTMO VIP 🤴🏽]: NOISE | conf=85% | Message is commentary/analysis noting we're in a zone worth watching, with a gen
-2026-08-10 11:17:21,281 [WARNING] Kanal GHP 🦁 VIP-JACKPOT 🇳🇱 FX Fehler: The channel specified is private and you lack permission to access it. Another reason may be that you were banned from it (caused by GetHistoryRequest)
-2026-08-10 11:17:21,359 [WARNING] Kanal GHP 🦁 VIP-JACKPOT INDICES & CRYPTO🇳🇱 FX Fehler: The channel specified is private and you lack permission to access it. Another reason may be that you were banned from it (caused by GetHistoryRequest)
-2026-08-10 11:17:23,477 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:17:29,895 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:17:36,238 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:17:42,584 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:17:48,947 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:17:55,462 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:18:01,828 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:18:07,766 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
-2026-08-10 11:18:08,158 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:18:14,552 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:18:20,881 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:18:27,334 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:18:33,923 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:18:40,269 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:18:46,600 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:18:52,956 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:18:59,459 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:19:05,823 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:19:12,242 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:19:18,579 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:19:25,043 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:19:31,440 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:19:31,873 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
-2026-08-10 11:19:37,908 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:19:44,259 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:19:50,582 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:19:56,964 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:20:03,425 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:20:09,804 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:20:16,157 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:20:22,525 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:20:28,914 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:20:35,289 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:20:41,650 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:20:47,996 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:20:54,392 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-08-10 11:20:55,919 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
-2026-08-10 11:21:00,735 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
 2026-08-10 11:21:07,115 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
 2026-08-10 11:21:13,490 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
 2026-08-10 11:21:19,819 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322763&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
@@ -7997,4 +7905,96 @@ AUTO_CONFIRM_LIVE=true – Autostart
 Live-Modus bestaetigt.
 
 2026-08-11 01:15:01,720 [ERROR] MT5 Fehler: (-10005, 'IPC timeout')
+❌ MT5 Verbindung fehlgeschlagen.
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🔴 LIVE | Phase: 3
+══════════════════════════════════════════════════════════
+
+
+======================================================
+  LIVE-MODUS AKTIV - ECHTES GELD!
+======================================================
+
+  [OK] ANTHROPIC_API_KEY gesetzt
+  [OK] RISK_PER_100=0.03 (empfohlen <= 0.07)
+  [OK] Lot-Sizing: 0.02/100$ Standard, GHP-Backup 2x
+  [OK] MAX_POS_PER_SYMBOL=6 (empfohlen <= 10)
+  [OK] TRAILING_STOP_ENABLED=true
+  [OK] MAGIC_NUMBER=88888
+
+AUTO_CONFIRM_LIVE=true – Autostart
+Live-Modus bestaetigt.
+
+2026-08-11 02:01:16,250 [ERROR] MT5 Fehler: (-10005, 'IPC timeout')
+❌ MT5 Verbindung fehlgeschlagen.
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🔴 LIVE | Phase: 3
+══════════════════════════════════════════════════════════
+
+
+======================================================
+  LIVE-MODUS AKTIV - ECHTES GELD!
+======================================================
+
+  [OK] ANTHROPIC_API_KEY gesetzt
+  [OK] RISK_PER_100=0.03 (empfohlen <= 0.07)
+  [OK] Lot-Sizing: 0.02/100$ Standard, GHP-Backup 2x
+  [OK] MAX_POS_PER_SYMBOL=6 (empfohlen <= 10)
+  [OK] TRAILING_STOP_ENABLED=true
+  [OK] MAGIC_NUMBER=88888
+
+AUTO_CONFIRM_LIVE=true – Autostart
+Live-Modus bestaetigt.
+
+2026-08-11 02:02:30,115 [ERROR] MT5 Fehler: (-10005, 'IPC timeout')
+❌ MT5 Verbindung fehlgeschlagen.
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🔴 LIVE | Phase: 3
+══════════════════════════════════════════════════════════
+
+
+======================================================
+  LIVE-MODUS AKTIV - ECHTES GELD!
+======================================================
+
+  [OK] ANTHROPIC_API_KEY gesetzt
+  [OK] RISK_PER_100=0.03 (empfohlen <= 0.07)
+  [OK] Lot-Sizing: 0.02/100$ Standard, GHP-Backup 2x
+  [OK] MAX_POS_PER_SYMBOL=6 (empfohlen <= 10)
+  [OK] TRAILING_STOP_ENABLED=true
+  [OK] MAGIC_NUMBER=88888
+
+AUTO_CONFIRM_LIVE=true – Autostart
+Live-Modus bestaetigt.
+
+2026-08-11 02:03:43,038 [ERROR] MT5 Fehler: (-10005, 'IPC timeout')
+❌ MT5 Verbindung fehlgeschlagen.
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🔴 LIVE | Phase: 3
+══════════════════════════════════════════════════════════
+
+
+======================================================
+  LIVE-MODUS AKTIV - ECHTES GELD!
+======================================================
+
+  [OK] ANTHROPIC_API_KEY gesetzt
+  [OK] RISK_PER_100=0.03 (empfohlen <= 0.07)
+  [OK] Lot-Sizing: 0.02/100$ Standard, GHP-Backup 2x
+  [OK] MAX_POS_PER_SYMBOL=6 (empfohlen <= 10)
+  [OK] TRAILING_STOP_ENABLED=true
+  [OK] MAGIC_NUMBER=88888
+
+AUTO_CONFIRM_LIVE=true – Autostart
+Live-Modus bestaetigt.
+
+2026-08-11 02:04:55,506 [ERROR] MT5 Fehler: (-10005, 'IPC timeout')
 ❌ MT5 Verbindung fehlgeschlagen.
