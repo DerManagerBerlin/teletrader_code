@@ -613,6 +613,13 @@ URGENT_NOW_PATTERNS = [
 ]
 
 
+def _URGENT_NOW_CHANNELS_OK(channel_name: str) -> bool:
+    """Kanaele, fuer die 'buy/sell now' ohne KI direkt ausgefuehrt wird."""
+    allow = os.getenv("URGENT_NOW_CHANNELS", "gtmo").lower().split(",")
+    cn = (channel_name or "").lower()
+    return any(a.strip() and a.strip() in cn for a in allow)
+
+
 def detect_urgent_signal(text: str) -> dict | None:
     """
     Erkennt kurze Urgent-Signale wie 'buy gold now' oder 'sell BTC immediately'.
@@ -4853,6 +4860,14 @@ async def main():
                     state.channel_history.get(channel_name, [])
                 )
 
+            # -- HARTE REGEL: "<symbol> buy/sell now" -> sofort Market, keine KI --
+            _u_hit = detect_urgent_signal(text)
+            if _u_hit and _URGENT_NOW_CHANNELS_OK(channel_name):
+                log.info("URGENT-NOW (Regex, ohne KI) | " + str(channel_name) +
+                         " | " + str(_u_hit.get("direction")) + " " + str(_u_hit.get("symbol")))
+                await execute_urgent(_u_hit.get("symbol"), _u_hit.get("direction"),
+                                     text, channel_name)
+                return
             action = result.get("action", "NOISE")
             symbol = resolve_symbol(result.get("symbol","") or "")
 
