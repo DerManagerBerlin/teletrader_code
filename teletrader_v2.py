@@ -1172,20 +1172,24 @@ async def send_notification(text: str):
 
 # ─── MT5 ─────────────────────────────────────────────────────────────────────
 def connect_mt5() -> bool:
-    _ok = mt5.initialize(login=MT5_LOGIN, password=MT5_PASSWORD, server=MT5_SERVER)
+    _ok = False
+    # 1) Attach an laufende Terminal-Sitzung - loest KEINEN Login aus,
+    #    kann also eine intakte Verbindung nicht abmelden.
+    if mt5.initialize():
+        _ai = mt5.account_info()
+        if _ai and int(_ai.login) == int(MT5_LOGIN):
+            _ok = True
+            log.info('MT5 via Attach verbunden - Konto %s | Balance %s',
+                     _ai.login, _ai.balance)
+        else:
+            log.warning('Terminal haelt Konto %s statt %s - versuche Parameter-Login',
+                        getattr(_ai, 'login', None), MT5_LOGIN)
+            mt5.shutdown()
+    # 2) Nur wenn kein oder falsches Konto anliegt: expliziter Login
     if not _ok:
-        _err = mt5.last_error()
-        log.warning('MT5 Parameter-Login fehlgeschlagen %s - versuche Attach an laufende Sitzung', _err)
-        _ok = mt5.initialize()
-        if _ok:
-            _ai = mt5.account_info()
-            if (not _ai) or int(_ai.login) != int(MT5_LOGIN):
-                log.error('FALSCHES KONTO im Terminal: %s statt %s - Abbruch',
-                          getattr(_ai, 'login', None), MT5_LOGIN)
-                mt5.shutdown()
-                _ok = False
-            else:
-                log.info('MT5 via Attach verbunden - Konto %s', _ai.login)
+        _ok = mt5.initialize(login=MT5_LOGIN, password=MT5_PASSWORD, server=MT5_SERVER)
+        if not _ok:
+            log.error('MT5 Parameter-Login fehlgeschlagen: %s', mt5.last_error())
     if not _ok:
         log.error(f"MT5 Fehler: {mt5.last_error()}")
         return False
