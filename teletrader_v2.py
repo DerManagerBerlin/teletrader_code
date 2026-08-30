@@ -1385,7 +1385,7 @@ def execute_layers(sig: TradeSignal) -> list[int]:
                 total_risk_now    = sl_distance * pip_value_per_lot * lot_per_layer * num_layers
                 if total_risk_now > max_loss_allowed:
                     scale = max_loss_allowed / total_risk_now
-                    lot_per_layer = round(max(0.01, lot_per_layer * scale), 2)
+                    lot_per_layer = max(0.01, int(lot_per_layer * scale * 100) / 100.0)
                     log.info(
                         "Risk-Cap: SL=" + str(round(sl_distance,2)) +
                         "pts → Lot auf " + str(lot_per_layer) +
@@ -1829,7 +1829,7 @@ async def execute_urgent(symbol: str, direction: str, raw_text: str, channel_nam
     _max_loss      = balance * _max_risk_pct
     _risk_now      = urgent_sl_dist * _pip_val_lot * lot_per_layer * num_layers
     if _risk_now > _max_loss and _risk_now > 0:
-        lot_per_layer = round(max(0.01, lot_per_layer * (_max_loss / _risk_now)), 2)
+        lot_per_layer = max(0.01, int(lot_per_layer * (_max_loss / _risk_now) * 100) / 100.0)
         log.info("Urgent Risk-Cap: Lot -> " + str(lot_per_layer) +
                  " (" + str(round(_max_risk_pct*100)) + "% Max)")
     # -- Total-Heat-Deckel fuer Urgent (aggregiertes Risiko ueber ALLE Positionen) --
@@ -1973,9 +1973,23 @@ def attach_levels_to_urgent(symbol, direction, sl, tps, has_open, tickets):
             return 0.0
         return t
 
+    _tp_for = {}
+    _nw, _nt = len(workers), len(tps)
+    if _nw and _nt:
+        if _nw >= _nt:
+            for i in range(_nw):
+                _tp_for[i] = tps[i] if i < _nt else tps[-1]
+        elif _nw == 1:
+            _tp_for[0] = tps[max(0, (_nt - 1) // 2)]
+        else:
+            for i in range(_nw):
+                _tp_for[i] = tps[int(round(i * (_nt - 1) / (_nw - 1)))]
+        log.info("Stufe B TP-Spread: " + str(_nw) + " Worker / " + str(_nt) +
+                 " TP -> " + str([_tp_for[i] for i in range(_nw)]))
+
     updated = 0
     for i, p in enumerate(workers):
-        tp = tps[i] if i < len(tps) else 0.0
+        tp = _tp_for.get(i, 0.0)
         r = mt5.order_send({"action": mt5.TRADE_ACTION_SLTP, "symbol": symbol,
                             "position": p.ticket, "sl": round(_vsl(p, sl), _dig),
                             "tp": round(_vtp(p, tp), _dig)})
