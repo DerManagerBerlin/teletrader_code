@@ -4060,8 +4060,13 @@ async def main():
             try:
                 if is_trading_hours():
                     positions = mt5.positions_get() or []
+                    _pg_runners = runner_tickets()
                     for pos in positions:
                         if pos.magic != MAGIC_NUMBER:
+                            continue
+                        if pos.ticket in _pg_runners:
+                            continue
+                        if pos.sl != 0.0 and ((pos.sl >= pos.price_open) if pos.type == 0 else (pos.sl <= pos.price_open)):
                             continue
                         if pos.tp != 0.0:
                             continue  # Hat einen TP gesetzt → ignorieren
