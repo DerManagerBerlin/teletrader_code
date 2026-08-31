@@ -1990,16 +1990,22 @@ def attach_levels_to_urgent(symbol, direction, sl, tps, has_open, tickets):
     _tp_for = {}
     _nw, _nt = len(workers), len(tps)
     if _nw and _nt:
-        if _nw >= _nt:
-            for i in range(_nw):
-                _tp_for[i] = tps[i] if i < _nt else tps[-1]
-        elif _nw == 1:
-            _tp_for[0] = tps[max(0, (_nt - 1) // 2)]
+        # TP_ASSIGN=nearest (Default): Worker bekommen TP1..TPn der Reihe nach,
+        # also die naechstliegenden Ziele. Die weiter entfernten TPs deckt der
+        # Runner ab, der ohne TP bis zum Close haelt.
+        # TP_ASSIGN=spread: altes Verhalten (ueber die volle Spanne verteilt).
+        _mode = os.getenv("TP_ASSIGN", "nearest").strip().lower()
+        if _mode == "spread" and _nw < _nt:
+            if _nw == 1:
+                _tp_for[0] = tps[max(0, (_nt - 1) // 2)]
+            else:
+                for i in range(_nw):
+                    _tp_for[i] = tps[int(round(i * (_nt - 1) / (_nw - 1)))]
         else:
             for i in range(_nw):
-                _tp_for[i] = tps[int(round(i * (_nt - 1) / (_nw - 1)))]
-        log.info("Stufe B TP-Spread: " + str(_nw) + " Worker / " + str(_nt) +
-                 " TP -> " + str([_tp_for[i] for i in range(_nw)]))
+                _tp_for[i] = tps[i] if i < _nt else tps[-1]
+        log.info("Stufe B TP-Spread [" + _mode + "]: " + str(_nw) + " Worker / " +
+                 str(_nt) + " TP -> " + str([_tp_for[i] for i in range(_nw)]))
 
     updated = 0
     for i, p in enumerate(workers):
