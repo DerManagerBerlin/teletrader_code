@@ -521,8 +521,16 @@ SYMBOL_MAP = {
     # Indices
     "nasdaq": None, "nas100": None, "nas": None,
     "us30": None, "dow": None, "dj30": None,
-    # Rohstoffe
-    "oil": None, "wti": None, "usoil": None,
+    # Rohstoffe - Broker-Namen: WTI = USOUSD, Brent = UKOUSD
+    "oil":    os.getenv("OIL_SYMBOL", _fx("usousd")),
+    "wti":    os.getenv("OIL_SYMBOL", _fx("usousd")),
+    "usoil":  os.getenv("OIL_SYMBOL", _fx("usousd")),
+    "usousd": os.getenv("OIL_SYMBOL", _fx("usousd")),
+    "wtiusd": os.getenv("OIL_SYMBOL", _fx("usousd")),
+    "crude":  os.getenv("OIL_SYMBOL", _fx("usousd")),
+    "brent":  os.getenv("BRENT_SYMBOL", _fx("ukousd")),
+    "ukoil":  os.getenv("BRENT_SYMBOL", _fx("ukousd")),
+    "ukousd": os.getenv("BRENT_SYMBOL", _fx("ukousd")),
 }
 
 CANCEL_WORDS   = ["cancel", "cancelled", "void", "ignore", "invalidate", "abort"]
