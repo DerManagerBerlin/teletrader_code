@@ -1805,15 +1805,29 @@ async def execute_urgent(symbol: str, direction: str, raw_text: str, channel_nam
             log.info("Urgent-Sizing: Lot " + str(lot_per_layer) + " -> " + str(_u_lot) +
                      " (" + str(_u_per100) + " je 100$)")
             lot_per_layer = _u_lot
-    tick = mt5.symbol_info_tick(symbol)
-    sym_info = mt5.symbol_info(symbol)
+    # Symbol robust holen: bis zu 3 Versuche mit symbol_select dazwischen.
+    # Grund: nach einem Terminal-Resync liefert symbol_info kurzzeitig None.
+    tick = None
+    sym_info = None
+    for _try in range(3):
+        sym_info = mt5.symbol_info(symbol)
+        if sym_info is None or not sym_info.visible:
+            mt5.symbol_select(symbol, True)
+            await asyncio.sleep(0.5)
+            sym_info = mt5.symbol_info(symbol)
+        tick = mt5.symbol_info_tick(symbol)
+        if tick and sym_info:
+            if _try > 0:
+                log.info("Symbol " + str(symbol) + " erst im Versuch " + str(_try + 1) + " verfuegbar")
+            break
+        log.warning("Symbol " + str(symbol) + " nicht verfuegbar (Versuch " + str(_try + 1) + "/3) - retry")
+        await asyncio.sleep(1.0)
 
     if not tick or not sym_info:
-        await send_notification(f"❌ Symbol {symbol} nicht verfügbar")
+        log.error("Symbol " + str(symbol) + " nach 3 Versuchen nicht verfuegbar - URGENT verworfen")
+        await send_notification(f"\u274c Symbol {symbol} nicht verf\u00fcgbar (3 Versuche)")
         return
 
-    if not sym_info.visible:
-        mt5.symbol_select(symbol, True)
 
     price = tick.ask if direction == "BUY" else tick.bid
     order_type = mt5.ORDER_TYPE_BUY if direction == "BUY" else mt5.ORDER_TYPE_SELL
