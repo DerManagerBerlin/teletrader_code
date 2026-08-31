@@ -1911,6 +1911,9 @@ async def execute_urgent(symbol: str, direction: str, raw_text: str, channel_nam
     if tickets:
         text_hash = get_text_hash(raw_text)
         state.open_orders[text_hash] = tickets
+        # Kanal-Zuordnung persistent merken: der MT5-Comment geht bei einem
+        # Teil-Close verloren, die Ticket-Menge nicht.
+        _channel_open_tickets.setdefault(channel_name, set()).update(tickets)
 
         # Pending Context für SL/TP Folgenachricht
         state.pending_context[symbol] = {
@@ -2317,16 +2320,22 @@ def partial_close(channel_name: str = None, fraction: float = 0.33) -> int:
         if not all_pos:
             return 0
 
-        # Kanalspezifisch filtern (via MT5-Comment)
+        # Kanalspezifisch filtern: Comment ODER getracktes Ticket.
+        # Nach einem Teil-Close setzt MT5 den Comment zurueck - dann traegt
+        # nur noch die Ticket-Menge die Kanal-Zuordnung.
         if channel_name:
-            # Comment traegt nur channel[:8] -> ebenso kuerzen, sonst kein Match
             ch_lower = _channel_code(channel_name).lower()
+            _ch_tk = _channel_open_tickets.get(channel_name, set())
             positions = [p for p in all_pos
-                         if p.magic == MAGIC_NUMBER and ch_lower in (p.comment or "").lower()]
+                         if p.magic == MAGIC_NUMBER and
+                         ((ch_lower and ch_lower in (p.comment or "").lower())
+                          or p.ticket in _ch_tk)]
         else:
             positions = [p for p in all_pos if p.magic == MAGIC_NUMBER]
 
         if not positions:
+            log.info("Partial-Close [" + str(channel_name) +
+                     "]: keine Position dieses Kanals (Comment+Ticket-Fallback leer)")
             return 0
 
         # Schlechteste zuerst sortieren (kleinster P&L)
