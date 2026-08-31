@@ -427,8 +427,8 @@ def distribute_layers(num_layers: int, tps: list, channel: str = "") -> dict:
 
     # Runner-Layer (TP=0) nur wenn RUNNER_LAYER_ENABLED=true; sonst alle Layer mit hartem TP
     open_layers    = 1 if os.getenv("RUNNER_LAYER_ENABLED", "false").lower() == "true" else 0
-    if "tfxc" in (channel or "").lower():
-        open_layers = 0  # TFXC: kein Runner - alle Layer feste TPs
+    if _no_runner_channel(channel):
+        open_layers = 0  # Kanal ohne Runner - alle Layer feste TPs
     # (b) Runner nur als ZUSAETZLICHER Layer: bei vorhandenen TPs behaelt mind. 1
     # Layer einen TP (kein TP-loser Runner bei auf 1 gekapptem Kleinkonto-Trade).
     if num_tps > 0:
@@ -465,6 +465,13 @@ def distribute_layers(num_layers: int, tps: list, channel: str = "") -> dict:
 
 # ─── Regex Signal Parser (kein API-Key nötig) ────────────────────────────────
 # Sobald Anthropic-Guthaben vorhanden → auf KI-Parser umstellen
+
+def _no_runner_channel(channel: str) -> bool:
+    """True, wenn fuer diesen Kanal KEIN TP-loser Runner angelegt werden soll."""
+    names = os.getenv("NO_RUNNER_CHANNELS", "tfxc,ghp").lower().split(",")
+    cn = (channel or "").lower()
+    return any(n.strip() and n.strip() in cn for n in names)
+
 
 def _fx(pair):
     """Gibt das Broker-Symbol fuer ein Forex-Paar zurueck."""
@@ -4971,9 +4978,15 @@ async def main():
                 _att_dir = _att_ctx.get("direction")
                 _msg_dir = str(result.get("direction", "")).upper()
                 if _lv["sl"] and (not _msg_dir or _msg_dir == _att_dir):
+                    _has_open_eff = _lv["has_open"] and not _no_runner_channel(
+                        _att_ctx.get("channel") or channel_name)
+                    if _lv["has_open"] and not _has_open_eff:
+                        log.info("Kein Runner fuer " +
+                                 str(_att_ctx.get("channel") or channel_name) +
+                                 " (NO_RUNNER_CHANNELS) - alle Layer bekommen feste TPs")
                     _u, _runner = attach_levels_to_urgent(
                         _att_sym, _att_dir, _lv["sl"], _lv["tps"],
-                        _lv["has_open"], _att_ctx["tickets"])
+                        _has_open_eff, _att_ctx["tickets"])
                     state.pending_context.pop(_att_sym, None)
                     log.info("Stufe B Attach: SL " + str(_lv["sl"]) + " + " +
                              str(len(_lv["tps"])) + " TP auf Urgent " + _att_sym +
