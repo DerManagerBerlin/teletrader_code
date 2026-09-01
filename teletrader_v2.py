@@ -490,8 +490,12 @@ _max_risk_pct_fn = _max_risk_pct
 
 def _no_runner_channel(channel: str) -> bool:
     """True, wenn fuer diesen Kanal KEIN TP-loser Runner angelegt werden soll."""
-    names = os.getenv("NO_RUNNER_CHANNELS", "tfxc,ghp").lower().split(",")
     cn = (channel or "").lower()
+    # Manuell/per Bot-Chat eingegebene Signale haben keine Kanal-Identitaet
+    # -> nie einen TP-losen Runner anlegen (Regel 01.09.).
+    if "manual" in cn:
+        return True
+    names = os.getenv("NO_RUNNER_CHANNELS", "tfxc,ghp").lower().split(",")
     return any(n.strip() and n.strip() in cn for n in names)
 
 
