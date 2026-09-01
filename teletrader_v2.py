@@ -466,6 +466,28 @@ def distribute_layers(num_layers: int, tps: list, channel: str = "") -> dict:
 # ─── Regex Signal Parser (kein API-Key nötig) ────────────────────────────────
 # Sobald Anthropic-Guthaben vorhanden → auf KI-Parser umstellen
 
+def _max_risk_pct(channel: str = "") -> float:
+    """Risiko-Obergrenze als Anteil der Balance, optional pro Kanal.
+    Sucht MAX_RISK_PCT_<TOKEN> fuer jedes Wort-Token des Kanalnamens,
+    faellt sonst auf MAX_RISK_PCT zurueck."""
+    _default = float(os.getenv("MAX_RISK_PCT", "0.10"))
+    cn = (channel or "").lower()
+    if not cn:
+        return _default
+    import re as _re
+    for tok in _re.findall(r"[a-z]{3,}", cn):
+        val = os.getenv("MAX_RISK_PCT_" + tok.upper())
+        if val:
+            try:
+                return float(val)
+            except ValueError:
+                pass
+    return _default
+
+
+_max_risk_pct_fn = _max_risk_pct
+
+
 def _no_runner_channel(channel: str) -> bool:
     """True, wenn fuer diesen Kanal KEIN TP-loser Runner angelegt werden soll."""
     names = os.getenv("NO_RUNNER_CHANNELS", "tfxc,ghp").lower().split(",")
@@ -1274,7 +1296,7 @@ def _enforce_risk_cap(lot_per_layer, num_layers, sig, tick, symbol_info, balance
         if not tick_size or tick_size <= 0:
             return lot_per_layer, num_layers
         pip_value  = tick_val / tick_size
-        max_loss   = balance * float(os.getenv("MAX_RISK_PCT", "0.10"))
+        max_loss   = balance * _max_risk_pct_fn(getattr(sig, "source_channel", ""))
         total_risk = sl_dist * pip_value * lot_per_layer * num_layers
         if total_risk <= max_loss:
             return lot_per_layer, num_layers
@@ -1387,7 +1409,7 @@ def execute_layers(sig: TradeSignal) -> list[int]:
                  str(conf_scale) + "=" + str(lot_per_layer))
 
     # ── Max 10% Risiko pro Trade ──────────────────────────────────────────────
-    MAX_RISK_PCT = float(os.getenv("MAX_RISK_PCT", "0.10"))  # 10% default
+    MAX_RISK_PCT = _max_risk_pct_fn(getattr(sig, "source_channel", ""))
     if sl_distance > 0 and sig.symbol:
         sym_info_risk = mt5.symbol_info(sig.symbol)
         if sym_info_risk:
@@ -1854,7 +1876,7 @@ async def execute_urgent(symbol: str, direction: str, raw_text: str, channel_nam
     _tick_val      = sym_info.trade_tick_value or 1.0
     _tick_size     = sym_info.trade_tick_size or 0.01
     _pip_val_lot   = (_tick_val / _tick_size) if _tick_size > 0 else 100.0
-    _max_risk_pct  = float(os.getenv("MAX_RISK_PCT", "0.10"))
+    _max_risk_pct  = _max_risk_pct_fn(channel_name)
     _max_loss      = balance * _max_risk_pct
     _risk_now      = urgent_sl_dist * _pip_val_lot * lot_per_layer * num_layers
     if _risk_now > _max_loss and _risk_now > 0:
