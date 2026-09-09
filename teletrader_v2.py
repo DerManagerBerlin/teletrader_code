@@ -387,7 +387,7 @@ def calculate_layers(balance: float, channel: str = "", is_backup: bool = False)
       $1000 → 3 Layer × 0.10 lot
     """
     LOT_PER_100 = float(os.getenv("LOT_PER_100", "0.01"))
-    MAX_LAYERS  = int(os.getenv("MAX_LAYERS", "6"))
+    MAX_LAYERS, _ = _channel_layers(channel)
 
     # Festes Lot pro Layer basierend auf Balance
     lot_per_layer = round(max(0.01, min(LOT_PER_100 * (balance / 100),
@@ -427,8 +427,12 @@ def distribute_layers(num_layers: int, tps: list, channel: str = "") -> dict:
 
     # Runner-Layer (TP=0) nur wenn RUNNER_LAYER_ENABLED=true; sonst alle Layer mit hartem TP
     open_layers    = 1 if os.getenv("RUNNER_LAYER_ENABLED", "false").lower() == "true" else 0
+    _n_ch, _r_ch = _channel_layers(channel)
+    if _r_ch > 0:
+        open_layers = _r_ch          # Kanal-Vorgabe: mehrere Runner
     if _no_runner_channel(channel):
-        open_layers = 0  # Kanal ohne Runner - alle Layer feste TPs
+        open_layers = 0              # Kanal ohne Runner - alle Layer feste TPs
+    open_layers = min(open_layers, max(0, num_layers - 1))
     # (b) Runner nur als ZUSAETZLICHER Layer: bei vorhandenen TPs behaelt mind. 1
     # Layer einen TP (kein TP-loser Runner bei auf 1 gekapptem Kleinkonto-Trade).
     if num_tps > 0:
@@ -465,6 +469,53 @@ def distribute_layers(num_layers: int, tps: list, channel: str = "") -> dict:
 
 # ─── Regex Signal Parser (kein API-Key nötig) ────────────────────────────────
 # Sobald Anthropic-Guthaben vorhanden → auf KI-Parser umstellen
+
+def _env_for_channel(prefix: str, channel: str, default):
+    """Sucht <PREFIX>_<TOKEN> je Wort des Kanalnamens, sonst <PREFIX>."""
+    import re as _re
+    cn = (channel or "").lower()
+    for tok in _re.findall(r"[a-z]{3,}", cn):
+        val = os.getenv(prefix + "_" + tok.upper())
+        if val:
+            return val
+    return os.getenv(prefix, default)
+
+
+def _channel_layers(channel: str = ""):
+    """(anzahl_layer, anzahl_runner) fuer diesen Kanal."""
+    try:
+        n = int(float(_env_for_channel("MAX_LAYERS", channel, "6")))
+    except (TypeError, ValueError):
+        n = 6
+    n = max(1, min(n, 30))
+    try:
+        r = int(float(_env_for_channel("RUNNER_LAYERS", channel, "0")))
+    except (TypeError, ValueError):
+        r = 0
+    r = max(0, min(r, max(0, n - 1)))
+    return n, r
+
+
+def _sl_factor(channel: str = "") -> float:
+    """Faktor, mit dem die Signal-SL-Distanz gekuerzt wird (1.0 = unveraendert).
+    Sucht SL_FACTOR_<TOKEN> je Wort des Kanalnamens, sonst SL_FACTOR."""
+    try:
+        _default = float(os.getenv("SL_FACTOR", "1.0"))
+    except ValueError:
+        _default = 1.0
+    cn = (channel or "").lower()
+    if not cn:
+        return _default
+    import re as _re
+    for tok in _re.findall(r"[a-z]{3,}", cn):
+        val = os.getenv("SL_FACTOR_" + tok.upper())
+        if val:
+            try:
+                return float(val)
+            except ValueError:
+                pass
+    return _default
+
 
 def _max_risk_pct(channel: str = "") -> float:
     """Risiko-Obergrenze als Anteil der Balance, optional pro Kanal.
@@ -1359,6 +1410,29 @@ def execute_layers(sig: TradeSignal) -> list[int]:
                 " <= Entry=" + str(sig.entry) + " → ungültiges Signal"
             )
             return []
+
+    # -- SL-Faktor: Signal-SL kuerzen (kanalabhaengig, SL_FACTOR_<KANAL>) --
+    _slf = _sl_factor(getattr(sig, "source_channel", ""))
+    if sig.sl and 0 < _slf < 1.0:
+        _si_f = mt5.symbol_info(sig.symbol)
+        _tk_f = mt5.symbol_info_tick(sig.symbol)
+        _ref_f = None
+        if sig.entry:
+            _ref_f = float(sig.entry)
+        elif _tk_f:
+            _ref_f = _tk_f.ask if sig.direction == "BUY" else _tk_f.bid
+        if _ref_f:
+            _dig_f = _si_f.digits if _si_f else 2
+            _alt = float(sig.sl)
+            _dist_f = abs(_ref_f - _alt) * _slf
+            _neu = round(_ref_f - _dist_f, _dig_f) if sig.direction == "BUY" \
+                else round(_ref_f + _dist_f, _dig_f)
+            log.info("SL-Faktor " + str(_slf) + " [" +
+                     str(getattr(sig, "source_channel", ""))[:12] + "]: SL " +
+                     str(_alt) + " -> " + str(_neu) +
+                     " (Distanz " + str(round(abs(_ref_f - _alt), _dig_f)) +
+                     " -> " + str(round(_dist_f, _dig_f)) + ")")
+            sig.sl = _neu
 
     # SL-Distanz berechnen für risikobasiertes Lot-Sizing
     sl_distance = 0.0
@@ -4732,11 +4806,15 @@ async def main():
                     open_pos = {p.ticket: p for p in (mt5.positions_get() or [])
                                 if p.magic == MAGIC_NUMBER}
                     for tk_str, rec in list(recs.items()):
-                        if not isinstance(rec, dict) or rec.get("be_done"):
+                        if not isinstance(rec, dict):
                             continue
-                        tp1 = rec.get("tp1")
-                        if tp1 is None:
+                        _tps = rec.get("tps")
+                        if not _tps:
+                            _t1 = rec.get("tp1")
+                            _tps = [float(_t1)] if _t1 is not None else []
+                        if not _tps:
                             continue
+                        _tps = sorted([float(x) for x in _tps])
                         try:
                             tk = int(tk_str)
                         except Exception:
@@ -4747,37 +4825,52 @@ async def main():
                         is_buy = rec.get("is_buy")
                         if is_buy is None:
                             is_buy = (pos.type == mt5.ORDER_TYPE_BUY)
+                        if not is_buy:
+                            _tps = list(reversed(_tps))   # SELL: TP1 ist der hoechste Wert
                         tick = mt5.symbol_info_tick(pos.symbol)
                         if not tick:
                             continue
                         price = tick.bid if is_buy else tick.ask
-                        reached = (price >= tp1) if is_buy else (price <= tp1)
-                        if not reached:
+                        _reached = 0
+                        for _i, _tp in enumerate(_tps):
+                            _ok = (price >= _tp) if is_buy else (price <= _tp)
+                            if _ok:
+                                _reached = _i + 1
+                            else:
+                                break
+                        _stage_old = int(rec.get("stage") or (1 if rec.get("be_done") else 0))
+                        if _reached <= _stage_old or _reached < 1:
                             continue
                         entry = float(rec.get("entry") or pos.price_open)
                         info = mt5.symbol_info(pos.symbol)
                         dig = info.digits if info else 2
-                        be = round(entry, dig)
-                        if pos.sl and abs(pos.sl - be) < 5 * (10 ** (-dig)):
-                            _mark_runner_be(tk)
-                            continue
+                        _target = entry if _reached == 1 else _tps[_reached - 2]
+                        new_sl = round(float(_target), dig)
+                        if pos.sl:
+                            _besser = (new_sl > pos.sl) if is_buy else (new_sl < pos.sl)
+                            if not _besser:
+                                _mark_runner_stage(tk, _reached)
+                                continue
                         pt = info.point if info else 0.01
                         stops = getattr(info, "trade_stops_level", 0) or 0
                         min_d = max(stops * pt, pt * 10)
-                        too_close = (be > price - min_d) if is_buy else (be < price + min_d)
+                        too_close = ((new_sl > price - min_d) if is_buy
+                                     else (new_sl < price + min_d))
                         if too_close:
-                            continue  # BE-SL noch zu nah am Kurs -> still warten (kein 10016-Spam)
+                            continue  # SL noch zu nah am Kurs -> warten (kein 10016-Spam)
                         r = mt5.order_send({"action": mt5.TRADE_ACTION_SLTP,
                                             "symbol": pos.symbol, "position": tk,
-                                            "sl": be, "tp": 0.0})
+                                            "sl": new_sl, "tp": 0.0})
                         if r and r.retcode == mt5.TRADE_RETCODE_DONE:
-                            _mark_runner_be(tk)
-                            log.info("Stufe C: Runner #" + str(tk) + " auf BE (Entry " +
-                                     str(be) + ", TP1 " + str(tp1) + " erreicht)")
-                            await send_notification("\U0001f512 Runner #" + str(tk) +
-                                                    " auf Break-Even gesichert (TP1 erreicht)")
+                            _mark_runner_stage(tk, _reached)
+                            _wohin = "Entry/BE" if _reached == 1 else ("TP" + str(_reached - 1))
+                            log.info("SL-Leiter: #" + str(tk) + " TP" + str(_reached) +
+                                     " erreicht -> SL auf " + _wohin + " (" + str(new_sl) + ")")
+                            await send_notification("\U0001f512 #" + str(tk) + " TP" +
+                                                    str(_reached) + " erreicht - SL auf " +
+                                                    _wohin + " (" + str(new_sl) + ")")
                         else:
-                            log.error("Stufe C: BE fehlgeschlagen #" + str(tk) + ": " + str(r))
+                            log.error("SL-Leiter fehlgeschlagen #" + str(tk) + ": " + str(r))
             except Exception as _e:
                 log.error("runner_breakeven_checker: " + str(_e))
             await asyncio.sleep(15)
