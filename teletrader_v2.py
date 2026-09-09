@@ -1712,7 +1712,8 @@ def execute_layers(sig: TradeSignal) -> list[int]:
                 if not tp_price:
                     mark_runner(result.order, channel=sig.source_channel, symbol=sig.symbol,
                                 tp1=(sig.tps()[0] if sig.tps() else None),
-                                is_buy=(sig.direction == "BUY"), entry=price_f)
+                                is_buy=(sig.direction == "BUY"), entry=price_f,
+                                tps=sig.tps())
                 log.info("Layer " + str(layer_num) + "/" + str(num_layers) +
                          " Ticket #" + str(result.order) + " TP=" + str(tp_price))
             else:
@@ -2656,10 +2657,24 @@ def _save_runners(d):
     except Exception as _e:
         log.error("runners.json speichern: " + str(_e))
 
-def mark_runner(ticket, channel="", symbol="", tp1=None, is_buy=None, entry=None):
+def mark_runner(ticket, channel="", symbol="", tp1=None, is_buy=None, entry=None,
+                tps=None):
     d = _load_runners()
     rec = {"channel": str(channel), "symbol": str(symbol),
-           "ts": datetime.now().isoformat(), "be_done": False}
+           "ts": datetime.now().isoformat(), "be_done": False, "stage": 0}
+    if tps:
+        _clean = []
+        for _t in tps:
+            try:
+                _v = float(_t)
+                if _v > 0:
+                    _clean.append(_v)
+            except (TypeError, ValueError):
+                pass
+        if _clean:
+            rec["tps"] = _clean
+            if tp1 is None:
+                tp1 = _clean[0]
     if tp1 is not None:
         try: rec["tp1"] = float(tp1)
         except Exception: pass
@@ -2677,6 +2692,16 @@ def _mark_runner_be(ticket):
     d = _load_runners()
     if str(ticket) in d and isinstance(d[str(ticket)], dict):
         d[str(ticket)]["be_done"] = True
+        _save_runners(d)
+
+
+def _mark_runner_stage(ticket, stage):
+    """SL-Leiter: erreichte Stufe festhalten (1 = TP1 erreicht -> SL auf Entry)."""
+    d = _load_runners()
+    if str(ticket) in d and isinstance(d[str(ticket)], dict):
+        d[str(ticket)]["stage"] = int(stage)
+        if stage >= 1:
+            d[str(ticket)]["be_done"] = True
         _save_runners(d)
 
 def unmark_runner(ticket):
