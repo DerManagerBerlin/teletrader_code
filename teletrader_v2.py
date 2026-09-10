@@ -2071,8 +2071,9 @@ def parse_levels_from_text(text):
     return out
 
 
-def attach_levels_to_urgent(symbol, direction, sl, tps, has_open, tickets):
-    """Stufe B: SL auf alle Urgent-Positionen; TP1..TP(n-1) auf Worker; letzte = Runner (tp=0)."""
+def attach_levels_to_urgent(symbol, direction, sl, tps, has_open, tickets,
+                            channel=""):
+    """Stufe B: SL auf alle Urgent-Positionen; TPs auf Worker; Rest = Runner (tp=0)."""
     pos = [p for p in (mt5.positions_get(symbol=symbol) or [])
            if p.magic == MAGIC_NUMBER and p.ticket in tickets]
     if not pos:
@@ -2085,8 +2086,37 @@ def attach_levels_to_urgent(symbol, direction, sl, tps, has_open, tickets):
     pos.sort(key=lambda p: p.ticket)
     _si = mt5.symbol_info(symbol)
     _dig = _si.digits if _si else 2
-    runner = pos[-1] if has_open else None
-    workers = pos[:-1] if has_open else pos
+    # -- SL-Faktor auch hier anwenden (wirkte bisher nur im TRADE-Pfad) --
+    _slf = _sl_factor(channel)
+    if sl and 0 < _slf < 1.0:
+        _ref = sum(p.price_open for p in pos) / len(pos)
+        _alt = float(sl)
+        _neu = round(_ref - abs(_ref - _alt) * _slf, _dig) if direction == "BUY" \
+            else round(_ref + abs(_ref - _alt) * _slf, _dig)
+        log.info("SL-Faktor " + str(_slf) + " [Stufe B, " + str(channel)[:12] +
+                 "]: SL " + str(_alt) + " -> " + str(_neu))
+        sl = _neu
+
+    # -- Runner-Anzahl kanalabhaengig statt fix 1 --
+    _n_runner = 1 if has_open else 0
+    if has_open:
+        try:
+            _, _r_cfg = _channel_layers(channel)
+        except Exception:
+            _r_cfg = 0
+        if _r_cfg > 0:
+            _n_runner = _r_cfg
+    # Ueberzaehlige Worker (mehr Worker als TPs) ebenfalls zu Runnern machen
+    if tps:
+        _ueber = len(pos) - _n_runner - len(tps)
+        if _ueber > 0:
+            _n_runner += _ueber
+            log.info("Stufe B: " + str(_ueber) + " ueberzaehlige Worker -> Runner "
+                     "(nur " + str(len(tps)) + " TPs vorhanden)")
+    _n_runner = max(0, min(_n_runner, len(pos) - 1)) if len(pos) > 1 else 0
+    runners = pos[-_n_runner:] if _n_runner else []
+    workers = pos[:len(pos) - _n_runner]
+    runner = runners[-1] if runners else None
 
     def _vsl(p, s):
         if not s:
@@ -2121,35 +2151,68 @@ def attach_levels_to_urgent(symbol, direction, sl, tps, has_open, tickets):
                 for i in range(_nw):
                     _tp_for[i] = tps[int(round(i * (_nt - 1) / (_nw - 1)))]
         else:
-            for i in range(_nw):
-                _tp_for[i] = tps[i] if i < _nt else tps[-1]
+            # Mehr Worker als TPs: gleichmaessig verteilen, nahe TPs zuerst
+            # (6 Worker / 4 TP -> 2,2,1,1) - wie im normalen TRADE-Pfad.
+            _base, _rest = divmod(_nw, _nt)
+            _idx = 0
+            for _j in range(_nt):
+                _cnt = _base + (1 if _j < _rest else 0)
+                for _ in range(_cnt):
+                    if _idx < _nw:
+                        _tp_for[_idx] = tps[_j]
+                        _idx += 1
+            while _idx < _nw:
+                _tp_for[_idx] = tps[-1]
+                _idx += 1
         log.info("Stufe B TP-Spread [" + _mode + "]: " + str(_nw) + " Worker / " +
                  str(_nt) + " TP -> " + str([_tp_for[i] for i in range(_nw)]))
 
     updated = 0
     for i, p in enumerate(workers):
         tp = _tp_for.get(i, 0.0)
+        _sl_v = round(_vsl(p, sl), _dig)
+        _tp_v = round(_vtp(p, tp), _dig)
         r = mt5.order_send({"action": mt5.TRADE_ACTION_SLTP, "symbol": symbol,
-                            "position": p.ticket, "sl": round(_vsl(p, sl), _dig),
-                            "tp": round(_vtp(p, tp), _dig)})
+                            "position": p.ticket, "sl": _sl_v, "tp": _tp_v})
         if r and r.retcode == mt5.TRADE_RETCODE_DONE:
             updated += 1
-            log.info("Stufe B Worker #" + str(p.ticket) + " SL=" +
-                     str(round(_vsl(p, sl), _dig)) + " TP=" + str(round(_vtp(p, tp), _dig)))
+            log.info("Stufe B Worker #" + str(p.ticket) + " SL=" + str(_sl_v) +
+                     " TP=" + str(_tp_v))
+            continue
+        # Fallback: TP vom Broker abgelehnt (z.B. 10016, TP schon durchlaufen)
+        # -> wenigstens den SL setzen, damit keine ungesicherte Position bleibt.
+        log.warning("Stufe B Worker #" + str(p.ticket) + " mit TP abgelehnt (" +
+                    str(getattr(r, "retcode", "?")) + ") - versuche nur SL")
+        r2 = mt5.order_send({"action": mt5.TRADE_ACTION_SLTP, "symbol": symbol,
+                             "position": p.ticket, "sl": _sl_v, "tp": 0.0})
+        if r2 and r2.retcode == mt5.TRADE_RETCODE_DONE:
+            updated += 1
+            log.info("Stufe B Worker #" + str(p.ticket) + " SL=" + str(_sl_v) +
+                     " TP=0 (Fallback, laeuft als Runner)")
+            mark_runner(p.ticket, channel=channel, symbol=symbol,
+                        is_buy=(p.type == mt5.POSITION_TYPE_BUY),
+                        entry=p.price_open, tps=tps)
         else:
-            log.error("Stufe B Worker #" + str(p.ticket) + " SLTP fehlgeschlagen: " + str(r))
+            log.error("Stufe B Worker #" + str(p.ticket) +
+                      " OHNE SL - bitte manuell pruefen: " + str(r2))
     runner_tk = None
-    if runner is not None:
+    for _rp in runners:
+        _sl_r = round(_vsl(_rp, sl), _dig)
         r = mt5.order_send({"action": mt5.TRADE_ACTION_SLTP, "symbol": symbol,
-                            "position": runner.ticket, "sl": round(_vsl(runner, sl), _dig),
-                            "tp": 0.0})
+                            "position": _rp.ticket, "sl": _sl_r, "tp": 0.0})
         if r and r.retcode == mt5.TRADE_RETCODE_DONE:
-            runner_tk = runner.ticket
-            mark_runner(runner.ticket, channel="", symbol=symbol)
-            log.info("Stufe B Runner #" + str(runner.ticket) + " SL=" +
-                     str(round(_vsl(runner, sl), _dig)) + " TP=0 (haelt bis Close)")
+            runner_tk = _rp.ticket
+            mark_runner(_rp.ticket, channel=channel, symbol=symbol,
+                        is_buy=(_rp.type == mt5.POSITION_TYPE_BUY),
+                        entry=_rp.price_open, tps=tps)
+            log.info("Stufe B Runner #" + str(_rp.ticket) + " SL=" + str(_sl_r) +
+                     " TP=0 (haelt bis Close)")
         else:
-            log.error("Stufe B Runner SLTP fehlgeschlagen: " + str(r))
+            log.error("Stufe B Runner #" + str(_rp.ticket) +
+                      " SLTP fehlgeschlagen: " + str(r))
+    if runners:
+        log.info("Stufe B: " + str(len(workers)) + " Worker / " +
+                 str(len(runners)) + " Runner")
     return (updated, runner_tk)
 
 
@@ -5130,7 +5193,8 @@ async def main():
                                  " (NO_RUNNER_CHANNELS) - alle Layer bekommen feste TPs")
                     _u, _runner = attach_levels_to_urgent(
                         _att_sym, _att_dir, _lv["sl"], _lv["tps"],
-                        _has_open_eff, _att_ctx["tickets"])
+                        _has_open_eff, _att_ctx["tickets"],
+                        channel=(_att_ctx.get("channel") or channel_name))
                     state.pending_context.pop(_att_sym, None)
                     log.info("Stufe B Attach: SL " + str(_lv["sl"]) + " + " +
                              str(len(_lv["tps"])) + " TP auf Urgent " + _att_sym +
