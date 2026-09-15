@@ -1,51 +1,3 @@
-2026-09-15 10:15:30,564 [INFO] KI-V2 [GTMO VIP 🤴🏽]: URGENT | conf=78% | Message says 'Gold sell now' — direction is SELL on XAUUSD but no entry price, S
-2026-09-15 10:15:30,564 [INFO] Verpasstes Signal ausfuehren [GTMO VIP 🤴🏽] 10:07: URGENT conf=78%
-2026-09-15 10:15:31,223 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-09-15 10:15:31,230 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-09-15 10:15:31,423 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:15:37,695 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:15:40,568 [WARNING] Interpreter [GTMO VIP 🤴🏽]: 
-2026-09-15 10:15:43,973 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:15:50,258 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:15:52,250 [INFO] 📨 Neue Nachricht aus GTMO VIP 🤴🏽: 'In them bluesss🤑🤑'
-2026-09-15 10:15:52,859 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-09-15 10:15:52,861 [INFO] Pre-filter NOISE [GTMO VIP 🤴🏽]: In them bluesss🤑🤑
-2026-09-15 10:15:52,862 [INFO] 🔇 NOISE: Pre-filter: NOISE
-2026-09-15 10:15:56,550 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:16:02,833 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:16:09,139 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:16:15,436 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:16:21,722 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:16:28,042 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:16:31,051 [INFO] SL-Leiter: #376827169 TP1 erreicht -> SL auf Entry/BE (4274.1)
-2026-09-15 10:16:31,391 [INFO] SL-Leiter: #376827171 TP1 erreicht -> SL auf Entry/BE (4274.09)
-2026-09-15 10:16:31,521 [INFO] SL-Leiter: #376827175 TP1 erreicht -> SL auf Entry/BE (4274.09)
-2026-09-15 10:16:31,663 [INFO] SL-Leiter: #376827177 TP1 erreicht -> SL auf Entry/BE (4274.09)
-2026-09-15 10:16:31,800 [INFO] SL-Leiter: #376827179 TP1 erreicht -> SL auf Entry/BE (4274.09)
-2026-09-15 10:16:31,937 [INFO] SL-Leiter: #376827181 TP1 erreicht -> SL auf Entry/BE (4274.09)
-2026-09-15 10:16:34,440 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:16:40,720 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:16:46,459 [INFO] Auto-BE (GTMo-TP2): #376827164 XAUUSD.s SL→BE nach 2.2 Pts Profit
-2026-09-15 10:16:46,550 [INFO] Auto-BE (GTMo-TP2): #376827165 XAUUSD.s SL→BE nach 2.2 Pts Profit
-2026-09-15 10:16:46,642 [INFO] Auto-BE (GTMo-TP2): #376827167 XAUUSD.s SL→BE nach 2.2 Pts Profit
-2026-09-15 10:16:47,010 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:16:53,299 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:16:54,158 [INFO] 📨 Neue Nachricht aus GTMO VIP 🤴🏽: 'First TakeProfit checkkk🤑🤑💦'
-2026-09-15 10:16:54,822 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-09-15 10:16:54,828 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-09-15 10:16:59,582 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:17:00,919 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-09-15 10:17:00,921 [INFO] KI-V2 [GTMO VIP 🤴🏽]: HOLD_LOWEST | conf=88% | TP1 hit announcement ('First TakeProfit checkkk') from the signal in history (en
-2026-09-15 10:17:00,921 [INFO] HOLD_LOWEST ignoriert (GTMO VIP 🤴🏽) - feste TPs arbeiten selbst
-2026-09-15 10:17:04,249 [INFO] 🔁 Duplikat ignoriert aus: GTMO VIP 🤴🏽
-2026-09-15 10:17:05,868 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:17:12,149 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:17:18,454 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:17:24,778 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
-2026-09-15 10:17:27,736 [INFO] 📨 Neue Nachricht aus GTMO VIP 🤴🏽: 'TakeProfit 2 commme on🤑🤑'
-2026-09-15 10:17:28,394 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
-2026-09-15 10:17:28,406 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
-2026-09-15 10:17:31,062 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
 2026-09-15 10:17:37,345 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
 2026-09-15 10:17:39,893 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
 2026-09-15 10:17:39,895 [INFO] KI-V2 [GTMO VIP 🤴🏽]: HOLD_LOWEST | conf=85% | TP2 hit announcement ('TakeProfit 2 commme on') signals second target reached. P
@@ -7998,3 +7950,51 @@ Thats where
 2026-09-15 22:14:43,658 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
 2026-09-15 22:14:49,918 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
 2026-09-15 22:14:56,182 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:15:02,433 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:15:09,718 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:15:15,990 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:15:22,266 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:15:28,523 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:15:34,779 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:15:41,040 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:15:47,309 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:15:53,577 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:15:59,855 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:16:06,150 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:16:12,419 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:16:18,687 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:16:24,962 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:16:31,221 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:16:37,484 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:16:43,763 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:16:50,035 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:16:56,307 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:17:02,569 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:17:08,837 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:17:15,110 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:17:21,374 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:17:27,629 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:17:33,892 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:17:40,148 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:17:46,413 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:17:52,670 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:17:58,939 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:18:05,207 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:18:11,501 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:18:17,782 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:18:24,069 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:18:30,482 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:18:36,758 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:18:43,013 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:18:49,279 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:18:55,547 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:19:01,826 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:19:08,108 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:19:14,398 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:19:20,661 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:19:26,940 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:19:33,202 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:19:39,485 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:19:45,756 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:19:52,017 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-09-15 22:19:58,299 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=101322807&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
