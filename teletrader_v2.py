@@ -550,6 +550,87 @@ def _no_runner_channel(channel: str) -> bool:
     return any(n.strip() and n.strip() in cn for n in names)
 
 
+def _max_entry_dev(channel: str = "") -> float:
+    """Max. erlaubte Abweichung (Preispunkte) zwischen Signal-Entry und aktuellem
+    Kurs, kanalabhaengig via MAX_ENTRY_DEV_<TOKEN>. 0 = Pruefung aus (Default)."""
+    try:
+        return float(_env_for_channel("MAX_ENTRY_DEV", channel, "0"))
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def _regex_only_channel(channel: str) -> bool:
+    """True, wenn fuer diesen Kanal der deterministische Parser statt der Claude-API
+    benutzt wird (starres Template, kein API-Call/Guthaben noetig)."""
+    cn = (channel or "").lower()
+    names = os.getenv("REGEX_ONLY_CHANNELS", "scalping").lower().split(",")
+    return any(n.strip() and n.strip() in cn for n in names)
+
+
+_SC_NUM = r"(\d{3,5}(?:[.,]\d{1,3})?)"
+
+
+def parse_scalp_signal(text: str) -> dict:
+    """Deterministischer Parser fuer das Template von GOLD SCALPING VIP (kein API-Call):
+        SCALP IDEE - XAUUSD / ICH GEHE BUY|SELL / Entry Zone: X / SL: Y / TP1..TP4 / TP5: OPEN
+    Liefert dasselbe Dict-Format wie der KI-Interpreter. Alles, was nicht eindeutig
+    ein vollstaendiges, plausibles Signal ist, wird NOISE (nie raten)."""
+    def _noise(why):
+        return {"action": "NOISE", "direction": None, "symbol": None, "entry": None,
+                "sl": None, "tp1": None, "tp2": None, "tp3": None, "tp4": None,
+                "tp5": None, "tp6": None, "is_limit": False, "is_backup": False,
+                "new_sl": None, "new_tp": None, "confidence": 99,
+                "reasoning": "Regex: " + why}
+
+    def _f(s):
+        return float(s.replace(",", "."))
+
+    t = (text or "").replace("\u00a0", " ")
+    m_dir = re.search(r"ICH\s+GEHE\s+(BUY|SELL)\b", t, re.I)
+    if not m_dir:
+        return _noise("kein 'ICH GEHE BUY/SELL' -> kein Signal")
+    direction = m_dir.group(1).upper()
+
+    m_sym = re.search(r"SCALP\s+IDEE\W+([A-Z]{6})\b", t, re.I)
+    symbol = m_sym.group(1).upper() if m_sym else "XAUUSD"
+
+    m_en = re.search(r"Entry\s*Zone\s*:?\s*" + _SC_NUM + r"(?:\s*[-\u2013\u2014]\s*" + _SC_NUM + r")?", t, re.I)
+    m_sl = re.search(r"\bSL\s*:?\s*" + _SC_NUM, t, re.I)
+    if not m_en or not m_sl:
+        return _noise("Entry oder SL fehlt")
+    e1 = _f(m_en.group(1))
+    e2 = _f(m_en.group(2)) if m_en.group(2) else None
+    entry = max(e1, e2) if e2 else e1
+    entry_low = min(e1, e2) if e2 else None
+    sl = _f(m_sl.group(1))
+
+    tps = {}
+    for m in re.finditer(r"\bTP\s*([1-9])\s*:?\s*" + _SC_NUM, t, re.I):
+        tps[int(m.group(1))] = _f(m.group(2))
+    if 1 not in tps:
+        return _noise("TP1 fehlt")
+
+    # Plausibilitaet: SL auf der richtigen Seite, TPs in Signalrichtung, SL-Abstand sinnvoll
+    sl_dist = abs(entry - sl)
+    sl_max = float(os.getenv("SCALP_SL_MAX", "30"))
+    if not (2.0 <= sl_dist <= sl_max):
+        return _noise("SL-Abstand " + str(round(sl_dist, 2)) + " unplausibel")
+    if direction == "BUY":
+        ok = sl < entry and all(v > entry for v in tps.values())
+    else:
+        ok = sl > entry and all(v < entry for v in tps.values())
+    if not ok:
+        return _noise("Seiten von SL/TP passen nicht zu " + direction)
+
+    return {"action": "TRADE", "direction": direction, "symbol": symbol,
+            "entry": entry, "entry_low": entry_low, "sl": sl,
+            "tp1": tps.get(1), "tp2": tps.get(2), "tp3": tps.get(3),
+            "tp4": tps.get(4), "tp5": tps.get(5), "tp6": tps.get(6),
+            "is_limit": False, "is_backup": False, "new_sl": None, "new_tp": None,
+            "confidence": 99, "small_lot": False,
+            "reasoning": "Regex-Parser (kein API-Call)"}
+
+
 def _fx(pair):
     """Gibt das Broker-Symbol fuer ein Forex-Paar zurueck."""
     return pair.upper() + FX_SUFFIX
@@ -1464,6 +1545,8 @@ def execute_layers(sig: TradeSignal) -> list[int]:
     _sig_tps = [t for t in [sig.tp1, sig.tp2, sig.tp3, sig.tp4, sig.tp5,
                               getattr(sig,"tp6",None), getattr(sig,"tp7",None)] if t]
     _max_lay  = int(os.getenv("MAX_LAYERS", "6"))
+    # Kanalspezifische Obergrenze (MAX_LAYERS_<KANAL>) darf die globale nur verkleinern
+    _max_lay  = min(_max_lay, _channel_layers(sig.source_channel)[0])
     _num_lay  = max(1, min(len(_sig_tps) + 1, _max_lay))
     num_layers, lot_per_layer = calculate_layers(balance, sig.source_channel, sig.is_backup)
     num_layers = _num_lay
@@ -2480,6 +2563,8 @@ def _channel_code(channel: str) -> str:
         return "PAUL"
     if "TFXC" in c:
         return "TFXC"
+    if "SCALPING" in c:
+        return "SCAL"
     if "GHP" in c or "JACKPOT" in c:
         if "INDICES" in c or "CRYPTO" in c:
             return "GHPI"
@@ -3787,12 +3872,30 @@ async def process_signal(sig: TradeSignal):
             await send_notification("⚠️ " + msg)
             return
 
+    # ── Stale-Signal-Schutz: Kurs weit vom Signal-Entry weg -> kein Trade ─────
+    # Bei Scalps (TP1 ~5 Punkte, SL ~12) frisst schon 1-2 Punkte Verspaetung den Vorteil.
+    # Aktiv nur wenn MAX_ENTRY_DEV (bzw. MAX_ENTRY_DEV_<KANAL>) > 0 gesetzt ist.
+    _dev_max = _max_entry_dev(sig.source_channel)
+    if _dev_max > 0 and sig.entry and tick_pre:
+        _px_now = tick_pre.ask if sig.direction == "BUY" else tick_pre.bid
+        _dev = abs(_px_now - float(sig.entry))
+        if _dev > _dev_max:
+            _dmsg = ("Signal zu spaet: " + sig.source_channel + " " + sig.direction +
+                     " Entry " + str(sig.entry) + " vs Kurs " + str(round(_px_now, 2)) +
+                     " (Abw. " + str(round(_dev, 2)) + " > " + str(_dev_max) + ")")
+            log.warning(_dmsg)
+            state.daily_stats["skipped"] += 1
+            await send_notification("⏭ " + _dmsg)
+            return
+
     # Prioritaetspruefung
     # ── Lose-Streak-Schutz: nach 3 SLs pausieren (nicht für GTMo VIP) ──────
     _is_goldhunter = any(k in sig.source_channel.lower()
                          for k in ("goldhunter", "paul", "gold hunt"))
+    # "vip" bewusst NICHT mehr dabei: "GOLD SCALPING VIP" (und jeder andere VIP-Kanal)
+    # wurde sonst als GTMo gewertet und umging den Lose-Streak-Schutz.
     _is_gtmo = any(k in sig.source_channel.lower()
-                   for k in ("gtmo", "goldtrader", "vip"))
+                   for k in ("gtmo", "goldtrader"))
     if not _is_gtmo and _channel_streak.get(sig.source_channel, 0) <= -3:
         log.warning("SKIP: " + sig.source_channel + " hat 3 SLs in Folge → pausiert")
         await send_notification("⏸ " + sig.source_channel +
@@ -4076,7 +4179,8 @@ async def main():
                     try:
                         tick = mt5.symbol_info_tick(GOLD_SYMBOL)
                         cur  = tick.bid if tick else 0.0
-                        result = await asyncio.wait_for(
+                        _rx_res = parse_scalp_signal(text) if _regex_only_channel(channel_name) else None
+                        result = _rx_res if _rx_res is not None else await asyncio.wait_for(
                             get_interpreter().interpret(
                                 text=text,
                                 channel=channel_name,
@@ -4247,10 +4351,13 @@ async def main():
                     log.info("Equity Guardian: Start=" + str(round(start_balance, 2)) + "$")
 
                 equity    = info.equity
-                threshold = start_balance * 0.70
+                # Schwelle jetzt per .env (EQUITY_GUARD_PCT, Anteil vom Startkapital).
+                # Default 0.70 = bisheriges Verhalten (die Texte sagten faelschlich "50%").
+                _eg_pct   = float(os.getenv("EQUITY_GUARD_PCT", "0.70"))
+                threshold = start_balance * _eg_pct
                 if equity < threshold:
                     log.error("FALLSCHIRM: Equity " + str(round(equity, 2)) +
-                              "$ < 50% (" + str(round(threshold, 2)) + "$)")
+                              "$ < " + str(int(_eg_pct * 100)) + "% (" + str(round(threshold, 2)) + "$)")
                     positions = mt5.positions_get() or []
                     for pos in positions:
                         if pos.magic != MAGIC_NUMBER:
@@ -4279,7 +4386,7 @@ async def main():
                                             "order": o.ticket})
                     state.phase = 1
                     msg = ("FALLSCHIRM AUSGELOEST\n"
-                           "Equity unter 50%!\n"
+                           "Equity unter " + str(int(_eg_pct * 100)) + "% des Startkapitals!\n"
                            "Alle Positionen geschlossen.\n"
                            "Bot auf Phase 1 (manuell).\n"
                            "Equity: " + str(round(equity, 2)) + "$")
@@ -5110,7 +5217,10 @@ async def main():
             text_lower_check = text.lower().strip()
             words = text_lower_check.split()
 
-            if len(words) <= 2:
+            if _regex_only_channel(channel_name):
+                # Starres Kanal-Template: deterministischer Parser, KEIN Claude-API-Call
+                result = parse_scalp_signal(text)
+            elif len(words) <= 2:
                 if any(w in text_lower_check for w in CANCEL_WORDS):
                     result = {"action": "CANCEL", "reasoning": "Cancel (schnell)"}
                 elif is_close_signal(text):
