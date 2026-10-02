@@ -3637,15 +3637,19 @@ async def handle_phase_command(text: str) -> bool:
                 "GTMO": "GTMO VIP",
                 "PAUL": "GOLDHUNTER | PAUL",
                 "TFXC": "TFXC SIGNALS",
+                "SCAL": "GOLD SCALPING VIP",
             }
             channel_name = channel_map.get(channel_alias, channel_alias)
             await send_notification("Simuliere: " + channel_name + "\n" + signal_text)
             tick = mt5.symbol_info_tick(GOLD_SYMBOL)
             cur  = tick.bid if tick else 0.0
-            result = await get_interpreter().interpret(
-                text=signal_text, channel=channel_name, mt5=mt5,
-                channel_history=[], current_price=cur,
-            )
+            if _regex_only_channel(channel_name):
+                result = parse_scalp_signal(signal_text)
+            else:
+                result = await get_interpreter().interpret(
+                    text=signal_text, channel=channel_name, mt5=mt5,
+                    channel_history=[], current_price=cur,
+                )
             action = result.get("action", "NOISE")
             conf   = result.get("confidence", 0)
             tps    = [result.get("tp"+str(i)) for i in range(1,8) if result.get("tp"+str(i))]
@@ -3695,6 +3699,49 @@ async def handle_phase_command(text: str) -> bool:
                 await send_notification(str(action) + " - im Test keine Ausfuehrung")
         except Exception as e:
             await send_notification("Simulate-Fehler: " + str(e))
+        return True
+
+    elif cmd.startswith("/simscal"):
+        # Testsignal im Original-Template von GOLD SCALPING VIP, Preise aus dem Live-Tick.
+        # Laeuft durch Parser + process_signal wie ein echtes Signal -> ECHTE Order (Demo!).
+        # Aufruf: /simscal buy   oder   /simscal sell      (danach /closeall zum Beenden)
+        try:
+            _dir = "SELL" if text[len("/simscal"):].strip().upper().startswith("SELL") else "BUY"
+            _tk = mt5.symbol_info_tick(GOLD_SYMBOL)
+            if not _tk:
+                await send_notification("simscal: kein Tick fuer " + GOLD_SYMBOL + " (Markt zu?)")
+                return True
+            _px = round(_tk.ask if _dir == "BUY" else _tk.bid, 1)
+            _sg = 1 if _dir == "BUY" else -1
+            _txt = ("SCALP IDEE - XAUUSD\n\n" +
+                    "ICH GEHE " + _dir + "\n\n"
+                    "Entry Zone: " + "%.1f" % _px + "\n"
+                    "SL: " + "%.1f" % (_px - _sg * 12) + "\n\n"
+                    "TP1: " + "%.1f" % (_px + _sg * 5) + "\n"
+                    "TP2: " + "%.1f" % (_px + _sg * 10) + "\n"
+                    "TP3: " + "%.1f" % (_px + _sg * 15) + "\n"
+                    "TP4: " + "%.1f" % (_px + _sg * 20) + "\n"
+                    "TP5: OPEN")
+            await send_notification("Simuliere (echte Demo-Order):\n" + _txt)
+            _res = parse_scalp_signal(_txt)
+            if _res.get("action") != "TRADE":
+                await send_notification("Parser: " + str(_res.get("reasoning")))
+                return True
+            sig = TradeSignal(
+                direction=_res["direction"],
+                symbol=resolve_symbol(_res.get("symbol") or "") or GOLD_SYMBOL,
+                entry=_res["entry"], sl=_res["sl"],
+                tp1=_res.get("tp1"), tp2=_res.get("tp2"),
+                tp3=_res.get("tp3"), tp4=_res.get("tp4"), tp5=_res.get("tp5"),
+                is_limit=False,
+                raw_text=_txt,
+                text_hash=get_text_hash(_txt + datetime.now().isoformat()),
+                source_channel="GOLD SCALPING VIP",
+            )
+            sig.confidence = 99
+            await process_signal(sig)
+        except Exception as e:
+            await send_notification("simscal-Fehler: " + str(e))
         return True
 
     elif cmd == "/testsignal":
