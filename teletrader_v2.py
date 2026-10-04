@@ -714,20 +714,45 @@ def parse_scalp_signal(text: str) -> dict:
     # Skalen- und Aktualitaetspruefung: der Entry muss zum echten Broker-Kurs passen.
     # Faengt (a) Kanaele, die in einer anderen Preis-Skala quotieren als der Broker,
     # und (b) veraltete Signale - bevor daraus eine Order wird.
-    _max_dev = _scalp_env("SCALP_ENTRY_MAX_DEV_PCT", symbol, "1.0")
-    if _max_dev > 0:
+    _max_dev   = _scalp_env("SCALP_ENTRY_MAX_DEV_PCT", symbol, "1.0")
+    _max_pips  = _scalp_env("SCALP_ENTRY_MAX_PIPS", symbol, "15")
+    _max_frac  = _scalp_env("SCALP_ENTRY_MAX_SLFRAC", symbol, "0.25")
+    if _max_dev > 0 or _max_pips > 0 or _max_frac > 0:
         try:
             _bs = resolve_symbol(symbol)
             _tk = mt5.symbol_info_tick(_bs)
+            _si = mt5.symbol_info(_bs)
             if _tk and (_tk.bid or _tk.ask):
+                # Gegen den Preis rechnen, zu dem WIR einsteigen wuerden
+                _ref = _tk.ask if direction == "BUY" else _tk.bid
                 _mid = (_tk.bid + _tk.ask) / 2.0
-                if _mid > 0:
+                _gap = abs(entry - _ref)
+                # (1) grober Skalen-Schutz: falsche Preis-Skala des Kanals
+                if _max_dev > 0 and _mid > 0:
                     _dev = abs(entry - _mid) / _mid * 100.0
                     if _dev > _max_dev:
                         return _noise("Entry " + str(entry) + " weicht " +
                                       str(round(_dev, 1)) + "% vom Broker-Kurs " +
                                       str(round(_mid, 2)) + " ab (" + str(_bs) +
                                       ", max " + str(_max_dev) + "%)")
+                # (2) absolute Pip-Grenze
+                _pt = (getattr(_si, "point", 0) or 0.01) if _si else 0.01
+                _pip = _pt * 10.0
+                if _max_pips > 0 and _pip > 0:
+                    _gap_pips = _gap / _pip
+                    if _gap_pips > _max_pips:
+                        return _noise("Markt schon " + str(round(_gap_pips, 1)) +
+                                      " Pips vom Entry " + str(entry) + " weg (Kurs " +
+                                      str(round(_ref, 5)) + ", max " +
+                                      str(_max_pips) + " Pips)")
+                # (3) Anteil der SL-Distanz - traegt dieselbe Idee auf jedes Instrument
+                if _max_frac > 0 and sl_dist > 0:
+                    _frac = _gap / sl_dist
+                    if _frac > _max_frac:
+                        return _noise("Markt schon " + str(round(_frac * 100, 1)) +
+                                      "% der SL-Distanz vom Entry weg (Kurs " +
+                                      str(round(_ref, 5)) + ", Entry " + str(entry) +
+                                      ", max " + str(round(_max_frac * 100)) + "%)")
         except Exception as _e:
             log.warning("Scalp-Kurspruefung uebersprungen: " + str(_e))
 
