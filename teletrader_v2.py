@@ -567,7 +567,28 @@ def _regex_only_channel(channel: str) -> bool:
     return any(n.strip() and n.strip() in cn for n in names)
 
 
-_SC_NUM = r"(\d{3,5}(?:[.,]\d{1,3})?)"
+_SC_NUM = r"(\d{3,7}(?:[.,]\d{1,3})?)"
+
+
+_SCALP_SYMS = {
+    "xauusd": "XAUUSD", "gold": "XAUUSD", "xau": "XAUUSD",
+    "btcusd": "BTCUSD", "btc": "BTCUSD", "bitcoin": "BTCUSD",
+    "xptusd": "XPTUSD", "xpt": "XPTUSD", "platin": "XPTUSD",
+    "platinum": "XPTUSD",
+    "xpdusd": "XPDUSD", "xpd": "XPDUSD", "palladium": "XPDUSD",
+    "xagusd": "XAGUSD", "xag": "XAGUSD", "silber": "XAGUSD",
+    "silver": "XAGUSD",
+}
+
+
+def _scalp_env(name: str, symbol: str, default: str) -> float:
+    """Schwelle pro Symbol ueberschreibbar: SCALP_SL_MAX_PCT_BTCUSD vor
+    SCALP_SL_MAX_PCT. So bekommt jedes Instrument sein eigenes Fenster."""
+    v = os.getenv(name + "_" + (symbol or "").upper()) or os.getenv(name, default)
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return float(default)
 
 
 def parse_scalp_signal(text: str) -> dict:
@@ -591,8 +612,14 @@ def parse_scalp_signal(text: str) -> dict:
         return _noise("kein 'ICH GEHE BUY/SELL' -> kein Signal")
     direction = m_dir.group(1).upper()
 
-    m_sym = re.search(r"SCALP\s+IDEE\W+([A-Z]{6})\b", t, re.I)
-    symbol = m_sym.group(1).upper() if m_sym else "XAUUSD"
+    m_sym = re.search(r"SCALP\s+IDEE\W+([A-Za-z]{3,10})\b", t, re.I)
+    if not m_sym:
+        return _noise("kein Instrument im Kopf ('SCALP IDEE - <Symbol>')")
+    _raw_sym = m_sym.group(1).lower()
+    if _raw_sym not in _SCALP_SYMS:
+        return _noise("unbekanntes Instrument '" + m_sym.group(1) +
+                      "' - in _SCALP_SYMS ergaenzen")
+    symbol = _SCALP_SYMS[_raw_sym]
 
     m_en = re.search(r"Entry\s*Zone\s*:?\s*" + _SC_NUM + r"(?:\s*[-\u2013\u2014]\s*" + _SC_NUM + r")?", t, re.I)
     m_sl = re.search(r"\bSL\s*:?\s*" + _SC_NUM, t, re.I)
@@ -612,15 +639,47 @@ def parse_scalp_signal(text: str) -> dict:
 
     # Plausibilitaet: SL auf der richtigen Seite, TPs in Signalrichtung, SL-Abstand sinnvoll
     sl_dist = abs(entry - sl)
-    sl_max = float(os.getenv("SCALP_SL_MAX", "30"))
-    if not (2.0 <= sl_dist <= sl_max):
-        return _noise("SL-Abstand " + str(round(sl_dist, 2)) + " unplausibel")
+    # SL-Plausibilitaet RELATIV zum Entry: ein Scalp-SL ist ein kleiner Prozentsatz
+    # des Einstiegs. Das gilt unabhaengig davon, in welcher Skala der Kanal quotiert
+    # (4450 oder 84930) - ein fester Absolutwert tut das nicht.
+    sl_pct     = (sl_dist / entry * 100.0) if entry else 0.0
+    sl_min_pct = _scalp_env("SCALP_SL_MIN_PCT", symbol, "0.02")
+    sl_max_pct = _scalp_env("SCALP_SL_MAX_PCT", symbol, "0.60")
+    if not (sl_min_pct <= sl_pct <= sl_max_pct):
+        return _noise("SL-Abstand " + str(round(sl_dist, 2)) + " = " +
+                      str(round(sl_pct, 3)) + "% unplausibel (erlaubt " +
+                      str(sl_min_pct) + "-" + str(sl_max_pct) + "%)")
+    # Zusaetzliche Absolut-Obergrenze, nur wenn ausdruecklich gesetzt (0 = aus)
+    _sl_abs = float(os.getenv("SCALP_SL_MAX", "0"))
+    if _sl_abs > 0 and sl_dist > _sl_abs:
+        return _noise("SL-Abstand " + str(round(sl_dist, 2)) +
+                      " ueber Absolut-Limit " + str(_sl_abs))
     if direction == "BUY":
         ok = sl < entry and all(v > entry for v in tps.values())
     else:
         ok = sl > entry and all(v < entry for v in tps.values())
     if not ok:
         return _noise("Seiten von SL/TP passen nicht zu " + direction)
+
+    # Skalen- und Aktualitaetspruefung: der Entry muss zum echten Broker-Kurs passen.
+    # Faengt (a) Kanaele, die in einer anderen Preis-Skala quotieren als der Broker,
+    # und (b) veraltete Signale - bevor daraus eine Order wird.
+    _max_dev = _scalp_env("SCALP_ENTRY_MAX_DEV_PCT", symbol, "1.0")
+    if _max_dev > 0:
+        try:
+            _bs = resolve_symbol(symbol)
+            _tk = mt5.symbol_info_tick(_bs)
+            if _tk and (_tk.bid or _tk.ask):
+                _mid = (_tk.bid + _tk.ask) / 2.0
+                if _mid > 0:
+                    _dev = abs(entry - _mid) / _mid * 100.0
+                    if _dev > _max_dev:
+                        return _noise("Entry " + str(entry) + " weicht " +
+                                      str(round(_dev, 1)) + "% vom Broker-Kurs " +
+                                      str(round(_mid, 2)) + " ab (" + str(_bs) +
+                                      ", max " + str(_max_dev) + "%)")
+        except Exception as _e:
+            log.warning("Scalp-Kurspruefung uebersprungen: " + str(_e))
 
     return {"action": "TRADE", "direction": direction, "symbol": symbol,
             "entry": entry, "entry_low": entry_low, "sl": sl,
@@ -1866,6 +1925,14 @@ def execute_layers(sig: TradeSignal) -> list[int]:
             elif result.retcode == mt5.TRADE_RETCODE_DONE:
                 tickets.append(result.order)
                 tp_map[tp_price].append(result.order)
+                # Regex-Kanaele: JEDER Layer kommt in die SL-Leiter, damit bei TP1
+                # auch die Worker (mit hartem TP) auf Break-Even nachgezogen werden.
+                if tp_price and _regex_only_channel(sig.source_channel):
+                    mark_runner(result.order, channel=sig.source_channel,
+                                symbol=sig.symbol,
+                                tp1=(sig.tps()[0] if sig.tps() else None),
+                                is_buy=(sig.direction == "BUY"), entry=price_f,
+                                tps=sig.tps())
                 if not tp_price:
                     mark_runner(result.order, channel=sig.source_channel, symbol=sig.symbol,
                                 tp1=(sig.tps()[0] if sig.tps() else None),
@@ -5022,6 +5089,17 @@ async def main():
                 if recs:
                     open_pos = {p.ticket: p for p in (mt5.positions_get() or [])
                                 if p.magic == MAGIC_NUMBER}
+                    # Geschlossene Tickets austragen - sonst waechst runners.json
+                    # bei 30 Signalen/Tag unbegrenzt.
+                    if open_pos:
+                        _stale = [k for k in recs
+                                  if str(k).isdigit() and int(k) not in open_pos]
+                        if len(_stale) > 50:
+                            for _k in _stale:
+                                recs.pop(_k, None)
+                            _save_runners(recs)
+                            log.info("runners.json: " + str(len(_stale)) +
+                                     " geschlossene Tickets entfernt")
                     for tk_str, rec in list(recs.items()):
                         if not isinstance(rec, dict):
                             continue
@@ -5075,9 +5153,11 @@ async def main():
                                      else (new_sl < price + min_d))
                         if too_close:
                             continue  # SL noch zu nah am Kurs -> warten (kein 10016-Spam)
+                        # TP NICHT loeschen: Worker-Layer behalten ihr Ziel,
+                        # ein echter Runner hat ohnehin tp=0.
                         r = mt5.order_send({"action": mt5.TRADE_ACTION_SLTP,
                                             "symbol": pos.symbol, "position": tk,
-                                            "sl": new_sl, "tp": 0.0})
+                                            "sl": new_sl, "tp": pos.tp})
                         if r and r.retcode == mt5.TRADE_RETCODE_DONE:
                             _mark_runner_stage(tk, _reached)
                             _wohin = "Entry/BE" if _reached == 1 else ("TP" + str(_reached - 1))
