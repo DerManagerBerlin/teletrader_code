@@ -735,24 +735,53 @@ def parse_scalp_signal(text: str) -> dict:
                                       str(round(_dev, 1)) + "% vom Broker-Kurs " +
                                       str(round(_mid, 2)) + " ab (" + str(_bs) +
                                       ", max " + str(_max_dev) + "%)")
-                # (2) absolute Pip-Grenze
                 _pt = (getattr(_si, "point", 0) or 0.01) if _si else 0.01
                 _pip = _pt * 10.0
-                if _max_pips > 0 and _pip > 0:
-                    _gap_pips = _gap / _pip
-                    if _gap_pips > _max_pips:
-                        return _noise("Markt schon " + str(round(_gap_pips, 1)) +
-                                      " Pips vom Entry " + str(entry) + " weg (Kurs " +
-                                      str(round(_ref, 5)) + ", max " +
-                                      str(_max_pips) + " Pips)")
-                # (3) Anteil der SL-Distanz - traegt dieselbe Idee auf jedes Instrument
-                if _max_frac > 0 and sl_dist > 0:
-                    _frac = _gap / sl_dist
-                    if _frac > _max_frac:
-                        return _noise("Markt schon " + str(round(_frac * 100, 1)) +
-                                      "% der SL-Distanz vom Entry weg (Kurs " +
-                                      str(round(_ref, 5)) + ", Entry " + str(entry) +
-                                      ", max " + str(round(_max_frac * 100)) + "%)")
+                # Ist der Markt GEGEN uns gelaufen (schlechterer Einstieg als im
+                # Signal) oder ZU UNSEREN GUNSTEN (besserer Einstieg)?
+                _adverse = (_ref > entry) if direction == "BUY" else (_ref < entry)
+                _tp1 = tps.get(1)
+                if _adverse:
+                    # (2) absolute Pip-Grenze
+                    if _max_pips > 0 and _pip > 0:
+                        _gap_pips = _gap / _pip
+                        if _gap_pips > _max_pips:
+                            return _noise("Markt " + str(round(_gap_pips, 1)) +
+                                          " Pips GEGEN uns vom Entry " + str(entry) +
+                                          " weg (Kurs " + str(round(_ref, 5)) +
+                                          ", max " + str(_max_pips) + " Pips)")
+                    # (3) Anteil der SL-Distanz
+                    if _max_frac > 0 and sl_dist > 0:
+                        _frac = _gap / sl_dist
+                        if _frac > _max_frac:
+                            return _noise("Markt " + str(round(_frac * 100, 1)) +
+                                          "% der SL-Distanz GEGEN uns (Kurs " +
+                                          str(round(_ref, 5)) + ", Entry " + str(entry) +
+                                          ", max " + str(round(_max_frac * 100)) + "%)")
+                elif os.getenv("SCALP_FAVOUR_ALLOW", "true").lower() == "true":
+                    # Besserer Einstieg als im Signal -> nehmen, aber nur solange
+                    # SL und TP1 noch sinnvoll liegen.
+                    if direction == "BUY":
+                        _past_sl = _ref <= sl
+                        _past_tp = (_tp1 is not None and _ref >= _tp1)
+                    else:
+                        _past_sl = _ref >= sl
+                        _past_tp = (_tp1 is not None and _ref <= _tp1)
+                    if _past_sl:
+                        return _noise("Markt bereits am/hinter SL " + str(sl) +
+                                      " (Kurs " + str(round(_ref, 5)) + ")")
+                    if _past_tp:
+                        return _noise("TP1 " + str(_tp1) + " bereits durchlaufen (Kurs " +
+                                      str(round(_ref, 5)) + ")")
+                    _fav_max = _scalp_env("SCALP_FAVOUR_MAX_SLFRAC", symbol, "0.50")
+                    if _fav_max > 0 and sl_dist > 0 and (_gap / sl_dist) > _fav_max:
+                        return _noise("Markt " + str(round(_gap / sl_dist * 100, 1)) +
+                                      "% der SL-Distanz zu unseren Gunsten weg - zu nah "
+                                      "am SL (Kurs " + str(round(_ref, 5)) + ", max " +
+                                      str(round(_fav_max * 100)) + "%)")
+                    log.info("Scalp: besserer Einstieg als im Signal (" +
+                             str(round(_gap / _pip, 1)) + " Pips zu unseren Gunsten) "
+                             "- Trade wird genommen")
         except Exception as _e:
             log.warning("Scalp-Kurspruefung uebersprungen: " + str(_e))
 
