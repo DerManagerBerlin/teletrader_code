@@ -3853,21 +3853,43 @@ async def handle_phase_command(text: str) -> bool:
         # Laeuft durch Parser + process_signal wie ein echtes Signal -> ECHTE Order (Demo!).
         # Aufruf: /simscal buy   oder   /simscal sell      (danach /closeall zum Beenden)
         try:
-            _dir = "SELL" if text[len("/simscal"):].strip().upper().startswith("SELL") else "BUY"
-            _tk = mt5.symbol_info_tick(GOLD_SYMBOL)
-            if not _tk:
-                await send_notification("simscal: kein Tick fuer " + GOLD_SYMBOL + " (Markt zu?)")
+            _parts = text[len("/simscal"):].strip().split()
+            _dir = "SELL" if (_parts and _parts[0].upper().startswith("SELL")) else "BUY"
+            _key = _parts[1].lower() if len(_parts) > 1 else "gold"
+            _tkr = _SCALP_SYMS.get(_key)
+            if not _tkr:
+                await send_notification("simscal: unbekanntes Instrument '" + _key +
+                                        "'. Moeglich: " +
+                                        ", ".join(sorted(set(_SCALP_SYMS.values()))))
                 return True
-            _px = round(_tk.ask if _dir == "BUY" else _tk.bid, 1)
+            _bs = resolve_symbol(_tkr) or GOLD_SYMBOL
+            _tk = mt5.symbol_info_tick(_bs)
+            if not _tk:
+                mt5.symbol_select(_bs, True)
+                _tk = mt5.symbol_info_tick(_bs)
+            if not _tk or not (_tk.bid or _tk.ask):
+                await send_notification("simscal: kein Tick fuer " + _bs + " (Markt zu?)")
+                return True
+            _si = mt5.symbol_info(_bs)
+            _dg = (_si.digits if _si else 2)
+            _px = round(_tk.ask if _dir == "BUY" else _tk.bid, _dg)
             _sg = 1 if _dir == "BUY" else -1
-            _txt = ("SCALP IDEE - XAUUSD\n\n" +
+            # Abstaende massstabsgerecht: SL als Prozentsatz vom Kurs (wie im Kanal
+            # beobachtet), TPs im Verhaeltnis 5/10/15/20 zu 12 Risiko-Einheiten.
+            _slp = float(os.getenv("SIMSCAL_SL_PCT", "0.1413"))
+            _sld = round(_px * _slp / 100.0, _dg)
+            if _sld <= 0:
+                await send_notification("simscal: SL-Abstand 0 - SIMSCAL_SL_PCT pruefen")
+                return True
+            _f = "%." + str(_dg) + "f"
+            _txt = ("SCALP IDEE - " + _tkr + "\n\n" +
                     "ICH GEHE " + _dir + "\n\n"
-                    "Entry Zone: " + "%.1f" % _px + "\n"
-                    "SL: " + "%.1f" % (_px - _sg * 12) + "\n\n"
-                    "TP1: " + "%.1f" % (_px + _sg * 5) + "\n"
-                    "TP2: " + "%.1f" % (_px + _sg * 10) + "\n"
-                    "TP3: " + "%.1f" % (_px + _sg * 15) + "\n"
-                    "TP4: " + "%.1f" % (_px + _sg * 20) + "\n"
+                    "Entry Zone: " + _f % _px + "\n"
+                    "SL: " + _f % (_px - _sg * _sld) + "\n\n"
+                    "TP1: " + _f % (_px + _sg * _sld * 5.0 / 12.0) + "\n"
+                    "TP2: " + _f % (_px + _sg * _sld * 10.0 / 12.0) + "\n"
+                    "TP3: " + _f % (_px + _sg * _sld * 15.0 / 12.0) + "\n"
+                    "TP4: " + _f % (_px + _sg * _sld * 20.0 / 12.0) + "\n"
                     "TP5: OPEN")
             await send_notification("Simuliere (echte Demo-Order):\n" + _txt)
             _res = parse_scalp_signal(_txt)
