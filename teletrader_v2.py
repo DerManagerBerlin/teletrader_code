@@ -581,6 +581,56 @@ _SCALP_SYMS = {
 }
 
 
+def _norm_lot(symbol: str, lot: float) -> float:
+    """Rundet eine Lotgroesse auf das Raster des Brokers und hebt sie auf das
+    Minimum an. Ohne das lehnt MT5 z.B. 0.01 Lot auf XPTUSD.s (min 0.10) ab."""
+    try:
+        i = mt5.symbol_info(symbol)
+        if not i:
+            return lot
+        step = getattr(i, "volume_step", 0.01) or 0.01
+        vmin = getattr(i, "volume_min", 0.01) or 0.01
+        vmax = getattr(i, "volume_max", 0.0) or 0.0
+        out = round(round(float(lot) / step) * step, 8)
+        if out < vmin:
+            out = vmin
+        if vmax and out > vmax:
+            out = vmax
+        out = round(out, 8)
+        if abs(out - float(lot)) > 1e-9:
+            log.info("Lot-Normalisierung " + str(symbol) + ": " + str(lot) +
+                     " -> " + str(out) + " (min " + str(vmin) +
+                     ", step " + str(step) + ")")
+        return out
+    except Exception as _e:
+        log.warning("Lot-Normalisierung fehlgeschlagen: " + str(_e))
+        return lot
+
+
+def _lot_risk_ok(symbol: str, lot: float, sl_dist: float, balance: float,
+                 channel: str = "") -> bool:
+    """False, wenn schon das Broker-Minimum mehr riskiert als erlaubt."""
+    try:
+        i = mt5.symbol_info(symbol)
+        if not i or not sl_dist or sl_dist <= 0 or not balance:
+            return True
+        ts = getattr(i, "trade_tick_size", 0) or 0
+        tv = getattr(i, "trade_tick_value", 0) or 0
+        if ts <= 0:
+            return True
+        risk = sl_dist * (tv / ts) * float(lot)
+        cap = balance * _max_risk_pct_fn(channel)
+        if risk > cap:
+            log.warning("Broker-Minimum zu gross: " + str(symbol) + " " +
+                        str(lot) + " Lot = $" + str(round(risk, 2)) +
+                        " Risiko > Limit $" + str(round(cap, 2)) +
+                        " -> uebersprungen")
+            return False
+        return True
+    except Exception:
+        return True
+
+
 def _scalp_env(name: str, symbol: str, default: str) -> float:
     """Schwelle pro Symbol ueberschreibbar: SCALP_SL_MAX_PCT_BTCUSD vor
     SCALP_SL_MAX_PCT. So bekommt jedes Instrument sein eigenes Fenster."""
@@ -1735,6 +1785,11 @@ def execute_layers(sig: TradeSignal) -> list[int]:
     if num_layers <= 0:
         log.warning("Risk-Cap (final): kein Layer passt ins Risiko -> uebersprungen")
         return []
+    # Broker-Minimum kann ueber dem erlaubten Risiko liegen (z.B. XPTUSD min 0.10)
+    _nl = _norm_lot(sig.symbol, lot_per_layer)
+    if not _lot_risk_ok(sig.symbol, _nl, sl_distance, balance,
+                        getattr(sig, "source_channel", "")):
+        return []
     distribution = distribute_layers(num_layers, tps, sig.source_channel)
     tp_map = {tp: [] for tp in distribution}
     layer_num = 0
@@ -1896,7 +1951,7 @@ def execute_layers(sig: TradeSignal) -> list[int]:
             request = {
                 "action":       mt5.TRADE_ACTION_PENDING if is_pending else mt5.TRADE_ACTION_DEAL,
                 "symbol":       sig.symbol,
-                "volume":       lot_per_layer,
+                "volume":       _norm_lot(sig.symbol, lot_per_layer),
                 "type":         order_type,
                 "price":        price_f,
                 "sl":           sl_f,
@@ -2156,7 +2211,7 @@ async def execute_urgent(symbol: str, direction: str, raw_text: str, channel_nam
         request = {
             "action":       mt5.TRADE_ACTION_DEAL,
             "symbol":       symbol,
-            "volume":       lot_per_layer,
+            "volume":       _norm_lot(symbol, lot_per_layer),
             "type":         order_type,
             "price":        price,
             "sl":           urgent_sl,
