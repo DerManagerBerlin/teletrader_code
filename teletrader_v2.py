@@ -4838,10 +4838,11 @@ async def main():
                     for pos in positions:
                         if pos.magic != MAGIC_NUMBER:
                             continue
-                        if pos.ticket in runner_tickets():
-                            continue   # Stufe A: getrackten Runner NICHT trailen (laeuft bis Close)
                         # Nur echte Runner (ohne harten TP) trailen - Layer mit
                         # hartem TP laeuft regelbasiert in sein Ziel.
+                        # (Die frueher hier stehende runner_tickets()-Sperre ist
+                        #  entfallen: seit der SL-Leiter steht JEDER Layer in
+                        #  runners.json, damit wurde gar nichts mehr getrailt.)
                         if pos.tp and pos.tp > 0:
                             continue
                         sym_info = mt5.symbol_info(pos.symbol)
@@ -4849,8 +4850,16 @@ async def main():
                         if not sym_info or not tick:
                             continue
                         pip        = sym_info.point * 10
-                        trail_dist = TRAILING_STOP_PIPS * pip
-                        min_profit = TRAILING_STOP_MIN_PROFIT * pip
+                        # Pro Symbol ueberschreibbar, z.B. TRAILING_STOP_PIPS_BTCUSD.
+                        # "Pip" meint bei Gold 0.1 und bei BTC 1.0 Kurspunkte -
+                        # eine gemeinsame Zahl passt nie fuer beide Instrumente.
+                        _sym_key   = (pos.symbol or "").split(".")[0]
+                        _tp_pips   = _scalp_env("TRAILING_STOP_PIPS", _sym_key,
+                                                str(TRAILING_STOP_PIPS))
+                        _mp_pips   = _scalp_env("TRAILING_STOP_MIN_PROFIT_PIPS", _sym_key,
+                                                str(TRAILING_STOP_MIN_PROFIT))
+                        trail_dist = _tp_pips * pip
+                        min_profit = _mp_pips * pip
                         if pos.type == mt5.POSITION_TYPE_BUY:
                             current     = tick.bid
                             profit_pips = current - pos.price_open
