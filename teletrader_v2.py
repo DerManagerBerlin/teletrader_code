@@ -657,32 +657,55 @@ def parse_scalp_signal(text: str) -> dict:
         return float(s.replace(",", "."))
 
     t = (text or "").replace("\u00a0", " ")
+    # Format A (alt): "SCALP IDEE - XAUUSD" + "ICH GEHE BUY"
+    # Format B (neu): "NEUE TRADE IDEE"     + "XAUUSD BUY"
+    direction = None
+    _raw_sym = None
     m_dir = re.search(r"ICH\s+GEHE\s+(BUY|SELL)\b", t, re.I)
-    if not m_dir:
-        return _noise("kein 'ICH GEHE BUY/SELL' -> kein Signal")
-    direction = m_dir.group(1).upper()
-
-    m_sym = re.search(r"SCALP\s+IDEE\W+([A-Za-z]{3,10})\b", t, re.I)
-    if not m_sym:
-        return _noise("kein Instrument im Kopf ('SCALP IDEE - <Symbol>')")
-    _raw_sym = m_sym.group(1).lower()
+    if m_dir:
+        direction = m_dir.group(1).upper()
+        m_sym = re.search(r"SCALP\s+IDEE\W+([A-Za-z]{3,10})\b", t, re.I)
+        if m_sym:
+            _raw_sym = m_sym.group(1).lower()
+    else:
+        # Instrument MUSS direkt vor BUY/SELL stehen - sonst wuerde z.B. die
+        # Tages-Summary ("SELL - TP4 +328 Pips") als Signal gelesen.
+        m_nb = re.search(r"\b([A-Za-z]{3,10})\s*\*{0,2}\s*(BUY|SELL)\b", t, re.I)
+        if m_nb:
+            _raw_sym = m_nb.group(1).lower()
+            direction = m_nb.group(2).upper()
+    if not direction:
+        return _noise("keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')")
+    if not _raw_sym:
+        return _noise("kein Instrument im Kopf")
     if _raw_sym not in _SCALP_SYMS:
-        return _noise("unbekanntes Instrument '" + m_sym.group(1) +
+        return _noise("unbekanntes Instrument '" + _raw_sym +
                       "' - in _SCALP_SYMS ergaenzen")
     symbol = _SCALP_SYMS[_raw_sym]
 
-    m_en = re.search(r"Entry\s*Zone\s*:?\s*" + _SC_NUM + r"(?:\s*[-\u2013\u2014]\s*" + _SC_NUM + r")?", t, re.I)
-    m_sl = re.search(r"\bSL\s*:?\s*" + _SC_NUM, t, re.I)
+    # Trenner zwischen Label und Zahl: ":", Pfeil-Emoji, Sternchen, Leerzeichen.
+    # Bewusst ohne Zeilenumbruch, damit "TP4 -> OPEN" nicht die naechste Zahl greift.
+    _SEP = r"[^\d\n]{0,10}"
+    m_en = re.search(r"Entry\s*Zone" + _SEP + _SC_NUM +
+                     r"(?:[^\d\n]{0,5}" + _SC_NUM + r")?", t, re.I)
+    m_sl = re.search(r"(?:Stop\s*Loss|\bSL)" + _SEP + _SC_NUM, t, re.I)
     if not m_en or not m_sl:
         return _noise("Entry oder SL fehlt")
     e1 = _f(m_en.group(1))
     e2 = _f(m_en.group(2)) if m_en.group(2) else None
-    entry = max(e1, e2) if e2 else e1
-    entry_low = min(e1, e2) if e2 else None
+    if e2 is not None:
+        # Aus einer Zone IMMER die SCHLECHTERE Kante nehmen: beim BUY die obere,
+        # beim SELL die untere. Sonst wird der SL-Abstand kuenstlich klein und
+        # die Lot-Berechnung macht daraus eine Riesenposition.
+        entry     = max(e1, e2) if direction == "BUY" else min(e1, e2)
+        entry_low = min(e1, e2) if direction == "BUY" else max(e1, e2)
+    else:
+        entry = e1
+        entry_low = None
     sl = _f(m_sl.group(1))
 
     tps = {}
-    for m in re.finditer(r"\bTP\s*([1-9])\s*:?\s*" + _SC_NUM, t, re.I):
+    for m in re.finditer(r"\bTP\s*([1-9])" + _SEP + _SC_NUM, t, re.I):
         tps[int(m.group(1))] = _f(m.group(2))
     if 1 not in tps:
         return _noise("TP1 fehlt")
@@ -5318,14 +5341,19 @@ async def main():
                         else:
                             break
                     _stage_old = int(rec.get("stage") or (1 if rec.get("be_done") else 0))
-                    if _reached <= _stage_old or _reached < 1:
+                    # LADDER_START_STAGE: ab welchem erreichten TP die Leiter greift.
+                    # 1 = TP1 -> BE (alt); 2 = erst TP2 -> BE, TP3 -> TP1, TP4 -> TP2
+                    _lstart = max(1, int(os.getenv("LADDER_START_STAGE", "1")))
+                    if _reached <= _stage_old or _reached < _lstart:
                         continue
                     entry = float(rec.get("entry") or pos.price_open)
                     info = mt5.symbol_info(pos.symbol)
                     dig = info.digits if info else 2
-                    _target = entry if _reached == 1 else _tps[_reached - 2]
+                    _target = (entry if _reached == _lstart
+                               else _tps[_reached - _lstart - 1])
                     new_sl = round(float(_target), dig)
-                    _wohin = "Entry/BE" if _reached == 1 else ("TP" + str(_reached - 1))
+                    _wohin = ("Entry/BE" if _reached == _lstart
+                              else ("TP" + str(_reached - _lstart)))
                     # SL nie zurueckziehen
                     if pos.sl:
                         _besser = (new_sl > pos.sl) if is_buy else (new_sl < pos.sl)
