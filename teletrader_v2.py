@@ -2034,9 +2034,9 @@ def execute_layers(sig: TradeSignal) -> list[int]:
             elif result.retcode == mt5.TRADE_RETCODE_DONE:
                 tickets.append(result.order)
                 tp_map[tp_price].append(result.order)
-                # Regex-Kanaele: JEDER Layer kommt in die SL-Leiter, damit bei TP1
-                # auch die Worker (mit hartem TP) auf Break-Even nachgezogen werden.
-                if tp_price and _regex_only_channel(sig.source_channel):
+                # RIGOROSE SL-LEITER: JEDER Layer JEDES Kanals kommt in die Leiter,
+                # damit bei TP1 auch die Worker (mit hartem TP) auf BE nachgezogen werden.
+                if tp_price:
                     mark_runner(result.order, channel=sig.source_channel,
                                 symbol=sig.symbol,
                                 tp1=(sig.tps()[0] if sig.tps() else None),
@@ -2437,6 +2437,9 @@ def attach_levels_to_urgent(symbol, direction, sl, tps, has_open, tickets,
             updated += 1
             log.info("Stufe B Worker #" + str(p.ticket) + " SL=" + str(_sl_v) +
                      " TP=" + str(_tp_v))
+            mark_runner(p.ticket, channel=channel, symbol=symbol,
+                        is_buy=(p.type == mt5.POSITION_TYPE_BUY),
+                        entry=p.price_open, tps=tps)
             continue
         # Fallback: TP vom Broker abgelehnt (z.B. 10016, TP schon durchlaufen)
         # -> wenigstens den SL setzen, damit keine ungesicherte Position bleibt.
@@ -5208,100 +5211,179 @@ async def main():
 
     async def runner_breakeven_checker():
         """
-        Stufe C: Sobald TP1 erreicht ist, SL des Runners auf Entry (Break-Even).
-        Verhindert, dass ein (lone) Runner einen Gewinner zurueck ins Minus reitet.
-        Greift nur auf getrackte Runner mit gespeichertem tp1 (runners.json).
-        Trailing laesst Runner danach in Ruhe -> haelt auf BE, reitet weiter.
+        RIGOROSE SL-LEITER
+          TP1 erreicht -> SL auf Entry (Break-Even)
+          TP2 erreicht -> SL auf TP1
+          TP3 erreicht -> SL auf TP2 ... usw.
+        - jede offene Position mit unserer Magic wird erfasst (Auto-Adoption)
+        - Extremkurs aus M1-Bars: auch Spitzen zwischen zwei Polls zaehlen
+        - SL wird nie zurueckgezogen
+        - ist das Ziel schon wieder durchlaufen (SL nicht mehr setzbar),
+          wird die Position sofort geschlossen statt in den SL zu laufen
         """
-        await asyncio.sleep(30)
+        _poll = max(1.0, float(os.getenv("LADDER_POLL_SECONDS", "3")))
+        _force = os.getenv("LADDER_FORCE_CLOSE", "true").lower() == "true"
+        _peaks = {}
+        await asyncio.sleep(20)
         while True:
             try:
                 recs = _load_runners()
-                if recs:
-                    open_pos = {p.ticket: p for p in (mt5.positions_get() or [])
-                                if p.magic == MAGIC_NUMBER}
-                    # Geschlossene Tickets austragen - sonst waechst runners.json
-                    # bei 30 Signalen/Tag unbegrenzt.
-                    if open_pos:
-                        _stale = [k for k in recs
-                                  if str(k).isdigit() and int(k) not in open_pos]
-                        if len(_stale) > 50:
-                            for _k in _stale:
-                                recs.pop(_k, None)
-                            _save_runners(recs)
-                            log.info("runners.json: " + str(len(_stale)) +
-                                     " geschlossene Tickets entfernt")
-                    for tk_str, rec in list(recs.items()):
-                        if not isinstance(rec, dict):
-                            continue
-                        _tps = rec.get("tps")
-                        if not _tps:
-                            _t1 = rec.get("tp1")
-                            _tps = [float(_t1)] if _t1 is not None else []
-                        if not _tps:
-                            continue
-                        _tps = sorted([float(x) for x in _tps])
-                        try:
-                            tk = int(tk_str)
-                        except Exception:
-                            continue
-                        pos = open_pos.get(tk)
-                        if pos is None:
-                            continue
-                        is_buy = rec.get("is_buy")
-                        if is_buy is None:
-                            is_buy = (pos.type == mt5.ORDER_TYPE_BUY)
-                        if not is_buy:
-                            _tps = list(reversed(_tps))   # SELL: TP1 ist der hoechste Wert
-                        tick = mt5.symbol_info_tick(pos.symbol)
-                        if not tick:
-                            continue
-                        price = tick.bid if is_buy else tick.ask
-                        _reached = 0
-                        for _i, _tp in enumerate(_tps):
-                            _ok = (price >= _tp) if is_buy else (price <= _tp)
-                            if _ok:
-                                _reached = _i + 1
+                open_pos = {p.ticket: p for p in (mt5.positions_get() or [])
+                            if p.magic == MAGIC_NUMBER}
+                # Auto-Adoption: offene Position ohne Eintrag nachtragen, damit
+                # die Leiter keine Position uebersieht (Stufe B, Nachmeldungen,
+                # Positionen von vor dem Patch).
+                _new = 0
+                for _tkk, _pp in open_pos.items():
+                    if str(_tkk) in recs:
+                        continue
+                    _tp0 = float(getattr(_pp, "tp", 0.0) or 0.0)
+                    if _tp0 <= 0:
+                        continue
+                    mark_runner(_tkk, channel="auto", symbol=_pp.symbol,
+                                is_buy=(_pp.type == mt5.ORDER_TYPE_BUY),
+                                entry=_pp.price_open, tps=[_tp0])
+                    _new += 1
+                if _new:
+                    log.info("SL-Leiter: " + str(_new) +
+                             " offene Position(en) nachtraeglich aufgenommen")
+                    recs = _load_runners()
+                # Geschlossene Tickets austragen - sonst waechst runners.json
+                if recs and open_pos:
+                    _stale = [k for k in recs
+                              if str(k).isdigit() and int(k) not in open_pos]
+                    if len(_stale) > 50:
+                        for _k in _stale:
+                            recs.pop(_k, None)
+                        _save_runners(recs)
+                        log.info("runners.json: " + str(len(_stale)) +
+                                 " geschlossene Tickets entfernt")
+                for tk_str, rec in list(recs.items()):
+                    if not isinstance(rec, dict):
+                        continue
+                    _tps = rec.get("tps")
+                    if not _tps:
+                        _t1 = rec.get("tp1")
+                        _tps = [float(_t1)] if _t1 is not None else []
+                    if not _tps:
+                        continue
+                    _tps = sorted([float(x) for x in _tps])
+                    try:
+                        tk = int(tk_str)
+                    except Exception:
+                        continue
+                    pos = open_pos.get(tk)
+                    if pos is None:
+                        _peaks.pop(tk, None)
+                        continue
+                    is_buy = rec.get("is_buy")
+                    if is_buy is None:
+                        is_buy = (pos.type == mt5.ORDER_TYPE_BUY)
+                    if not is_buy:
+                        _tps = list(reversed(_tps))   # SELL: TP1 ist der hoechste Wert
+                    tick = mt5.symbol_info_tick(pos.symbol)
+                    if not tick:
+                        continue
+                    price = tick.bid if is_buy else tick.ask
+                    # Extremkurs seit Eroeffnung: Tick + M1-Hochs/Tiefs +
+                    # gemerkter Peak. Faengt Spitzen, die zwischen zwei Polls
+                    # durch einen TP gelaufen und zurueckgekommen sind.
+                    _ext = price
+                    try:
+                        _bars = mt5.copy_rates_from_pos(pos.symbol,
+                                                        mt5.TIMEFRAME_M1, 0, 240)
+                        if _bars is not None and len(_bars):
+                            _t0 = float(pos.time)
+                            if is_buy:
+                                _v = [float(b["high"]) for b in _bars
+                                      if float(b["time"]) >= _t0]
+                                if _v:
+                                    _ext = max(_ext, max(_v))
                             else:
-                                break
-                        _stage_old = int(rec.get("stage") or (1 if rec.get("be_done") else 0))
-                        if _reached <= _stage_old or _reached < 1:
-                            continue
-                        entry = float(rec.get("entry") or pos.price_open)
-                        info = mt5.symbol_info(pos.symbol)
-                        dig = info.digits if info else 2
-                        _target = entry if _reached == 1 else _tps[_reached - 2]
-                        new_sl = round(float(_target), dig)
-                        if pos.sl:
-                            _besser = (new_sl > pos.sl) if is_buy else (new_sl < pos.sl)
-                            if not _besser:
-                                _mark_runner_stage(tk, _reached)
-                                continue
-                        pt = info.point if info else 0.01
-                        stops = getattr(info, "trade_stops_level", 0) or 0
-                        min_d = max(stops * pt, pt * 10)
-                        too_close = ((new_sl > price - min_d) if is_buy
-                                     else (new_sl < price + min_d))
-                        if too_close:
-                            continue  # SL noch zu nah am Kurs -> warten (kein 10016-Spam)
-                        # TP NICHT loeschen: Worker-Layer behalten ihr Ziel,
-                        # ein echter Runner hat ohnehin tp=0.
-                        r = mt5.order_send({"action": mt5.TRADE_ACTION_SLTP,
-                                            "symbol": pos.symbol, "position": tk,
-                                            "sl": new_sl, "tp": pos.tp})
-                        if r and r.retcode == mt5.TRADE_RETCODE_DONE:
-                            _mark_runner_stage(tk, _reached)
-                            _wohin = "Entry/BE" if _reached == 1 else ("TP" + str(_reached - 1))
-                            log.info("SL-Leiter: #" + str(tk) + " TP" + str(_reached) +
-                                     " erreicht -> SL auf " + _wohin + " (" + str(new_sl) + ")")
-                            await send_notification("\U0001f512 #" + str(tk) + " TP" +
-                                                    str(_reached) + " erreicht - SL auf " +
-                                                    _wohin + " (" + str(new_sl) + ")")
+                                _v = [float(b["low"]) for b in _bars
+                                      if float(b["time"]) >= _t0]
+                                if _v:
+                                    _ext = min(_ext, min(_v))
+                    except Exception:
+                        pass
+                    _pk = _peaks.get(tk)
+                    if _pk is not None:
+                        _ext = max(_ext, _pk) if is_buy else min(_ext, _pk)
+                    _peaks[tk] = _ext
+                    _reached = 0
+                    for _i, _tp in enumerate(_tps):
+                        _ok = (_ext >= _tp) if is_buy else (_ext <= _tp)
+                        if _ok:
+                            _reached = _i + 1
                         else:
-                            log.error("SL-Leiter fehlgeschlagen #" + str(tk) + ": " + str(r))
+                            break
+                    _stage_old = int(rec.get("stage") or (1 if rec.get("be_done") else 0))
+                    if _reached <= _stage_old or _reached < 1:
+                        continue
+                    entry = float(rec.get("entry") or pos.price_open)
+                    info = mt5.symbol_info(pos.symbol)
+                    dig = info.digits if info else 2
+                    _target = entry if _reached == 1 else _tps[_reached - 2]
+                    new_sl = round(float(_target), dig)
+                    _wohin = "Entry/BE" if _reached == 1 else ("TP" + str(_reached - 1))
+                    # SL nie zurueckziehen
+                    if pos.sl:
+                        _besser = (new_sl > pos.sl) if is_buy else (new_sl < pos.sl)
+                        if not _besser:
+                            _mark_runner_stage(tk, _reached)
+                            continue
+                    # Ziel schon wieder durchlaufen -> SL dort nicht mehr setzbar.
+                    _passed = (price <= new_sl) if is_buy else (price >= new_sl)
+                    if _passed:
+                        if _force:
+                            _cp = tick.bid if is_buy else tick.ask
+                            _rc = mt5.order_send({
+                                "action": mt5.TRADE_ACTION_DEAL,
+                                "symbol": pos.symbol, "position": tk,
+                                "volume": float(pos.volume),
+                                "type": (mt5.ORDER_TYPE_SELL if is_buy
+                                         else mt5.ORDER_TYPE_BUY),
+                                "price": _cp, "deviation": 30,
+                                "magic": MAGIC_NUMBER, "comment": "TT-LEITER-BE",
+                                "type_filling": mt5.ORDER_FILLING_IOC})
+                            if _rc and _rc.retcode == mt5.TRADE_RETCODE_DONE:
+                                _mark_runner_stage(tk, _reached)
+                                log.info("SL-Leiter: #" + str(tk) + " TP" +
+                                         str(_reached) + " war erreicht, Kurs schon "
+                                         "zurueck hinter " + _wohin +
+                                         " -> Position bei " + str(_cp) + " geschlossen")
+                                await send_notification(
+                                    "\U0001f6d1 #" + str(tk) + " TP" + str(_reached) +
+                                    " erreicht, Kurs zurueck hinter " + _wohin +
+                                    " - Position bei " + str(_cp) + " geschlossen")
+                                continue
+                            log.error("SL-Leiter Notschluss #" + str(tk) +
+                                      " fehlgeschlagen: " + str(_rc))
+                        continue
+                    pt = info.point if info else 0.01
+                    stops = getattr(info, "trade_stops_level", 0) or 0
+                    min_d = max(stops * pt, pt * 10)
+                    too_close = ((new_sl > price - min_d) if is_buy
+                                 else (new_sl < price + min_d))
+                    if too_close:
+                        continue  # SL noch zu nah am Kurs -> naechster Durchlauf
+                    # TP NICHT loeschen: Worker behalten ihr Ziel,
+                    # ein echter Runner hat ohnehin tp=0.
+                    r = mt5.order_send({"action": mt5.TRADE_ACTION_SLTP,
+                                        "symbol": pos.symbol, "position": tk,
+                                        "sl": new_sl, "tp": pos.tp})
+                    if r and r.retcode == mt5.TRADE_RETCODE_DONE:
+                        _mark_runner_stage(tk, _reached)
+                        log.info("SL-Leiter: #" + str(tk) + " TP" + str(_reached) +
+                                 " erreicht -> SL auf " + _wohin + " (" + str(new_sl) + ")")
+                        await send_notification("\U0001f512 #" + str(tk) + " TP" +
+                                                str(_reached) + " erreicht - SL auf " +
+                                                _wohin + " (" + str(new_sl) + ")")
+                    else:
+                        log.error("SL-Leiter fehlgeschlagen #" + str(tk) + ": " + str(r))
             except Exception as _e:
                 log.error("runner_breakeven_checker: " + str(_e))
-            await asyncio.sleep(15)
+            await asyncio.sleep(_poll)
 
     async def api_alert_watcher():
         """Warnt per Telegram, wenn der Interpreter API_ALERT.flag setzt
