@@ -607,6 +607,23 @@ def _norm_lot(symbol: str, lot: float) -> float:
         return lot
 
 
+def _target_risk_pct(channel: str = "") -> float:
+    """Zielrisiko je Signal (alle Layer zusammen) als Anteil der Balance.
+    TARGET_RISK_PCT_<KANALTOKEN> schlaegt TARGET_RISK_PCT. 0 = aus."""
+    cn = (channel or "").lower()
+    for tok in re.findall(r"[a-z]{3,}", cn):
+        v = os.getenv("TARGET_RISK_PCT_" + tok.upper())
+        if v:
+            try:
+                return float(v)
+            except ValueError:
+                pass
+    try:
+        return float(os.getenv("TARGET_RISK_PCT", "0"))
+    except ValueError:
+        return 0.0
+
+
 def _lot_risk_ok(symbol: str, lot: float, sl_dist: float, balance: float,
                  channel: str = "") -> bool:
     """False, wenn schon das Broker-Minimum mehr riskiert als erlaubt."""
@@ -1756,6 +1773,24 @@ def execute_layers(sig: TradeSignal) -> list[int]:
                  str(conf_scale) + "=" + str(lot_per_layer))
 
     # ── Max 10% Risiko pro Trade ──────────────────────────────────────────────
+    # Zielrisiko-Sizing: Lot aus SL-Distanz statt festem Lot pro Guthaben.
+    _trg = _target_risk_pct(getattr(sig, "source_channel", ""))
+    if _trg > 0 and sl_distance > 0 and sig.symbol:
+        _si_t = mt5.symbol_info(sig.symbol)
+        if _si_t and getattr(_si_t, "trade_tick_size", 0):
+            _pv = _si_t.trade_tick_value / _si_t.trade_tick_size
+            if _pv > 0:
+                _want = balance * _trg / max(1, num_layers) / (sl_distance * _pv)
+                _want = _norm_lot(sig.symbol, _want)
+                if _want != lot_per_layer:
+                    log.info("Zielrisiko " + str(round(_trg * 100, 2)) + "%: SL=" +
+                             str(round(sl_distance, 2)) + " -> Lot " +
+                             str(lot_per_layer) + " -> " + str(_want) + " x " +
+                             str(num_layers) + " Layer = " +
+                             str(round(_want * sl_distance * _pv * num_layers, 2)) +
+                             " je Signal")
+                lot_per_layer = _want
+
     MAX_RISK_PCT = _max_risk_pct_fn(getattr(sig, "source_channel", ""))
     if sl_distance > 0 and sig.symbol:
         sym_info_risk = mt5.symbol_info(sig.symbol)
