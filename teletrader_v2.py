@@ -229,6 +229,8 @@ PENDING_EXPIRY_H  = int(os.getenv("PENDING_EXPIRY_HOURS", "12"))   # Pending Ord
 MAGIC_NUMBER       = int(os.getenv("MAGIC_NUMBER", "88888"))
 MAX_POS_PER_SYMBOL = int(os.getenv("MAX_POS_PER_SYMBOL", "6"))
 _channel_streak: dict = {}   # +1 pro Win, -1 pro SL, reset bei 0
+_channel_batch_pnl: dict = {}    # channel -> aufsummierter Gewinn des laufenden Signals
+_channel_pause_until: dict = {}  # channel -> Ende der Streak-Sperre
 _channel_open_tickets: dict = {}  # channel -> set of ticket numbers
 _daily_audit: dict = {}            # channel -> {msgs, trades, noise, decisions}
 DUPLICATE_WINDOW       = 900    # 15 Min Text-Hash-Duplikat
@@ -4202,11 +4204,39 @@ async def process_signal(sig: TradeSignal):
     # wurde sonst als GTMo gewertet und umging den Lose-Streak-Schutz.
     _is_gtmo = any(k in sig.source_channel.lower()
                    for k in ("gtmo", "goldtrader"))
-    if not _is_gtmo and _channel_streak.get(sig.source_channel, 0) <= -3:
-        log.warning("SKIP: " + sig.source_channel + " hat 3 SLs in Folge → pausiert")
-        await send_notification("⏸ " + sig.source_channel +
-                                " pausiert (3 SLs in Folge)")
-        return
+    try:
+        _streak_lim = int(float(os.getenv("LOSE_STREAK_LIMIT", "3")))
+    except (TypeError, ValueError):
+        _streak_lim = 3
+    try:
+        _streak_pause = float(os.getenv("LOSE_STREAK_PAUSE_MIN", "60"))
+    except (TypeError, ValueError):
+        _streak_pause = 60.0
+    if (_streak_lim > 0 and not _is_gtmo
+            and _channel_streak.get(sig.source_channel, 0) <= -_streak_lim):
+        _ch_s  = sig.source_channel
+        _now_s = datetime.now()
+        _until = _channel_pause_until.get(_ch_s)
+        if _until is None:
+            _channel_pause_until[_ch_s] = _now_s + timedelta(minutes=_streak_pause)
+            _until = _channel_pause_until[_ch_s]
+        elif _now_s >= _until:
+            # Sperrfrist abgelaufen -> Zaehler zuruecksetzen und weiterhandeln.
+            # Ohne das bliebe der Kanal dauerhaft gesperrt: ein pausierter Kanal
+            # handelt nicht, also kann es keinen Gewinn geben, der ihn loest.
+            _channel_streak[_ch_s] = 0
+            _channel_pause_until.pop(_ch_s, None)
+            log.info("Streak-Sperre fuer " + _ch_s[:14] +
+                     " abgelaufen - Zaehler zurueckgesetzt")
+            _until = None
+        if _until is not None:
+            log.warning("SKIP: " + _ch_s + " hat " + str(_streak_lim) +
+                        " Verlustsignale in Folge -> pausiert bis " +
+                        _until.strftime("%H:%M"))
+            await send_notification("⏸ " + _ch_s + " pausiert (" +
+                                    str(_streak_lim) + " Verlustsignale) bis " +
+                                    _until.strftime("%H:%M"))
+            return
 
     # ── Goldhunter: max 3 offene Positionen (kein Overtrading) ───────────────
     if _is_goldhunter:
@@ -5144,21 +5174,39 @@ async def main():
                             break
                     if not ch:
                         continue
-                    # Win oder Loss?
-                    if deal.profit > 0:
-                        prev = _channel_streak.get(ch, 0)
+                    # Ergebnis NICHT je Layer werten - ein Signal besteht aus
+                    # mehreren Layern und ergibt erst als Summe ein Resultat.
+                    _channel_batch_pnl[ch] = _channel_batch_pnl.get(ch, 0.0) + deal.profit
+                # Hat ein Kanal keine offenen Tickets mehr, ist sein Signal fertig
+                # -> das Nettoergebnis zaehlt als EIN Gewinn oder EIN Verlust.
+                try:
+                    _lim = int(float(os.getenv("LOSE_STREAK_LIMIT", "3")))
+                except (TypeError, ValueError):
+                    _lim = 3
+                for ch, _pnl in list(_channel_batch_pnl.items()):
+                    if _channel_open_tickets.get(ch):
+                        continue
+                    _channel_batch_pnl.pop(ch, None)
+                    if _pnl == 0:
+                        continue
+                    prev = _channel_streak.get(ch, 0)
+                    if _pnl > 0:
                         _channel_streak[ch] = max(0, prev) + 1
+                        _channel_pause_until.pop(ch, None)
                         log.info("Streak " + ch[:12] + ": +" +
-                                 str(_channel_streak[ch]))
-                    elif deal.profit < 0:
-                        prev = _channel_streak.get(ch, 0)
+                                 str(_channel_streak[ch]) + " (Signal " +
+                                 str(round(_pnl, 2)) + ")")
+                    else:
                         _channel_streak[ch] = min(0, prev) - 1
                         streak = _channel_streak[ch]
-                        log.info("Streak " + ch[:12] + ": " + str(streak))
-                        if streak == -3:
-                            log.warning("STREAK -3: " + ch + " → nächste Signale pausiert")
+                        log.info("Streak " + ch[:12] + ": " + str(streak) +
+                                 " (Signal " + str(round(_pnl, 2)) + ")")
+                        if _lim > 0 and streak == -_lim:
+                            log.warning("STREAK " + str(streak) + ": " + ch +
+                                        " -> naechste Signale pausiert")
                             await send_notification(
-                                "⚠️ " + ch + " – 3 SLs in Folge. Kanal pausiert bis zur nächsten Win.")
+                                "⚠️ " + ch + " - " + str(_lim) +
+                                " Verlustsignale in Folge. Kanal pausiert.")
             except Exception as e:
                 log.error("streak_tracker: " + str(e))
             await asyncio.sleep(60)
