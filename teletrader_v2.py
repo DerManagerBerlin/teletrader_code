@@ -234,7 +234,13 @@ _channel_pause_until: dict = {}  # channel -> Ende der Streak-Sperre
 _channel_open_tickets: dict = {}  # channel -> set of ticket numbers
 _daily_audit: dict = {}            # channel -> {msgs, trades, noise, decisions}
 DUPLICATE_WINDOW       = 900    # 15 Min Text-Hash-Duplikat
-ENTRY_DUPLICATE_WINDOW = 21600  # 6 Std Entry-Preis-Duplikat
+# Entry-Preis-Duplikat: Fenster in Minuten, ueber ENTRY_DUP_WINDOW_MIN
+# einstellbar (Default 15). Frueher fest 6 Stunden - viel zu lang fuer einen
+# Scalping-Kanal, der mehrmals taeglich in derselben Preiszone handelt.
+try:
+    ENTRY_DUPLICATE_WINDOW = int(float(os.getenv("ENTRY_DUP_WINDOW_MIN", "15")) * 60)
+except (TypeError, ValueError):
+    ENTRY_DUPLICATE_WINDOW = 900
 SL_COOLDOWN_SECONDS    = int(float(os.getenv("SL_COOLDOWN_SECONDS", "7200")))
 BACKUP_LOT_MULTIPLIER  = float(os.getenv("BACKUP_LOT_MULTIPLIER", "2.0"))
 TRADING_HOUR_START     = int(os.getenv("TRADING_HOUR_START", "6"))   # 06:00
@@ -426,6 +432,7 @@ def distribute_layers(num_layers: int, tps: list, channel: str = "") -> dict:
       → OPEN:3
     """
     num_tps = len(tps)
+
 
     # RUNNER_ONLY: kein Layer bekommt ein festes Ziel. Die Position laeuft
     # offen und wird von der SL-Leiter (TP1 -> BE, TP2 -> TP1, ...) und dem
@@ -1444,7 +1451,9 @@ def is_entry_duplicate(direction: str, symbol: str, entry: float, channel: str =
         if ch_ref == channel and d == direction and sym == symbol and abs(e_ref - entry) <= tol:
             age = int((now - t).total_seconds() / 60)
             log.info("Entry-Dup [" + str(channel) + "]: " + direction + " " + symbol +
-                     " @ " + str(entry) + " = " + str(e_ref) + " vor " + str(age) + " Min")
+                     " @ " + str(entry) + " = " + str(e_ref) + " vor " + str(age) +
+                     " Min (Toleranz " + str(round(tol, 2)) + ", Fenster " +
+                     str(int(ENTRY_DUPLICATE_WINDOW / 60)) + " Min)")
             return True
     state.seen_entries[(channel, direction, symbol, round(entry, 1))] = now
     return False
@@ -4290,7 +4299,7 @@ async def process_signal(sig: TradeSignal):
                                 " gleiche Zone gesperrt auf " + sig.symbol)
         return
 
-    # Entry-Duplikat (4h) – Backup-Signale ebenfalls ausnehmen
+    # Entry-Duplikat (Fenster: ENTRY_DUP_WINDOW_MIN) - Backup-Signale ausgenommen
     if not sig.is_backup and sig.entry and is_entry_duplicate(
             sig.direction, sig.symbol, sig.entry, sig.source_channel):
         state.daily_stats["skipped"] += 1
