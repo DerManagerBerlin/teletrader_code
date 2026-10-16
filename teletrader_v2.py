@@ -427,6 +427,14 @@ def distribute_layers(num_layers: int, tps: list, channel: str = "") -> dict:
     """
     num_tps = len(tps)
 
+    # RUNNER_ONLY: kein Layer bekommt ein festes Ziel. Die Position laeuft
+    # offen und wird von der SL-Leiter (TP1 -> BE, TP2 -> TP1, ...) und dem
+    # Trailing Stop gefuehrt. Damit ist der Ertrag nach oben nicht gedeckelt.
+    if os.getenv("RUNNER_ONLY", "false").lower() == "true":
+        log.info("Layer-Verteilung: " + str(num_layers) +
+                 " Layer, alle ohne festes Ziel (RUNNER_ONLY)")
+        return {0: num_layers}
+
     # Runner-Layer (TP=0) nur wenn RUNNER_LAYER_ENABLED=true; sonst alle Layer mit hartem TP
     open_layers    = 1 if os.getenv("RUNNER_LAYER_ENABLED", "false").lower() == "true" else 0
     _n_ch, _r_ch = _channel_layers(channel)
@@ -1924,57 +1932,65 @@ def execute_layers(sig: TradeSignal) -> list[int]:
             # Limit Order: explizit wenn is_limit=True ODER Entry weicht vom Markt ab
             # Schwelle: 0.1% des Preises (symbol-unabhängig: funktioniert für Gold UND BTC)
             limit_threshold = price * 0.001  # 0.1%
-            is_explicit_limit = sig.is_limit and sig.entry
-            is_price_limit = sig.entry and abs(sig.entry - price) > limit_threshold
+            # -- Einstieg ueber die Zone staffeln ("reinlayern") --------------
+            # Layer 1 am marktnahen (schlechteren) Zonenrand, die weiteren
+            # gestaffelt zum guenstigeren Rand hin. Jeder Layer entscheidet
+            # fuer sich, ob er als Market- oder als Limit-Order aufgegeben wird.
+            _dig_z = getattr(symbol_info, "digits", 2) if symbol_info else 2
+            _e_a = float(sig.entry or 0.0)
+            _e_b = float(getattr(sig, "entry_low", 0.0) or _e_a)
+            _z_lo, _z_hi = min(_e_a, _e_b), max(_e_a, _e_b)
+            _entry_layer = _e_a
+            _staffel = (os.getenv("ZONE_STAFFELN", "true").lower() == "true"
+                        and num_layers > 1 and _z_hi > _z_lo)
+            if _staffel:
+                _st = (_z_hi - _z_lo) / (num_layers - 1)
+                _entry_layer = (_z_hi - _st * (layer_num - 1)
+                                if sig.direction == "BUY"
+                                else _z_lo + _st * (layer_num - 1))
+                _entry_layer = round(_entry_layer, _dig_z)
+                log.info("Zone-Staffel " + str(layer_num) + "/" + str(num_layers) +
+                         ": Ziel " + str(_entry_layer) + " (Zone " + str(_z_lo) +
+                         "-" + str(_z_hi) + ")")
+
+            is_explicit_limit = sig.is_limit and _entry_layer
+            is_price_limit = _entry_layer and (
+                abs(_entry_layer - price) > limit_threshold
+                or (_staffel and layer_num > 1))
 
             is_pending = False  # default: Market Order
             if is_explicit_limit or is_price_limit:
                 if sig.direction == "BUY":
-                    # BUY LIMIT: entry unter aktuellem Preis (warte auf Rücksetzer)
-                    # BUY STOP: entry über aktuellem Preis (Breakout)
-                    if sig.entry < price - _mkt_band:
-                        order_type = mt5.ORDER_TYPE_BUY_LIMIT   # Kurs kommt von oben runter
+                    # BUY LIMIT: Ziel unter aktuellem Preis (warte auf Ruecksetzer)
+                    if _entry_layer < price - _mkt_band:
+                        order_type = mt5.ORDER_TYPE_BUY_LIMIT
                     else:
-                        # Entry ueber aktuellem Kurs: pruefen ob schon durchgelaufen
-                        # Signal sagt "BUY LIMIT" aber Entry ist hoher als Markt
-                        # → als Market ausfuehren (Entry bereits vorbei)
+                        # Ziel ueber aktuellem Kurs -> bereits durchlaufen, Market
                         is_pending = False
                         order_type = mt5.ORDER_TYPE_BUY
                         price = tick.ask
-                        log.info("BUY: Entry " + str(sig.entry) + " > Ask " +
-                                 str(tick.ask) + " → Market (Entry bereits durchlaufen)")
+                        log.info("BUY: Ziel " + str(_entry_layer) + " > Ask " +
+                                 str(tick.ask) + " -> Market (bereits durchlaufen)")
                 else:  # SELL
-                    if sig.entry > price + _mkt_band:
-                        # Entry über Markt → SELL LIMIT (warte bis Kurs steigt)
+                    if _entry_layer > price + _mkt_band:
                         order_type = mt5.ORDER_TYPE_SELL_LIMIT
                     else:
-                        # Entry unter Markt → sofort Market SELL
-                        # (Entry bereits durchgelaufen, günstigerer Preis verpasst)
                         is_pending = False
                         order_type = mt5.ORDER_TYPE_SELL
                         price = tick.bid
-                        log.info("SELL Market: Entry " + str(sig.entry) +
-                                 " < Bid " + str(round(tick.bid,5)) +
-                                 " → sofort ausführen")
+                        log.info("SELL: Ziel " + str(_entry_layer) + " < Bid " +
+                                 str(round(tick.bid, 5)) + " -> Market")
                 is_pending = order_type in (
                     mt5.ORDER_TYPE_BUY_LIMIT, mt5.ORDER_TYPE_SELL_LIMIT,
                     mt5.ORDER_TYPE_BUY_STOP,  mt5.ORDER_TYPE_SELL_STOP,
                 )
                 if is_pending:
-                    # Zone-Entry: Layers gleichmässig über Zone verteilen
-                    # z.B. entry=4177, entry_low=4172 → Layer 1@4177, Layer 2@4175, etc.
-                    entry_low = getattr(sig, "entry_low", None)
-                    if entry_low and entry_low < sig.entry and num_layers > 1:
-                        zone_range = sig.entry - entry_low
-                        step = zone_range / (num_layers - 1) if num_layers > 1 else 0
-                        zone_price = sig.entry - (step * (layer_num - 1))
-                        price = round(zone_price, 2)
-                    elif order_type == mt5.ORDER_TYPE_BUY_LIMIT:
-                        price = sig.entry + LIMIT_BUFFER_PIPS
+                    if order_type == mt5.ORDER_TYPE_BUY_LIMIT:
+                        price = round(_entry_layer + LIMIT_BUFFER_PIPS, _dig_z)
                     elif order_type == mt5.ORDER_TYPE_SELL_LIMIT:
-                        price = sig.entry - LIMIT_BUFFER_PIPS
+                        price = round(_entry_layer - LIMIT_BUFFER_PIPS, _dig_z)
                     else:
-                        price = sig.entry
+                        price = _entry_layer
                 log.info("Pending Order: " + str(order_type) +
                          " @ " + str(price) + " (Markt: " +
                          str(tick.ask if sig.direction == "BUY" else tick.bid) + ")")
