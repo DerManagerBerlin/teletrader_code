@@ -1,0 +1,4 @@
+# Eine Zeile pro Patch-Skript, in der Reihenfolge der Anwendung.
+# ttpull.sh auf dem VPS holt sie alle 5 Minuten, wendet neue einmalig an,
+# rollt bei Fehler zurueck und startet den Bot neu.
+patch_26_tp1.py
