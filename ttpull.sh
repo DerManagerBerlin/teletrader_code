@@ -76,10 +76,22 @@ if [ -n "$RESTART_CMD" ]; then
     bash -c "$RESTART_CMD" >>"$LOG" 2>&1
 elif [ -n "$UNIT" ]; then
     say "Neustart ueber systemd: $UNIT"
-    systemctl restart "$UNIT" >>"$LOG" 2>&1 \
-        || systemctl --user restart "$UNIT" >>"$LOG" 2>&1 \
-        || sudo -n systemctl restart "$UNIT" >>"$LOG" 2>&1 \
-        || err "systemctl restart $UNIT fehlgeschlagen"
+    # --no-ask-password: unter cron gibt es kein TTY, ein polkit-Passwortdialog
+    # wuerde den Lauf blockieren. sudo -n zuerst, weil eine System-Unit Root
+    # braucht und der unprivilegierte Versuch sonst nur den Dialog ausloest.
+    if sudo -n systemctl --no-ask-password restart "$UNIT" >>"$LOG" 2>&1; then
+        :
+    elif systemctl --no-ask-password --user restart "$UNIT" >>"$LOG" 2>&1; then
+        :
+    elif systemctl --no-ask-password restart "$UNIT" >>"$LOG" 2>&1; then
+        :
+    else
+        err "Neustart von $UNIT nicht moeglich - Code ist gepatcht, laeuft aber"
+        err "noch nicht. Einmalig erlauben: echo '$(whoami) ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart $UNIT' | sudo tee /etc/sudoers.d/teletrader-restart"
+    fi
+    sleep 5
+    if systemctl is-active --quiet "$UNIT"; then say "$UNIT laeuft"
+    else err "$UNIT ist NICHT aktiv - von Hand pruefen"; fi
 elif [ -n "$PID" ]; then
     CMD=$(tr '\0' ' ' < "/proc/$PID/cmdline")
     CWD=$(readlink "/proc/$PID/cwd")
