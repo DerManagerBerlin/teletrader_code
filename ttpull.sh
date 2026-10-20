@@ -79,7 +79,7 @@ elif [ -n "$UNIT" ]; then
     # --no-ask-password: unter cron gibt es kein TTY, ein polkit-Passwortdialog
     # wuerde den Lauf blockieren. sudo -n zuerst, weil eine System-Unit Root
     # braucht und der unprivilegierte Versuch sonst nur den Dialog ausloest.
-    if sudo -n systemctl --no-ask-password restart "$UNIT" >>"$LOG" 2>&1; then
+    if sudo -n systemctl restart "$UNIT" >>"$LOG" 2>&1; then
         :
     elif systemctl --no-ask-password --user restart "$UNIT" >>"$LOG" 2>&1; then
         :
