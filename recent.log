@@ -1,40 +1,3 @@
-2026-10-13 09:42:05,734 [INFO] Runner markiert #409150664 -> runners.json
-2026-10-13 09:42:05,735 [INFO] Layer 2/3 Ticket #409150664 TP=83775.32
-2026-10-13 09:42:06,147 [INFO] Runner markiert #409150679 -> runners.json
-2026-10-13 09:42:06,147 [INFO] Layer 3/3 Ticket #409150679 TP=83895.32
-2026-10-13 09:42:06,148 [INFO] TP-Layer Map: {'tp1': [409150606], 'tp2': [409150664], 'tp3': [409150679]}
-2026-10-13 09:42:06,148 [INFO] Phase 3: Auto-Trade BTCUSD | 3 Tickets
-2026-10-13 09:43:31,088 [WARNING] Server closed the connection: [WinError 64] Network name deleted
-2026-10-13 09:43:31,089 [INFO] Connection closed while receiving data: [WinError 64] Network name deleted
-2026-10-13 09:43:31,089 [INFO] Closing current connection to begin reconnect...
-2026-10-13 09:43:31,090 [INFO] Connecting to 149.154.167.51:443/TcpFull...
-2026-10-13 09:43:31,092 [INFO] <class 'ConnectionResetError'> during disconnect: [WinError 64] Network name deleted
-2026-10-13 09:43:31,102 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
-2026-10-13 09:43:50,293 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-13 09:43:50,435 [INFO] Verpasstes Signal ausfuehren [BTC SCALPING⚡️] 09:42: TRADE conf=99%
-2026-10-13 09:43:50,436 [INFO] Verpasstes Signal uebersprungen: bereits 3 Position(en) offen
-2026-10-13 09:46:00,464 [INFO] 📨 Neue Nachricht aus BTC SCALPING⚡️: '❌ SL HIT –120 PIPS'
-2026-10-13 09:46:00,465 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-13 09:46:23,541 [INFO] Prioritaet freigegeben: BTCUSD (BTC SCALPING⚡️)
-2026-10-13 09:46:23,547 [INFO] prune_runners: 3 verwaiste entfernt
-2026-10-13 09:46:43,498 [INFO] Befehl empfangen: /status
-2026-10-13 09:49:54,945 [INFO] Telethon Wakeup-Ping
-2026-10-13 09:53:50,438 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-13 09:53:50,600 [INFO] ✅ Keine verpassten Signale
-2026-10-13 09:54:05,051 [INFO] 📨 Neue Nachricht aus BTC SCALPING⚡️: '📊 SCALP IDEE – BTCUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 83619.4'
-2026-10-13 09:54:05,056 [INFO] Lot-Sizing: Balance=973.0$  Lot=0.05  Kanal=BTC SCALPING
-
-⚡ SIGNAL [09:54:05] aus: BTC SCALPING⚡️
-  BUY BTCUSD | 4 Layer à 0.01 Lot
-  SL: 83499.47 | TPs: [83679.47, 83739.47, 83859.47, 83979.47]
-  Verteilung: {83679.47: 1, 83739.47: 1, 83859.47: 1, 83979.47: 1}
-2026-10-13 09:54:05,057 [INFO] Lot-Sizing: Balance=973.0$  Lot=0.05  Kanal=BTC SCALPING
-2026-10-13 09:54:05,058 [INFO] Lot-Normalisierung BTCUSD: 0.1510752856527778 -> 0.15 (min 0.01, step 0.01)
-2026-10-13 09:54:05,059 [INFO] Zielrisiko 5.0%: SL=120.0 -> Lot 0.05 -> 0.15 x 3 Layer = 48.32 je Signal
-2026-10-13 09:54:05,467 [INFO] Runner markiert #409158894 -> runners.json
-2026-10-13 09:54:05,467 [INFO] Layer 1/3 Ticket #409158894 TP=83679.47
-2026-10-13 09:54:05,875 [INFO] Runner markiert #409158898 -> runners.json
-2026-10-13 09:54:05,875 [INFO] Layer 2/3 Ticket #409158898 TP=83739.47
 2026-10-13 09:54:06,285 [INFO] Runner markiert #409158901 -> runners.json
 2026-10-13 09:54:06,285 [INFO] Layer 3/3 Ticket #409158901 TP=83859.47
 2026-10-13 09:54:06,285 [INFO] TP-Layer Map: {'tp1': [409158894], 'tp2': [409158898], 'tp3': [409158901]}
@@ -7998,3 +7961,40 @@ Failed to restart teletrader.service: Unit teletrader.service not found.
 2026-10-21 15:18:31,783 [INFO] <class 'ConnectionResetError'> during disconnect: [WinError 64] Network name deleted
 2026-10-21 15:18:31,793 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
 2026-10-21 15:23:37,092 [INFO] Telethon Wakeup-Ping
+2026-10-21 15:27:19,644 [INFO] Trail-SL #417547834 XAUUSD.s BUY -> SL:4131.48 (+55.7p)
+2026-10-21 15:27:19,747 [INFO] Trail-SL #417547838 XAUUSD.s BUY -> SL:4131.48 (+55.4p)
+2026-10-21 15:27:19,848 [INFO] Trail-SL #417547853 XAUUSD.s BUY -> SL:4131.48 (+50.8p)
+2026-10-21 15:27:30,848 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-21 15:27:30,951 [INFO] ✅ Keine verpassten Signale
+2026-10-21 15:27:40,062 [INFO] MFE #417547826 XAUUSD.s: Hoch +5.6 Punkte, Stufe 0
+2026-10-21 15:27:40,077 [INFO] prune_runners: 1 verwaiste entfernt
+2026-10-21 15:27:40,180 [INFO] Trail-SL #417547834 XAUUSD.s BUY -> SL:4132.08 (+58.1p)
+2026-10-21 15:27:40,283 [INFO] Trail-SL #417547838 XAUUSD.s BUY -> SL:4132.08 (+58.5p)
+2026-10-21 15:27:40,383 [INFO] Trail-SL #417547853 XAUUSD.s BUY -> SL:4132.08 (+53.7p)
+2026-10-21 15:28:20,525 [INFO] Trail-SL #417547834 XAUUSD.s BUY -> SL:4132.12 (+62.9p)
+2026-10-21 15:28:20,629 [INFO] Trail-SL #417547838 XAUUSD.s BUY -> SL:4132.12 (+62.8p)
+2026-10-21 15:28:20,727 [INFO] Trail-SL #417547853 XAUUSD.s BUY -> SL:4132.12 (+58.3p)
+2026-10-21 15:28:30,833 [INFO] Trail-SL #417547834 XAUUSD.s BUY -> SL:4132.36 (+65.5p)
+2026-10-21 15:28:30,932 [INFO] Trail-SL #417547838 XAUUSD.s BUY -> SL:4132.47 (+66.5p)
+2026-10-21 15:28:31,031 [INFO] Trail-SL #417547853 XAUUSD.s BUY -> SL:4132.58 (+62.9p)
+2026-10-21 15:28:33,199 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
+2026-10-21 15:28:33,201 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-10-21 15:28:39,508 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-21 15:28:41,136 [INFO] Trail-SL #417547834 XAUUSD.s BUY -> SL:4132.6 (+59.2p)
+2026-10-21 15:28:41,237 [INFO] Trail-SL #417547838 XAUUSD.s BUY -> SL:4132.6 (+58.4p)
+2026-10-21 15:28:41,338 [INFO] Trail-SL #417547853 XAUUSD.s BUY -> SL:4132.6 (+53.7p)
+2026-10-21 15:29:01,452 [INFO] Trail-SL #417547834 XAUUSD.s BUY -> SL:4132.98 (+72.3p)
+2026-10-21 15:29:01,553 [INFO] Trail-SL #417547838 XAUUSD.s BUY -> SL:4132.98 (+71.1p)
+2026-10-21 15:29:01,654 [INFO] Trail-SL #417547853 XAUUSD.s BUY -> SL:4132.98 (+66.5p)
+2026-10-21 15:29:11,903 [INFO] Trail-SL #417547834 XAUUSD.s BUY -> SL:4133.42 (+73.4p)
+2026-10-21 15:29:12,003 [INFO] Trail-SL #417547838 XAUUSD.s BUY -> SL:4133.42 (+75.8p)
+2026-10-21 15:29:12,103 [INFO] Trail-SL #417547853 XAUUSD.s BUY -> SL:4133.42 (+71.0p)
+2026-10-21 15:29:22,519 [INFO] Trail-SL #417547834 XAUUSD.s BUY -> SL:4133.76 (+79.8p)
+2026-10-21 15:29:22,621 [INFO] Trail-SL #417547838 XAUUSD.s BUY -> SL:4133.76 (+79.3p)
+2026-10-21 15:29:22,725 [INFO] Trail-SL #417547853 XAUUSD.s BUY -> SL:4133.76 (+74.6p)
+2026-10-21 15:29:32,832 [INFO] Trail-SL #417547834 XAUUSD.s BUY -> SL:4134.93 (+91.8p)
+2026-10-21 15:29:32,934 [INFO] Trail-SL #417547838 XAUUSD.s BUY -> SL:4135.16 (+93.4p)
+2026-10-21 15:29:33,035 [INFO] Trail-SL #417547853 XAUUSD.s BUY -> SL:4135.21 (+89.2p)
+2026-10-21 15:29:43,151 [INFO] Trail-SL #417547834 XAUUSD.s BUY -> SL:4136.22 (+100.4p)
+2026-10-21 15:29:43,256 [INFO] Trail-SL #417547838 XAUUSD.s BUY -> SL:4136.22 (+99.3p)
+2026-10-21 15:29:43,360 [INFO] Trail-SL #417547853 XAUUSD.s BUY -> SL:4136.22 (+94.3p)
