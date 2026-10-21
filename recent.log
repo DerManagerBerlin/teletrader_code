@@ -1,10 +1,3 @@
-2026-10-13 08:30:19,697 [INFO] Zielrisiko 5.0%: SL=120.0 -> Lot 0.05 -> 0.15 x 3 Layer = 48.27 je Signal
-2026-10-13 08:30:20,124 [INFO] Runner markiert #409105484 -> runners.json
-2026-10-13 08:30:20,125 [INFO] Layer 1/3 Ticket #409105484 TP=83872.48
-2026-10-13 08:30:20,539 [INFO] Runner markiert #409105486 -> runners.json
-2026-10-13 08:30:20,540 [INFO] Layer 2/3 Ticket #409105486 TP=83812.48
-2026-10-13 08:30:20,954 [INFO] Runner markiert #409105491 -> runners.json
-2026-10-13 08:30:20,955 [INFO] Layer 3/3 Ticket #409105491 TP=83692.48
 2026-10-13 08:30:20,955 [INFO] TP-Layer Map: {'tp1': [409105484], 'tp2': [409105486], 'tp3': [409105491]}
 2026-10-13 08:30:20,957 [INFO] Phase 3: Auto-Trade BTCUSD | 3 Tickets
 2026-10-13 08:33:49,610 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
@@ -7998,3 +7991,10 @@ Failed to restart teletrader.service: Unit teletrader.service not found.
 2026-10-21 13:53:33,611 [INFO] Telethon Wakeup-Ping
 2026-10-21 13:57:29,467 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-21 13:57:29,570 [INFO] ✅ Keine verpassten Signale
+2026-10-21 14:00:21,871 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4131.4'
+2026-10-21 14:00:21,875 [INFO] 🔇 NOISE: Regex: Markt 46.1 Pips GEGEN uns vom Entry 4131.48 weg (Kurs 4126.87, max 18.0 Pips)
+2026-10-21 14:00:29,284 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-21 14:00:47,630 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
+2026-10-21 14:00:47,631 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-10-21 14:00:49,666 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-21 14:03:33,888 [INFO] Telethon Wakeup-Ping
