@@ -1767,6 +1767,25 @@ def execute_layers(sig: TradeSignal) -> list[int]:
     sl_distance = 0.0
     if sig.entry and sig.sl:
         sl_distance = abs(sig.entry - sig.sl)
+        # Der Stop liegt fest, unser Einstieg nicht. Ist der Markt schon gegen
+        # uns gelaufen, wird die echte Distanz groesser - und mit ihr das
+        # Risiko. Fuer die Lot- und Layerrechnung deshalb den schlechteren der
+        # beiden Bezugspunkte nehmen.
+        if os.getenv("SL_DIST_VOM_MARKT", "true").lower() == "true":
+            try:
+                _tk_r = mt5.symbol_info_tick(sig.symbol)
+                if _tk_r:
+                    _ref_r = _tk_r.ask if sig.direction == "BUY" else _tk_r.bid
+                    _d_markt = abs(_ref_r - sig.sl)
+                    if _d_markt > sl_distance:
+                        log.info("SL-Distanz vom Markt statt vom Signal: " +
+                                 str(round(sl_distance, 2)) + " -> " +
+                                 str(round(_d_markt, 2)) + " (Einstieg " +
+                                 str(round(_ref_r, 2)) + " statt " +
+                                 str(sig.entry) + ")")
+                        sl_distance = _d_markt
+            except Exception:
+                pass
     elif sig.sl:
         # Kein expliziter Entry → aktuellen Preis als Referenz nehmen
         tick = mt5.symbol_info_tick(sig.symbol)
