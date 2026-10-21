@@ -3245,6 +3245,37 @@ def runner_tickets():
             pass
     return out
 
+def _schreib_mfe(tk, rec):
+    """Haengt eine Zeile an mfe.csv. Wird von der SL-Leiter UND von
+    prune_runners aufgerufen, je nachdem wer die geschlossene Position
+    zuerst bemerkt."""
+    try:
+        _pk = rec.get("peak")
+        if _pk is None:
+            return False
+        _en = float(rec.get("entry") or 0.0)
+        _ib = bool(rec.get("is_buy"))
+        _mfe = (float(_pk) - _en) if _ib else (_en - float(_pk))
+        _p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mfe.csv")
+        _neu = not os.path.exists(_p)
+        with open(_p, "a", encoding="utf-8") as _f:
+            if _neu:
+                _f.write("zeit;ticket;symbol;richtung;entry;hoch;mfe_punkte;stufe\n")
+            _f.write(";".join([
+                datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                str(tk), str(rec.get("symbol") or ""),
+                "BUY" if _ib else "SELL",
+                str(round(_en, 3)), str(round(float(_pk), 3)),
+                str(round(_mfe, 3)), str(int(rec.get("stage") or 0))]) + "\n")
+        log.info("MFE #" + str(tk) + " " + str(rec.get("symbol") or "") +
+                 ": Hoch +" + str(round(_mfe, 1)) + " Punkte, Stufe " +
+                 str(int(rec.get("stage") or 0)))
+        return True
+    except Exception as _e:
+        log.error("MFE-Schreiben #" + str(tk) + ": " + str(_e))
+        return False
+
+
 def prune_runners():
     """Entfernt Runner-Eintraege, deren Position nicht mehr offen ist."""
     try:
@@ -3255,6 +3286,9 @@ def prune_runners():
                       if p.magic == MAGIC_NUMBER)
         removed = [t for t in list(d.keys()) if t not in open_tk]
         for t in removed:
+            _r = d.get(t)
+            if isinstance(_r, dict):
+                _schreib_mfe(t, _r)
             d.pop(t, None)
         if removed:
             _save_runners(d)
@@ -5552,6 +5586,20 @@ async def main():
                     if _pk is not None:
                         _ext = max(_ext, _pk) if is_buy else min(_ext, _pk)
                     _peaks[tk] = _ext
+                    # Hoechststand mitschreiben, damit er auch dann vorliegt,
+                    # wenn prune_runners den Eintrag zuerst einsammelt.
+                    try:
+                        _alt = rec.get("peak")
+                        _pt = (mt5.symbol_info(pos.symbol).point
+                               if mt5.symbol_info(pos.symbol) else 0.01) * 10
+                        if _alt is None or abs(float(_alt) - _ext) >= _pt:
+                            _dd = _load_runners()
+                            if str(tk) in _dd and isinstance(_dd[str(tk)], dict):
+                                _dd[str(tk)]["peak"] = round(float(_ext), 3)
+                                _save_runners(_dd)
+                                rec["peak"] = round(float(_ext), 3)
+                    except Exception:
+                        pass
                     _reached = 0
                     for _i, _tp in enumerate(_tps):
                         _ok = (_ext >= _tp) if is_buy else (_ext <= _tp)
