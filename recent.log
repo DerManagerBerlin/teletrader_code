@@ -1,52 +1,3 @@
-2026-10-14 10:15:07,059 [INFO] Lot-Normalisierung BTCUSD: 0.09904360921875002 -> 0.1 (min 0.01, step 0.01)
-2026-10-14 10:15:07,060 [INFO] Zielrisiko 5.0%: SL=120.0 -> Lot 0.04 -> 0.1 x 4 Layer = 42.89 je Signal
-2026-10-14 10:15:07,480 [INFO] Runner markiert #410258906 -> runners.json
-2026-10-14 10:15:07,480 [INFO] Layer 1/4 Ticket #410258906 TP=83339.98
-2026-10-14 10:15:07,887 [INFO] Runner markiert #410258909 -> runners.json
-2026-10-14 10:15:07,888 [INFO] Layer 2/4 Ticket #410258909 TP=83399.98
-2026-10-14 10:15:08,296 [INFO] Runner markiert #410258910 -> runners.json
-2026-10-14 10:15:08,297 [INFO] Layer 3/4 Ticket #410258910 TP=83519.98
-2026-10-14 10:15:08,741 [INFO] Runner markiert #410258911 -> runners.json
-2026-10-14 10:15:08,745 [INFO] Layer 4/4 Ticket #410258911 TP=83639.98
-2026-10-14 10:15:08,746 [INFO] TP-Layer Map: {'tp1': [410258906], 'tp2': [410258909], 'tp3': [410258910], 'tp4': [410258911]}
-2026-10-14 10:15:08,747 [INFO] Phase 3: Auto-Trade BTCUSD | 4 Tickets
-2026-10-14 10:16:03,194 [ERROR] SL-Leiter fehlgeschlagen #410258909: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275524, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.37, tp=83399.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258909, position_by=0))
-2026-10-14 10:16:03,292 [ERROR] SL-Leiter fehlgeschlagen #410258910: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275525, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.37, tp=83519.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258910, position_by=0))
-2026-10-14 10:16:03,389 [ERROR] SL-Leiter fehlgeschlagen #410258911: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275526, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.42, tp=83639.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258911, position_by=0))
-2026-10-14 10:16:06,497 [ERROR] SL-Leiter fehlgeschlagen #410258909: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275527, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.37, tp=83399.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258909, position_by=0))
-2026-10-14 10:16:06,592 [ERROR] SL-Leiter fehlgeschlagen #410258910: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275528, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.37, tp=83519.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258910, position_by=0))
-2026-10-14 10:16:06,688 [ERROR] SL-Leiter fehlgeschlagen #410258911: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275529, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.42, tp=83639.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258911, position_by=0))
-2026-10-14 10:16:06,770 [INFO] 📨 Neue Nachricht aus BTC SCALPING⚡️: '✅ TP1 HIT! +60 PIPS 💰\n➡️ SL auf Entry (BE)'
-2026-10-14 10:16:06,770 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-14 10:16:09,788 [ERROR] SL-Leiter fehlgeschlagen #410258909: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275530, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.37, tp=83399.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258909, position_by=0))
-2026-10-14 10:16:09,883 [ERROR] SL-Leiter fehlgeschlagen #410258910: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275531, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.37, tp=83519.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258910, position_by=0))
-2026-10-14 10:16:09,979 [ERROR] SL-Leiter fehlgeschlagen #410258911: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275532, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.42, tp=83639.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258911, position_by=0))
-2026-10-14 10:16:13,081 [ERROR] SL-Leiter fehlgeschlagen #410258909: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275533, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.37, tp=83399.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258909, position_by=0))
-2026-10-14 10:16:13,177 [ERROR] SL-Leiter fehlgeschlagen #410258910: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275534, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.37, tp=83519.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258910, position_by=0))
-2026-10-14 10:16:13,271 [ERROR] SL-Leiter fehlgeschlagen #410258911: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275535, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.42, tp=83639.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258911, position_by=0))
-2026-10-14 10:16:16,373 [ERROR] SL-Leiter fehlgeschlagen #410258909: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275536, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.37, tp=83399.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258909, position_by=0))
-2026-10-14 10:16:16,469 [ERROR] SL-Leiter fehlgeschlagen #410258910: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275537, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.37, tp=83519.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258910, position_by=0))
-2026-10-14 10:16:16,564 [ERROR] SL-Leiter fehlgeschlagen #410258911: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275538, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.42, tp=83639.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258911, position_by=0))
-2026-10-14 10:16:19,671 [ERROR] SL-Leiter fehlgeschlagen #410258909: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275539, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.37, tp=83399.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258909, position_by=0))
-2026-10-14 10:16:19,767 [ERROR] SL-Leiter fehlgeschlagen #410258910: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275540, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.37, tp=83519.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258910, position_by=0))
-2026-10-14 10:16:19,864 [ERROR] SL-Leiter fehlgeschlagen #410258911: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275541, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.42, tp=83639.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258911, position_by=0))
-2026-10-14 10:16:20,759 [INFO] prune_runners: 1 verwaiste entfernt
-2026-10-14 10:16:22,966 [ERROR] SL-Leiter fehlgeschlagen #410258909: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275542, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.37, tp=83399.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258909, position_by=0))
-2026-10-14 10:16:23,066 [ERROR] SL-Leiter fehlgeschlagen #410258910: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275543, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.37, tp=83519.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258910, position_by=0))
-2026-10-14 10:16:23,169 [ERROR] SL-Leiter fehlgeschlagen #410258911: OrderSendResult(retcode=10016, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid stops', request_id=3656275544, retcode_external=0, request=TradeRequest(action=6, magic=0, order=0, symbol='BTCUSD', volume=0.0, price=0.0, stoplimit=0.0, sl=83324.42, tp=83639.98, deviation=0, type=0, type_filling=0, type_time=0, expiration=0, comment='', position=410258911, position_by=0))
-2026-10-14 10:16:26,281 [INFO] SL-Leiter: #410258909 TP1 war erreicht, Kurs schon zurueck hinter Entry/BE -> Position bei 83314.29 geschlossen
-2026-10-14 10:16:26,439 [INFO] SL-Leiter: #410258910 TP1 war erreicht, Kurs schon zurueck hinter Entry/BE -> Position bei 83314.29 geschlossen
-2026-10-14 10:16:26,587 [INFO] SL-Leiter: #410258911 TP1 war erreicht, Kurs schon zurueck hinter Entry/BE -> Position bei 83314.29 geschlossen
-2026-10-14 10:16:50,918 [INFO] Prioritaet freigegeben: BTCUSD (BTC SCALPING⚡️)
-2026-10-14 10:16:50,924 [INFO] prune_runners: 3 verwaiste entfernt
-2026-10-14 10:17:29,083 [INFO] Telethon Wakeup-Ping
-2026-10-14 10:19:05,253 [INFO] 📨 Neue Nachricht aus BTC SCALPING⚡️: '✅ TP2 HIT! +120 PIPS 💰'
-2026-10-14 10:19:05,254 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-14 10:21:13,804 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-14 10:21:13,969 [INFO] ✅ Keine verpassten Signale
-2026-10-14 10:27:29,458 [INFO] Telethon Wakeup-Ping
-2026-10-14 10:29:48,615 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '14:30 2x RED FOLDER NEWS an einem ZEITPUNKT‼️'
-2026-10-14 10:29:48,615 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
 2026-10-14 10:31:13,972 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-14 10:31:14,198 [INFO] ✅ Keine verpassten Signale
 2026-10-14 10:37:29,864 [INFO] Telethon Wakeup-Ping
@@ -7998,3 +7949,52 @@ Failed to restart teletrader.service: Unit teletrader.service not found.
 2026-10-22 13:17:22,651 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-22 13:17:22,773 [INFO] ✅ Keine verpassten Signale
 2026-10-22 13:23:24,860 [INFO] Telethon Wakeup-Ping
+2026-10-22 13:25:09,576 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4076.0'
+2026-10-22 13:25:09,585 [INFO] Lot-Sizing: Balance=939.0$  Lot=0.05  Kanal=XAUUSD SCALP
+2026-10-22 13:25:09,585 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4071.06) + 4 Runner (PARTIAL_AT_TP)
+
+⚡ SIGNAL [13:25:09] aus: XAUUSD SCALPING ⚡️
+  SELL XAUUSD.s | 5 Layer à 0.01 Lot
+  SL: 4084.06 | TPs: [4071.06, 4068.06, 4064.06, 4060.06]
+  Verteilung: {4071.06: 1, 0: 4}
+2026-10-22 13:25:09,587 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.03 (Einstieg 4075.03 statt 4076.06)
+2026-10-22 13:25:09,587 [INFO] Lot-Sizing: Balance=939.0$  Lot=0.05  Kanal=XAUUSD SCALP
+2026-10-22 13:25:09,589 [INFO] Lot-Normalisierung XAUUSD.s: 0.00884547864854953 -> 0.01 (min 0.01, step 0.01)
+2026-10-22 13:25:09,589 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 8.06, Budget 35.67)
+2026-10-22 13:25:09,590 [INFO] Zielrisiko 3.8%: SL=9.03 -> Lot 0.05 -> 0.01 x 4 Layer = 32.26 je Signal
+2026-10-22 13:25:09,592 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4071.06) + 3 Runner (PARTIAL_AT_TP)
+2026-10-22 13:25:09,594 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4071.06) + 3 Runner (PARTIAL_AT_TP)
+2026-10-22 13:25:09,596 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-22 13:25:10,020 [INFO] Runner markiert #418896416 -> runners.json
+2026-10-22 13:25:10,021 [INFO] Layer 1/4 Ticket #418896416 TP=4071.06
+2026-10-22 13:25:10,029 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-22 13:25:10,462 [INFO] Runner markiert #418896426 -> runners.json
+2026-10-22 13:25:10,463 [INFO] Layer 2/4 Ticket #418896426 TP=0
+2026-10-22 13:25:10,468 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-22 13:25:10,882 [INFO] Runner markiert #418896429 -> runners.json
+2026-10-22 13:25:10,883 [INFO] Layer 3/4 Ticket #418896429 TP=0
+2026-10-22 13:25:10,884 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-22 13:25:11,302 [INFO] Runner markiert #418896460 -> runners.json
+2026-10-22 13:25:11,303 [INFO] Layer 4/4 Ticket #418896460 TP=0
+2026-10-22 13:25:11,304 [INFO] TP-Layer Map: {'tp1': [418896416], 'tp2': [418896426, 418896429, 418896460]}
+2026-10-22 13:25:11,305 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
+2026-10-22 13:25:11,399 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-22 13:26:05,963 [INFO] Ruecksetzer #418896426 3.7p vom Hoch 4.8p (Trail 30.0p)
+2026-10-22 13:26:05,966 [INFO] Ruecksetzer #418896429 3.7p vom Hoch 4.7p (Trail 30.0p)
+2026-10-22 13:26:05,970 [INFO] Ruecksetzer #418896460 3.7p vom Hoch 1.6p (Trail 30.0p)
+2026-10-22 13:26:15,983 [INFO] Ruecksetzer #418896426 9.9p vom Hoch 3.2p (Trail 30.0p)
+2026-10-22 13:26:15,986 [INFO] Ruecksetzer #418896429 9.9p vom Hoch 3.1p (Trail 30.0p)
+2026-10-22 13:26:15,990 [INFO] Ruecksetzer #418896460 9.9p vom Hoch 0.0p (Trail 30.0p)
+2026-10-22 13:26:26,005 [INFO] Ruecksetzer #418896426 10.9p vom Hoch 3.2p (Trail 30.0p)
+2026-10-22 13:26:26,012 [INFO] Ruecksetzer #418896429 10.9p vom Hoch 3.1p (Trail 30.0p)
+2026-10-22 13:26:26,022 [INFO] Ruecksetzer #418896460 10.9p vom Hoch 0.0p (Trail 30.0p)
+2026-10-22 13:27:06,294 [INFO] Ruecksetzer #418896426 20.8p vom Hoch 2.5p (Trail 30.0p)
+2026-10-22 13:27:06,298 [INFO] Ruecksetzer #418896429 20.8p vom Hoch 2.6p (Trail 30.0p)
+2026-10-22 13:27:06,301 [INFO] Ruecksetzer #418896460 20.8p vom Hoch 5.7p (Trail 30.0p)
+2026-10-22 13:27:22,776 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-22 13:27:22,870 [INFO] Scalp: besserer Einstieg als im Signal (11.4 Pips zu unseren Gunsten) - Trade wird genommen
+2026-10-22 13:27:22,870 [INFO] Verpasstes Signal ausfuehren [XAUUSD SCALPING ⚡️] 13:25: TRADE conf=99%
+2026-10-22 13:27:22,873 [INFO] Verpasstes Signal uebersprungen: bereits 4 Position(en) offen
+2026-10-22 13:27:26,336 [INFO] Ruecksetzer #418896426 23.0p vom Hoch 2.5p (Trail 30.0p)
+2026-10-22 13:27:26,341 [INFO] Ruecksetzer #418896429 23.0p vom Hoch 2.6p (Trail 30.0p)
+2026-10-22 13:27:26,346 [INFO] Ruecksetzer #418896460 23.0p vom Hoch 5.7p (Trail 30.0p)
