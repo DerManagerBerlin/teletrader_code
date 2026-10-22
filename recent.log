@@ -1,19 +1,3 @@
-
-⚡ SIGNAL [15:39:04] aus: BTC SCALPING⚡️
-  SELL BTCUSD | 4 Layer à 0.01 Lot
-  SL: 81972.5 | TPs: [81792.5, 81732.5, 81612.5, 81492.5]
-  Verteilung: {81792.5: 1, 81732.5: 1, 81612.5: 1, 81492.5: 1}
-2026-10-14 15:39:04,479 [INFO] Lot-Sizing: Balance=754.0$  Lot=0.04  Kanal=BTC SCALPING
-2026-10-14 15:39:04,480 [INFO] Lot-Normalisierung BTCUSD: 0.08727700729166667 -> 0.09 (min 0.01, step 0.01)
-2026-10-14 15:39:04,481 [INFO] Zielrisiko 5.0%: SL=120.0 -> Lot 0.04 -> 0.09 x 4 Layer = 38.86 je Signal
-2026-10-14 15:39:04,888 [INFO] Runner markiert #411059690 -> runners.json
-2026-10-14 15:39:04,888 [INFO] Layer 1/4 Ticket #411059690 TP=81792.5
-2026-10-14 15:39:05,292 [INFO] Runner markiert #411059701 -> runners.json
-2026-10-14 15:39:05,292 [INFO] Layer 2/4 Ticket #411059701 TP=81732.5
-2026-10-14 15:39:05,699 [INFO] Runner markiert #411059718 -> runners.json
-2026-10-14 15:39:05,699 [INFO] Layer 3/4 Ticket #411059718 TP=81612.5
-2026-10-14 15:39:06,106 [INFO] Runner markiert #411059733 -> runners.json
-2026-10-14 15:39:06,106 [INFO] Layer 4/4 Ticket #411059733 TP=81492.5
 2026-10-14 15:39:06,107 [INFO] TP-Layer Map: {'tp1': [411059690], 'tp2': [411059701], 'tp3': [411059718], 'tp4': [411059733]}
 2026-10-14 15:39:06,107 [INFO] Phase 3: Auto-Trade BTCUSD | 4 Tickets
 2026-10-14 15:41:23,701 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
@@ -7998,3 +7982,19 @@ Failed to restart teletrader.service: Unit teletrader.service not found.
 2026-10-22 17:28:04,531 [INFO] Ruecksetzer #419310149 18.7p vom Hoch 2.5p (Trail 30.0p)
 2026-10-22 17:28:04,534 [INFO] Ruecksetzer #419310158 18.7p vom Hoch 2.5p (Trail 30.0p)
 2026-10-22 17:28:33,862 [INFO] Telethon Wakeup-Ping
+2026-10-22 17:31:45,459 [INFO] Ruecksetzer #419310130 21.6p vom Hoch 3.5p (Trail 30.0p)
+2026-10-22 17:31:45,462 [INFO] Ruecksetzer #419310140 21.6p vom Hoch 2.6p (Trail 30.0p)
+2026-10-22 17:31:45,465 [INFO] Ruecksetzer #419310149 21.6p vom Hoch 2.5p (Trail 30.0p)
+2026-10-22 17:31:45,468 [INFO] Ruecksetzer #419310158 21.6p vom Hoch 2.5p (Trail 30.0p)
+2026-10-22 17:31:55,476 [INFO] Ruecksetzer #419310130 24.8p vom Hoch 3.5p (Trail 30.0p)
+2026-10-22 17:31:55,481 [INFO] Ruecksetzer #419310140 24.8p vom Hoch 2.6p (Trail 30.0p)
+2026-10-22 17:31:55,486 [INFO] Ruecksetzer #419310149 24.8p vom Hoch 2.5p (Trail 30.0p)
+2026-10-22 17:31:55,493 [INFO] Ruecksetzer #419310158 24.8p vom Hoch 2.5p (Trail 30.0p)
+2026-10-22 17:32:05,505 [INFO] Ruecksetzer #419310130 29.6p vom Hoch 3.5p (Trail 30.0p)
+2026-10-22 17:32:05,508 [INFO] Ruecksetzer #419310140 29.6p vom Hoch 2.6p (Trail 30.0p)
+2026-10-22 17:32:05,511 [INFO] Ruecksetzer #419310149 29.6p vom Hoch 2.5p (Trail 30.0p)
+2026-10-22 17:32:05,514 [INFO] Ruecksetzer #419310158 29.6p vom Hoch 2.5p (Trail 30.0p)
+2026-10-22 17:32:29,542 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-22 17:32:29,612 [INFO] Scalp: besserer Einstieg als im Signal (7.7 Pips zu unseren Gunsten) - Trade wird genommen
+2026-10-22 17:32:29,612 [INFO] Verpasstes TRADE uebersprungen: Nachricht 17:25 ist 7.4 Min alt (> 5.0 Min) - kein Re-Fire
+2026-10-22 17:32:29,672 [INFO] ✅ Keine verpassten Signale
