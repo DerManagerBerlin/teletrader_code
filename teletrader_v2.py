@@ -5696,6 +5696,21 @@ async def main():
                     _lmax = int(os.getenv("LADDER_MAX_STAGE", "0"))
                     if _lmax > 0 and _reached > _lmax:
                         continue
+                    # PATCH43: Layer mit hartem TP nicht auf BE ziehen, solange
+                    # sein eigenes Ziel noch aussteht - sonst schliesst die
+                    # Leiter ihn, bevor sein TP fuellen kann.
+                    if (os.getenv("LEITER_SCHONT_TP_LAYER", "true").lower() == "true"
+                            and pos.tp and float(pos.tp) > 0):
+                        _eig = 0
+                        _tol = abs(float(pos.tp)) * 2e-6 + 0.005
+                        for _i, _tp in enumerate(_tps):
+                            if abs(float(_tp) - float(pos.tp)) <= _tol:
+                                _eig = _i + 1
+                                break
+                        if _eig and _reached <= _eig:
+                            log.info("SL-Leiter: #" + str(tk) + " hat eigenen TP" +
+                                     str(_eig) + " - Leiter laesst ihn laufen")
+                            continue
                     if _reached <= _stage_old or _reached < _lstart:
                         continue
                     entry = float(rec.get("entry") or pos.price_open)
