@@ -1,31 +1,3 @@
-2026-10-14 11:31:16,055 [INFO] Runner markiert #410327156 -> runners.json
-2026-10-14 11:31:16,056 [INFO] Layer 1/4 Ticket #410327156 TP=83308.36
-2026-10-14 11:31:16,468 [INFO] Runner markiert #410327165 -> runners.json
-2026-10-14 11:31:16,468 [INFO] Layer 2/4 Ticket #410327165 TP=83248.36
-2026-10-14 11:31:16,872 [INFO] Runner markiert #410327167 -> runners.json
-2026-10-14 11:31:16,872 [INFO] Layer 3/4 Ticket #410327167 TP=83128.36
-2026-10-14 11:31:17,281 [INFO] Runner markiert #410327170 -> runners.json
-2026-10-14 11:31:17,281 [INFO] Layer 4/4 Ticket #410327170 TP=83008.36
-2026-10-14 11:31:17,282 [INFO] TP-Layer Map: {'tp1': [410327156], 'tp2': [410327165], 'tp3': [410327167], 'tp4': [410327170]}
-2026-10-14 11:31:17,282 [INFO] Nachtraglich ausgefuhrt: 4 Layer
-2026-10-14 11:33:23,724 [INFO] prune_runners: 4 verwaiste entfernt
-2026-10-14 11:37:12,635 [INFO] Got difference for channel 1235349100 updates
-2026-10-14 11:37:32,397 [INFO] Telethon Wakeup-Ping
-2026-10-14 11:41:17,648 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-14 11:41:17,768 [INFO] ✅ Keine verpassten Signale
-2026-10-14 11:45:50,498 [INFO] 📨 Neue Nachricht aus BTC SCALPING⚡️: '❌ SL HIT –120 PIPS'
-2026-10-14 11:45:50,500 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-14 11:47:32,641 [INFO] Telethon Wakeup-Ping
-2026-10-14 11:51:17,770 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-14 11:51:17,881 [INFO] ✅ Keine verpassten Signale
-2026-10-14 11:57:32,846 [INFO] Telethon Wakeup-Ping
-2026-10-14 12:01:17,883 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-14 12:01:18,038 [INFO] ✅ Keine verpassten Signale
-2026-10-14 12:07:33,281 [INFO] Telethon Wakeup-Ping
-2026-10-14 12:11:18,040 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-14 12:11:18,246 [INFO] ✅ Keine verpassten Signale
-2026-10-14 12:17:33,709 [INFO] Telethon Wakeup-Ping
-2026-10-14 12:21:18,247 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-14 12:21:18,727 [INFO] ✅ Keine verpassten Signale
 2026-10-14 12:22:01,716 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🚨🚨 **NEUE TRADE IDEE** 🚨🚨\n\n🟢 **XAUUSD BUY** 🟢\n\n💎 Entry Zone '
 2026-10-14 12:22:01,724 [INFO] Lot-Sizing: Balance=781.0$  Lot=0.04  Kanal=XAUUSD SCALP
@@ -7998,3 +7970,31 @@ Failed to restart teletrader.service: Unit teletrader.service not found.
 2026-10-22 14:17:23,746 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-22 14:17:23,875 [INFO] ✅ Keine verpassten Signale
 2026-10-22 14:23:27,547 [INFO] Telethon Wakeup-Ping
+2026-10-22 14:25:02,000 [INFO] AUTOPATCH env: geaendert: TRAILING_STOP_MIN_PROFIT_PIPS_XAUUSD: 30 -> 100
+2026-10-22 14:25:02,000 [INFO] AUTOPATCH env: Stand: TARGET_RISK_PCT=0.038 MAX_LAYERS_XAUUSD=5 PARTIAL_LADDER=false LAYERS_FIT_RISK=true LADDER_START_STAGE=1 LADDER_MAX_STAGE=1 PARTIAL_AT_TP=1 TRAILING_STOP_PIPS_XAUUSD=30 TRAILING_STOP_MIN_PROFIT_PIPS_XAUUSD=100 SCALP_ENTRY_MAX_PIPS_XAUUSD=18
+2026-10-22 14:25:02,000 [INFO] AUTOPATCH: patch_42_trail_spaet.py angewendet - geaendert: TRAILING_STOP_MIN_PROFIT_PIPS_XAUUSD: 30 -> 100
+2026-10-22 14:25:02,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
+2026-10-22 14:25:38,000 [INFO] AUTOPATCH: teletrader.service laeuft
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-10-22 14:27:06,321 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $949.63 EUR
+2026-10-22 14:27:06,642 [INFO] Connecting to 149.154.167.51:443/TcpFull...
+2026-10-22 14:27:06,666 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
+2026-10-22 14:27:07,147 [INFO] Telegram User-Client verbunden.
+2026-10-22 14:27:07,186 [INFO] Connecting to 149.154.167.51:443/TcpFull...
+2026-10-22 14:27:07,204 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
+2026-10-22 14:27:07,422 [INFO] Telegram Bot-Client verbunden.
+2026-10-22 14:27:07,423 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-10-22 14:27:10,417 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-10-22 14:27:11,132 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-10-22 14:27:11,155 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 2 Kanäle
+
+2026-10-22 14:27:26,226 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-10-22 14:27:26,342 [INFO] ✅ Keine verpassten Signale
+2026-10-22 14:27:27,647 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-10-22 14:27:56,345 [INFO] Equity Guardian: Start=949.63$
