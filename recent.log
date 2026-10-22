@@ -1,15 +1,3 @@
-2026-10-14 02:45:08,471 [INFO] Layer 4/4 Ticket #409932495 TP=83736.67
-2026-10-14 02:45:08,471 [INFO] TP-Layer Map: {'tp1': [409932462], 'tp2': [409932470], 'tp3': [409932476], 'tp4': [409932495]}
-2026-10-14 02:45:08,471 [INFO] Phase 3: Auto-Trade BTCUSD | 4 Tickets
-2026-10-14 02:46:00,092 [INFO] SL-Leiter: #409932470 TP1 erreicht -> SL auf Entry/BE (83408.53)
-2026-10-14 02:46:00,240 [INFO] SL-Leiter: #409932476 TP1 erreicht -> SL auf Entry/BE (83408.53)
-2026-10-14 02:46:00,393 [INFO] SL-Leiter: #409932495 TP1 erreicht -> SL auf Entry/BE (83408.53)
-2026-10-14 02:46:02,189 [INFO] 🔁 Duplikat ignoriert aus: BTC SCALPING⚡️
-2026-10-14 02:46:03,973 [INFO] Auto-BE (Auto): #409932495 BTCUSD SL→BE nach 8.1 Pts Profit
-2026-10-14 02:46:08,806 [INFO] prune_runners: 1 verwaiste entfernt
-2026-10-14 02:46:38,804 [INFO] prune_runners: 1 verwaiste entfernt
-2026-10-14 02:47:10,974 [INFO] Telethon Wakeup-Ping
-2026-10-14 02:48:04,237 [INFO] SL-Leiter: #409932476 TP2 erreicht -> SL auf TP1 (83436.67)
 2026-10-14 02:48:04,384 [INFO] SL-Leiter: #409932495 TP2 erreicht -> SL auf TP1 (83436.67)
 2026-10-14 02:48:07,869 [INFO] 📨 Neue Nachricht aus BTC SCALPING⚡️: '✅ TP2 HIT! +120 PIPS 💰'
 2026-10-14 02:48:07,869 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
@@ -7998,3 +7986,15 @@ Failed to restart teletrader.service: Unit teletrader.service not found.
 2026-10-22 07:42:43,877 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-22 07:42:43,934 [INFO] Verpasstes TRADE uebersprungen: Nachricht 07:35 ist 7.6 Min alt (> 5.0 Min) - kein Re-Fire
 2026-10-22 07:42:43,983 [INFO] ✅ Keine verpassten Signale
+2026-10-22 07:49:01,302 [INFO] Telethon Wakeup-Ping
+2026-10-22 07:49:31,187 [INFO] Trail-SL #418427504 XAUUSD.s SELL -> SL:4089.9 (+31.3p)
+2026-10-22 07:49:31,288 [INFO] Trail-SL #418427512 XAUUSD.s SELL -> SL:4089.9 (+31.7p)
+2026-10-22 07:49:31,389 [INFO] Trail-SL #418427522 XAUUSD.s SELL -> SL:4089.89 (+32.2p)
+2026-10-22 07:49:31,601 [INFO] SL-Leiter: #418427499 TP1 erreicht -> SL auf Entry/BE (4090.34)
+2026-10-22 07:49:32,516 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
+2026-10-22 07:49:32,518 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-10-22 07:49:34,670 [INFO] MFE #418427499 XAUUSD.s: Hoch +3.5 Punkte, Stufe 1
+2026-10-22 07:49:39,465 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-22 07:49:41,522 [INFO] Trail-SL #418427504 XAUUSD.s SELL -> SL:4089.36 (+34.5p)
+2026-10-22 07:49:41,640 [INFO] Trail-SL #418427512 XAUUSD.s SELL -> SL:4089.36 (+34.8p)
+2026-10-22 07:49:41,762 [INFO] Trail-SL #418427522 XAUUSD.s SELL -> SL:4089.36 (+35.6p)
