@@ -187,6 +187,22 @@ PARTIAL_TEXT_WORDS = [w.strip().lower() for w in os.getenv(
     "taking profits,take more partials").split(",") if w.strip()]
 TRAILING_STOP_MIN_PROFIT = float(os.getenv("TRAILING_STOP_MIN_PROFIT_PIPS", "15"))
 
+def _trail_breite(_basis_pips, _hoch_pips, _pip):
+    """Trail-Breite in Kurspunkten, waechst mit dem Hoechststand (PATCH40).
+    Ein fester Trail gibt bei jedem Trade gleich viel zurueck, auch wenn der
+    Trade dreihundert Pips weit gelaufen ist. Oberhalb der Kniehoehe deshalb
+    einen Anteil des Hoechststands als Puffer nehmen statt eine feste Zahl.
+    TRAIL_GIVEBACK_PCT=0 schaltet zurueck auf das alte feste Verhalten."""
+    try:
+        _anteil = float(os.getenv("TRAIL_GIVEBACK_PCT", "0.40"))
+        _max    = float(os.getenv("TRAIL_MAX_PIPS", "250"))
+    except Exception:
+        _anteil, _max = 0.40, 250.0
+    if _anteil <= 0:
+        return _basis_pips * _pip
+    _breite = max(float(_basis_pips), _anteil * max(0.0, float(_hoch_pips)))
+    return min(_breite, _max) * _pip
+
 # KI-Interpreter (wird lazy initialisiert beim ersten Signal)
 _interpreter = None  # type: IntelligentInterpreter
 
@@ -5068,6 +5084,8 @@ async def main():
                             if profit_pips < min_profit:
                                 continue
                             _ref = max(current, _ext) if _ext else current
+                            trail_dist = _trail_breite(
+                                _tp_pips, (_ref - pos.price_open) / pip, pip)
                             new_sl = round(_ref - trail_dist, sym_info.digits)
                             # NIE schlechter als Entry: sonst schreibt der Trail
                             # einen Verlust fest, obwohl die Position im Plus ist.
@@ -5082,6 +5100,8 @@ async def main():
                             if profit_pips < min_profit:
                                 continue
                             _ref = min(current, _ext) if _ext else current
+                            trail_dist = _trail_breite(
+                                _tp_pips, (pos.price_open - _ref) / pip, pip)
                             new_sl = round(_ref + trail_dist, sym_info.digits)
                             new_sl = min(new_sl, round(pos.price_open, sym_info.digits))
                             if new_sl < current + _mind:
@@ -5095,7 +5115,8 @@ async def main():
                             d = "BUY" if pos.type == mt5.POSITION_TYPE_BUY else "SELL"
                             log.info("Trail-SL #" + str(pos.ticket) + " " + pos.symbol +
                                      " " + d + " -> SL:" + str(new_sl) +
-                                     " (+" + str(round(profit_pips/pip, 1)) + "p)")
+                                     " (+" + str(round(profit_pips/pip, 1)) + "p" +
+                                     " | Trail " + str(round(trail_dist/pip, 1)) + "p)")
             except Exception as e:
                 log.error("Trailing-Stop Fehler: " + str(e))
             await asyncio.sleep(max(3.0, float(os.getenv("TRAILING_POLL_SECONDS", "10"))))
