@@ -187,6 +187,24 @@ PARTIAL_TEXT_WORDS = [w.strip().lower() for w in os.getenv(
     "taking profits,take more partials").split(",") if w.strip()]
 TRAILING_STOP_MIN_PROFIT = float(os.getenv("TRAILING_STOP_MIN_PROFIT_PIPS", "15"))
 
+_rs_max = {}   # PATCH41: Ticket -> bisher tiefster Ruecksetzer in Pips
+
+def _trail_breite(_basis_pips, _hoch_pips, _pip):
+    """Trail-Breite in Kurspunkten, waechst mit dem Hoechststand (PATCH40).
+    Ein fester Trail gibt bei jedem Trade gleich viel zurueck, auch wenn der
+    Trade dreihundert Pips weit gelaufen ist. Oberhalb der Kniehoehe deshalb
+    einen Anteil des Hoechststands als Puffer nehmen statt eine feste Zahl.
+    TRAIL_GIVEBACK_PCT=0 schaltet zurueck auf das alte feste Verhalten."""
+    try:
+        _anteil = float(os.getenv("TRAIL_GIVEBACK_PCT", "0.40"))
+        _max    = float(os.getenv("TRAIL_MAX_PIPS", "250"))
+    except Exception:
+        _anteil, _max = 0.40, 250.0
+    if _anteil <= 0:
+        return _basis_pips * _pip
+    _breite = max(float(_basis_pips), _anteil * max(0.0, float(_hoch_pips)))
+    return min(_breite, _max) * _pip
+
 # KI-Interpreter (wird lazy initialisiert beim ersten Signal)
 _interpreter = None  # type: IntelligentInterpreter
 
@@ -438,6 +456,32 @@ def distribute_layers(num_layers: int, tps: list, channel: str = "") -> dict:
     # offen und wird von der SL-Leiter (TP1 -> BE, TP2 -> TP1, ...) und dem
     # Trailing Stop gefuehrt. Damit ist der Ertrag nach oben nicht gedeckelt.
     if os.getenv("RUNNER_ONLY", "false").lower() == "true":
+        # Partial: ein Layer nimmt einen festen TP mit, der Rest laeuft weiter
+        # und wird von Leiter + Trailing gefuehrt.
+        #   PARTIAL_AT_TP = 1 -> TP1 (Vorgabe) | 2 -> TP2 | -1 -> letzter TP | 0 -> aus
+        # TP-Leiter: je ein Layer auf TP1, TP2, TP3 ... plus IMMER ein Runner.
+        # Zu wenige Layer -> die hinteren TPs fallen weg, der Runner bleibt.
+        if (os.getenv("PARTIAL_LADDER", "true").lower() == "true"
+                and num_tps > 0 and num_layers >= 2):
+            _n = min(num_tps, num_layers - 1)       # so viele TPs wie moeglich
+            _v = {}
+            for _i in range(_n):
+                _v[tps[_i]] = _v.get(tps[_i], 0) + 1
+            _v[0] = num_layers - _n                 # Rest laeuft offen
+            log.info("Layer-Verteilung: " + str(num_layers) + " Layer = Partials auf "
+                     + ", ".join("TP" + str(_i + 1) + " (" + str(tps[_i]) + ")"
+                                 for _i in range(_n))
+                     + " + " + str(_v[0]) + " Runner (PARTIAL_LADDER)")
+            return _v
+        _ptp = int(os.getenv("PARTIAL_AT_TP", "1"))
+        if _ptp != 0 and num_tps > 0 and num_layers >= 2:
+            _idx  = (num_tps - 1) if _ptp < 0 else min(_ptp, num_tps) - 1
+            _ziel = tps[_idx]
+            log.info("Layer-Verteilung: " + str(num_layers) +
+                     " Layer = 1 Partial auf TP" + str(_idx + 1) +
+                     " (" + str(_ziel) + ") + " + str(num_layers - 1) +
+                     " Runner (PARTIAL_AT_TP)")
+            return {_ziel: 1, 0: num_layers - 1}
         log.info("Layer-Verteilung: " + str(num_layers) +
                  " Layer, alle ohne festes Ziel (RUNNER_ONLY)")
         return {0: num_layers}
@@ -1741,6 +1785,25 @@ def execute_layers(sig: TradeSignal) -> list[int]:
     sl_distance = 0.0
     if sig.entry and sig.sl:
         sl_distance = abs(sig.entry - sig.sl)
+        # Der Stop liegt fest, unser Einstieg nicht. Ist der Markt schon gegen
+        # uns gelaufen, wird die echte Distanz groesser - und mit ihr das
+        # Risiko. Fuer die Lot- und Layerrechnung deshalb den schlechteren der
+        # beiden Bezugspunkte nehmen.
+        if os.getenv("SL_DIST_VOM_MARKT", "true").lower() == "true":
+            try:
+                _tk_r = mt5.symbol_info_tick(sig.symbol)
+                if _tk_r:
+                    _ref_r = _tk_r.ask if sig.direction == "BUY" else _tk_r.bid
+                    _d_markt = abs(_ref_r - sig.sl)
+                    if _d_markt > sl_distance:
+                        log.info("SL-Distanz vom Markt statt vom Signal: " +
+                                 str(round(sl_distance, 2)) + " -> " +
+                                 str(round(_d_markt, 2)) + " (Einstieg " +
+                                 str(round(_ref_r, 2)) + " statt " +
+                                 str(sig.entry) + ")")
+                        sl_distance = _d_markt
+            except Exception:
+                pass
     elif sig.sl:
         # Kein expliziter Entry → aktuellen Preis als Referenz nehmen
         tick = mt5.symbol_info_tick(sig.symbol)
@@ -1801,6 +1864,19 @@ def execute_layers(sig: TradeSignal) -> list[int]:
             if _pv > 0:
                 _want = balance * _trg / max(1, num_layers) / (sl_distance * _pv)
                 _want = _norm_lot(sig.symbol, _want)
+                # Die Mindest-Lotgroesse kann das Budget sprengen. Dann nicht
+                # still mehr riskieren, sondern weniger Layer eroeffnen.
+                if os.getenv("LAYERS_FIT_RISK", "true").lower() == "true":
+                    _je_layer = _want * sl_distance * _pv
+                    if _je_layer > 0:
+                        _passt = int((balance * _trg) // _je_layer)
+                        _passt = max(1, min(num_layers, _passt))
+                        if _passt != num_layers:
+                            log.info("Layerzahl ans Risiko angepasst: " +
+                                     str(num_layers) + " -> " + str(_passt) +
+                                     " (je Layer " + str(round(_je_layer, 2)) +
+                                     ", Budget " + str(round(balance * _trg, 2)) + ")")
+                            num_layers = _passt
                 if _want != lot_per_layer:
                     log.info("Zielrisiko " + str(round(_trg * 100, 2)) + "%: SL=" +
                              str(round(sl_distance, 2)) + " -> Lot " +
@@ -3206,6 +3282,37 @@ def runner_tickets():
             pass
     return out
 
+def _schreib_mfe(tk, rec):
+    """Haengt eine Zeile an mfe.csv. Wird von der SL-Leiter UND von
+    prune_runners aufgerufen, je nachdem wer die geschlossene Position
+    zuerst bemerkt."""
+    try:
+        _pk = rec.get("peak")
+        if _pk is None:
+            return False
+        _en = float(rec.get("entry") or 0.0)
+        _ib = bool(rec.get("is_buy"))
+        _mfe = (float(_pk) - _en) if _ib else (_en - float(_pk))
+        _p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mfe.csv")
+        _neu = not os.path.exists(_p)
+        with open(_p, "a", encoding="utf-8") as _f:
+            if _neu:
+                _f.write("zeit;ticket;symbol;richtung;entry;hoch;mfe_punkte;stufe\n")
+            _f.write(";".join([
+                datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                str(tk), str(rec.get("symbol") or ""),
+                "BUY" if _ib else "SELL",
+                str(round(_en, 3)), str(round(float(_pk), 3)),
+                str(round(_mfe, 3)), str(int(rec.get("stage") or 0))]) + "\n")
+        log.info("MFE #" + str(tk) + " " + str(rec.get("symbol") or "") +
+                 ": Hoch +" + str(round(_mfe, 1)) + " Punkte, Stufe " +
+                 str(int(rec.get("stage") or 0)))
+        return True
+    except Exception as _e:
+        log.error("MFE-Schreiben #" + str(tk) + ": " + str(_e))
+        return False
+
+
 def prune_runners():
     """Entfernt Runner-Eintraege, deren Position nicht mehr offen ist."""
     try:
@@ -3216,6 +3323,9 @@ def prune_runners():
                       if p.magic == MAGIC_NUMBER)
         removed = [t for t in list(d.keys()) if t not in open_tk]
         for t in removed:
+            _r = d.get(t)
+            if isinstance(_r, dict):
+                _schreib_mfe(t, _r)
             d.pop(t, None)
         if removed:
             _save_runners(d)
@@ -4950,15 +5060,76 @@ async def main():
                                                 str(TRAILING_STOP_MIN_PROFIT))
                         trail_dist = _tp_pips * pip
                         min_profit = _mp_pips * pip
+                        # Hoechststand seit Eroeffnung aus M1-Bars. Ohne das
+                        # sieht der Trail nur den Tick im Poll-Moment und
+                        # verpasst Spitzen, die zwischen zwei Durchlaeufen
+                        # liegen.
+                        _ext = None
+                        if os.getenv("TRAIL_USE_M1_PEAK", "true").lower() == "true":
+                            try:
+                                _bars = mt5.copy_rates_from_pos(pos.symbol,
+                                                                mt5.TIMEFRAME_M1, 0, 240)
+                                if _bars is not None and len(_bars):
+                                    _t0 = float(pos.time)
+                                    _buy = (pos.type == mt5.POSITION_TYPE_BUY)
+                                    _w = [float(b["high" if _buy else "low"]) for b in _bars
+                                          if float(b["time"]) >= _t0]
+                                    if _w:
+                                        _ext = max(_w) if _buy else min(_w)
+                            except Exception:
+                                _ext = None
+                        # PATCH41: tiefster Ruecksetzer vom laufenden Hoch.
+                        # Nur Messung, kein Einfluss auf den Stop.
+                        if os.getenv("MESSE_RUECKSETZER", "true").lower() == "true":
+                            try:
+                                _rb = mt5.copy_rates_from_pos(pos.symbol,
+                                                              mt5.TIMEFRAME_M1, 0, 240)
+                                if _rb is not None and len(_rb):
+                                    _rt0 = float(pos.time)
+                                    _rbuy = (pos.type == mt5.POSITION_TYPE_BUY)
+                                    _rh = None; _rtief = 0.0
+                                    for _b in _rb:
+                                        if float(_b["time"]) < _rt0:
+                                            continue
+                                        _hi = float(_b["high"]); _lo = float(_b["low"])
+                                        if _rbuy:
+                                            _rh = _hi if _rh is None else max(_rh, _hi)
+                                            _rtief = max(_rtief, _rh - _lo)
+                                        else:
+                                            _rh = _lo if _rh is None else min(_rh, _lo)
+                                            _rtief = max(_rtief, _hi - _rh)
+                                    if _rh is not None and _rtief > 0:
+                                        _rp = round(_rtief / pip, 1)
+                                        _rhoch = round(abs(_rh - pos.price_open) / pip, 1)
+                                        if _rp > _rs_max.get(pos.ticket, 0.0) + 0.9:
+                                            _rs_max[pos.ticket] = _rp
+                                            _rbr = _trail_breite(_tp_pips, _rhoch, pip) / pip
+                                            log.info("Ruecksetzer #" + str(pos.ticket) +
+                                                     " " + str(_rp) + "p vom Hoch " +
+                                                     str(_rhoch) + "p (Trail " +
+                                                     str(round(_rbr, 1)) + "p)")
+                                if len(_rs_max) > 400:
+                                    _offen = set(x.ticket for x in (positions or []))
+                                    for _k in [k for k in _rs_max if k not in _offen]:
+                                        _rs_max.pop(_k, None)
+                            except Exception:
+                                pass
+                        _stops = getattr(sym_info, "trade_stops_level", 0) or 0
+                        _mind  = max(_stops * sym_info.point, sym_info.point * 10)
                         if pos.type == mt5.POSITION_TYPE_BUY:
                             current     = tick.bid
                             profit_pips = current - pos.price_open
                             if profit_pips < min_profit:
                                 continue
-                            new_sl = round(current - trail_dist, sym_info.digits)
+                            _ref = max(current, _ext) if _ext else current
+                            trail_dist = _trail_breite(
+                                _tp_pips, (_ref - pos.price_open) / pip, pip)
+                            new_sl = round(_ref - trail_dist, sym_info.digits)
                             # NIE schlechter als Entry: sonst schreibt der Trail
                             # einen Verlust fest, obwohl die Position im Plus ist.
                             new_sl = max(new_sl, round(pos.price_open, sym_info.digits))
+                            if new_sl > current - _mind:
+                                continue   # zu nah am Kurs, naechster Durchlauf
                             if pos.sl and new_sl <= pos.sl:
                                 continue
                         else:
@@ -4966,8 +5137,13 @@ async def main():
                             profit_pips = pos.price_open - current
                             if profit_pips < min_profit:
                                 continue
-                            new_sl = round(current + trail_dist, sym_info.digits)
+                            _ref = min(current, _ext) if _ext else current
+                            trail_dist = _trail_breite(
+                                _tp_pips, (pos.price_open - _ref) / pip, pip)
+                            new_sl = round(_ref + trail_dist, sym_info.digits)
                             new_sl = min(new_sl, round(pos.price_open, sym_info.digits))
+                            if new_sl < current + _mind:
+                                continue   # zu nah am Kurs, naechster Durchlauf
                             if pos.sl and new_sl >= pos.sl:
                                 continue
                         req = {"action": mt5.TRADE_ACTION_SLTP, "symbol": pos.symbol,
@@ -4977,10 +5153,11 @@ async def main():
                             d = "BUY" if pos.type == mt5.POSITION_TYPE_BUY else "SELL"
                             log.info("Trail-SL #" + str(pos.ticket) + " " + pos.symbol +
                                      " " + d + " -> SL:" + str(new_sl) +
-                                     " (+" + str(round(profit_pips/pip, 1)) + "p)")
+                                     " (+" + str(round(profit_pips/pip, 1)) + "p" +
+                                     " | Trail " + str(round(trail_dist/pip, 1)) + "p)")
             except Exception as e:
                 log.error("Trailing-Stop Fehler: " + str(e))
-            await asyncio.sleep(30)
+            await asyncio.sleep(max(3.0, float(os.getenv("TRAILING_POLL_SECONDS", "10"))))
 
     # ── Tägliche Zusammenfassung (um 22:00 Uhr) ──────────────────────────────
     async def daily_summary_loop():
@@ -5414,7 +5591,44 @@ async def main():
                         continue
                     pos = open_pos.get(tk)
                     if pos is None:
-                        _peaks.pop(tk, None)
+                        # Position zu -> Hoechststand (MFE) einmalig festhalten.
+                        _pk = _peaks.pop(tk, None)
+                        if _pk is None:
+                            _pk = rec.get("peak")
+                        if _pk is not None:
+                            try:
+                                _en = float(rec.get("entry") or 0.0)
+                                _ib = bool(rec.get("is_buy"))
+                                _mfe = ((float(_pk) - _en) if _ib
+                                        else (_en - float(_pk)))
+                                _p = os.path.join(os.path.dirname(
+                                        os.path.abspath(__file__)), "mfe.csv")
+                                _neu = not os.path.exists(_p)
+                                with open(_p, "a", encoding="utf-8") as _mf:
+                                    if _neu:
+                                        _mf.write("zeit;ticket;symbol;richtung;"
+                                                  "entry;hoch;mfe_punkte;stufe\n")
+                                    _mf.write(";".join([
+                                        datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                                        str(tk), str(rec.get("symbol") or ""),
+                                        "BUY" if _ib else "SELL",
+                                        str(round(_en, 3)),
+                                        str(round(float(_pk), 3)),
+                                        str(round(_mfe, 3)),
+                                        str(int(rec.get("stage") or 0))]) + "\n")
+                                log.info("MFE #" + str(tk) + " " +
+                                         str(rec.get("symbol") or "") + ": Hoch +" +
+                                         str(round(_mfe, 1)) + " Punkte, Stufe " +
+                                         str(int(rec.get("stage") or 0)))
+                            except Exception as _me:
+                                log.error("MFE-Log #" + str(tk) + ": " + str(_me))
+                        try:
+                            _d = _load_runners()
+                            if str(tk) in _d:
+                                _d.pop(str(tk), None)
+                                _save_runners(_d)
+                        except Exception:
+                            pass
                         continue
                     is_buy = rec.get("is_buy")
                     if is_buy is None:
@@ -5450,6 +5664,20 @@ async def main():
                     if _pk is not None:
                         _ext = max(_ext, _pk) if is_buy else min(_ext, _pk)
                     _peaks[tk] = _ext
+                    # Hoechststand mitschreiben, damit er auch dann vorliegt,
+                    # wenn prune_runners den Eintrag zuerst einsammelt.
+                    try:
+                        _alt = rec.get("peak")
+                        _pt = (mt5.symbol_info(pos.symbol).point
+                               if mt5.symbol_info(pos.symbol) else 0.01) * 10
+                        if _alt is None or abs(float(_alt) - _ext) >= _pt:
+                            _dd = _load_runners()
+                            if str(tk) in _dd and isinstance(_dd[str(tk)], dict):
+                                _dd[str(tk)]["peak"] = round(float(_ext), 3)
+                                _save_runners(_dd)
+                                rec["peak"] = round(float(_ext), 3)
+                    except Exception:
+                        pass
                     _reached = 0
                     for _i, _tp in enumerate(_tps):
                         _ok = (_ext >= _tp) if is_buy else (_ext <= _tp)
@@ -5461,6 +5689,13 @@ async def main():
                     # LADDER_START_STAGE: ab welchem erreichten TP die Leiter greift.
                     # 1 = TP1 -> BE (alt); 2 = erst TP2 -> BE, TP3 -> TP1, TP4 -> TP2
                     _lstart = max(1, int(os.getenv("LADDER_START_STAGE", "1")))
+                    # LADDER_MAX_STAGE: hoechste Stufe, die die Leiter noch setzt.
+                    # 0 = unbegrenzt (alt). 1 = nur BE, danach fuehrt der Trail.
+                    # Verhindert, dass der SL auf einem gerade durchlaufenen
+                    # TP-Niveau geparkt und vom naechsten Ruecksetzer geholt wird.
+                    _lmax = int(os.getenv("LADDER_MAX_STAGE", "0"))
+                    if _lmax > 0 and _reached > _lmax:
+                        continue
                     if _reached <= _stage_old or _reached < _lstart:
                         continue
                     entry = float(rec.get("entry") or pos.price_open)
@@ -5690,6 +5925,18 @@ async def main():
                 return
 
             log.info(f"📨 Neue Nachricht aus {channel_name}: {text[:60]!r}")
+            # Vollstaendiger Text in eigene Datei: das Hauptlog kuerzt auf 60
+            # Zeichen, damit gehen die Tages-Summaries des Signalgebers
+            # (inkl. "max. +N Pips" je Signal) verloren.
+            try:
+                with open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                       "channel_msgs.log"), "a",
+                          encoding="utf-8") as _cf:
+                    _cf.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "\t" +
+                              str(channel_name) + "\t" +
+                              str(text).replace("\n", "\\n") + "\n")
+            except Exception:
+                pass
 
             # Kanal-History aktualisieren (für KI-Kontext)
             if channel_name not in state.channel_history:
