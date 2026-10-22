@@ -1,32 +1,3 @@
-2026-10-14 15:39:06,107 [INFO] TP-Layer Map: {'tp1': [411059690], 'tp2': [411059701], 'tp3': [411059718], 'tp4': [411059733]}
-2026-10-14 15:39:06,107 [INFO] Phase 3: Auto-Trade BTCUSD | 4 Tickets
-2026-10-14 15:41:23,701 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-14 15:41:23,812 [INFO] Verpasstes Signal ausfuehren [BTC SCALPING⚡️] 15:39: TRADE conf=99%
-2026-10-14 15:41:23,813 [INFO] Verpasstes Signal uebersprungen: bereits 4 Position(en) offen
-2026-10-14 15:41:44,503 [INFO] SL-Leiter: #411059701 TP1 erreicht -> SL auf Entry/BE (81858.11)
-2026-10-14 15:41:44,670 [INFO] SL-Leiter: #411059718 TP1 erreicht -> SL auf Entry/BE (81858.1)
-2026-10-14 15:41:44,817 [INFO] SL-Leiter: #411059733 TP1 erreicht -> SL auf Entry/BE (81858.1)
-2026-10-14 15:41:46,939 [INFO] 📨 Neue Nachricht aus BTC SCALPING⚡️: '✅ TP1 HIT! +60 PIPS 💰\n➡️ SL auf Entry (BE)'
-2026-10-14 15:41:46,939 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-14 15:41:53,977 [INFO] SL-Leiter: #411059701 TP2 erreicht -> SL auf TP1 (81792.5)
-2026-10-14 15:41:54,135 [INFO] SL-Leiter: #411059718 TP2 erreicht -> SL auf TP1 (81792.5)
-2026-10-14 15:41:54,293 [INFO] SL-Leiter: #411059733 TP2 erreicht -> SL auf TP1 (81792.5)
-2026-10-14 15:41:59,828 [INFO] prune_runners: 1 verwaiste entfernt
-2026-10-14 15:42:09,116 [INFO] 📨 Neue Nachricht aus BTC SCALPING⚡️: '✅ TP2 HIT! +120 PIPS 💰'
-2026-10-14 15:42:09,117 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-14 15:42:13,923 [INFO] Auto-BE (Auto): #411059701 BTCUSD SL→BE nach 98.4 Pts Profit
-2026-10-14 15:42:14,016 [INFO] Auto-BE (Auto): #411059718 BTCUSD SL→BE nach 98.4 Pts Profit
-2026-10-14 15:42:14,109 [INFO] Auto-BE (Auto): #411059733 BTCUSD SL→BE nach 98.4 Pts Profit
-2026-10-14 15:42:59,842 [INFO] prune_runners: 1 verwaiste entfernt
-2026-10-14 15:47:43,738 [INFO] Telethon Wakeup-Ping
-2026-10-14 15:51:23,814 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-14 15:51:23,925 [INFO] ✅ Keine verpassten Signale
-2026-10-14 15:57:44,170 [INFO] Telethon Wakeup-Ping
-2026-10-14 15:58:13,264 [INFO] SL-Leiter: #411059733 TP3 erreicht -> SL auf TP2 (81732.5)
-2026-10-14 15:58:14,029 [INFO] 📨 Neue Nachricht aus BTC SCALPING⚡️: '✅ TP3 HIT! +240 PIPS 💰'
-2026-10-14 15:58:14,030 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-14 15:58:14,263 [INFO] Auto-BE (Auto): #411059733 BTCUSD SL→BE nach 188.4 Pts Profit
-2026-10-14 15:58:30,225 [INFO] prune_runners: 1 verwaiste entfernt
 2026-10-14 16:01:23,928 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-14 16:01:24,183 [INFO] ✅ Keine verpassten Signale
 2026-10-14 16:02:04,581 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🚀 TP4: +989 Pips · CRV 1:12,4'
@@ -7998,3 +7969,32 @@ Failed to restart teletrader.service: Unit teletrader.service not found.
 2026-10-22 17:32:29,612 [INFO] Scalp: besserer Einstieg als im Signal (7.7 Pips zu unseren Gunsten) - Trade wird genommen
 2026-10-22 17:32:29,612 [INFO] Verpasstes TRADE uebersprungen: Nachricht 17:25 ist 7.4 Min alt (> 5.0 Min) - kein Re-Fire
 2026-10-22 17:32:29,672 [INFO] ✅ Keine verpassten Signale
+2026-10-22 17:35:46,178 [INFO] Ruecksetzer #419310130 31.4p vom Hoch 4.4p (Trail 30.0p)
+2026-10-22 17:35:46,181 [INFO] Ruecksetzer #419310140 31.4p vom Hoch 3.5p (Trail 30.0p)
+2026-10-22 17:35:46,184 [INFO] Ruecksetzer #419310149 31.4p vom Hoch 3.4p (Trail 30.0p)
+2026-10-22 17:35:46,187 [INFO] Ruecksetzer #419310158 31.4p vom Hoch 3.4p (Trail 30.0p)
+2026-10-22 17:35:56,196 [INFO] Ruecksetzer #419310130 34.0p vom Hoch 4.4p (Trail 30.0p)
+2026-10-22 17:35:56,199 [INFO] Ruecksetzer #419310140 34.0p vom Hoch 3.5p (Trail 30.0p)
+2026-10-22 17:35:56,201 [INFO] Ruecksetzer #419310149 34.0p vom Hoch 3.4p (Trail 30.0p)
+2026-10-22 17:35:56,204 [INFO] Ruecksetzer #419310158 34.0p vom Hoch 3.4p (Trail 30.0p)
+2026-10-22 17:36:06,213 [INFO] Ruecksetzer #419310130 40.0p vom Hoch 4.4p (Trail 30.0p)
+2026-10-22 17:36:06,216 [INFO] Ruecksetzer #419310140 40.0p vom Hoch 3.5p (Trail 30.0p)
+2026-10-22 17:36:06,219 [INFO] Ruecksetzer #419310149 40.0p vom Hoch 3.4p (Trail 30.0p)
+2026-10-22 17:36:06,222 [INFO] Ruecksetzer #419310158 40.0p vom Hoch 3.4p (Trail 30.0p)
+2026-10-22 17:36:26,244 [INFO] Ruecksetzer #419310130 44.8p vom Hoch 4.4p (Trail 30.0p)
+2026-10-22 17:36:26,248 [INFO] Ruecksetzer #419310140 44.8p vom Hoch 3.5p (Trail 30.0p)
+2026-10-22 17:36:26,251 [INFO] Ruecksetzer #419310149 44.8p vom Hoch 3.4p (Trail 30.0p)
+2026-10-22 17:36:26,254 [INFO] Ruecksetzer #419310158 44.8p vom Hoch 3.4p (Trail 30.0p)
+2026-10-22 17:36:56,307 [INFO] Ruecksetzer #419310130 50.8p vom Hoch 4.4p (Trail 30.0p)
+2026-10-22 17:36:56,311 [INFO] Ruecksetzer #419310140 50.8p vom Hoch 3.5p (Trail 30.0p)
+2026-10-22 17:36:56,315 [INFO] Ruecksetzer #419310149 50.8p vom Hoch 3.4p (Trail 30.0p)
+2026-10-22 17:36:56,318 [INFO] Ruecksetzer #419310158 50.8p vom Hoch 3.4p (Trail 30.0p)
+2026-10-22 17:37:06,327 [INFO] Ruecksetzer #419310130 57.1p vom Hoch 4.4p (Trail 30.0p)
+2026-10-22 17:37:06,331 [INFO] Ruecksetzer #419310140 57.1p vom Hoch 3.5p (Trail 30.0p)
+2026-10-22 17:37:06,334 [INFO] Ruecksetzer #419310149 57.1p vom Hoch 3.4p (Trail 30.0p)
+2026-10-22 17:37:06,336 [INFO] Ruecksetzer #419310158 57.1p vom Hoch 3.4p (Trail 30.0p)
+2026-10-22 17:37:16,347 [INFO] Ruecksetzer #419310130 58.4p vom Hoch 4.4p (Trail 30.0p)
+2026-10-22 17:37:16,352 [INFO] Ruecksetzer #419310140 58.4p vom Hoch 3.5p (Trail 30.0p)
+2026-10-22 17:37:16,358 [INFO] Ruecksetzer #419310149 58.4p vom Hoch 3.4p (Trail 30.0p)
+2026-10-22 17:37:16,360 [INFO] Ruecksetzer #419310158 58.4p vom Hoch 3.4p (Trail 30.0p)
+2026-10-22 17:38:34,110 [INFO] Telethon Wakeup-Ping
