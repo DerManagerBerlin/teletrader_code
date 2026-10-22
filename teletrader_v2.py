@@ -187,6 +187,8 @@ PARTIAL_TEXT_WORDS = [w.strip().lower() for w in os.getenv(
     "taking profits,take more partials").split(",") if w.strip()]
 TRAILING_STOP_MIN_PROFIT = float(os.getenv("TRAILING_STOP_MIN_PROFIT_PIPS", "15"))
 
+_rs_max = {}   # PATCH41: Ticket -> bisher tiefster Ruecksetzer in Pips
+
 def _trail_breite(_basis_pips, _hoch_pips, _pip):
     """Trail-Breite in Kurspunkten, waechst mit dem Hoechststand (PATCH40).
     Ein fester Trail gibt bei jedem Trade gleich viel zurueck, auch wenn der
@@ -5076,6 +5078,42 @@ async def main():
                                         _ext = max(_w) if _buy else min(_w)
                             except Exception:
                                 _ext = None
+                        # PATCH41: tiefster Ruecksetzer vom laufenden Hoch.
+                        # Nur Messung, kein Einfluss auf den Stop.
+                        if os.getenv("MESSE_RUECKSETZER", "true").lower() == "true":
+                            try:
+                                _rb = mt5.copy_rates_from_pos(pos.symbol,
+                                                              mt5.TIMEFRAME_M1, 0, 240)
+                                if _rb is not None and len(_rb):
+                                    _rt0 = float(pos.time)
+                                    _rbuy = (pos.type == mt5.POSITION_TYPE_BUY)
+                                    _rh = None; _rtief = 0.0
+                                    for _b in _rb:
+                                        if float(_b["time"]) < _rt0:
+                                            continue
+                                        _hi = float(_b["high"]); _lo = float(_b["low"])
+                                        if _rbuy:
+                                            _rh = _hi if _rh is None else max(_rh, _hi)
+                                            _rtief = max(_rtief, _rh - _lo)
+                                        else:
+                                            _rh = _lo if _rh is None else min(_rh, _lo)
+                                            _rtief = max(_rtief, _hi - _rh)
+                                    if _rh is not None and _rtief > 0:
+                                        _rp = round(_rtief / pip, 1)
+                                        _rhoch = round(abs(_rh - pos.price_open) / pip, 1)
+                                        if _rp > _rs_max.get(pos.ticket, 0.0) + 0.9:
+                                            _rs_max[pos.ticket] = _rp
+                                            _rbr = _trail_breite(_tp_pips, _rhoch, pip) / pip
+                                            log.info("Ruecksetzer #" + str(pos.ticket) +
+                                                     " " + str(_rp) + "p vom Hoch " +
+                                                     str(_rhoch) + "p (Trail " +
+                                                     str(round(_rbr, 1)) + "p)")
+                                if len(_rs_max) > 400:
+                                    _offen = set(x.ticket for x in (positions or []))
+                                    for _k in [k for k in _rs_max if k not in _offen]:
+                                        _rs_max.pop(_k, None)
+                            except Exception:
+                                pass
                         _stops = getattr(sym_info, "trade_stops_level", 0) or 0
                         _mind  = max(_stops * sym_info.point, sym_info.point * 10)
                         if pos.type == mt5.POSITION_TYPE_BUY:
