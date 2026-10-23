@@ -720,6 +720,8 @@ def _scalp_env(name: str, symbol: str, default: str) -> float:
 
 
 _NACHHOL_DATEI = "nachholen.json"
+_leiter_gemeldet = set()    # PATCH45: Tickets, fuer die die Leiter schon gemeldet hat
+_nachhol_erledigt = {}      # PATCH45: Entry-Schluessel -> Zeitstempel der Vormerkung
 
 def _nachhol_lesen():
     """Vorgemerkte Signale lesen (PATCH44). Fehler = leere Liste."""
@@ -746,6 +748,20 @@ def _nachhol_merken(symbol, direction, entry, sl, tps, text, warum):
     try:
         if not (symbol and direction and entry and sl and tps.get(1)):
             return
+        # PATCH45: derselbe Entry wird nicht alle 10 Minuten neu angelegt.
+        # Der Verpasste-Signale-Scan parst alte Nachrichten wiederholt und
+        # landet jedes Mal hier.
+        _schl = str(symbol) + "|" + str(direction) + "|" + str(round(float(entry), 2))
+        _jetzt = datetime.now().timestamp()
+        _sperre = float(os.getenv("NACHHOL_SPERRE_MIN", "180")) * 60.0
+        _vor = _nachhol_erledigt.get(_schl)
+        if _vor is not None and (_jetzt - _vor) < _sperre:
+            return
+        if len(_nachhol_erledigt) > 300:
+            for _k in [k for k, v in _nachhol_erledigt.items()
+                       if (_jetzt - v) > _sperre]:
+                _nachhol_erledigt.pop(_k, None)
+        _nachhol_erledigt[_schl] = _jetzt
         liste = [k for k in _nachhol_lesen()
                  if not (k.get("symbol") == symbol
                          and k.get("direction") == direction
@@ -5139,16 +5155,39 @@ async def main():
                                 if _rb is not None and len(_rb):
                                     _rt0 = float(pos.time)
                                     _rbuy = (pos.type == mt5.POSITION_TYPE_BUY)
-                                    _rh = None; _rtief = 0.0
+                                    _rh = None; _rtief = 0.0; _rtmin = 0.0
+                                    # PATCH45: erst ab echtem Gewinn zaehlen, und
+                                    # den Ruecksetzer gegen das Extrem der
+                                    # VORHERIGEN Bars rechnen. Sonst geht die
+                                    # Spanne des Extrem-Bars als Ruecksetzer
+                                    # durch, obwohl M1 die Reihenfolge von Hoch
+                                    # und Tief im Bar nicht hergibt.
+                                    _ab = float(os.getenv("MESSE_AB_PIPS", "20")) * pip
+                                    _scharf = False
                                     for _b in _rb:
                                         if float(_b["time"]) < _rt0:
                                             continue
                                         _hi = float(_b["high"]); _lo = float(_b["low"])
+                                        if _scharf and _rh is not None:
+                                            # Untergrenze: gegen das bisherige Extrem
+                                            if _rbuy:
+                                                _rtmin = max(_rtmin, _rh - _lo)
+                                            else:
+                                                _rtmin = max(_rtmin, _hi - _rh)
                                         if _rbuy:
                                             _rh = _hi if _rh is None else max(_rh, _hi)
-                                            _rtief = max(_rtief, _rh - _lo)
                                         else:
                                             _rh = _lo if _rh is None else min(_rh, _lo)
+                                        if not _scharf:
+                                            _gew = ((_rh - pos.price_open) if _rbuy
+                                                    else (pos.price_open - _rh))
+                                            if _gew < _ab:
+                                                continue
+                                            _scharf = True
+                                        # Obergrenze: inklusive Spanne dieses Bars
+                                        if _rbuy:
+                                            _rtief = max(_rtief, _rh - _lo)
+                                        else:
                                             _rtief = max(_rtief, _hi - _rh)
                                     if _rh is not None and _rtief > 0:
                                         _rp = round(_rtief / pip, 1)
@@ -5157,7 +5196,8 @@ async def main():
                                             _rs_max[pos.ticket] = _rp
                                             _rbr = _trail_breite(_tp_pips, _rhoch, pip) / pip
                                             log.info("Ruecksetzer #" + str(pos.ticket) +
-                                                     " " + str(_rp) + "p vom Hoch " +
+                                                     " " + str(round(_rtmin / pip, 1)) +
+                                                     "-" + str(_rp) + "p vom Hoch " +
                                                      str(_rhoch) + "p (Trail " +
                                                      str(round(_rbr, 1)) + "p)")
                                 if len(_rs_max) > 400:
@@ -5760,8 +5800,12 @@ async def main():
                                 _eig = _i + 1
                                 break
                         if _eig and _reached <= _eig:
-                            log.info("SL-Leiter: #" + str(tk) + " hat eigenen TP" +
-                                     str(_eig) + " - Leiter laesst ihn laufen")
+                            if tk not in _leiter_gemeldet:
+                                _leiter_gemeldet.add(tk)
+                                if len(_leiter_gemeldet) > 500:
+                                    _leiter_gemeldet.clear()
+                                log.info("SL-Leiter: #" + str(tk) + " hat eigenen TP" +
+                                         str(_eig) + " - Leiter laesst ihn laufen")
                             continue
                     if _reached <= _stage_old or _reached < _lstart:
                         continue
