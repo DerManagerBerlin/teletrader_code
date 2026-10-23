@@ -720,7 +720,32 @@ def _scalp_env(name: str, symbol: str, default: str) -> float:
 
 
 _NACHHOL_DATEI = "nachholen.json"
+# PATCH46: zuletzt vom Kanal gemeldete TP-Stufe. Wird bei jedem neuen
+# Signal zurueckgesetzt, gilt also immer nur fuer den laufenden Trade.
+_tp_meldung = {"stufe": 0, "ts": 0.0}
+_TP_MELD_RX = re.compile(r"TP\s*(\d)\s*(?:HIT|Hit)", re.IGNORECASE)
+
+def _tp_meldung_pruefen(text):
+    """Erkennt die TP-Treffermeldung des Kanals und merkt die Stufe."""
+    try:
+        if not text:
+            return
+        if "SCALP IDEE" in text or "NEUE TRADE IDEE" in text:
+            _tp_meldung["stufe"] = 0
+            _tp_meldung["ts"] = datetime.now().timestamp()
+            return
+        _m = _TP_MELD_RX.search(text)
+        if _m:
+            _s = int(_m.group(1))
+            if _s > int(_tp_meldung.get("stufe") or 0):
+                _tp_meldung["stufe"] = _s
+                _tp_meldung["ts"] = datetime.now().timestamp()
+                log.info("Kanal meldet TP" + str(_s) +
+                         " - Leiter darf die Stufe ohne eigenen Kursdruck setzen")
+    except Exception:
+        pass
 _leiter_gemeldet = set()    # PATCH45: Tickets, fuer die die Leiter schon gemeldet hat
+_meld_genutzt = set()       # PATCH46: Tickets, die schon eine Kanalstufe genutzt haben
 _nachhol_erledigt = {}      # PATCH45: Entry-Schluessel -> Zeitstempel der Vormerkung
 
 def _nachhol_lesen():
@@ -792,6 +817,8 @@ def parse_scalp_signal(text: str) -> dict:
                 "tp5": None, "tp6": None, "is_limit": False, "is_backup": False,
                 "new_sl": None, "new_tp": None, "confidence": 99,
                 "reasoning": "Regex: " + why}
+
+    _tp_meldung_pruefen(text)          # PATCH46
 
     def _f(s):
         return float(s.replace(",", "."))
@@ -5786,6 +5813,24 @@ async def main():
                     # Verhindert, dass der SL auf einem gerade durchlaufenen
                     # TP-Niveau geparkt und vom naechsten Ruecksetzer geholt wird.
                     _lmax = int(os.getenv("LADDER_MAX_STAGE", "0"))
+                    # PATCH46: Was der Kanal gemeldet hat, zaehlt auch dann,
+                    # wenn unsere eigenen Bars die Stufe nicht gedruckt haben.
+                    if os.getenv("TP_AUS_MELDUNG", "true").lower() == "true":
+                        _ms = int(_tp_meldung.get("stufe") or 0)
+                        _mts = float(_tp_meldung.get("ts") or 0)
+                        if _ms > 0 and _mts > 0 and \
+                                (datetime.now().timestamp() - _mts) < 14400:
+                            if _lmax > 0:
+                                _ms = min(_ms, _lmax)
+                            if _ms > _reached:
+                                if tk not in _meld_genutzt:
+                                    _meld_genutzt.add(tk)
+                                    if len(_meld_genutzt) > 500:
+                                        _meld_genutzt.clear()
+                                    log.info("SL-Leiter #" + str(tk) + ": Stufe " +
+                                             str(_ms) + " aus der Kanalmeldung (" +
+                                             "eigener Kurs hat sie nicht gedruckt)")
+                                _reached = _ms
                     if _lmax > 0 and _reached > _lmax:
                         continue
                     # PATCH43: Layer mit hartem TP nicht auf BE ziehen, solange
