@@ -1,156 +1,3 @@
-2026-10-16 09:25:54,512 [INFO] Got difference for channel 1235349100 updates
-2026-10-16 09:31:32,115 [INFO] Telethon Wakeup-Ping
-2026-10-16 09:32:20,548 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-16 09:32:20,737 [INFO] ✅ Keine verpassten Signale
-2026-10-16 09:41:32,369 [INFO] Telethon Wakeup-Ping
-2026-10-16 09:42:20,739 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-16 09:42:20,870 [INFO] ✅ Keine verpassten Signale
-2026-10-16 09:51:32,707 [INFO] Telethon Wakeup-Ping
-2026-10-16 09:52:20,872 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-16 09:52:21,138 [INFO] ✅ Keine verpassten Signale
-2026-10-16 09:54:51,615 [INFO] Prioritaet freigegeben: XAUUSD.s (XAUUSD SCALPING ⚡️)
-2026-10-16 09:55:14,637 [INFO] prune_runners: 1 verwaiste entfernt
-2026-10-16 10:01:32,990 [INFO] Telethon Wakeup-Ping
-2026-10-16 10:02:21,145 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-16 10:02:21,293 [INFO] ✅ Keine verpassten Signale
-2026-10-16 10:04:05,172 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🚨🚨 **NEUE TRADE IDEE** 🚨🚨\n\n🔴 **XAUUSD SELL** 🔴\n\n💎 Entry Zone'
-2026-10-16 10:04:05,175 [INFO] Scalp: besserer Einstieg als im Signal (0.0 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-16 10:04:05,180 [INFO] Lot-Sizing: Balance=903.0$  Lot=0.05  Kanal=XAUUSD SCALP
-
-⚡ SIGNAL [10:04:05] aus: XAUUSD SCALPING ⚡️
-  SELL XAUUSD.s | 4 Layer à 0.01 Lot
-  SL: 4184.0 | TPs: [4172.0, 4168.0, 4152.0]
-  Verteilung: {4172.0: 2, 4168.0: 1, 4152.0: 1}
-2026-10-16 10:04:05,182 [INFO] Lot-Sizing: Balance=903.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-16 10:04:05,184 [INFO] Lot-Normalisierung XAUUSD.s: 0.015878491334375 -> 0.02 (min 0.01, step 0.01)
-2026-10-16 10:04:05,184 [INFO] Zielrisiko 5.0%: SL=8.0 -> Lot 0.05 -> 0.02 x 4 Layer = 56.85 je Signal
-2026-10-16 10:04:05,189 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-16 10:04:05,592 [INFO] Runner markiert #413278998 -> runners.json
-2026-10-16 10:04:05,593 [INFO] Layer 1/4 Ticket #413278998 TP=4172.0
-2026-10-16 10:04:05,594 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-16 10:04:05,997 [INFO] Runner markiert #413278999 -> runners.json
-2026-10-16 10:04:05,997 [INFO] Layer 2/4 Ticket #413278999 TP=4172.0
-2026-10-16 10:04:05,999 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-16 10:04:06,402 [INFO] Runner markiert #413279002 -> runners.json
-2026-10-16 10:04:06,402 [INFO] Layer 3/4 Ticket #413279002 TP=4168.0
-2026-10-16 10:04:06,404 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-16 10:04:06,807 [INFO] Runner markiert #413279009 -> runners.json
-2026-10-16 10:04:06,807 [INFO] Layer 4/4 Ticket #413279009 TP=4152.0
-2026-10-16 10:04:06,808 [INFO] TP-Layer Map: {'tp1': [413278998, 413278999], 'tp2': [413279002], 'tp3': [413279009]}
-2026-10-16 10:04:06,808 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
-2026-10-16 10:04:13,455 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-16 10:11:33,283 [INFO] Telethon Wakeup-Ping
-2026-10-16 10:12:21,295 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-16 10:12:21,433 [INFO] ✅ Keine verpassten Signale
-2026-10-16 10:18:44,979 [INFO] prune_runners: 4 verwaiste entfernt
-2026-10-16 10:18:51,875 [INFO] Prioritaet freigegeben: XAUUSD.s (XAUUSD SCALPING ⚡️)
-2026-10-16 10:19:07,619 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '❌ **Setup nicht aufgegangen** -80 Pips'
-2026-10-16 10:19:07,620 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-16 10:19:12,839 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-16 10:21:33,508 [INFO] Telethon Wakeup-Ping
-2026-10-16 10:22:04,231 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🚨🚨 **NEUE TRADE IDEE** 🚨🚨\n\n🔴 **XAUUSD SELL** 🔴\n\n💎 Entry Zone'
-2026-10-16 10:22:04,232 [INFO] Scalp: besserer Einstieg als im Signal (1.8 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-16 10:22:04,236 [INFO] Lot-Sizing: Balance=847.0$  Lot=0.04  Kanal=XAUUSD SCALP
-
-⚡ SIGNAL [10:22:04] aus: XAUUSD SCALPING ⚡️
-  SELL XAUUSD.s | 4 Layer à 0.01 Lot
-  SL: 4192.0 | TPs: [4180.0, 4176.0, 4160.0]
-  Verteilung: {4180.0: 2, 4176.0: 1, 4160.0: 1}
-2026-10-16 10:22:04,237 [INFO] Lot-Sizing: Balance=847.0$  Lot=0.04  Kanal=XAUUSD SCALP
-2026-10-16 10:22:04,238 [INFO] Lot-Normalisierung XAUUSD.s: 0.014899672201562499 -> 0.01 (min 0.01, step 0.01)
-2026-10-16 10:22:04,239 [INFO] Zielrisiko 5.0%: SL=8.0 -> Lot 0.04 -> 0.01 x 4 Layer = 28.41 je Signal
-2026-10-16 10:22:04,243 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-16 10:22:04,645 [INFO] Runner markiert #413294321 -> runners.json
-2026-10-16 10:22:04,646 [INFO] Layer 1/4 Ticket #413294321 TP=4180.0
-2026-10-16 10:22:04,647 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-16 10:22:05,052 [INFO] Runner markiert #413294331 -> runners.json
-2026-10-16 10:22:05,053 [INFO] Layer 2/4 Ticket #413294331 TP=4180.0
-2026-10-16 10:22:05,055 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-16 10:22:05,458 [INFO] Runner markiert #413294332 -> runners.json
-2026-10-16 10:22:05,459 [INFO] Layer 3/4 Ticket #413294332 TP=4176.0
-2026-10-16 10:22:05,460 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-16 10:22:05,863 [INFO] Runner markiert #413294337 -> runners.json
-2026-10-16 10:22:05,863 [INFO] Layer 4/4 Ticket #413294337 TP=4160.0
-2026-10-16 10:22:05,864 [INFO] TP-Layer Map: {'tp1': [413294321, 413294331], 'tp2': [413294332], 'tp3': [413294337]}
-2026-10-16 10:22:05,865 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
-2026-10-16 10:22:12,927 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-16 10:22:21,436 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-16 10:22:21,523 [INFO] Scalp: besserer Einstieg als im Signal (3.0 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-16 10:22:21,524 [INFO] Verpasstes Signal ausfuehren [XAUUSD SCALPING ⚡️] 10:22: TRADE conf=99%
-2026-10-16 10:22:21,524 [INFO] Verpasstes Signal uebersprungen: bereits 4 Position(en) offen
-2026-10-16 10:31:33,778 [INFO] Telethon Wakeup-Ping
-2026-10-16 10:32:21,642 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-16 10:32:21,796 [INFO] ✅ Keine verpassten Signale
-2026-10-16 10:41:34,070 [INFO] Telethon Wakeup-Ping
-2026-10-16 10:42:21,799 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-16 10:42:21,998 [INFO] ✅ Keine verpassten Signale
-2026-10-16 10:48:37,242 [INFO] SL-Leiter: #413294321 TP1 erreicht -> SL auf Entry/BE (4184.18)
-2026-10-16 10:48:37,390 [INFO] SL-Leiter: #413294331 TP1 erreicht -> SL auf Entry/BE (4184.19)
-2026-10-16 10:48:37,539 [INFO] SL-Leiter: #413294332 TP1 erreicht -> SL auf Entry/BE (4184.23)
-2026-10-16 10:48:37,697 [INFO] SL-Leiter: #413294337 TP1 erreicht -> SL auf Entry/BE (4184.21)
-2026-10-16 10:49:06,455 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ **TP1 Hit** +50 Pips\n🔒 BE nach Belieben'
-2026-10-16 10:49:06,455 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-16 10:49:13,130 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-16 10:49:15,671 [INFO] prune_runners: 2 verwaiste entfernt
-2026-10-16 10:51:34,867 [INFO] Telethon Wakeup-Ping
-2026-10-16 10:52:22,000 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-16 10:52:22,137 [INFO] ✅ Keine verpassten Signale
-2026-10-16 10:54:00,939 [INFO] SL-Leiter: #413294332 TP2 erreicht -> SL auf TP1 (4180.0)
-2026-10-16 10:54:01,087 [INFO] SL-Leiter: #413294337 TP2 erreicht -> SL auf TP1 (4180.0)
-2026-10-16 10:54:05,753 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ **TP2 Hit** +90 Pips · CRV 1:1,1'
-2026-10-16 10:54:05,754 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-16 10:54:12,804 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-16 10:54:15,970 [INFO] prune_runners: 1 verwaiste entfernt
-2026-10-16 10:54:37,906 [INFO] Auto-BE (Auto): #413294337 XAUUSD.s SL→BE nach 6.3 Pts Profit
-2026-10-16 11:01:35,267 [INFO] Telethon Wakeup-Ping
-2026-10-16 11:02:22,140 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-16 11:02:22,305 [INFO] ✅ Keine verpassten Signale
-2026-10-16 11:11:35,596 [INFO] Telethon Wakeup-Ping
-2026-10-16 11:12:22,306 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-16 11:12:22,449 [INFO] ✅ Keine verpassten Signale
-2026-10-16 11:21:35,841 [INFO] Telethon Wakeup-Ping
-2026-10-16 11:22:22,451 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-16 11:22:22,587 [INFO] ✅ Keine verpassten Signale
-2026-10-16 11:31:36,119 [INFO] Telethon Wakeup-Ping
-2026-10-16 11:32:22,590 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-16 11:32:22,707 [INFO] ✅ Keine verpassten Signale
-2026-10-16 11:41:36,494 [INFO] Telethon Wakeup-Ping
-2026-10-16 11:42:22,709 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-16 11:42:22,843 [INFO] ✅ Keine verpassten Signale
-2026-10-16 11:51:36,717 [INFO] Telethon Wakeup-Ping
-2026-10-16 11:51:55,090 [INFO] Got difference for channel 1235349100 updates
-2026-10-16 11:52:22,845 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-16 11:52:22,991 [INFO] ✅ Keine verpassten Signale
-2026-10-16 12:01:36,978 [INFO] Telethon Wakeup-Ping
-2026-10-16 12:02:05,903 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: 'Freut mich das ihr klar kommt! Übung macht den Meister, ich '
-2026-10-16 12:02:05,904 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-16 12:02:12,817 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-16 12:02:22,994 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-16 12:02:23,181 [INFO] ✅ Keine verpassten Signale
-2026-10-16 12:11:37,509 [INFO] Telethon Wakeup-Ping
-2026-10-16 12:12:23,183 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-16 12:12:23,331 [INFO] ✅ Keine verpassten Signale
-2026-10-16 12:21:37,792 [INFO] Telethon Wakeup-Ping
-
-══════════════════════════════════════════════════════════
-  TeleTrader AI  –  Finale Version
-  Modus: 🟡 DEMO | Phase: 3
-══════════════════════════════════════════════════════════
-
-2026-10-16 12:23:50,258 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $861.44 EUR
-2026-10-16 12:23:50,452 [INFO] Connecting to 149.154.167.51:443/TcpFull...
-2026-10-16 12:23:50,470 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
-2026-10-16 12:23:50,696 [INFO] Telegram User-Client verbunden.
-2026-10-16 12:23:50,703 [INFO] Connecting to 149.154.167.51:443/TcpFull...
-2026-10-16 12:23:50,718 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
-2026-10-16 12:23:50,883 [INFO] Telegram Bot-Client verbunden.
-2026-10-16 12:23:50,884 [INFO] Lade Dialoge für private Kanal-Auflösung...
-2026-10-16 12:23:53,694 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
-2026-10-16 12:23:55,429 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
-2026-10-16 12:23:55,483 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
-✅ Bereit – überwache 2 Kanäle
-
-2026-10-16 12:24:10,601 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
 2026-10-16 12:24:10,823 [INFO] ✅ Keine verpassten Signale
 2026-10-16 12:24:12,213 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 80.0 Pips
 2026-10-16 12:24:40,826 [INFO] Equity Guardian: Start=861.44$
@@ -7998,3 +7845,156 @@ Failed to restart teletrader.service: Unit teletrader.service not found.
 2026-10-23 02:12:21,938 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-23 02:12:22,037 [INFO] ✅ Keine verpassten Signale
 2026-10-23 02:18:27,325 [INFO] Telethon Wakeup-Ping
+2026-10-23 02:20:04,128 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4014.10'
+2026-10-23 02:20:04,134 [INFO] Lot-Sizing: Balance=929.0$  Lot=0.05  Kanal=XAUUSD SCALP
+2026-10-23 02:20:04,134 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4019.1) + 4 Runner (PARTIAL_AT_TP)
+
+⚡ SIGNAL [02:20:04] aus: XAUUSD SCALPING ⚡️
+  BUY XAUUSD.s | 5 Layer à 0.01 Lot
+  SL: 4006.1 | TPs: [4019.1, 4022.1, 4026.1, 4030.1]
+  Verteilung: {4019.1: 1, 0: 4}
+2026-10-23 02:20:04,136 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.15 (Einstieg 4015.25 statt 4014.1)
+2026-10-23 02:20:04,136 [INFO] Lot-Sizing: Balance=929.0$  Lot=0.05  Kanal=XAUUSD SCALP
+2026-10-23 02:20:04,137 [INFO] Lot-Normalisierung XAUUSD.s: 0.008653299098666583 -> 0.01 (min 0.01, step 0.01)
+2026-10-23 02:20:04,137 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 8.16, Budget 35.31)
+2026-10-23 02:20:04,138 [INFO] Zielrisiko 3.8%: SL=9.15 -> Lot 0.05 -> 0.01 x 4 Layer = 32.64 je Signal
+2026-10-23 02:20:04,140 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4019.1) + 3 Runner (PARTIAL_AT_TP)
+2026-10-23 02:20:04,146 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4019.1) + 3 Runner (PARTIAL_AT_TP)
+2026-10-23 02:20:04,148 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-23 02:20:04,555 [INFO] Runner markiert #419739721 -> runners.json
+2026-10-23 02:20:04,555 [INFO] Layer 1/4 Ticket #419739721 TP=4019.1
+2026-10-23 02:20:04,557 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-23 02:20:04,967 [INFO] Runner markiert #419739722 -> runners.json
+2026-10-23 02:20:04,967 [INFO] Layer 2/4 Ticket #419739722 TP=0
+2026-10-23 02:20:04,968 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-23 02:20:05,377 [INFO] Runner markiert #419739726 -> runners.json
+2026-10-23 02:20:05,377 [INFO] Layer 3/4 Ticket #419739726 TP=0
+2026-10-23 02:20:05,380 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-23 02:20:05,788 [INFO] Runner markiert #419739729 -> runners.json
+2026-10-23 02:20:05,788 [INFO] Layer 4/4 Ticket #419739729 TP=0
+2026-10-23 02:20:05,789 [INFO] TP-Layer Map: {'tp1': [419739722, 419739726, 419739729], 'tp2': [419739721]}
+2026-10-23 02:20:05,789 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
+2026-10-23 02:20:05,818 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:20:05,847 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-23 02:20:08,856 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:20:11,873 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:20:14,893 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:20:17,925 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:20:20,950 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:20:23,965 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:20:26,982 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:20:29,995 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:20:33,012 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:20:36,025 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:20:39,040 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:20:42,052 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:20:45,069 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:20:48,088 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:20:51,102 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:20:54,118 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:20:57,146 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:00,176 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:01,127 [INFO] Ruecksetzer #419739722 2.0p vom Hoch 4.7p (Trail 30.0p)
+2026-10-23 02:21:01,130 [INFO] Ruecksetzer #419739726 2.0p vom Hoch 4.7p (Trail 30.0p)
+2026-10-23 02:21:01,132 [INFO] Ruecksetzer #419739729 2.0p vom Hoch 4.2p (Trail 30.0p)
+2026-10-23 02:21:03,178 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:06,190 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:09,205 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:11,145 [INFO] Ruecksetzer #419739722 6.6p vom Hoch 1.0p (Trail 30.0p)
+2026-10-23 02:21:11,149 [INFO] Ruecksetzer #419739726 6.6p vom Hoch 1.0p (Trail 30.0p)
+2026-10-23 02:21:11,154 [INFO] Ruecksetzer #419739729 6.6p vom Hoch 0.5p (Trail 30.0p)
+2026-10-23 02:21:12,221 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:15,235 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:18,250 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:21,265 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:24,279 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:27,300 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:30,313 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:31,183 [INFO] Ruecksetzer #419739722 9.0p vom Hoch 1.0p (Trail 30.0p)
+2026-10-23 02:21:31,186 [INFO] Ruecksetzer #419739726 9.0p vom Hoch 1.0p (Trail 30.0p)
+2026-10-23 02:21:31,189 [INFO] Ruecksetzer #419739729 9.0p vom Hoch 0.5p (Trail 30.0p)
+2026-10-23 02:21:33,327 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:36,342 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:39,361 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:41,195 [INFO] Ruecksetzer #419739722 11.1p vom Hoch 1.0p (Trail 30.0p)
+2026-10-23 02:21:41,198 [INFO] Ruecksetzer #419739726 11.1p vom Hoch 1.0p (Trail 30.0p)
+2026-10-23 02:21:41,200 [INFO] Ruecksetzer #419739729 11.1p vom Hoch 0.5p (Trail 30.0p)
+2026-10-23 02:21:42,374 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:45,387 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:48,408 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:51,208 [INFO] Ruecksetzer #419739722 16.0p vom Hoch 1.0p (Trail 30.0p)
+2026-10-23 02:21:51,211 [INFO] Ruecksetzer #419739726 16.0p vom Hoch 1.0p (Trail 30.0p)
+2026-10-23 02:21:51,214 [INFO] Ruecksetzer #419739729 16.0p vom Hoch 0.5p (Trail 30.0p)
+2026-10-23 02:21:51,421 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:54,435 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:21:57,450 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:00,464 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:03,470 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:06,476 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:09,492 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:12,514 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:15,527 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:18,543 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:21,251 [INFO] Ruecksetzer #419739722 19.9p vom Hoch 1.0p (Trail 30.0p)
+2026-10-23 02:22:21,255 [INFO] Ruecksetzer #419739726 19.9p vom Hoch 1.0p (Trail 30.0p)
+2026-10-23 02:22:21,259 [INFO] Ruecksetzer #419739729 19.9p vom Hoch 0.5p (Trail 30.0p)
+2026-10-23 02:22:21,558 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:22,039 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 02:22:22,107 [INFO] Scalp: besserer Einstieg als im Signal (6.1 Pips zu unseren Gunsten) - Trade wird genommen
+2026-10-23 02:22:22,108 [INFO] Verpasstes Signal ausfuehren [XAUUSD SCALPING ⚡️] 02:20: TRADE conf=99%
+2026-10-23 02:22:22,109 [INFO] Verpasstes Signal uebersprungen: bereits 4 Position(en) offen
+2026-10-23 02:22:24,572 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:27,585 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:30,597 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:33,610 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:36,623 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:39,637 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:42,651 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:45,665 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:48,677 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:51,694 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:54,706 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:22:57,721 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:00,745 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:03,760 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:06,772 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:09,791 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:12,812 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:15,829 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:18,843 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:21,857 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:24,872 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:27,886 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:30,901 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:33,917 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:36,933 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:39,946 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:42,959 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:45,980 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:49,006 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:51,387 [INFO] Ruecksetzer #419739722 29.4p vom Hoch 8.1p (Trail 30.0p)
+2026-10-23 02:23:51,391 [INFO] Ruecksetzer #419739726 29.4p vom Hoch 8.1p (Trail 30.0p)
+2026-10-23 02:23:51,395 [INFO] Ruecksetzer #419739729 29.4p vom Hoch 8.6p (Trail 30.0p)
+2026-10-23 02:23:52,023 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:55,037 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:23:58,052 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:01,067 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:04,124 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:07,142 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:10,166 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:13,197 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:16,216 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:19,241 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:22,260 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:25,278 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:28,294 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:31,306 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:34,319 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:37,333 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:40,346 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:43,359 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:46,372 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:49,384 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:52,404 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:55,421 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 02:24:58,436 [INFO] SL-Leiter: #419739721 hat eigenen TP1 - Leiter laesst ihn laufen
