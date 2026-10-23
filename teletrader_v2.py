@@ -719,6 +719,52 @@ def _scalp_env(name: str, symbol: str, default: str) -> float:
         return float(default)
 
 
+_NACHHOL_DATEI = "nachholen.json"
+
+def _nachhol_lesen():
+    """Vorgemerkte Signale lesen (PATCH44). Fehler = leere Liste."""
+    try:
+        with open(_NACHHOL_DATEI, encoding="utf-8") as _f:
+            _d = json.load(_f)
+        return _d if isinstance(_d, list) else []
+    except Exception:
+        return []
+
+def _nachhol_schreiben(liste):
+    try:
+        with open(_NACHHOL_DATEI + ".tmp", "w", encoding="utf-8") as _f:
+            json.dump(liste, _f)
+        os.replace(_NACHHOL_DATEI + ".tmp", _NACHHOL_DATEI)
+    except Exception:
+        pass
+
+def _nachhol_merken(symbol, direction, entry, sl, tps, text, warum):
+    """Signal fuer einen spaeteren Einstieg vormerken, wenn der Markt beim
+    Eintreffen zu weit weg war. Der Watcher entscheidet dann."""
+    if os.getenv("NACHHOLEN", "true").lower() != "true":
+        return
+    try:
+        if not (symbol and direction and entry and sl and tps.get(1)):
+            return
+        liste = [k for k in _nachhol_lesen()
+                 if not (k.get("symbol") == symbol
+                         and k.get("direction") == direction
+                         and abs(float(k.get("entry") or 0) - float(entry)) < 1e-9)]
+        liste = liste[-20:]
+        liste.append({"symbol": symbol, "direction": direction,
+                      "entry": float(entry), "sl": float(sl),
+                      "tp1": tps.get(1), "tp2": tps.get(2), "tp3": tps.get(3),
+                      "tp4": tps.get(4), "tp5": tps.get(5),
+                      "ts": datetime.now().timestamp(),
+                      "raw_text": (text or "")[:400],
+                      "hash": "nachhol_" + str(symbol) + str(direction) + str(entry),
+                      "warum": warum})
+        _nachhol_schreiben(liste)
+        log.info("Nachholen vorgemerkt: " + str(symbol) + " " + str(direction) +
+                 " Entry " + str(entry) + " (" + str(warum) + ")")
+    except Exception:
+        pass
+
 def parse_scalp_signal(text: str) -> dict:
     """Deterministischer Parser fuer das Template von GOLD SCALPING VIP (kein API-Call):
         SCALP IDEE - XAUUSD / ICH GEHE BUY|SELL / Entry Zone: X / SL: Y / TP1..TP4 / TP5: OPEN
@@ -847,6 +893,9 @@ def parse_scalp_signal(text: str) -> dict:
                     if _max_pips > 0 and _pip > 0:
                         _gap_pips = _gap / _pip
                         if _gap_pips > _max_pips:
+                            _nachhol_merken(symbol, direction, entry, sl, tps, text,
+                                            "Markt " + str(round(_gap_pips, 1)) +
+                                            " Pips weg, Fenster " + str(_max_pips))
                             return _noise("Markt " + str(round(_gap_pips, 1)) +
                                           " Pips GEGEN uns vom Entry " + str(entry) +
                                           " weg (Kurs " + str(round(_ref, 5)) +
@@ -855,6 +904,9 @@ def parse_scalp_signal(text: str) -> dict:
                     if _max_frac > 0 and sl_dist > 0:
                         _frac = _gap / sl_dist
                         if _frac > _max_frac:
+                            _nachhol_merken(symbol, direction, entry, sl, tps, text,
+                                            "Markt " + str(round(_frac * 100, 1)) +
+                                            "% der SL-Distanz weg")
                             return _noise("Markt " + str(round(_frac * 100, 1)) +
                                           "% der SL-Distanz GEGEN uns (Kurs " +
                                           str(round(_ref, 5)) + ", Entry " + str(entry) +
@@ -6381,6 +6433,88 @@ async def main():
 
 
     # ── Starten ───────────────────────────────────────────────────────────────
+    async def nachhol_watcher():
+        """PATCH44: holt verworfene Signale nach, deren Kurs vor TP1 wieder
+        in die Entry-Zone zurueckkommt."""
+        if os.getenv("NACHHOLEN", "true").lower() != "true":
+            return
+        _poll  = max(3.0, float(os.getenv("NACHHOL_POLL_SECONDS", "10")))
+        _frist = float(os.getenv("NACHHOL_FRIST_MIN", "60"))
+        while True:
+            try:
+                liste = _nachhol_lesen()
+                if liste:
+                    rest = []
+                    for k in liste:
+                        try:
+                            _alter = (datetime.now().timestamp() -
+                                      float(k.get("ts") or 0)) / 60.0
+                        except Exception:
+                            _alter = 99999.0
+                        _bs  = resolve_symbol(k.get("symbol") or "")
+                        _dir = str(k.get("direction") or "").upper()
+                        if _alter > _frist or not _bs or _dir not in ("BUY", "SELL"):
+                            log.info("Nachholen verfallen: " + str(_bs) + " " + _dir +
+                                     " Entry " + str(k.get("entry")) + " nach " +
+                                     str(round(_alter, 1)) + " Min")
+                            continue
+                        _tk = mt5.symbol_info_tick(_bs)
+                        _si = mt5.symbol_info(_bs)
+                        if not _tk or not (_tk.bid or _tk.ask):
+                            rest.append(k); continue
+                        _buy = (_dir == "BUY")
+                        _ref = _tk.ask if _buy else _tk.bid
+                        try:
+                            _entry = float(k["entry"]); _sl = float(k["sl"])
+                            _tp1   = float(k["tp1"])
+                        except Exception:
+                            continue
+                        # Bewegung gelaufen oder Setup tot -> nicht hinterherspringen
+                        if (_ref >= _tp1) if _buy else (_ref <= _tp1):
+                            log.info("Nachholen verworfen: " + str(_bs) + " " + _dir +
+                                     " TP1 " + str(_tp1) + " schon durchlaufen")
+                            continue
+                        if (_ref <= _sl) if _buy else (_ref >= _sl):
+                            log.info("Nachholen verworfen: " + str(_bs) + " " + _dir +
+                                     " SL " + str(_sl) + " beruehrt")
+                            continue
+                        _off = mt5.positions_get(symbol=_bs)
+                        if _off and len(_off) > 0:
+                            rest.append(k); continue
+                        _pip = ((getattr(_si, "point", 0) or 0.01) * 10.0) if _si else 0.1
+                        _gap = (abs(_entry - _ref) / _pip) if _pip else 99999.0
+                        _adv = (_ref > _entry) if _buy else (_ref < _entry)
+                        _fenster = _scalp_env("SCALP_ENTRY_MAX_PIPS",
+                                              k.get("symbol") or "", "15")
+                        if _adv and _fenster > 0 and _gap > _fenster:
+                            rest.append(k); continue   # noch zu weit weg, weiter warten
+                        log.info("Signal nachgeholt: " + str(_bs) + " " + _dir +
+                                 " Entry " + str(_entry) + ", Kurs " +
+                                 str(round(_ref, 5)) + " (" + str(round(_gap, 1)) +
+                                 " Pips, " + str(round(_alter, 1)) + " Min nach dem Signal)")
+                        try:
+                            _sig = TradeSignal(
+                                symbol=_bs, direction=_dir,
+                                entry=_entry, sl=_sl,
+                                tp1=k.get("tp1"), tp2=k.get("tp2"), tp3=k.get("tp3"),
+                                tp4=k.get("tp4"), tp5=k.get("tp5"),
+                                raw_text=k.get("raw_text") or "",
+                                text_hash=str(k.get("hash") or ""),
+                                source_channel=str(k.get("channel") or "nachgeholt"))
+                            await process_signal(_sig)
+                            await send_notification(
+                                "\u23ed Nachgeholt: " + str(_bs) + " " + _dir +
+                                " Entry " + str(_entry) + " (" + str(round(_alter, 1)) +
+                                " Min nach dem Signal)")
+                        except Exception as _pe:
+                            log.error("Nachholen fehlgeschlagen #" + str(_bs) +
+                                      ": " + str(_pe))
+                    if len(rest) != len(liste):
+                        _nachhol_schreiben(rest)
+            except Exception as _e:
+                log.error("nachhol_watcher: " + str(_e))
+            await asyncio.sleep(_poll)
+
     await asyncio.gather(
         user_client.run_until_disconnected(),
         bot_client.run_until_disconnected(),
@@ -6392,6 +6526,7 @@ async def main():
         api_alert_watcher(),
         auto_breakeven_checker(),
         runner_breakeven_checker(),
+        nachhol_watcher(),
         algo_trading_checker(),
         update_status_file(),
         periodic_missed_signals(),
