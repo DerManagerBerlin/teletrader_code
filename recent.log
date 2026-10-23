@@ -1,29 +1,3 @@
-2026-10-21 15:50:01,000 [INFO] AUTOPATCH: patch_38_trail30.py angewendet - geaendert: TRAILING_STOP_PIPS_XAUUSD: 50 -> 30 | TRAILING_STOP_MIN_PROFIT_PIPS_XAUUSD: (fehlte) -> 30
-2026-10-21 15:50:02,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
-2026-10-21 15:50:37,000 [INFO] AUTOPATCH: teletrader.service laeuft
-
-══════════════════════════════════════════════════════════
-  TeleTrader AI  –  Finale Version
-  Modus: 🟡 DEMO | Phase: 3
-══════════════════════════════════════════════════════════
-
-2026-10-21 15:52:02,864 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $945.52 EUR
-2026-10-21 15:52:03,027 [INFO] Connecting to 149.154.167.51:443/TcpFull...
-2026-10-21 15:52:03,042 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
-2026-10-21 15:52:03,203 [INFO] Telegram User-Client verbunden.
-2026-10-21 15:52:03,211 [INFO] Connecting to 149.154.167.51:443/TcpFull...
-2026-10-21 15:52:03,224 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
-2026-10-21 15:52:03,432 [INFO] Telegram Bot-Client verbunden.
-2026-10-21 15:52:03,433 [INFO] Lade Dialoge für private Kanal-Auflösung...
-2026-10-21 15:52:06,292 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
-2026-10-21 15:52:07,527 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
-2026-10-21 15:52:07,550 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
-✅ Bereit – überwache 2 Kanäle
-
-2026-10-21 15:52:22,615 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
-2026-10-21 15:52:22,745 [INFO] ✅ Keine verpassten Signale
-2026-10-21 15:52:24,436 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
-2026-10-21 15:52:52,748 [INFO] Equity Guardian: Start=945.52$
 2026-10-21 15:57:22,758 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-21 15:57:22,966 [INFO] ✅ Keine verpassten Signale
 2026-10-21 16:03:24,777 [INFO] Telethon Wakeup-Ping
@@ -7998,3 +7972,29 @@
 2026-10-23 14:42:26,124 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-23 14:42:26,237 [INFO] ✅ Keine verpassten Signale
 2026-10-23 14:48:30,459 [INFO] Telethon Wakeup-Ping
+2026-10-23 14:50:02,000 [INFO] AUTOPATCH: patch_48_meldung_nur_live.py angewendet - Patch 48 OK - TP-Meldung zaehlt nur noch am Live-Eingang
+2026-10-23 14:50:03,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
+2026-10-23 14:50:38,000 [INFO] AUTOPATCH: teletrader.service laeuft
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-10-23 14:52:03,321 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $934.77 EUR
+2026-10-23 14:52:03,478 [INFO] Connecting to 149.154.167.51:443/TcpFull...
+2026-10-23 14:52:03,492 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
+2026-10-23 14:52:03,653 [INFO] Telegram User-Client verbunden.
+2026-10-23 14:52:03,659 [INFO] Connecting to 149.154.167.51:443/TcpFull...
+2026-10-23 14:52:03,671 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
+2026-10-23 14:52:03,814 [INFO] Telegram Bot-Client verbunden.
+2026-10-23 14:52:03,814 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-10-23 14:52:06,205 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-10-23 14:52:07,464 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-10-23 14:52:07,489 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 2 Kanäle
+
+2026-10-23 14:52:22,557 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-10-23 14:52:22,772 [INFO] ✅ Keine verpassten Signale
+2026-10-23 14:52:24,084 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-10-23 14:52:52,775 [INFO] Equity Guardian: Start=934.77$

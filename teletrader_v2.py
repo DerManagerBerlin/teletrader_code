@@ -854,8 +854,8 @@ def parse_scalp_signal(text: str) -> dict:
                 "new_sl": None, "new_tp": None, "confidence": 99,
                 "reasoning": "Regex: " + why}
 
-    _tp_meldung_pruefen(text)          # PATCH46
-
+    # PATCH48: Erkennung hier entfernt - der Parser laeuft auch fuer
+    # wiederholte alte Nachrichten aus dem Verpasste-Signale-Scan.
     def _f(s):
         return float(s.replace(",", "."))
 
@@ -6143,6 +6143,7 @@ async def main():
 
             if _regex_only_channel(channel_name):
                 # Starres Kanal-Template: deterministischer Parser, KEIN Claude-API-Call
+                _tp_meldung_pruefen(text)      # PATCH48: nur hier, live
                 result = parse_scalp_signal(text)
             elif len(words) <= 2:
                 if any(w in text_lower_check for w in CANCEL_WORDS):
