@@ -1,39 +1,3 @@
-2026-10-21 09:27:26,166 [INFO] ✅ Keine verpassten Signale
-2026-10-21 09:33:38,437 [INFO] Telethon Wakeup-Ping
-2026-10-21 09:37:26,168 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 09:37:26,386 [INFO] ✅ Keine verpassten Signale
-2026-10-21 09:43:38,694 [INFO] Telethon Wakeup-Ping
-2026-10-21 09:47:26,389 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 09:47:26,676 [INFO] ✅ Keine verpassten Signale
-2026-10-21 09:53:38,975 [INFO] Telethon Wakeup-Ping
-2026-10-21 09:57:26,678 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 09:57:26,808 [INFO] ✅ Keine verpassten Signale
-2026-10-21 10:00:02,000 [INFO] AUTOPATCH: patch_35_mfe_sicher.py angewendet - Patch 35 OK - MFE geht nicht mehr verloren
-2026-10-21 10:00:03,000 [INFO] AUTOPATCH: patch_36_sync.py angewendet - Patch 36 OK - sync.sh filtert Polling und spiegelt mfe.csv
-2026-10-21 10:00:03,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
-2026-10-21 10:00:38,000 [INFO] AUTOPATCH: teletrader.service laeuft
-
-══════════════════════════════════════════════════════════
-  TeleTrader AI  –  Finale Version
-  Modus: 🟡 DEMO | Phase: 3
-══════════════════════════════════════════════════════════
-
-2026-10-21 10:02:03,758 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $912.87 EUR
-2026-10-21 10:02:03,969 [INFO] Connecting to 149.154.167.51:443/TcpFull...
-2026-10-21 10:02:03,989 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
-2026-10-21 10:02:04,218 [INFO] Telegram User-Client verbunden.
-2026-10-21 10:02:04,227 [INFO] Connecting to 149.154.167.51:443/TcpFull...
-2026-10-21 10:02:04,241 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
-2026-10-21 10:02:04,397 [INFO] Telegram Bot-Client verbunden.
-2026-10-21 10:02:04,397 [INFO] Lade Dialoge für private Kanal-Auflösung...
-2026-10-21 10:02:07,273 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
-2026-10-21 10:02:08,956 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
-2026-10-21 10:02:08,995 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
-✅ Bereit – überwache 2 Kanäle
-
-2026-10-21 10:02:24,081 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
-2026-10-21 10:02:24,265 [INFO] ✅ Keine verpassten Signale
-2026-10-21 10:02:26,061 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
 2026-10-21 10:02:54,268 [INFO] Equity Guardian: Start=912.87$
 2026-10-21 10:04:04,849 [INFO] Got difference for channel 3909992762 updates
 2026-10-21 10:07:24,537 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
@@ -7998,3 +7962,39 @@
 2026-10-23 11:32:32,875 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-23 11:32:33,066 [INFO] ✅ Keine verpassten Signale
 2026-10-23 11:38:37,665 [INFO] Telethon Wakeup-Ping
+2026-10-23 11:40:07,746 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4023.9'
+2026-10-23 11:40:07,751 [INFO] Scalp: besserer Einstieg als im Signal (5.8 Pips zu unseren Gunsten) - Trade wird genommen
+2026-10-23 11:40:07,756 [INFO] Lot-Sizing: Balance=955.0$  Lot=0.05  Kanal=XAUUSD SCALP
+2026-10-23 11:40:07,757 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4018.94) + 4 Runner (PARTIAL_AT_TP)
+
+⚡ SIGNAL [11:40:07] aus: XAUUSD SCALPING ⚡️
+  SELL XAUUSD.s | 5 Layer à 0.01 Lot
+  SL: 4031.94 | TPs: [4018.94, 4015.94, 4011.94, 4007.94]
+  Verteilung: {4018.94: 1, 0: 4}
+2026-10-23 11:40:07,768 [INFO] Lot-Sizing: Balance=955.0$  Lot=0.05  Kanal=XAUUSD SCALP
+2026-10-23 11:40:07,775 [INFO] Lot-Normalisierung XAUUSD.s: 0.010157826588 -> 0.01 (min 0.01, step 0.01)
+2026-10-23 11:40:07,778 [INFO] Zielrisiko 3.8%: SL=8.0 -> Lot 0.05 -> 0.01 x 5 Layer = 35.74 je Signal
+2026-10-23 11:40:07,803 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4018.94) + 4 Runner (PARTIAL_AT_TP)
+2026-10-23 11:40:07,823 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4018.94) + 4 Runner (PARTIAL_AT_TP)
+2026-10-23 11:40:07,840 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-23 11:40:08,277 [INFO] Runner markiert #420203082 -> runners.json
+2026-10-23 11:40:08,277 [INFO] Layer 1/5 Ticket #420203082 TP=4018.94
+2026-10-23 11:40:08,286 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-23 11:40:08,707 [INFO] Runner markiert #420203108 -> runners.json
+2026-10-23 11:40:08,708 [INFO] Layer 2/5 Ticket #420203108 TP=0
+2026-10-23 11:40:08,712 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-23 11:40:09,130 [INFO] Runner markiert #420203115 -> runners.json
+2026-10-23 11:40:09,130 [INFO] Layer 3/5 Ticket #420203115 TP=0
+2026-10-23 11:40:09,136 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-23 11:40:09,566 [INFO] Runner markiert #420203137 -> runners.json
+2026-10-23 11:40:09,569 [INFO] Layer 4/5 Ticket #420203137 TP=0
+2026-10-23 11:40:09,575 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-23 11:40:10,002 [INFO] Runner markiert #420203147 -> runners.json
+2026-10-23 11:40:10,009 [INFO] Layer 5/5 Ticket #420203147 TP=0
+2026-10-23 11:40:10,010 [INFO] TP-Layer Map: {'tp1': [420203082], 'tp2': [420203108, 420203115, 420203137, 420203147]}
+2026-10-23 11:40:10,011 [INFO] Phase 3: Auto-Trade XAUUSD.s | 5 Tickets
+2026-10-23 11:40:10,042 [INFO] SL-Leiter: #420203082 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 11:40:10,684 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-23 11:42:33,068 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 11:42:33,300 [INFO] Verpasstes Signal ausfuehren [XAUUSD SCALPING ⚡️] 11:40: TRADE conf=99%
+2026-10-23 11:42:33,301 [INFO] Verpasstes Signal uebersprungen: bereits 5 Position(en) offen
