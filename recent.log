@@ -1,104 +1,3 @@
-══════════════════════════════════════════════════════════
-  TeleTrader AI  –  Finale Version
-  Modus: 🟡 DEMO | Phase: 3
-══════════════════════════════════════════════════════════
-
-2026-10-20 12:05:01,663 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $892.01 EUR
-2026-10-20 12:05:01,989 [INFO] Connecting to 149.154.167.51:443/TcpFull...
-2026-10-20 12:05:02,004 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
-2026-10-20 12:05:02,299 [INFO] Telegram User-Client verbunden.
-2026-10-20 12:05:02,308 [INFO] Connecting to 149.154.167.51:443/TcpFull...
-2026-10-20 12:05:02,326 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
-2026-10-20 12:05:02,538 [INFO] Telegram Bot-Client verbunden.
-2026-10-20 12:05:02,538 [INFO] Lade Dialoge für private Kanal-Auflösung...
-2026-10-20 12:05:04,226 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
-2026-10-20 12:05:05,216 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
-2026-10-20 12:05:05,244 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
-✅ Bereit – überwache 2 Kanäle
-
-2026-10-20 12:05:20,335 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
-2026-10-20 12:05:20,463 [INFO] Scalp: besserer Einstieg als im Signal (4.9 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-20 12:05:20,464 [INFO] Verpasstes TRADE uebersprungen: Nachricht 11:50 ist 15.2 Min alt (> 5.0 Min) - kein Re-Fire
-2026-10-20 12:05:20,554 [INFO] ✅ Keine verpassten Signale
-2026-10-20 12:05:23,394 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
-2026-10-20 12:05:50,558 [INFO] Equity Guardian: Start=892.01$
-2026-10-20 12:08:51,407 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
-2026-10-20 12:08:51,410 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-20 12:08:53,786 [INFO] SL-Leiter: #415956798 TP1 erreicht -> SL auf Entry/BE (4120.31)
-2026-10-20 12:08:53,950 [INFO] SL-Leiter: #415956812 TP1 erreicht -> SL auf Entry/BE (4120.3)
-2026-10-20 12:08:54,149 [INFO] SL-Leiter: #415956820 TP1 erreicht -> SL auf Entry/BE (4120.32)
-2026-10-20 12:09:00,045 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-20 12:09:20,672 [INFO] Runner-BE: #415956798 SL -> 4120.3
-2026-10-20 12:09:23,530 [INFO] Trail-SL #415956798 XAUUSD.s SELL -> SL:4120.14 (+51.6p)
-2026-10-20 12:09:53,638 [INFO] Trail-SL #415956798 XAUUSD.s SELL -> SL:4119.19 (+61.1p)
-2026-10-20 12:09:53,739 [INFO] Trail-SL #415956812 XAUUSD.s SELL -> SL:4119.05 (+62.7p)
-2026-10-20 12:09:53,838 [INFO] Trail-SL #415956820 XAUUSD.s SELL -> SL:4119.0 (+63.3p)
-2026-10-20 12:10:20,572 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-20 12:10:20,764 [INFO] ✅ Keine verpassten Signale
-2026-10-20 12:10:53,961 [INFO] Trail-SL #415956798 XAUUSD.s SELL -> SL:4118.7 (+66.0p)
-2026-10-20 12:10:54,059 [INFO] Trail-SL #415956812 XAUUSD.s SELL -> SL:4118.7 (+66.2p)
-2026-10-20 12:10:54,160 [INFO] Trail-SL #415956820 XAUUSD.s SELL -> SL:4118.71 (+66.2p)
-2026-10-20 12:10:59,573 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP2 HIT! +80 PIPS 💰'
-2026-10-20 12:10:59,578 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-20 12:10:59,629 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-20 12:11:01,241 [INFO] SL-Leiter: #415956798 TP2 erreicht -> SL auf TP1 (4115.77)
-2026-10-20 12:11:01,416 [INFO] SL-Leiter: #415956812 TP2 erreicht -> SL auf TP1 (4115.77)
-2026-10-20 12:11:01,592 [INFO] SL-Leiter: #415956820 TP2 erreicht -> SL auf TP1 (4115.77)
-2026-10-20 12:13:24,296 [INFO] prune_runners: 3 verwaiste entfernt
-2026-10-20 12:16:23,737 [INFO] Telethon Wakeup-Ping
-2026-10-20 12:19:03,357 [INFO] Got difference for channel 1235349100 updates
-2026-10-20 12:20:02,599 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🔒 BE HIT! – Für jeden der SL auf BE gezogen hat'
-2026-10-20 12:20:02,603 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-20 12:20:09,521 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-20 12:20:20,769 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-20 12:20:20,849 [INFO] Verpasstes TRADE uebersprungen: Nachricht 11:50 ist 30.2 Min alt (> 5.0 Min) - kein Re-Fire
-2026-10-20 12:20:20,914 [INFO] ✅ Keine verpassten Signale
-2026-10-20 12:26:23,993 [INFO] Telethon Wakeup-Ping
-2026-10-20 12:30:20,918 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-20 12:30:21,113 [INFO] ✅ Keine verpassten Signale
-2026-10-20 12:36:24,482 [INFO] Telethon Wakeup-Ping
-2026-10-20 12:40:02,000 [INFO] AUTOPATCH env: geaendert: nichts
-2026-10-20 12:40:02,000 [INFO] AUTOPATCH env: Stand: TARGET_RISK_PCT=0.02 MAX_TOTAL_HEAT_PCT=0.50 MAX_RISK_PCT_SCALPING=0.25 MAX_LAYERS=6 MAX_LAYERS_XAUUSD=3 RUNNER_ONLY=true PARTIAL_AT_TP=1 ZONE_STAFFELN=true LADDER_START_STAGE=1 TRAILING_STOP_PIPS=50 TRAILING_STOP_MIN_PROFIT_PIPS=50
-2026-10-20 12:40:02,000 [INFO] AUTOPATCH: patch_28_be_only.py angewendet - nichts zu tun, Werte stehen bereits
-2026-10-20 12:40:02,000 [INFO] AUTOPATCH env: geaendert: LADDER_MAX_STAGE: (fehlte) -> 1
-2026-10-20 12:40:02,000 [INFO] AUTOPATCH env: Stand: TARGET_RISK_PCT=0.02 MAX_TOTAL_HEAT_PCT=0.50 RUNNER_ONLY=true PARTIAL_AT_TP=1 LADDER_START_STAGE=1 LADDER_MAX_STAGE=1 ZONE_STAFFELN=true TRAILING_STOP_PIPS=50 TRAILING_STOP_MIN_PROFIT_PIPS=50
-2026-10-20 12:40:02,000 [INFO] AUTOPATCH: patch_29_be_only.py angewendet - geaendert: LADDER_MAX_STAGE: (fehlte) -> 1
-2026-10-20 12:40:02,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
-2026-10-20 12:40:38,000 [INFO] AUTOPATCH: teletrader.service laeuft
-
-══════════════════════════════════════════════════════════
-  TeleTrader AI  –  Finale Version
-  Modus: 🟡 DEMO | Phase: 3
-══════════════════════════════════════════════════════════
-
-2026-10-20 12:42:02,880 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $916.33 EUR
-2026-10-20 12:42:03,061 [INFO] Connecting to 149.154.167.51:443/TcpFull...
-2026-10-20 12:42:03,077 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
-2026-10-20 12:42:03,277 [INFO] Telegram User-Client verbunden.
-2026-10-20 12:42:03,289 [INFO] Connecting to 149.154.167.51:443/TcpFull...
-2026-10-20 12:42:03,308 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
-2026-10-20 12:42:03,487 [INFO] Telegram Bot-Client verbunden.
-2026-10-20 12:42:03,487 [INFO] Lade Dialoge für private Kanal-Auflösung...
-2026-10-20 12:42:06,144 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
-2026-10-20 12:42:07,763 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
-2026-10-20 12:42:07,872 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
-✅ Bereit – überwache 2 Kanäle
-
-2026-10-20 12:42:22,979 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
-2026-10-20 12:42:23,080 [INFO] Scalp: besserer Einstieg als im Signal (19.0 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-20 12:42:23,080 [INFO] Verpasstes TRADE uebersprungen: Nachricht 11:50 ist 52.3 Min alt (> 5.0 Min) - kein Re-Fire
-2026-10-20 12:42:23,170 [INFO] ✅ Keine verpassten Signale
-2026-10-20 12:42:25,207 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
-2026-10-20 12:42:53,174 [INFO] Equity Guardian: Start=916.33$
-2026-10-20 12:47:23,408 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-20 12:47:23,592 [INFO] ✅ Keine verpassten Signale
-2026-10-20 12:50:11,606 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4123.30'
-2026-10-20 12:50:11,615 [INFO] Scalp: besserer Einstieg als im Signal (8.3 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-20 12:50:11,627 [INFO] Lot-Sizing: Balance=916.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-20 12:50:11,629 [INFO] Layer-Verteilung: 3 Layer = 1 Partial auf TP1 (4128.3) + 2 Runner (PARTIAL_AT_TP)
-
-⚡ SIGNAL [12:50:11] aus: XAUUSD SCALPING ⚡️
-  BUY XAUUSD.s | 3 Layer à 0.01 Lot
   SL: 4115.3 | TPs: [4128.3, 4131.3, 4135.3, 4139.3]
   Verteilung: {4128.3: 1, 0: 2}
 2026-10-20 12:50:11,638 [INFO] Lot-Sizing: Balance=916.0$  Lot=0.05  Kanal=XAUUSD SCALP
@@ -7998,3 +7897,104 @@
 2026-10-23 07:39:53,400 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
 2026-10-23 07:39:56,421 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
 2026-10-23 07:39:59,460 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:02,489 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:05,519 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:08,556 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:11,591 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:14,615 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:17,633 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:20,656 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:23,695 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:26,722 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:29,756 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:32,787 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:35,807 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:38,826 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:41,843 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:44,865 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:47,884 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:51,158 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:54,179 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:40:57,199 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:00,224 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:03,249 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:06,267 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:09,283 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:12,300 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:15,319 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:18,336 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:21,354 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:24,375 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:27,408 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:30,429 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:33,447 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:36,467 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:39,492 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:42,559 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:45,580 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:48,602 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:51,646 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:54,672 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:41:57,699 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:00,719 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:03,751 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:06,775 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:09,793 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:12,817 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:15,837 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:18,856 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:21,878 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:24,902 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:26,444 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 07:42:26,565 [INFO] ✅ Keine verpassten Signale
+2026-10-23 07:42:28,003 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:31,022 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:34,041 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:37,072 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:40,103 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:43,122 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:46,149 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:49,170 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:52,196 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:55,213 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:42:58,245 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:01,278 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:04,313 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:07,339 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:10,365 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:13,384 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:16,418 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:19,435 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:22,456 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:25,584 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:28,609 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:31,637 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:34,664 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:37,686 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:40,727 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:43,750 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:46,777 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:49,809 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:52,839 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:55,861 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:43:58,899 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:01,932 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:04,953 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:07,979 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:11,079 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:14,102 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:17,129 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:20,208 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:23,306 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:26,342 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:29,371 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:32,397 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:35,418 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:38,441 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:41,475 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:44,508 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:47,541 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:50,565 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:53,594 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:56,868 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 07:44:59,897 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
