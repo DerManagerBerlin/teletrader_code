@@ -1751,8 +1751,55 @@ async def send_notification(text: str):
 
 
 # ─── MT5 ─────────────────────────────────────────────────────────────────────
+LOGIN_FAIL_FLAG = "LOGIN_FAILS"   # PATCH56, relativ zum CWD wie PAUSE_FLAG
+
+def _live_creds_ok():
+    """(ok, grund) - sind die Live-Zugangsdaten vollstaendig? PATCH56"""
+    _lg = str(os.getenv("LIVE_MT5_LOGIN", "")).strip()
+    if not _lg.isdigit() or int(_lg) <= 0:
+        return False, "LIVE_MT5_LOGIN fehlt oder ist keine Kontonummer"
+    if not str(os.getenv("LIVE_MT5_PASSWORD", "")).strip():
+        return False, "LIVE_MT5_PASSWORD ist leer"
+    if not str(os.getenv("LIVE_MT5_SERVER", "")).strip():
+        return False, "LIVE_MT5_SERVER ist leer"
+    if not str(os.getenv("LIVE_GOLD_SYMBOL", "")).strip():
+        return False, "LIVE_GOLD_SYMBOL ist leer"
+    return True, ""
+
+def _login_fails() -> int:
+    try:
+        with open(LOGIN_FAIL_FLAG, encoding="utf-8") as _f:
+            return int((_f.read().strip().split() or ["0"])[0])
+    except Exception:
+        return 0
+
+def _login_fail_note(reset: bool = False):
+    try:
+        if reset:
+            if os.path.exists(LOGIN_FAIL_FLAG):
+                os.remove(LOGIN_FAIL_FLAG)
+            return
+        _n = _login_fails() + 1
+        with open(LOGIN_FAIL_FLAG, "w", encoding="utf-8") as _f:
+            _f.write(str(_n) + " " + datetime.now().isoformat() + "\n")
+    except Exception:
+        pass
+
 def connect_mt5() -> bool:
     _ok = False
+    # PATCH56: im Live-Modus niemals mit unvollstaendigen Daten einloggen.
+    if not DEMO_MODE:
+        _cok, _cwhy = _live_creds_ok()
+        if not _cok:
+            log.error("LIVE-Login nicht versucht: " + _cwhy +
+                      " - mit /demo zurueckschalten")
+            return False
+        _mx = int(float(os.getenv("MAX_LOGIN_FAILS", "3")))
+        if _mx > 0 and _login_fails() >= _mx:
+            log.error("LIVE-Login gesperrt nach " + str(_login_fails()) +
+                      " Fehlversuchen. Datei " + LOGIN_FAIL_FLAG +
+                      " loeschen, um es erneut zu versuchen.")
+            return False
     # 1) Attach an laufende Terminal-Sitzung - loest KEINEN Login aus,
     #    kann also eine intakte Verbindung nicht abmelden.
     if mt5.initialize():
@@ -1770,6 +1817,8 @@ def connect_mt5() -> bool:
         _ok = mt5.initialize(login=MT5_LOGIN, password=MT5_PASSWORD, server=MT5_SERVER)
         if not _ok:
             log.error('MT5 Parameter-Login fehlgeschlagen: %s', mt5.last_error())
+            if not DEMO_MODE:
+                _login_fail_note()            # PATCH56
     if not _ok:
         log.error(f"MT5 Fehler: {mt5.last_error()}")
         return False
@@ -1778,6 +1827,7 @@ def connect_mt5() -> bool:
         log.error("Kontodaten nicht abrufbar.")
         return False
     account_type = "DEMO" if DEMO_MODE else "LIVE ⚠️"
+    _login_fail_note(reset=True)              # PATCH56: Erfolg -> Zaehler weg
     log.info(f"MT5 [{account_type}] → Konto {info.login} | Balance: ${info.balance:.2f} {info.currency}")
     # PATCH54: Pruefwerte fuer den Umstieg auf live. Kontonummer maskiert,
     # keine Zugangsdaten.
@@ -3966,6 +4016,15 @@ async def handle_phase_command(text: str) -> bool:
 
     elif cmd in ("/live", "/demo"):
         switch_to = "live" if cmd == "/live" else "demo"
+        if switch_to == "live":               # PATCH56
+            _cok, _cwhy = _live_creds_ok()
+            if not _cok:
+                await send_notification(
+                    "\u274c Wechsel auf LIVE abgelehnt\n" + _cwhy +
+                    "\nZugangsdaten mit live_setup.sh eintragen.")
+                return True
+            if _login_fails() > 0:
+                _login_fail_note(reset=True)
         # Immer Linux-Pfad verwenden (funktioniert unter Wine)
         env_file = "/home/alexander_lacher/teletrader/.env"
         try:
