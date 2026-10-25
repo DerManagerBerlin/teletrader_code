@@ -1751,8 +1751,83 @@ async def send_notification(text: str):
 
 
 # ─── MT5 ─────────────────────────────────────────────────────────────────────
+LOGIN_FAIL_FLAG = "LOGIN_FAILS"   # PATCH56, relativ zum CWD wie PAUSE_FLAG
+
+def _live_creds_ok():
+    """(ok, grund) - sind die Live-Zugangsdaten vollstaendig? PATCH56"""
+    _lg = str(os.getenv("LIVE_MT5_LOGIN", "")).strip()
+    if not _lg.isdigit() or int(_lg) <= 0:
+        return False, "LIVE_MT5_LOGIN fehlt oder ist keine Kontonummer"
+    if not str(os.getenv("LIVE_MT5_PASSWORD", "")).strip():
+        return False, "LIVE_MT5_PASSWORD ist leer"
+    if not str(os.getenv("LIVE_MT5_SERVER", "")).strip():
+        return False, "LIVE_MT5_SERVER ist leer"
+    if not str(os.getenv("LIVE_GOLD_SYMBOL", "")).strip():
+        return False, "LIVE_GOLD_SYMBOL ist leer"
+    return True, ""
+
+def _login_fails() -> int:
+    try:
+        with open(LOGIN_FAIL_FLAG, encoding="utf-8") as _f:
+            return int((_f.read().strip().split() or ["0"])[0])
+    except Exception:
+        return 0
+
+def _login_fail_note(reset: bool = False):
+    try:
+        if reset:
+            if os.path.exists(LOGIN_FAIL_FLAG):
+                os.remove(LOGIN_FAIL_FLAG)
+            return
+        _n = _login_fails() + 1
+        with open(LOGIN_FAIL_FLAG, "w", encoding="utf-8") as _f:
+            _f.write(str(_n) + " " + datetime.now().isoformat() + "\n")
+    except Exception:
+        pass
+
+def _zurueck_auf_demo(grund: str) -> None:
+    """PATCH58: DEMO_MODE=true schreiben, damit der naechste Start hochkommt
+    und der Bot per Telegram erreichbar bleibt."""
+    if os.getenv("SELBSTHEILUNG_DEMO", "true").lower() != "true":
+        return
+    try:
+        _ef = os.path.join(os.path.expanduser("~"), "teletrader", ".env")
+        if not os.path.exists(_ef):
+            _ef = ".env"
+        _zl = open(_ef, encoding="utf-8").read().splitlines()
+        _neu, _hit = [], False
+        for _z in _zl:
+            if _z.strip().startswith("DEMO_MODE="):
+                _neu.append("DEMO_MODE=true"); _hit = True
+            else:
+                _neu.append(_z)
+        if not _hit:
+            _neu.append("DEMO_MODE=true")
+        shutil.copyfile(_ef, _ef + ".bak_selbstheilung")
+        with open(_ef, "w", encoding="utf-8") as _f:
+            _f.write("\n".join(_neu) + "\n")
+        log.error("SELBSTHEILUNG: " + str(grund) + " -> DEMO_MODE=true gesetzt. "
+                  "Naechster Start laeuft auf dem Demokonto, danach ist /live "
+                  "wieder moeglich.")
+    except Exception as _he:
+        log.error("SELBSTHEILUNG fehlgeschlagen: " + str(_he))
+
 def connect_mt5() -> bool:
     _ok = False
+    # PATCH56: im Live-Modus niemals mit unvollstaendigen Daten einloggen.
+    if not DEMO_MODE:
+        _cok, _cwhy = _live_creds_ok()
+        if not _cok:
+            log.error("LIVE-Login nicht versucht: " + _cwhy)
+            _zurueck_auf_demo(_cwhy)                        # PATCH58
+            return False
+        _mx = int(float(os.getenv("MAX_LOGIN_FAILS", "3")))
+        if _mx > 0 and _login_fails() >= _mx:
+            log.error("LIVE-Login gesperrt nach " + str(_login_fails()) +
+                      " Fehlversuchen. Datei " + LOGIN_FAIL_FLAG +
+                      " loeschen, um es erneut zu versuchen.")
+            _zurueck_auf_demo("Login-Sperre erreicht")      # PATCH58
+            return False
     # 1) Attach an laufende Terminal-Sitzung - loest KEINEN Login aus,
     #    kann also eine intakte Verbindung nicht abmelden.
     if mt5.initialize():
@@ -1770,15 +1845,81 @@ def connect_mt5() -> bool:
         _ok = mt5.initialize(login=MT5_LOGIN, password=MT5_PASSWORD, server=MT5_SERVER)
         if not _ok:
             log.error('MT5 Parameter-Login fehlgeschlagen: %s', mt5.last_error())
+            if not DEMO_MODE:
+                _login_fail_note()            # PATCH56
     if not _ok:
         log.error(f"MT5 Fehler: {mt5.last_error()}")
+        if not DEMO_MODE:
+            _zurueck_auf_demo("Live-Login gescheitert: " +
+                              str(mt5.last_error()))        # PATCH58
         return False
     info = mt5.account_info()
     if info is None:
         log.error("Kontodaten nicht abrufbar.")
         return False
     account_type = "DEMO" if DEMO_MODE else "LIVE ⚠️"
+    _login_fail_note(reset=True)              # PATCH56: Erfolg -> Zaehler weg
     log.info(f"MT5 [{account_type}] → Konto {info.login} | Balance: ${info.balance:.2f} {info.currency}")
+    # PATCH54: Pruefwerte fuer den Umstieg auf live. Kontonummer maskiert,
+    # keine Zugangsdaten.
+    if os.getenv("TERMINALCHECK", "true").lower() == "true":
+        try:
+            import subprocess as _sp
+            for _lbl, _cmd in (
+                    ("Prozesse", "ps -eo pid,etimes,args | grep -i terminal64 "
+                                 "| grep -v grep | head -4"),
+                    ("Dienste",  "systemctl list-units --type=service --no-pager "
+                                 "--no-legend 2>/dev/null "
+                                 "| grep -iE 'mt5|wine|xvfb|teletrader' | head -5"),
+                    ("Timer",    "crontab -l 2>/dev/null | grep -vE '^#' | head -5")):
+                try:
+                    _out = _sp.run(["bash", "-lc", _cmd], capture_output=True,
+                                   text=True, timeout=15).stdout.strip()
+                except Exception as _ce:
+                    _out = "Fehler: " + str(_ce)
+                for _zeile in (_out.splitlines() or ["(leer)"]):
+                    log.info("TERMINALCHECK " + _lbl + ": " + _zeile[:220])
+        except Exception as _te:
+            log.error("TERMINALCHECK Fehler: " + str(_te))
+    if os.getenv("LIVECHECK", "true").lower() == "true":
+        try:
+            _kt = str(info.login)
+            log.info("LIVECHECK Modus=" + ("DEMO" if DEMO_MODE else "LIVE") +
+                     " Server=" + str(getattr(info, "server", "?")) +
+                     " Konto=***" + _kt[-3:] +
+                     " Waehrung=" + str(info.currency) +
+                     " Balance=" + str(round(info.balance, 2)) +
+                     " Hebel=" + str(getattr(info, "leverage", "?")) +
+                     " TradeAllowed=" + str(getattr(info, "trade_allowed", "?")))
+            for _sym in [GOLD_SYMBOL, BTC_SYMBOL + FX_SUFFIX]:
+                try:
+                    _si = mt5.symbol_info(_sym)
+                    if _si is None:
+                        if not mt5.symbol_select(_sym, True):
+                            log.error("LIVECHECK " + str(_sym) +
+                                      " NICHT VERFUEGBAR - Symbolname pruefen")
+                            continue
+                        _si = mt5.symbol_info(_sym)
+                    if _si is None:
+                        log.error("LIVECHECK " + str(_sym) + " NICHT VERFUEGBAR")
+                        continue
+                    _tk = mt5.symbol_info_tick(_sym)
+                    _pip = (_si.point or 0.01) * 10
+                    _spr = ((_tk.ask - _tk.bid) / _pip) if (_tk and _pip) else -1
+                    log.info("LIVECHECK " + str(_sym) +
+                             " handelbar=" + str(getattr(_si, "trade_mode", "?")) +
+                             " lot " + str(_si.volume_min) + "-" + str(_si.volume_max) +
+                             " step " + str(_si.volume_step) +
+                             " stops=" + str(getattr(_si, "trade_stops_level", "?")) +
+                             " digits=" + str(_si.digits) +
+                             " bid=" + (str(_tk.bid) if _tk else "?") +
+                             " ask=" + (str(_tk.ask) if _tk else "?") +
+                             " spread=" + str(round(_spr, 1)) + " Pips")
+                except Exception as _se:
+                    log.error("LIVECHECK " + str(_sym) + " Fehler: " + str(_se))
+            log.info("LIVECHECK Handel pausiert=" + str(is_trading_paused()))
+        except Exception as _e:
+            log.error("LIVECHECK Fehler: " + str(_e))
     return True
 
 
@@ -3925,6 +4066,15 @@ async def handle_phase_command(text: str) -> bool:
 
     elif cmd in ("/live", "/demo"):
         switch_to = "live" if cmd == "/live" else "demo"
+        if switch_to == "live":               # PATCH56
+            _cok, _cwhy = _live_creds_ok()
+            if not _cok:
+                await send_notification(
+                    "\u274c Wechsel auf LIVE abgelehnt\n" + _cwhy +
+                    "\nZugangsdaten mit live_setup.sh eintragen.")
+                return True
+            if _login_fails() > 0:
+                _login_fail_note(reset=True)
         # Immer Linux-Pfad verwenden (funktioniert unter Wine)
         env_file = "/home/alexander_lacher/teletrader/.env"
         try:
