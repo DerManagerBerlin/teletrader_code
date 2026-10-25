@@ -1785,20 +1785,48 @@ def _login_fail_note(reset: bool = False):
     except Exception:
         pass
 
+def _zurueck_auf_demo(grund: str) -> None:
+    """PATCH58: DEMO_MODE=true schreiben, damit der naechste Start hochkommt
+    und der Bot per Telegram erreichbar bleibt."""
+    if os.getenv("SELBSTHEILUNG_DEMO", "true").lower() != "true":
+        return
+    try:
+        _ef = os.path.join(os.path.expanduser("~"), "teletrader", ".env")
+        if not os.path.exists(_ef):
+            _ef = ".env"
+        _zl = open(_ef, encoding="utf-8").read().splitlines()
+        _neu, _hit = [], False
+        for _z in _zl:
+            if _z.strip().startswith("DEMO_MODE="):
+                _neu.append("DEMO_MODE=true"); _hit = True
+            else:
+                _neu.append(_z)
+        if not _hit:
+            _neu.append("DEMO_MODE=true")
+        shutil.copyfile(_ef, _ef + ".bak_selbstheilung")
+        with open(_ef, "w", encoding="utf-8") as _f:
+            _f.write("\n".join(_neu) + "\n")
+        log.error("SELBSTHEILUNG: " + str(grund) + " -> DEMO_MODE=true gesetzt. "
+                  "Naechster Start laeuft auf dem Demokonto, danach ist /live "
+                  "wieder moeglich.")
+    except Exception as _he:
+        log.error("SELBSTHEILUNG fehlgeschlagen: " + str(_he))
+
 def connect_mt5() -> bool:
     _ok = False
     # PATCH56: im Live-Modus niemals mit unvollstaendigen Daten einloggen.
     if not DEMO_MODE:
         _cok, _cwhy = _live_creds_ok()
         if not _cok:
-            log.error("LIVE-Login nicht versucht: " + _cwhy +
-                      " - mit /demo zurueckschalten")
+            log.error("LIVE-Login nicht versucht: " + _cwhy)
+            _zurueck_auf_demo(_cwhy)                        # PATCH58
             return False
         _mx = int(float(os.getenv("MAX_LOGIN_FAILS", "3")))
         if _mx > 0 and _login_fails() >= _mx:
             log.error("LIVE-Login gesperrt nach " + str(_login_fails()) +
                       " Fehlversuchen. Datei " + LOGIN_FAIL_FLAG +
                       " loeschen, um es erneut zu versuchen.")
+            _zurueck_auf_demo("Login-Sperre erreicht")      # PATCH58
             return False
     # 1) Attach an laufende Terminal-Sitzung - loest KEINEN Login aus,
     #    kann also eine intakte Verbindung nicht abmelden.
@@ -1821,6 +1849,9 @@ def connect_mt5() -> bool:
                 _login_fail_note()            # PATCH56
     if not _ok:
         log.error(f"MT5 Fehler: {mt5.last_error()}")
+        if not DEMO_MODE:
+            _zurueck_auf_demo("Live-Login gescheitert: " +
+                              str(mt5.last_error()))        # PATCH58
         return False
     info = mt5.account_info()
     if info is None:
@@ -1831,6 +1862,25 @@ def connect_mt5() -> bool:
     log.info(f"MT5 [{account_type}] → Konto {info.login} | Balance: ${info.balance:.2f} {info.currency}")
     # PATCH54: Pruefwerte fuer den Umstieg auf live. Kontonummer maskiert,
     # keine Zugangsdaten.
+    if os.getenv("TERMINALCHECK", "true").lower() == "true":
+        try:
+            import subprocess as _sp
+            for _lbl, _cmd in (
+                    ("Prozesse", "ps -eo pid,etimes,args | grep -i terminal64 "
+                                 "| grep -v grep | head -4"),
+                    ("Dienste",  "systemctl list-units --type=service --no-pager "
+                                 "--no-legend 2>/dev/null "
+                                 "| grep -iE 'mt5|wine|xvfb|teletrader' | head -5"),
+                    ("Timer",    "crontab -l 2>/dev/null | grep -vE '^#' | head -5")):
+                try:
+                    _out = _sp.run(["bash", "-lc", _cmd], capture_output=True,
+                                   text=True, timeout=15).stdout.strip()
+                except Exception as _ce:
+                    _out = "Fehler: " + str(_ce)
+                for _zeile in (_out.splitlines() or ["(leer)"]):
+                    log.info("TERMINALCHECK " + _lbl + ": " + _zeile[:220])
+        except Exception as _te:
+            log.error("TERMINALCHECK Fehler: " + str(_te))
     if os.getenv("LIVECHECK", "true").lower() == "true":
         try:
             _kt = str(info.login)
