@@ -1,76 +1,3 @@
-2026-10-22 15:15:08,977 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4056.0'
-2026-10-22 15:15:08,984 [INFO] Lot-Sizing: Balance=953.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-22 15:15:08,985 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4051.0) + 4 Runner (PARTIAL_AT_TP)
-
-⚡ SIGNAL [15:15:08] aus: XAUUSD SCALPING ⚡️
-  SELL XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4064.0 | TPs: [4051.0, 4048.0, 4044.0, 4040.0]
-  Verteilung: {4051.0: 1, 0: 4}
-2026-10-22 15:15:08,987 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.6 (Einstieg 4054.4 statt 4056.0)
-2026-10-22 15:15:08,987 [INFO] Lot-Sizing: Balance=953.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-22 15:15:08,989 [INFO] Lot-Normalisierung XAUUSD.s: 0.008454906444000081 -> 0.01 (min 0.01, step 0.01)
-2026-10-22 15:15:08,989 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 8.57, Budget 36.22)
-2026-10-22 15:15:08,990 [INFO] Zielrisiko 3.8%: SL=9.6 -> Lot 0.05 -> 0.01 x 4 Layer = 34.28 je Signal
-2026-10-22 15:15:08,993 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4051.0) + 3 Runner (PARTIAL_AT_TP)
-2026-10-22 15:15:08,995 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4051.0) + 3 Runner (PARTIAL_AT_TP)
-2026-10-22 15:15:08,997 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 15:15:09,407 [INFO] Runner markiert #419144909 -> runners.json
-2026-10-22 15:15:09,407 [INFO] Layer 1/4 Ticket #419144909 TP=4051.0
-2026-10-22 15:15:09,411 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 15:15:09,832 [INFO] Runner markiert #419144920 -> runners.json
-2026-10-22 15:15:09,833 [INFO] Layer 2/4 Ticket #419144920 TP=0
-2026-10-22 15:15:09,837 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 15:15:10,263 [INFO] Runner markiert #419144926 -> runners.json
-2026-10-22 15:15:10,265 [INFO] Layer 3/4 Ticket #419144926 TP=0
-2026-10-22 15:15:10,271 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 15:15:10,686 [INFO] Runner markiert #419144930 -> runners.json
-2026-10-22 15:15:10,686 [INFO] Layer 4/4 Ticket #419144930 TP=0
-2026-10-22 15:15:10,687 [INFO] TP-Layer Map: {'tp1': [419144909], 'tp2': [419144920, 419144926, 419144930]}
-2026-10-22 15:15:10,688 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
-2026-10-22 15:15:11,244 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 15:16:03,313 [INFO] Ruecksetzer #419144920 2.5p vom Hoch 1.5p (Trail 30.0p)
-2026-10-22 15:16:03,323 [INFO] Ruecksetzer #419144926 2.5p vom Hoch 2.0p (Trail 30.0p)
-2026-10-22 15:16:03,343 [INFO] Ruecksetzer #419144930 2.5p vom Hoch 1.3p (Trail 30.0p)
-2026-10-22 15:16:13,359 [INFO] Ruecksetzer #419144920 7.2p vom Hoch 1.1p (Trail 30.0p)
-2026-10-22 15:16:13,369 [INFO] Ruecksetzer #419144926 7.2p vom Hoch 0.6p (Trail 30.0p)
-2026-10-22 15:16:13,377 [INFO] Ruecksetzer #419144930 7.2p vom Hoch 1.3p (Trail 30.0p)
-2026-10-22 15:16:53,558 [INFO] Ruecksetzer #419144920 9.5p vom Hoch 3.4p (Trail 30.0p)
-2026-10-22 15:16:53,561 [INFO] Ruecksetzer #419144926 9.5p vom Hoch 2.9p (Trail 30.0p)
-2026-10-22 15:16:53,564 [INFO] Ruecksetzer #419144930 9.5p vom Hoch 3.6p (Trail 30.0p)
-2026-10-22 15:17:03,578 [INFO] Ruecksetzer #419144920 22.1p vom Hoch 3.4p (Trail 30.0p)
-2026-10-22 15:17:03,582 [INFO] Ruecksetzer #419144926 22.1p vom Hoch 2.9p (Trail 30.0p)
-2026-10-22 15:17:03,585 [INFO] Ruecksetzer #419144930 22.1p vom Hoch 3.6p (Trail 30.0p)
-2026-10-22 15:17:13,592 [INFO] Ruecksetzer #419144920 45.9p vom Hoch 3.4p (Trail 30.0p)
-2026-10-22 15:17:13,595 [INFO] Ruecksetzer #419144926 45.9p vom Hoch 2.9p (Trail 30.0p)
-2026-10-22 15:17:13,598 [INFO] Ruecksetzer #419144930 45.9p vom Hoch 3.6p (Trail 30.0p)
-2026-10-22 15:18:23,874 [INFO] Ruecksetzer #419144920 47.0p vom Hoch 3.4p (Trail 30.0p)
-2026-10-22 15:18:23,877 [INFO] Ruecksetzer #419144926 47.0p vom Hoch 2.9p (Trail 30.0p)
-2026-10-22 15:18:23,879 [INFO] Ruecksetzer #419144930 47.0p vom Hoch 3.6p (Trail 30.0p)
-2026-10-22 15:18:29,377 [INFO] Telethon Wakeup-Ping
-2026-10-22 15:18:34,127 [INFO] Ruecksetzer #419144920 65.7p vom Hoch 3.4p (Trail 30.0p)
-2026-10-22 15:18:34,130 [INFO] Ruecksetzer #419144926 65.7p vom Hoch 2.9p (Trail 30.0p)
-2026-10-22 15:18:34,136 [INFO] Ruecksetzer #419144930 65.7p vom Hoch 3.6p (Trail 30.0p)
-2026-10-22 15:18:44,151 [INFO] Ruecksetzer #419144920 68.0p vom Hoch 3.4p (Trail 30.0p)
-2026-10-22 15:18:44,154 [INFO] Ruecksetzer #419144926 68.0p vom Hoch 2.9p (Trail 30.0p)
-2026-10-22 15:18:44,156 [INFO] Ruecksetzer #419144930 68.0p vom Hoch 3.6p (Trail 30.0p)
-2026-10-22 15:22:27,215 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 15:22:27,288 [INFO] Scalp: besserer Einstieg als im Signal (5.4 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-22 15:22:27,288 [INFO] Verpasstes TRADE uebersprungen: Nachricht 15:15 ist 7.3 Min alt (> 5.0 Min) - kein Re-Fire
-2026-10-22 15:22:27,341 [INFO] ✅ Keine verpassten Signale
-2026-10-22 15:28:29,695 [INFO] Telethon Wakeup-Ping
-2026-10-22 15:32:02,644 [INFO] SL-Leiter: #419144909 TP1 erreicht -> SL auf Entry/BE (4054.4)
-2026-10-22 15:32:02,810 [INFO] SL-Leiter: #419144920 TP1 erreicht -> SL auf Entry/BE (4054.38)
-2026-10-22 15:32:02,959 [INFO] SL-Leiter: #419144926 TP1 erreicht -> SL auf Entry/BE (4054.42)
-2026-10-22 15:32:03,131 [INFO] SL-Leiter: #419144930 TP1 erreicht -> SL auf Entry/BE (4054.36)
-2026-10-22 15:32:05,544 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
-2026-10-22 15:32:05,547 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 15:32:05,664 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 15:32:25,747 [INFO] MFE #419144909 XAUUSD.s: Hoch +3.5 Punkte, Stufe 1
-2026-10-22 15:32:25,749 [INFO] prune_runners: 1 verwaiste entfernt
-2026-10-22 15:32:27,342 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 15:32:27,473 [INFO] ✅ Keine verpassten Signale
-2026-10-22 15:34:00,950 [INFO] MFE #419144920 XAUUSD.s: Hoch +4.0 Punkte, Stufe 1
-2026-10-22 15:34:00,955 [INFO] MFE #419144926 XAUUSD.s: Hoch +4.0 Punkte, Stufe 1
 2026-10-22 15:34:00,964 [INFO] MFE #419144930 XAUUSD.s: Hoch +4.0 Punkte, Stufe 1
 2026-10-22 15:34:29,066 [INFO] Prioritaet freigegeben: XAUUSD.s (XAUUSD SCALPING ⚡️)
 2026-10-22 15:38:30,045 [INFO] Telethon Wakeup-Ping
@@ -7998,3 +7925,76 @@ Live-Modus bestaetigt.
 AUTO_CONFIRM_LIVE=true – Autostart
 Live-Modus bestaetigt.
 
+2026-10-25 22:00:18,780 [ERROR] MT5 Parameter-Login fehlgeschlagen: (-10005, 'IPC timeout')
+2026-10-25 22:00:18,784 [ERROR] MT5 Fehler: (-10005, 'IPC timeout')
+❌ MT5 Verbindung fehlgeschlagen.
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🔴 LIVE | Phase: 3
+══════════════════════════════════════════════════════════
+
+
+======================================================
+  LIVE-MODUS AKTIV - ECHTES GELD!
+======================================================
+
+  [OK] ANTHROPIC_API_KEY gesetzt
+  [OK] RISK_PER_100=0.03 (empfohlen <= 0.07)
+  [OK] Lot-Sizing: 0.02/100$ Standard, GHP-Backup 2x
+  [OK] MAX_POS_PER_SYMBOL=6 (empfohlen <= 10)
+  [OK] TRAILING_STOP_ENABLED=true
+  [OK] MAGIC_NUMBER=88888
+
+AUTO_CONFIRM_LIVE=true – Autostart
+Live-Modus bestaetigt.
+
+2026-10-25 22:02:32,392 [ERROR] MT5 Parameter-Login fehlgeschlagen: (-10005, 'IPC timeout')
+2026-10-25 22:02:32,402 [ERROR] MT5 Fehler: (-10005, 'IPC timeout')
+❌ MT5 Verbindung fehlgeschlagen.
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🔴 LIVE | Phase: 3
+══════════════════════════════════════════════════════════
+
+
+======================================================
+  LIVE-MODUS AKTIV - ECHTES GELD!
+======================================================
+
+  [OK] ANTHROPIC_API_KEY gesetzt
+  [OK] RISK_PER_100=0.03 (empfohlen <= 0.07)
+  [OK] Lot-Sizing: 0.02/100$ Standard, GHP-Backup 2x
+  [OK] MAX_POS_PER_SYMBOL=6 (empfohlen <= 10)
+  [OK] TRAILING_STOP_ENABLED=true
+  [OK] MAGIC_NUMBER=88888
+
+AUTO_CONFIRM_LIVE=true – Autostart
+Live-Modus bestaetigt.
+
+2026-10-25 22:02:45,139 [ERROR] LIVE-Login gesperrt nach 3 Fehlversuchen. Datei LOGIN_FAILS loeschen, um es erneut zu versuchen.
+❌ MT5 Verbindung fehlgeschlagen.
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🔴 LIVE | Phase: 3
+══════════════════════════════════════════════════════════
+
+
+======================================================
+  LIVE-MODUS AKTIV - ECHTES GELD!
+======================================================
+
+  [OK] ANTHROPIC_API_KEY gesetzt
+  [OK] RISK_PER_100=0.03 (empfohlen <= 0.07)
+  [OK] Lot-Sizing: 0.02/100$ Standard, GHP-Backup 2x
+  [OK] MAX_POS_PER_SYMBOL=6 (empfohlen <= 10)
+  [OK] TRAILING_STOP_ENABLED=true
+  [OK] MAGIC_NUMBER=88888
+
+AUTO_CONFIRM_LIVE=true – Autostart
+Live-Modus bestaetigt.
+
+2026-10-25 22:03:57,213 [ERROR] LIVE-Login gesperrt nach 3 Fehlversuchen. Datei LOGIN_FAILS loeschen, um es erneut zu versuchen.
+❌ MT5 Verbindung fehlgeschlagen.
