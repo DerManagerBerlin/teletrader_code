@@ -461,6 +461,42 @@ def distribute_layers(num_layers: int, tps: list, channel: str = "") -> dict:
         #   PARTIAL_AT_TP = 1 -> TP1 (Vorgabe) | 2 -> TP2 | -1 -> letzter TP | 0 -> aus
         # TP-Leiter: je ein Layer auf TP1, TP2, TP3 ... plus IMMER ein Runner.
         # Zu wenige Layer -> die hinteren TPs fallen weg, der Runner bleibt.
+        # PATCH47: gewichtete Verteilung. "2,1,1,1" = 2 Einheiten auf TP1,
+        # je 1 auf TP2/TP3/TP4, Rest Runner. Mindestens 1 Runner bleibt.
+        _gw = (os.getenv("PARTIAL_GEWICHTE", "") or "").strip()
+        if _gw and num_tps > 0 and num_layers >= 2:
+            _ws = []
+            try:
+                _ws = [int(float(x)) for x in _gw.replace(";", ",").split(",")
+                       if x.strip()]
+            except Exception:
+                _ws = []
+            if _ws and any(w > 0 for w in _ws):
+                _v = {}
+                _frei = num_layers - 1          # ein Layer bleibt fuer den Runner
+                _txt = []
+                for _i, _w in enumerate(_ws):
+                    if _i >= num_tps or _frei <= 0:
+                        break
+                    _take = min(max(0, _w), _frei)
+                    if _take <= 0:
+                        continue
+                    _v[tps[_i]] = _v.get(tps[_i], 0) + _take
+                    _frei -= _take
+                    _txt.append(str(_take) + "x TP" + str(_i + 1) +
+                                " (" + str(tps[_i]) + ")")
+                _rest = num_layers - sum(_v.values())
+                if _rest < 1:                   # Sicherung: Runner nie opfern
+                    _k = sorted(_v.keys())[-1]
+                    _v[_k] -= 1
+                    if _v[_k] <= 0:
+                        _v.pop(_k, None)
+                    _rest = num_layers - sum(_v.values())
+                _v[0] = _rest
+                log.info("Layer-Verteilung: " + str(num_layers) + " Layer = " +
+                         ", ".join(_txt) + " + " + str(_rest) +
+                         " Runner (PARTIAL_GEWICHTE " + _gw + ")")
+                return _v
         if (os.getenv("PARTIAL_LADDER", "true").lower() == "true"
                 and num_tps > 0 and num_layers >= 2):
             _n = min(num_tps, num_layers - 1)       # so viele TPs wie moeglich
@@ -720,7 +756,32 @@ def _scalp_env(name: str, symbol: str, default: str) -> float:
 
 
 _NACHHOL_DATEI = "nachholen.json"
+# PATCH46: zuletzt vom Kanal gemeldete TP-Stufe. Wird bei jedem neuen
+# Signal zurueckgesetzt, gilt also immer nur fuer den laufenden Trade.
+_tp_meldung = {"stufe": 0, "ts": 0.0}
+_TP_MELD_RX = re.compile(r"TP\s*(\d)\s*(?:HIT|Hit)", re.IGNORECASE)
+
+def _tp_meldung_pruefen(text):
+    """Erkennt die TP-Treffermeldung des Kanals und merkt die Stufe."""
+    try:
+        if not text:
+            return
+        if "SCALP IDEE" in text or "NEUE TRADE IDEE" in text:
+            _tp_meldung["stufe"] = 0
+            _tp_meldung["ts"] = datetime.now().timestamp()
+            return
+        _m = _TP_MELD_RX.search(text)
+        if _m:
+            _s = int(_m.group(1))
+            if _s > int(_tp_meldung.get("stufe") or 0):
+                _tp_meldung["stufe"] = _s
+                _tp_meldung["ts"] = datetime.now().timestamp()
+                log.info("Kanal meldet TP" + str(_s) +
+                         " - Leiter darf die Stufe ohne eigenen Kursdruck setzen")
+    except Exception:
+        pass
 _leiter_gemeldet = set()    # PATCH45: Tickets, fuer die die Leiter schon gemeldet hat
+_meld_genutzt = set()       # PATCH46: Tickets, die schon eine Kanalstufe genutzt haben
 _nachhol_erledigt = {}      # PATCH45: Entry-Schluessel -> Zeitstempel der Vormerkung
 
 def _nachhol_lesen():
@@ -793,6 +854,8 @@ def parse_scalp_signal(text: str) -> dict:
                 "new_sl": None, "new_tp": None, "confidence": 99,
                 "reasoning": "Regex: " + why}
 
+    # PATCH48: Erkennung hier entfernt - der Parser laeuft auch fuer
+    # wiederholte alte Nachrichten aus dem Verpasste-Signale-Scan.
     def _f(s):
         return float(s.replace(",", "."))
 
@@ -5786,6 +5849,24 @@ async def main():
                     # Verhindert, dass der SL auf einem gerade durchlaufenen
                     # TP-Niveau geparkt und vom naechsten Ruecksetzer geholt wird.
                     _lmax = int(os.getenv("LADDER_MAX_STAGE", "0"))
+                    # PATCH46: Was der Kanal gemeldet hat, zaehlt auch dann,
+                    # wenn unsere eigenen Bars die Stufe nicht gedruckt haben.
+                    if os.getenv("TP_AUS_MELDUNG", "true").lower() == "true":
+                        _ms = int(_tp_meldung.get("stufe") or 0)
+                        _mts = float(_tp_meldung.get("ts") or 0)
+                        if _ms > 0 and _mts > 0 and \
+                                (datetime.now().timestamp() - _mts) < 14400:
+                            if _lmax > 0:
+                                _ms = min(_ms, _lmax)
+                            if _ms > _reached:
+                                if tk not in _meld_genutzt:
+                                    _meld_genutzt.add(tk)
+                                    if len(_meld_genutzt) > 500:
+                                        _meld_genutzt.clear()
+                                    log.info("SL-Leiter #" + str(tk) + ": Stufe " +
+                                             str(_ms) + " aus der Kanalmeldung (" +
+                                             "eigener Kurs hat sie nicht gedruckt)")
+                                _reached = _ms
                     if _lmax > 0 and _reached > _lmax:
                         continue
                     # PATCH43: Layer mit hartem TP nicht auf BE ziehen, solange
@@ -5799,7 +5880,7 @@ async def main():
                             if abs(float(_tp) - float(pos.tp)) <= _tol:
                                 _eig = _i + 1
                                 break
-                        if _eig and _reached <= _eig:
+                        if _eig and _reached >= _eig:
                             if tk not in _leiter_gemeldet:
                                 _leiter_gemeldet.add(tk)
                                 if len(_leiter_gemeldet) > 500:
@@ -6062,6 +6143,7 @@ async def main():
 
             if _regex_only_channel(channel_name):
                 # Starres Kanal-Template: deterministischer Parser, KEIN Claude-API-Call
+                _tp_meldung_pruefen(text)      # PATCH48: nur hier, live
                 result = parse_scalp_signal(text)
             elif len(words) <= 2:
                 if any(w in text_lower_check for w in CANCEL_WORDS):

@@ -1,1151 +1,3 @@
-2026-10-21 15:50:01,000 [INFO] AUTOPATCH env: Stand: TARGET_RISK_PCT=0.038 MAX_LAYERS_XAUUSD=5 PARTIAL_LADDER=false LAYERS_FIT_RISK=true LADDER_START_STAGE=1 LADDER_MAX_STAGE=1 TRAILING_STOP_PIPS=50 TRAILING_STOP_PIPS_XAUUSD=30 TRAILING_STOP_MIN_PROFIT_PIPS=50 PARTIAL_AT_TP=1 SCALP_ENTRY_MAX_PIPS_XAUUSD=18 TRAILING_STOP_MIN_PROFIT_PIPS_XAUUSD=30
-2026-10-21 15:50:01,000 [INFO] AUTOPATCH: patch_38_trail30.py angewendet - geaendert: TRAILING_STOP_PIPS_XAUUSD: 50 -> 30 | TRAILING_STOP_MIN_PROFIT_PIPS_XAUUSD: (fehlte) -> 30
-2026-10-21 15:50:02,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
-2026-10-21 15:50:37,000 [INFO] AUTOPATCH: teletrader.service laeuft
-
-══════════════════════════════════════════════════════════
-  TeleTrader AI  –  Finale Version
-  Modus: 🟡 DEMO | Phase: 3
-══════════════════════════════════════════════════════════
-
-2026-10-21 15:52:02,864 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $945.52 EUR
-2026-10-21 15:52:03,027 [INFO] Connecting to 149.154.167.51:443/TcpFull...
-2026-10-21 15:52:03,042 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
-2026-10-21 15:52:03,203 [INFO] Telegram User-Client verbunden.
-2026-10-21 15:52:03,211 [INFO] Connecting to 149.154.167.51:443/TcpFull...
-2026-10-21 15:52:03,224 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
-2026-10-21 15:52:03,432 [INFO] Telegram Bot-Client verbunden.
-2026-10-21 15:52:03,433 [INFO] Lade Dialoge für private Kanal-Auflösung...
-2026-10-21 15:52:06,292 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
-2026-10-21 15:52:07,527 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
-2026-10-21 15:52:07,550 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
-✅ Bereit – überwache 2 Kanäle
-
-2026-10-21 15:52:22,615 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
-2026-10-21 15:52:22,745 [INFO] ✅ Keine verpassten Signale
-2026-10-21 15:52:24,436 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
-2026-10-21 15:52:52,748 [INFO] Equity Guardian: Start=945.52$
-2026-10-21 15:57:22,758 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 15:57:22,966 [INFO] ✅ Keine verpassten Signale
-2026-10-21 16:03:24,777 [INFO] Telethon Wakeup-Ping
-2026-10-21 16:07:22,970 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 16:07:23,184 [INFO] ✅ Keine verpassten Signale
-2026-10-21 16:10:05,783 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4131.1'
-2026-10-21 16:10:05,796 [INFO] Lot-Sizing: Balance=946.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-21 16:10:05,797 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4126.11) + 4 Runner (PARTIAL_AT_TP)
-
-⚡ SIGNAL [16:10:05] aus: XAUUSD SCALPING ⚡️
-  SELL XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4139.11 | TPs: [4126.11, 4123.11, 4119.11, 4115.11]
-  Verteilung: {4126.11: 1, 0: 4}
-2026-10-21 16:10:05,799 [INFO] Lot-Sizing: Balance=946.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-21 16:10:05,801 [INFO] Lot-Normalisierung XAUUSD.s: 0.0100772197872 -> 0.01 (min 0.01, step 0.01)
-2026-10-21 16:10:05,801 [INFO] Zielrisiko 3.8%: SL=8.0 -> Lot 0.05 -> 0.01 x 5 Layer = 35.65 je Signal
-2026-10-21 16:10:05,804 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4126.11) + 4 Runner (PARTIAL_AT_TP)
-2026-10-21 16:10:05,807 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4126.11) + 4 Runner (PARTIAL_AT_TP)
-2026-10-21 16:10:05,808 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-21 16:10:06,226 [INFO] Runner markiert #417636987 -> runners.json
-2026-10-21 16:10:06,227 [INFO] Layer 1/5 Ticket #417636987 TP=4126.11
-2026-10-21 16:10:06,230 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-21 16:10:06,643 [INFO] Runner markiert #417636988 -> runners.json
-2026-10-21 16:10:06,643 [INFO] Layer 2/5 Ticket #417636988 TP=0
-2026-10-21 16:10:06,645 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-21 16:10:07,057 [INFO] Runner markiert #417636989 -> runners.json
-2026-10-21 16:10:07,058 [INFO] Layer 3/5 Ticket #417636989 TP=0
-2026-10-21 16:10:07,060 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-21 16:10:07,475 [INFO] Runner markiert #417636991 -> runners.json
-2026-10-21 16:10:07,476 [INFO] Layer 4/5 Ticket #417636991 TP=0
-2026-10-21 16:10:07,481 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-21 16:10:07,895 [INFO] Runner markiert #417636992 -> runners.json
-2026-10-21 16:10:07,895 [INFO] Layer 5/5 Ticket #417636992 TP=0
-2026-10-21 16:10:07,895 [INFO] TP-Layer Map: {'tp1': [417636987], 'tp2': [417636988, 417636989, 417636991, 417636992]}
-2026-10-21 16:10:07,896 [INFO] Phase 3: Auto-Trade XAUUSD.s | 5 Tickets
-2026-10-21 16:10:09,482 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 16:13:25,288 [INFO] Telethon Wakeup-Ping
-2026-10-21 16:17:23,188 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 16:17:23,261 [INFO] Scalp: besserer Einstieg als im Signal (14.7 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-21 16:17:23,262 [INFO] Verpasstes TRADE uebersprungen: Nachricht 16:10 ist 7.3 Min alt (> 5.0 Min) - kein Re-Fire
-2026-10-21 16:17:23,335 [INFO] ✅ Keine verpassten Signale
-2026-10-21 16:23:25,799 [INFO] Telethon Wakeup-Ping
-2026-10-21 16:27:23,329 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 16:27:23,412 [INFO] Scalp: besserer Einstieg als im Signal (6.9 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-21 16:27:23,413 [INFO] Verpasstes TRADE uebersprungen: Nachricht 16:10 ist 17.3 Min alt (> 5.0 Min) - kein Re-Fire
-2026-10-21 16:27:23,471 [INFO] ✅ Keine verpassten Signale
-2026-10-21 16:33:26,447 [INFO] Telethon Wakeup-Ping
-2026-10-21 16:37:23,476 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 16:37:23,812 [INFO] ✅ Keine verpassten Signale
-2026-10-21 16:40:02,367 [INFO] MFE #417636987 XAUUSD.s: Hoch +3.2 Punkte, Stufe 0
-2026-10-21 16:40:02,376 [INFO] MFE #417636988 XAUUSD.s: Hoch +3.2 Punkte, Stufe 0
-2026-10-21 16:40:02,386 [INFO] MFE #417636989 XAUUSD.s: Hoch +3.2 Punkte, Stufe 0
-2026-10-21 16:40:02,392 [INFO] MFE #417636991 XAUUSD.s: Hoch +3.1 Punkte, Stufe 0
-2026-10-21 16:40:02,399 [INFO] MFE #417636992 XAUUSD.s: Hoch +3.2 Punkte, Stufe 0
-2026-10-21 16:40:18,011 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '❌ SL HIT –80 PIPS'
-2026-10-21 16:40:18,016 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 16:40:19,351 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 16:40:25,171 [INFO] Prioritaet freigegeben: XAUUSD.s (XAUUSD SCALPING ⚡️)
-2026-10-21 16:42:10,367 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: 'Wtf 🤬😂'
-2026-10-21 16:42:10,371 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 16:42:19,427 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 16:42:28,181 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: 'Was war das für eine unnötige Kerze?'
-2026-10-21 16:42:28,183 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 16:42:29,223 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 16:42:39,983 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: 'Der trade sollte aufgehen 😂'
-2026-10-21 16:42:39,985 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 16:42:49,331 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 16:43:27,316 [INFO] Telethon Wakeup-Ping
-2026-10-21 16:44:08,992 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: 'Aus dem nichts.. ohne news??'
-2026-10-21 16:44:08,994 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 16:44:09,535 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 16:44:36,101 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: 'Hat trump getweetet ? 😅'
-2026-10-21 16:44:36,103 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 16:44:39,506 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 16:45:03,000 [INFO] AUTOPATCH: patch_39_sl_real.py angewendet - Patch 39 OK - SL-Distanz aus dem echten Einstiegskurs
-2026-10-21 16:45:03,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
-2026-10-21 16:45:38,000 [INFO] AUTOPATCH: teletrader.service laeuft
-
-══════════════════════════════════════════════════════════
-  TeleTrader AI  –  Finale Version
-  Modus: 🟡 DEMO | Phase: 3
-══════════════════════════════════════════════════════════
-
-2026-10-21 16:47:12,850 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $907.33 EUR
-2026-10-21 16:47:12,999 [INFO] Connecting to 149.154.167.51:443/TcpFull...
-2026-10-21 16:47:13,018 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
-2026-10-21 16:47:13,543 [INFO] Telegram User-Client verbunden.
-2026-10-21 16:47:13,550 [INFO] Connecting to 149.154.167.51:443/TcpFull...
-2026-10-21 16:47:13,563 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
-2026-10-21 16:47:13,774 [INFO] Telegram Bot-Client verbunden.
-2026-10-21 16:47:13,774 [INFO] Lade Dialoge für private Kanal-Auflösung...
-2026-10-21 16:47:15,391 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
-2026-10-21 16:47:16,013 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
-2026-10-21 16:47:16,045 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
-✅ Bereit – überwache 2 Kanäle
-
-2026-10-21 16:47:31,108 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
-2026-10-21 16:47:31,196 [INFO] Scalp: besserer Einstieg als im Signal (10.7 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-21 16:47:31,196 [INFO] Verpasstes TRADE uebersprungen: Nachricht 16:10 ist 37.4 Min alt (> 5.0 Min) - kein Re-Fire
-2026-10-21 16:47:31,360 [INFO] ✅ Keine verpassten Signale
-2026-10-21 16:47:32,424 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
-2026-10-21 16:48:01,363 [INFO] Equity Guardian: Start=907.33$
-2026-10-21 16:52:31,369 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 16:52:31,492 [INFO] ✅ Keine verpassten Signale
-2026-10-21 16:58:17,185 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: 'Kleines Update zu dem Spike, Leute 👇\n\nOffenbar haben sich ze'
-2026-10-21 16:58:17,188 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 16:58:19,658 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 16:58:33,064 [INFO] Telethon Wakeup-Ping
-2026-10-21 17:00:17,097 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4131.6'
-2026-10-21 17:00:17,110 [INFO] Lot-Sizing: Balance=907.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-21 17:00:17,111 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4126.68) + 4 Runner (PARTIAL_AT_TP)
-
-⚡ SIGNAL [17:00:17] aus: XAUUSD SCALPING ⚡️
-  SELL XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4139.68 | TPs: [4126.68, 4123.68, 4119.68, 4115.68]
-  Verteilung: {4126.68: 1, 0: 4}
-2026-10-21 17:00:17,113 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 8.31 (Einstieg 4131.37 statt 4131.68)
-2026-10-21 17:00:17,114 [INFO] Lot-Sizing: Balance=907.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-21 17:00:17,115 [INFO] Lot-Normalisierung XAUUSD.s: 0.009321569945510986 -> 0.01 (min 0.01, step 0.01)
-2026-10-21 17:00:17,116 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 7.4, Budget 34.48)
-2026-10-21 17:00:17,116 [INFO] Zielrisiko 3.8%: SL=8.31 -> Lot 0.05 -> 0.01 x 4 Layer = 29.59 je Signal
-2026-10-21 17:00:17,122 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4126.68) + 3 Runner (PARTIAL_AT_TP)
-2026-10-21 17:00:17,125 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4126.68) + 3 Runner (PARTIAL_AT_TP)
-2026-10-21 17:00:17,127 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-21 17:00:17,542 [INFO] Runner markiert #417684791 -> runners.json
-2026-10-21 17:00:17,543 [INFO] Layer 1/4 Ticket #417684791 TP=4126.68
-2026-10-21 17:00:17,545 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-21 17:00:17,957 [INFO] Runner markiert #417684799 -> runners.json
-2026-10-21 17:00:17,958 [INFO] Layer 2/4 Ticket #417684799 TP=0
-2026-10-21 17:00:17,960 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-21 17:00:18,371 [INFO] Runner markiert #417684800 -> runners.json
-2026-10-21 17:00:18,372 [INFO] Layer 3/4 Ticket #417684800 TP=0
-2026-10-21 17:00:18,374 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-21 17:00:18,786 [INFO] Runner markiert #417684806 -> runners.json
-2026-10-21 17:00:18,787 [INFO] Layer 4/4 Ticket #417684806 TP=0
-2026-10-21 17:00:18,788 [INFO] TP-Layer Map: {'tp1': [417684791], 'tp2': [417684799, 417684800, 417684806]}
-2026-10-21 17:00:18,788 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
-2026-10-21 17:00:19,340 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 17:02:31,493 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 17:02:31,650 [INFO] Verpasstes Signal ausfuehren [XAUUSD SCALPING ⚡️] 17:00: TRADE conf=99%
-2026-10-21 17:02:31,651 [INFO] Verpasstes Signal uebersprungen: bereits 4 Position(en) offen
-2026-10-21 17:08:33,358 [INFO] Telethon Wakeup-Ping
-2026-10-21 17:12:31,756 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 17:12:31,894 [INFO] ✅ Keine verpassten Signale
-2026-10-21 17:18:33,678 [INFO] Telethon Wakeup-Ping
-2026-10-21 17:22:31,896 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 17:22:32,092 [INFO] ✅ Keine verpassten Signale
-2026-10-21 17:28:33,905 [INFO] Telethon Wakeup-Ping
-2026-10-21 17:32:32,092 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 17:32:32,306 [INFO] ✅ Keine verpassten Signale
-2026-10-21 17:38:34,123 [INFO] Telethon Wakeup-Ping
-2026-10-21 17:42:32,307 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 17:42:32,514 [INFO] ✅ Keine verpassten Signale
-2026-10-21 17:48:34,401 [INFO] Telethon Wakeup-Ping
-2026-10-21 17:52:32,517 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 17:52:32,623 [INFO] ✅ Keine verpassten Signale
-2026-10-21 17:58:34,614 [INFO] Telethon Wakeup-Ping
-2026-10-21 18:02:32,625 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 18:02:32,739 [INFO] ✅ Keine verpassten Signale
-2026-10-21 18:05:53,669 [INFO] MFE #417684791 XAUUSD.s: Hoch +2.6 Punkte, Stufe 0
-2026-10-21 18:05:53,676 [INFO] MFE #417684799 XAUUSD.s: Hoch +2.5 Punkte, Stufe 0
-2026-10-21 18:05:53,682 [INFO] MFE #417684800 XAUUSD.s: Hoch +2.5 Punkte, Stufe 0
-2026-10-21 18:05:53,688 [INFO] MFE #417684806 XAUUSD.s: Hoch +2.5 Punkte, Stufe 0
-2026-10-21 18:06:01,608 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '❌ SL HIT –80 PIPS'
-2026-10-21 18:06:01,611 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 18:06:03,878 [INFO] Prioritaet freigegeben: XAUUSD.s (XAUUSD SCALPING ⚡️)
-2026-10-21 18:06:09,566 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 18:08:34,990 [INFO] Telethon Wakeup-Ping
-2026-10-21 18:12:32,740 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 18:12:32,855 [INFO] ✅ Keine verpassten Signale
-2026-10-21 18:18:35,349 [INFO] Telethon Wakeup-Ping
-2026-10-21 18:22:33,024 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 18:22:33,153 [INFO] ✅ Keine verpassten Signale
-2026-10-21 18:28:35,655 [INFO] Telethon Wakeup-Ping
-2026-10-21 18:32:33,156 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 18:32:33,365 [INFO] ✅ Keine verpassten Signale
-2026-10-21 18:38:36,483 [INFO] Telethon Wakeup-Ping
-2026-10-21 18:42:33,366 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 18:42:33,517 [INFO] ✅ Keine verpassten Signale
-2026-10-21 18:48:37,000 [INFO] Telethon Wakeup-Ping
-2026-10-21 18:50:08,771 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4132.9'
-2026-10-21 18:50:08,800 [INFO] 🔇 NOISE: Regex: Markt 49.2 Pips GEGEN uns vom Entry 4132.99 weg (Kurs 4128.07, max 18.0 Pips)
-2026-10-21 18:50:09,383 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
-2026-10-21 18:50:09,385 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 18:50:09,684 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 18:50:09,700 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 18:50:29,365 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: 'Zu schnell haha'
-2026-10-21 18:50:29,367 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 18:50:29,483 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 18:52:33,519 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 18:52:33,651 [INFO] ✅ Keine verpassten Signale
-2026-10-21 18:55:17,188 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP2 HIT! +80 PIPS 💰'
-2026-10-21 18:55:17,190 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 18:55:19,639 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 18:58:37,359 [INFO] Telethon Wakeup-Ping
-2026-10-21 18:59:03,593 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP4 HIT! +160 PIPS 💰'
-2026-10-21 18:59:03,595 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 18:59:09,591 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 19:00:09,370 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP3 HIT! +120 PIPS 💰'
-2026-10-21 19:00:09,372 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 19:00:09,608 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 19:01:06,104 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🚀 +210 PIPS!'
-2026-10-21 19:01:06,106 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 19:01:09,530 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 19:02:33,653 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 19:02:33,802 [INFO] ✅ Keine verpassten Signale
-2026-10-21 19:03:02,896 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🚀 +260 PIPS!'
-2026-10-21 19:03:02,898 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 19:03:09,621 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 19:08:37,694 [INFO] Telethon Wakeup-Ping
-2026-10-21 19:12:33,804 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 19:12:33,998 [INFO] ✅ Keine verpassten Signale
-2026-10-21 19:18:37,997 [INFO] Telethon Wakeup-Ping
-2026-10-21 19:22:33,999 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 19:22:34,122 [INFO] ✅ Keine verpassten Signale
-2026-10-21 19:28:38,329 [INFO] Telethon Wakeup-Ping
-2026-10-21 19:32:34,125 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 19:32:34,248 [INFO] ✅ Keine verpassten Signale
-2026-10-21 19:35:06,291 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4127.18'
-2026-10-21 19:35:06,296 [INFO] Lot-Sizing: Balance=878.0$  Lot=0.04  Kanal=XAUUSD SCALP
-2026-10-21 19:35:06,297 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4132.18) + 4 Runner (PARTIAL_AT_TP)
-
-⚡ SIGNAL [19:35:06] aus: XAUUSD SCALPING ⚡️
-  BUY XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4119.18 | TPs: [4132.18, 4135.18, 4139.18, 4143.18]
-  Verteilung: {4132.18: 1, 0: 4}
-2026-10-21 19:35:06,298 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.77 (Einstieg 4128.95 statt 4127.18)
-2026-10-21 19:35:06,299 [INFO] Lot-Sizing: Balance=878.0$  Lot=0.04  Kanal=XAUUSD SCALP
-2026-10-21 19:35:06,300 [INFO] Lot-Normalisierung XAUUSD.s: 0.0076695030703790796 -> 0.01 (min 0.01, step 0.01)
-2026-10-21 19:35:06,301 [INFO] Layerzahl ans Risiko angepasst: 5 -> 3 (je Layer 8.7, Budget 33.35)
-2026-10-21 19:35:06,301 [INFO] Zielrisiko 3.8%: SL=9.77 -> Lot 0.04 -> 0.01 x 3 Layer = 26.09 je Signal
-2026-10-21 19:35:06,303 [INFO] Layer-Verteilung: 3 Layer = 1 Partial auf TP1 (4132.18) + 2 Runner (PARTIAL_AT_TP)
-2026-10-21 19:35:06,305 [INFO] Layer-Verteilung: 3 Layer = 1 Partial auf TP1 (4132.18) + 2 Runner (PARTIAL_AT_TP)
-2026-10-21 19:35:06,306 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-21 19:35:06,717 [INFO] Runner markiert #417844959 -> runners.json
-2026-10-21 19:35:06,718 [INFO] Layer 1/3 Ticket #417844959 TP=4132.18
-2026-10-21 19:35:06,719 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-21 19:35:07,131 [INFO] Runner markiert #417844960 -> runners.json
-2026-10-21 19:35:07,132 [INFO] Layer 2/3 Ticket #417844960 TP=0
-2026-10-21 19:35:07,134 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-21 19:35:07,541 [INFO] Runner markiert #417844963 -> runners.json
-2026-10-21 19:35:07,541 [INFO] Layer 3/3 Ticket #417844963 TP=0
-2026-10-21 19:35:07,542 [INFO] TP-Layer Map: {'tp1': [417844960, 417844963], 'tp2': [417844959]}
-2026-10-21 19:35:07,542 [INFO] Phase 3: Auto-Trade XAUUSD.s | 3 Tickets
-2026-10-21 19:35:09,220 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 19:38:38,940 [INFO] Telethon Wakeup-Ping
-2026-10-21 19:39:09,847 [INFO] MFE #417844959 XAUUSD.s: Hoch +3.1 Punkte, Stufe 0
-2026-10-21 19:39:09,964 [INFO] SL-Leiter: #417844960 TP1 erreicht -> SL auf Entry/BE (4128.97)
-2026-10-21 19:39:10,082 [INFO] Trail-SL #417844960 XAUUSD.s BUY -> SL:4129.7 (+37.1p)
-2026-10-21 19:39:10,181 [INFO] Trail-SL #417844963 XAUUSD.s BUY -> SL:4129.7 (+35.9p)
-2026-10-21 19:39:10,311 [INFO] SL-Leiter: #417844963 TP1 erreicht -> SL auf Entry/BE (4128.97)
-2026-10-21 19:39:12,033 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
-2026-10-21 19:39:12,035 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 19:39:19,335 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 19:39:20,287 [INFO] Trail-SL #417844960 XAUUSD.s BUY -> SL:4129.99 (+37.6p)
-2026-10-21 19:39:20,394 [INFO] Trail-SL #417844963 XAUUSD.s BUY -> SL:4129.99 (+37.1p)
-2026-10-21 19:39:40,513 [INFO] Trail-SL #417844960 XAUUSD.s BUY -> SL:4131.31 (+51.4p)
-2026-10-21 19:39:40,612 [INFO] Trail-SL #417844963 XAUUSD.s BUY -> SL:4131.31 (+50.5p)
-2026-10-21 19:39:50,701 [INFO] Trail-SL #417844960 XAUUSD.s BUY -> SL:4131.8 (+56.4p)
-2026-10-21 19:39:50,799 [INFO] Trail-SL #417844963 XAUUSD.s BUY -> SL:4131.8 (+55.7p)
-2026-10-21 19:40:00,908 [INFO] Trail-SL #417844960 XAUUSD.s BUY -> SL:4132.47 (+64.9p)
-2026-10-21 19:40:01,008 [INFO] Trail-SL #417844963 XAUUSD.s BUY -> SL:4132.47 (+64.0p)
-2026-10-21 19:40:08,055 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP2 HIT! +80 PIPS 💰'
-2026-10-21 19:40:08,058 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 19:40:09,414 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 19:40:11,115 [INFO] Trail-SL #417844960 XAUUSD.s BUY -> SL:4133.07 (+61.7p)
-2026-10-21 19:40:11,215 [INFO] Trail-SL #417844963 XAUUSD.s BUY -> SL:4133.07 (+60.6p)
-2026-10-21 19:42:34,250 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 19:42:34,410 [INFO] ✅ Keine verpassten Signale
-2026-10-21 19:43:41,616 [INFO] MFE #417844960 XAUUSD.s: Hoch +7.1 Punkte, Stufe 1
-2026-10-21 19:43:41,618 [INFO] MFE #417844963 XAUUSD.s: Hoch +7.1 Punkte, Stufe 1
-2026-10-21 19:43:41,619 [INFO] prune_runners: 2 verwaiste entfernt
-2026-10-21 19:44:06,308 [INFO] Prioritaet freigegeben: XAUUSD.s (XAUUSD SCALPING ⚡️)
-2026-10-21 19:48:39,298 [INFO] Telethon Wakeup-Ping
-2026-10-21 19:52:34,411 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 19:52:34,530 [INFO] ✅ Keine verpassten Signale
-2026-10-21 19:58:39,869 [INFO] Telethon Wakeup-Ping
-2026-10-21 20:02:14,091 [INFO] Got difference for account updates
-2026-10-21 20:02:34,593 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 20:02:34,721 [INFO] ✅ Keine verpassten Signale
-2026-10-21 20:08:40,166 [INFO] Telethon Wakeup-Ping
-2026-10-21 20:12:34,723 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 20:12:34,839 [INFO] ✅ Keine verpassten Signale
-2026-10-21 20:18:40,465 [INFO] Telethon Wakeup-Ping
-2026-10-21 20:22:34,840 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 20:22:34,946 [INFO] ✅ Keine verpassten Signale
-2026-10-21 20:28:40,765 [INFO] Telethon Wakeup-Ping
-2026-10-21 20:32:34,948 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 20:32:35,062 [INFO] ✅ Keine verpassten Signale
-2026-10-21 20:38:40,949 [INFO] Telethon Wakeup-Ping
-2026-10-21 20:42:35,064 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 20:42:35,159 [INFO] ✅ Keine verpassten Signale
-2026-10-21 20:45:28,603 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP3 HIT! +120 PIPS 💰'
-2026-10-21 20:45:28,606 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 20:45:29,401 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 20:48:41,242 [INFO] Telethon Wakeup-Ping
-2026-10-21 20:52:35,162 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 20:52:35,284 [INFO] ✅ Keine verpassten Signale
-2026-10-21 20:58:41,497 [INFO] Telethon Wakeup-Ping
-2026-10-21 21:02:35,286 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 21:02:35,454 [INFO] ✅ Keine verpassten Signale
-2026-10-21 21:08:41,965 [INFO] Telethon Wakeup-Ping
-2026-10-21 21:12:30,291 [WARNING] command_poller: 
-2026-10-21 21:12:35,457 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 21:12:35,623 [INFO] ✅ Keine verpassten Signale
-2026-10-21 21:13:42,283 [WARNING] command_poller: 
-2026-10-21 21:18:42,248 [INFO] Telethon Wakeup-Ping
-2026-10-21 21:22:35,624 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 21:22:35,738 [INFO] ✅ Keine verpassten Signale
-2026-10-21 21:28:42,557 [INFO] Telethon Wakeup-Ping
-2026-10-21 21:32:35,739 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 21:32:35,841 [INFO] ✅ Keine verpassten Signale
-2026-10-21 21:38:42,759 [INFO] Telethon Wakeup-Ping
-2026-10-21 21:42:35,842 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 21:42:35,960 [INFO] ✅ Keine verpassten Signale
-2026-10-21 21:48:42,944 [INFO] Telethon Wakeup-Ping
-2026-10-21 21:52:35,962 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 21:52:36,079 [INFO] ✅ Keine verpassten Signale
-2026-10-21 21:58:43,191 [INFO] Telethon Wakeup-Ping
-2026-10-21 22:00:36,192 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 TAGESZUSAMMENFASSUNG XAUUSD\n📅 21.10.2026\n\nSignale: 16\n✅ Ge'
-2026-10-21 22:00:36,194 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 22:00:39,229 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 22:01:06,725 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP4 HIT! +160 PIPS 💰'
-2026-10-21 22:01:06,727 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 22:01:09,465 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 22:02:36,082 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 22:02:36,315 [INFO] ✅ Keine verpassten Signale
-2026-10-21 22:03:59,523 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: 'Tag heut im Profit beendet 👍🏻'
-2026-10-21 22:03:59,526 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 22:03:59,526 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 22:08:43,397 [INFO] Telethon Wakeup-Ping
-2026-10-21 22:12:36,317 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 22:12:36,509 [INFO] ✅ Keine verpassten Signale
-2026-10-21 22:18:43,735 [INFO] Telethon Wakeup-Ping
-2026-10-21 22:22:36,511 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 22:22:36,630 [INFO] ✅ Keine verpassten Signale
-2026-10-21 22:28:44,004 [INFO] Telethon Wakeup-Ping
-2026-10-21 22:32:36,631 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 22:32:36,733 [INFO] ✅ Keine verpassten Signale
-2026-10-21 22:37:19,914 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4135.1'
-2026-10-21 22:37:19,919 [INFO] Lot-Sizing: Balance=888.0$  Lot=0.04  Kanal=XAUUSD SCALP
-2026-10-21 22:37:19,920 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4130.16) + 4 Runner (PARTIAL_AT_TP)
-
-⚡ SIGNAL [22:37:19] aus: XAUUSD SCALPING ⚡️
-  SELL XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4143.16 | TPs: [4130.16, 4127.16, 4123.16, 4119.16]
-  Verteilung: {4130.16: 1, 0: 4}
-2026-10-21 22:37:19,921 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.1 (Einstieg 4134.06 statt 4135.16)
-2026-10-21 22:37:19,921 [INFO] Lot-Sizing: Balance=888.0$  Lot=0.04  Kanal=XAUUSD SCALP
-2026-10-21 22:37:19,923 [INFO] Lot-Normalisierung XAUUSD.s: 0.008325295003385113 -> 0.01 (min 0.01, step 0.01)
-2026-10-21 22:37:19,923 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 8.1, Budget 33.73)
-2026-10-21 22:37:19,923 [INFO] Zielrisiko 3.8%: SL=9.1 -> Lot 0.04 -> 0.01 x 4 Layer = 32.41 je Signal
-2026-10-21 22:37:19,925 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4130.16) + 3 Runner (PARTIAL_AT_TP)
-2026-10-21 22:37:19,927 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4130.16) + 3 Runner (PARTIAL_AT_TP)
-2026-10-21 22:37:19,928 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-21 22:37:20,349 [INFO] Runner markiert #417910412 -> runners.json
-2026-10-21 22:37:20,350 [INFO] Layer 1/4 Ticket #417910412 TP=4130.16
-2026-10-21 22:37:20,351 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-21 22:37:20,758 [INFO] Runner markiert #417910414 -> runners.json
-2026-10-21 22:37:20,759 [INFO] Layer 2/4 Ticket #417910414 TP=0
-2026-10-21 22:37:20,764 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-21 22:37:21,175 [INFO] Runner markiert #417910416 -> runners.json
-2026-10-21 22:37:21,176 [INFO] Layer 3/4 Ticket #417910416 TP=0
-2026-10-21 22:37:21,179 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-21 22:37:21,586 [INFO] Runner markiert #417910418 -> runners.json
-2026-10-21 22:37:21,586 [INFO] Layer 4/4 Ticket #417910418 TP=0
-2026-10-21 22:37:21,587 [INFO] TP-Layer Map: {'tp1': [417910412], 'tp2': [417910414, 417910416, 417910418]}
-2026-10-21 22:37:21,587 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
-2026-10-21 22:37:29,442 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 22:38:44,266 [INFO] Telethon Wakeup-Ping
-2026-10-21 22:42:36,735 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 22:42:36,894 [INFO] ✅ Keine verpassten Signale
-2026-10-21 22:48:44,453 [INFO] Telethon Wakeup-Ping
-2026-10-21 22:51:04,620 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4133.59 (+31.3p)
-2026-10-21 22:51:04,717 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4133.59 (+31.3p)
-2026-10-21 22:51:04,814 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4133.59 (+31.2p)
-2026-10-21 22:51:14,914 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4133.42 (+31.0p)
-2026-10-21 22:51:15,010 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4133.42 (+31.1p)
-2026-10-21 22:51:15,106 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4133.42 (+31.1p)
-2026-10-21 22:51:24,878 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
-2026-10-21 22:51:24,880 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 22:51:25,205 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4133.28 (+33.5p)
-2026-10-21 22:51:25,302 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4133.28 (+33.5p)
-2026-10-21 22:51:25,398 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4133.28 (+33.5p)
-2026-10-21 22:51:29,753 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 22:52:36,921 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 22:52:37,059 [INFO] ✅ Keine verpassten Signale
-2026-10-21 22:58:44,722 [INFO] Telethon Wakeup-Ping
-2026-10-21 23:01:16,445 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4133.02 (+36.9p)
-2026-10-21 23:01:16,543 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4133.02 (+36.9p)
-2026-10-21 23:01:16,640 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4133.02 (+36.9p)
-2026-10-21 23:01:16,858 [INFO] SL-Leiter: #417910412 TP1 erreicht -> SL auf Entry/BE (4134.06)
-2026-10-21 23:01:26,742 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4132.99 (+37.1p)
-2026-10-21 23:01:26,838 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4132.99 (+37.2p)
-2026-10-21 23:01:26,934 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4132.99 (+36.9p)
-2026-10-21 23:01:35,024 [INFO] MFE #417910412 XAUUSD.s: Hoch +4.2 Punkte, Stufe 1
-2026-10-21 23:01:37,034 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4132.75 (+39.4p)
-2026-10-21 23:01:37,131 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4132.75 (+39.1p)
-2026-10-21 23:01:37,230 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4132.75 (+39.2p)
-2026-10-21 23:01:47,331 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4132.66 (+40.2p)
-2026-10-21 23:01:47,427 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4132.66 (+40.3p)
-2026-10-21 23:01:47,523 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4132.66 (+40.3p)
-2026-10-21 23:01:57,626 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4132.54 (+39.8p)
-2026-10-21 23:01:57,725 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4132.54 (+39.9p)
-2026-10-21 23:01:57,822 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4132.54 (+40.8p)
-2026-10-21 23:02:07,923 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4132.18 (+45.5p)
-2026-10-21 23:02:08,021 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4132.18 (+45.2p)
-2026-10-21 23:02:08,119 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4132.18 (+45.0p)
-2026-10-21 23:02:18,218 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4132.11 (+46.2p)
-2026-10-21 23:02:18,314 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4132.11 (+46.2p)
-2026-10-21 23:02:18,411 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4132.11 (+46.2p)
-2026-10-21 23:02:28,516 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4131.66 (+48.9p)
-2026-10-21 23:02:28,612 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4131.66 (+48.9p)
-2026-10-21 23:02:28,711 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4131.66 (+48.9p)
-2026-10-21 23:02:37,061 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 23:02:37,166 [INFO] ✅ Keine verpassten Signale
-2026-10-21 23:02:58,832 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4131.63 (+50.9p)
-2026-10-21 23:02:58,931 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4131.63 (+50.9p)
-2026-10-21 23:02:59,028 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4131.63 (+50.9p)
-2026-10-21 23:03:09,131 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4131.54 (+49.3p)
-2026-10-21 23:03:09,228 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4131.54 (+49.3p)
-2026-10-21 23:03:09,325 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4131.54 (+49.3p)
-2026-10-21 23:03:29,435 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4131.4 (+53.2p)
-2026-10-21 23:03:29,534 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4131.4 (+53.1p)
-2026-10-21 23:03:29,631 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4131.4 (+53.1p)
-2026-10-21 23:03:39,733 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4131.36 (+53.5p)
-2026-10-21 23:03:39,828 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4131.36 (+53.5p)
-2026-10-21 23:03:39,925 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4131.36 (+53.5p)
-2026-10-21 23:04:00,035 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4131.31 (+54.0p)
-2026-10-21 23:04:00,134 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4131.31 (+54.0p)
-2026-10-21 23:04:00,236 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4131.31 (+53.9p)
-2026-10-21 23:04:10,337 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4131.29 (+53.1p)
-2026-10-21 23:04:10,436 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4131.29 (+53.1p)
-2026-10-21 23:04:10,533 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4131.29 (+53.1p)
-2026-10-21 23:04:40,657 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4131.25 (+54.7p)
-2026-10-21 23:04:40,753 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4131.25 (+54.7p)
-2026-10-21 23:04:40,850 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4131.25 (+54.7p)
-2026-10-21 23:04:50,951 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4131.05 (+56.8p)
-2026-10-21 23:04:51,048 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4131.05 (+56.8p)
-2026-10-21 23:04:51,149 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4131.05 (+56.8p)
-2026-10-21 23:05:01,255 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4130.09 (+65.5p)
-2026-10-21 23:05:01,352 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4130.09 (+65.6p)
-2026-10-21 23:05:01,449 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4130.09 (+65.6p)
-2026-10-21 23:05:05,092 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🔒 BE HIT! – Für jeden der SL auf BE gezogen hat'
-2026-10-21 23:05:05,094 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 23:05:05,510 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP2 HIT! +80 PIPS 💰'
-2026-10-21 23:05:05,512 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 23:05:09,454 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 23:05:09,474 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 23:05:11,550 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4129.62 (+71.0p)
-2026-10-21 23:05:11,657 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4129.55 (+71.8p)
-2026-10-21 23:05:11,755 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4129.54 (+71.9p)
-2026-10-21 23:05:21,859 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4129.54 (+71.0p)
-2026-10-21 23:05:21,956 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4129.54 (+70.7p)
-2026-10-21 23:07:12,159 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4129.44 (+72.5p)
-2026-10-21 23:07:12,256 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4129.44 (+72.5p)
-2026-10-21 23:07:12,352 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4129.44 (+72.6p)
-2026-10-21 23:07:22,458 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4129.41 (+71.7p)
-2026-10-21 23:07:22,556 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4129.41 (+71.7p)
-2026-10-21 23:07:22,656 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4129.41 (+71.7p)
-2026-10-21 23:07:52,777 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4129.35 (+71.6p)
-2026-10-21 23:07:52,874 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4129.35 (+71.6p)
-2026-10-21 23:07:52,972 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4129.35 (+71.3p)
-2026-10-21 23:08:33,104 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4129.11 (+75.8p)
-2026-10-21 23:08:33,201 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4129.11 (+75.7p)
-2026-10-21 23:08:33,297 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4129.11 (+75.7p)
-2026-10-21 23:08:43,397 [INFO] Trail-SL #417910414 XAUUSD.s SELL -> SL:4128.24 (+77.2p)
-2026-10-21 23:08:43,494 [INFO] Trail-SL #417910416 XAUUSD.s SELL -> SL:4128.24 (+77.2p)
-2026-10-21 23:08:43,590 [INFO] Trail-SL #417910418 XAUUSD.s SELL -> SL:4128.24 (+77.2p)
-2026-10-21 23:08:44,909 [INFO] Telethon Wakeup-Ping
-2026-10-21 23:11:32,718 [INFO] MFE #417910414 XAUUSD.s: Hoch +8.8 Punkte, Stufe 1
-2026-10-21 23:11:32,724 [INFO] MFE #417910416 XAUUSD.s: Hoch +8.8 Punkte, Stufe 1
-2026-10-21 23:11:32,729 [INFO] MFE #417910418 XAUUSD.s: Hoch +8.8 Punkte, Stufe 1
-2026-10-21 23:11:40,984 [INFO] Prioritaet freigegeben: XAUUSD.s (XAUUSD SCALPING ⚡️)
-2026-10-21 23:12:37,168 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 23:12:37,268 [INFO] ✅ Keine verpassten Signale
-2026-10-21 23:18:45,286 [INFO] Telethon Wakeup-Ping
-2026-10-21 23:22:37,270 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 23:22:37,367 [INFO] ✅ Keine verpassten Signale
-2026-10-21 23:28:45,742 [INFO] Telethon Wakeup-Ping
-2026-10-21 23:32:37,369 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 23:32:37,478 [INFO] ✅ Keine verpassten Signale
-2026-10-21 23:34:57,359 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP3 HIT! +120 PIPS 💰'
-2026-10-21 23:34:57,362 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-21 23:34:59,459 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-21 23:38:46,050 [INFO] Telethon Wakeup-Ping
-2026-10-21 23:42:37,480 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 23:42:37,600 [INFO] ✅ Keine verpassten Signale
-2026-10-21 23:48:46,241 [INFO] Telethon Wakeup-Ping
-2026-10-21 23:52:37,601 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-21 23:52:37,707 [INFO] ✅ Keine verpassten Signale
-2026-10-21 23:58:46,422 [INFO] Telethon Wakeup-Ping
-2026-10-22 00:02:37,709 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 00:02:37,813 [INFO] ✅ Keine verpassten Signale
-2026-10-22 00:08:46,779 [INFO] Telethon Wakeup-Ping
-2026-10-22 00:12:37,816 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 00:12:37,948 [INFO] ✅ Keine verpassten Signale
-2026-10-22 00:18:47,001 [INFO] Telethon Wakeup-Ping
-2026-10-22 00:22:37,950 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 00:22:38,047 [INFO] ✅ Keine verpassten Signale
-2026-10-22 00:28:47,190 [INFO] Telethon Wakeup-Ping
-2026-10-22 00:32:38,049 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 00:32:38,291 [INFO] ✅ Keine verpassten Signale
-2026-10-22 00:38:47,369 [INFO] Telethon Wakeup-Ping
-2026-10-22 00:42:38,293 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 00:42:38,387 [INFO] ✅ Keine verpassten Signale
-2026-10-22 00:48:47,582 [INFO] Telethon Wakeup-Ping
-2026-10-22 00:52:38,388 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 00:52:38,488 [INFO] ✅ Keine verpassten Signale
-2026-10-22 00:58:47,834 [INFO] Telethon Wakeup-Ping
-2026-10-22 01:02:38,492 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 01:02:38,613 [INFO] ✅ Keine verpassten Signale
-2026-10-22 01:08:48,182 [INFO] Telethon Wakeup-Ping
-2026-10-22 01:12:38,615 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 01:12:38,712 [INFO] ✅ Keine verpassten Signale
-2026-10-22 01:18:48,371 [INFO] Telethon Wakeup-Ping
-2026-10-22 01:22:38,716 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 01:22:38,808 [INFO] ✅ Keine verpassten Signale
-2026-10-22 01:24:49,010 [INFO] Got difference for channel 1235349100 updates
-2026-10-22 01:28:48,565 [INFO] Telethon Wakeup-Ping
-2026-10-22 01:32:38,809 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 01:32:38,907 [INFO] ✅ Keine verpassten Signale
-2026-10-22 01:38:48,974 [INFO] Telethon Wakeup-Ping
-2026-10-22 01:42:39,030 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 01:42:39,148 [INFO] ✅ Keine verpassten Signale
-2026-10-22 01:48:49,155 [INFO] Telethon Wakeup-Ping
-2026-10-22 01:52:39,151 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 01:52:39,250 [INFO] ✅ Keine verpassten Signale
-2026-10-22 01:58:49,374 [INFO] Telethon Wakeup-Ping
-2026-10-22 02:02:39,252 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 02:02:39,449 [INFO] ✅ Keine verpassten Signale
-2026-10-22 02:08:26,627 [INFO] Got difference for channel 1805057023 updates
-2026-10-22 02:08:49,768 [INFO] Telethon Wakeup-Ping
-2026-10-22 02:12:08,287 [INFO] Streak XAUUSD SCALP: -1 (Signal -0.68)
-2026-10-22 02:12:39,557 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 02:12:39,674 [INFO] ✅ Keine verpassten Signale
-2026-10-22 02:18:50,010 [INFO] Telethon Wakeup-Ping
-2026-10-22 02:22:39,674 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 02:22:39,765 [INFO] ✅ Keine verpassten Signale
-2026-10-22 02:25:12,493 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4116.19'
-2026-10-22 02:25:12,500 [INFO] Lot-Sizing: Balance=907.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-22 02:25:12,500 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4121.19) + 4 Runner (PARTIAL_AT_TP)
-
-⚡ SIGNAL [02:25:12] aus: XAUUSD SCALPING ⚡️
-  BUY XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4108.19 | TPs: [4121.19, 4124.19, 4128.19, 4132.19]
-  Verteilung: {4121.19: 1, 0: 4}
-2026-10-22 02:25:12,502 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 8.03 (Einstieg 4116.22 statt 4116.19)
-2026-10-22 02:25:12,502 [INFO] Lot-Sizing: Balance=907.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-22 02:25:12,503 [INFO] Lot-Normalisierung XAUUSD.s: 0.009639977012950647 -> 0.01 (min 0.01, step 0.01)
-2026-10-22 02:25:12,503 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 7.15, Budget 34.45)
-2026-10-22 02:25:12,503 [INFO] Zielrisiko 3.8%: SL=8.03 -> Lot 0.05 -> 0.01 x 4 Layer = 28.59 je Signal
-2026-10-22 02:25:12,506 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4121.19) + 3 Runner (PARTIAL_AT_TP)
-2026-10-22 02:25:12,508 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4121.19) + 3 Runner (PARTIAL_AT_TP)
-2026-10-22 02:25:12,510 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 02:25:12,917 [INFO] Runner markiert #418087057 -> runners.json
-2026-10-22 02:25:12,918 [INFO] Layer 1/4 Ticket #418087057 TP=4121.19
-2026-10-22 02:25:12,920 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 02:25:13,328 [INFO] Runner markiert #418087072 -> runners.json
-2026-10-22 02:25:13,328 [INFO] Layer 2/4 Ticket #418087072 TP=0
-2026-10-22 02:25:13,330 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 02:25:13,739 [INFO] Runner markiert #418087074 -> runners.json
-2026-10-22 02:25:13,739 [INFO] Layer 3/4 Ticket #418087074 TP=0
-2026-10-22 02:25:13,742 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 02:25:14,153 [INFO] Runner markiert #418087087 -> runners.json
-2026-10-22 02:25:14,153 [INFO] Layer 4/4 Ticket #418087087 TP=0
-2026-10-22 02:25:14,153 [INFO] TP-Layer Map: {'tp1': [418087072, 418087074, 418087087], 'tp2': [418087057]}
-2026-10-22 02:25:14,154 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
-2026-10-22 02:25:19,195 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 02:28:50,254 [INFO] Telethon Wakeup-Ping
-2026-10-22 02:30:19,753 [INFO] Trail-SL #418087072 XAUUSD.s BUY -> SL:4116.56 (+33.9p)
-2026-10-22 02:30:19,852 [INFO] Trail-SL #418087074 XAUUSD.s BUY -> SL:4116.56 (+34.6p)
-2026-10-22 02:30:19,950 [INFO] Trail-SL #418087087 XAUUSD.s BUY -> SL:4116.56 (+34.6p)
-2026-10-22 02:30:30,052 [INFO] Trail-SL #418087072 XAUUSD.s BUY -> SL:4117.15 (+41.2p)
-2026-10-22 02:30:30,151 [INFO] Trail-SL #418087074 XAUUSD.s BUY -> SL:4117.15 (+41.3p)
-2026-10-22 02:30:30,249 [INFO] Trail-SL #418087087 XAUUSD.s BUY -> SL:4117.16 (+41.2p)
-2026-10-22 02:30:40,258 [INFO] MFE #418087057 XAUUSD.s: Hoch +4.7 Punkte, Stufe 0
-2026-10-22 02:30:40,260 [INFO] prune_runners: 1 verwaiste entfernt
-2026-10-22 02:30:40,359 [INFO] Trail-SL #418087072 XAUUSD.s BUY -> SL:4118.3 (+43.7p)
-2026-10-22 02:30:40,458 [INFO] Trail-SL #418087074 XAUUSD.s BUY -> SL:4118.3 (+44.1p)
-2026-10-22 02:30:40,558 [INFO] Trail-SL #418087087 XAUUSD.s BUY -> SL:4118.3 (+43.9p)
-2026-10-22 02:30:44,446 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
-2026-10-22 02:30:44,448 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 02:30:49,455 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 02:30:50,661 [INFO] Trail-SL #418087072 XAUUSD.s BUY -> SL:4118.72 (+53.5p)
-2026-10-22 02:30:50,761 [INFO] Trail-SL #418087074 XAUUSD.s BUY -> SL:4118.72 (+53.7p)
-2026-10-22 02:30:50,860 [INFO] Trail-SL #418087087 XAUUSD.s BUY -> SL:4118.72 (+53.3p)
-2026-10-22 02:31:10,976 [INFO] Trail-SL #418087072 XAUUSD.s BUY -> SL:4119.38 (+60.7p)
-2026-10-22 02:31:11,077 [INFO] Trail-SL #418087074 XAUUSD.s BUY -> SL:4119.38 (+60.7p)
-2026-10-22 02:31:11,178 [INFO] Trail-SL #418087087 XAUUSD.s BUY -> SL:4119.38 (+60.3p)
-2026-10-22 02:31:31,294 [INFO] Trail-SL #418087072 XAUUSD.s BUY -> SL:4120.26 (+71.0p)
-2026-10-22 02:31:31,393 [INFO] Trail-SL #418087074 XAUUSD.s BUY -> SL:4120.26 (+71.2p)
-2026-10-22 02:31:31,492 [INFO] Trail-SL #418087087 XAUUSD.s BUY -> SL:4120.26 (+71.6p)
-2026-10-22 02:31:41,598 [INFO] Trail-SL #418087072 XAUUSD.s BUY -> SL:4120.83 (+75.5p)
-2026-10-22 02:31:41,700 [INFO] Trail-SL #418087074 XAUUSD.s BUY -> SL:4120.83 (+75.8p)
-2026-10-22 02:31:41,801 [INFO] Trail-SL #418087087 XAUUSD.s BUY -> SL:4120.83 (+75.9p)
-2026-10-22 02:32:39,768 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 02:32:39,875 [INFO] ✅ Keine verpassten Signale
-2026-10-22 02:33:22,008 [INFO] Trail-SL #418087072 XAUUSD.s BUY -> SL:4120.85 (+68.6p)
-2026-10-22 02:33:22,109 [INFO] Trail-SL #418087074 XAUUSD.s BUY -> SL:4120.85 (+68.8p)
-2026-10-22 02:33:22,209 [INFO] Trail-SL #418087087 XAUUSD.s BUY -> SL:4120.85 (+68.6p)
-2026-10-22 02:35:28,315 [INFO] MFE #418087072 XAUUSD.s: Hoch +7.8 Punkte, Stufe 1
-2026-10-22 02:35:28,320 [INFO] MFE #418087074 XAUUSD.s: Hoch +7.8 Punkte, Stufe 1
-2026-10-22 02:35:28,325 [INFO] MFE #418087087 XAUUSD.s: Hoch +7.8 Punkte, Stufe 1
-2026-10-22 02:35:44,278 [INFO] Prioritaet freigegeben: XAUUSD.s (XAUUSD SCALPING ⚡️)
-2026-10-22 02:38:50,432 [INFO] Telethon Wakeup-Ping
-2026-10-22 02:42:03,095 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🔒 BE HIT! – Für jeden der SL auf BE gezogen hat'
-2026-10-22 02:42:03,096 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 02:42:09,607 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 02:42:39,878 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 02:42:39,936 [INFO] Verpasstes TRADE uebersprungen: Nachricht 02:25 ist 17.5 Min alt (> 5.0 Min) - kein Re-Fire
-2026-10-22 02:42:39,982 [INFO] ✅ Keine verpassten Signale
-2026-10-22 02:48:50,662 [INFO] Telethon Wakeup-Ping
-2026-10-22 02:52:39,983 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 02:52:40,032 [INFO] Scalp: besserer Einstieg als im Signal (14.6 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-22 02:52:40,032 [INFO] Verpasstes TRADE uebersprungen: Nachricht 02:25 ist 27.5 Min alt (> 5.0 Min) - kein Re-Fire
-2026-10-22 02:52:40,076 [INFO] ✅ Keine verpassten Signale
-2026-10-22 02:55:10,305 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4113.5'
-2026-10-22 02:55:10,308 [INFO] Scalp: besserer Einstieg als im Signal (15.5 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-22 02:55:10,312 [INFO] Lot-Sizing: Balance=924.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-22 02:55:10,312 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4108.54) + 4 Runner (PARTIAL_AT_TP)
-
-⚡ SIGNAL [02:55:10] aus: XAUUSD SCALPING ⚡️
-  SELL XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4121.54 | TPs: [4108.54, 4105.54, 4101.54, 4097.54]
-  Verteilung: {4108.54: 1, 0: 4}
-2026-10-22 02:55:10,313 [INFO] Lot-Sizing: Balance=924.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-22 02:55:10,315 [INFO] Lot-Normalisierung XAUUSD.s: 0.009867684555299999 -> 0.01 (min 0.01, step 0.01)
-2026-10-22 02:55:10,315 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 7.12, Budget 35.12)
-2026-10-22 02:55:10,315 [INFO] Zielrisiko 3.8%: SL=8.0 -> Lot 0.05 -> 0.01 x 4 Layer = 28.47 je Signal
-2026-10-22 02:55:10,317 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4108.54) + 3 Runner (PARTIAL_AT_TP)
-2026-10-22 02:55:10,319 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4108.54) + 3 Runner (PARTIAL_AT_TP)
-2026-10-22 02:55:10,320 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 02:55:10,728 [INFO] Runner markiert #418118068 -> runners.json
-2026-10-22 02:55:10,728 [INFO] Layer 1/4 Ticket #418118068 TP=4108.54
-2026-10-22 02:55:10,730 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 02:55:11,144 [INFO] Runner markiert #418118070 -> runners.json
-2026-10-22 02:55:11,145 [INFO] Layer 2/4 Ticket #418118070 TP=0
-2026-10-22 02:55:11,149 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 02:55:11,559 [INFO] Runner markiert #418118081 -> runners.json
-2026-10-22 02:55:11,560 [INFO] Layer 3/4 Ticket #418118081 TP=0
-2026-10-22 02:55:11,562 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 02:55:11,970 [INFO] Runner markiert #418118089 -> runners.json
-2026-10-22 02:55:11,970 [INFO] Layer 4/4 Ticket #418118089 TP=0
-2026-10-22 02:55:11,970 [INFO] TP-Layer Map: {'tp1': [418118068], 'tp2': [418118070, 418118081, 418118089]}
-2026-10-22 02:55:11,971 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
-2026-10-22 02:55:19,278 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 02:58:50,876 [INFO] Telethon Wakeup-Ping
-2026-10-22 03:02:40,078 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 03:02:40,184 [INFO] Verpasstes TRADE uebersprungen: Nachricht 02:55 ist 7.5 Min alt (> 5.0 Min) - kein Re-Fire
-2026-10-22 03:02:40,234 [INFO] ✅ Keine verpassten Signale
-2026-10-22 03:04:25,512 [INFO] Trail-SL #418118070 XAUUSD.s SELL -> SL:4114.29 (+33.9p)
-2026-10-22 03:04:25,613 [INFO] Trail-SL #418118081 XAUUSD.s SELL -> SL:4114.29 (+32.2p)
-2026-10-22 03:04:25,717 [INFO] Trail-SL #418118089 XAUUSD.s SELL -> SL:4114.29 (+32.5p)
-2026-10-22 03:04:35,824 [INFO] Trail-SL #418118070 XAUUSD.s SELL -> SL:4113.01 (+47.1p)
-2026-10-22 03:04:35,925 [INFO] Trail-SL #418118081 XAUUSD.s SELL -> SL:4113.01 (+45.4p)
-2026-10-22 03:04:36,024 [INFO] Trail-SL #418118089 XAUUSD.s SELL -> SL:4113.01 (+45.5p)
-2026-10-22 03:04:46,127 [INFO] Trail-SL #418118070 XAUUSD.s SELL -> SL:4112.92 (+44.9p)
-2026-10-22 03:04:46,229 [INFO] Trail-SL #418118081 XAUUSD.s SELL -> SL:4112.92 (+43.2p)
-2026-10-22 03:04:46,329 [INFO] Trail-SL #418118089 XAUUSD.s SELL -> SL:4112.92 (+43.9p)
-2026-10-22 03:05:46,494 [INFO] Trail-SL #418118070 XAUUSD.s SELL -> SL:4112.74 (+49.9p)
-2026-10-22 03:05:46,595 [INFO] Trail-SL #418118081 XAUUSD.s SELL -> SL:4112.74 (+48.0p)
-2026-10-22 03:05:46,697 [INFO] Trail-SL #418118089 XAUUSD.s SELL -> SL:4112.74 (+48.2p)
-2026-10-22 03:06:14,257 [INFO] MFE #418118070 XAUUSD.s: Hoch +5.4 Punkte, Stufe 0
-2026-10-22 03:06:14,263 [INFO] MFE #418118081 XAUUSD.s: Hoch +5.3 Punkte, Stufe 0
-2026-10-22 03:06:14,278 [INFO] MFE #418118089 XAUUSD.s: Hoch +5.2 Punkte, Stufe 0
-2026-10-22 03:08:51,085 [INFO] Telethon Wakeup-Ping
-2026-10-22 03:10:49,542 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
-2026-10-22 03:10:49,544 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 03:10:51,541 [INFO] MFE #418118068 XAUUSD.s: Hoch +6.5 Punkte, Stufe 0
-2026-10-22 03:10:59,212 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 03:11:14,607 [INFO] Prioritaet freigegeben: XAUUSD.s (XAUUSD SCALPING ⚡️)
-2026-10-22 03:12:40,237 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 03:12:40,339 [INFO] ✅ Keine verpassten Signale
-2026-10-22 03:15:23,204 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP2 HIT! +80 PIPS 💰'
-2026-10-22 03:15:23,206 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 03:15:29,572 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 03:18:51,270 [INFO] Telethon Wakeup-Ping
-2026-10-22 03:22:40,341 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 03:22:40,440 [INFO] ✅ Keine verpassten Signale
-2026-10-22 03:24:09,427 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP3 HIT! +120 PIPS 💰'
-2026-10-22 03:24:09,429 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 03:24:09,515 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 03:25:04,143 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP4 HIT! +160 PIPS 💰'
-2026-10-22 03:25:04,148 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 03:25:09,627 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 03:28:51,840 [INFO] Telethon Wakeup-Ping
-2026-10-22 03:32:40,442 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 03:32:40,531 [INFO] ✅ Keine verpassten Signale
-2026-10-22 03:38:02,792 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🚀 +210 PIPS!'
-2026-10-22 03:38:02,794 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 03:38:09,205 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 03:38:52,224 [INFO] Telethon Wakeup-Ping
-2026-10-22 03:42:40,532 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 03:42:40,629 [INFO] ✅ Keine verpassten Signale
-2026-10-22 03:48:52,473 [INFO] Telethon Wakeup-Ping
-2026-10-22 03:52:40,631 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 03:52:40,791 [INFO] ✅ Keine verpassten Signale
-2026-10-22 03:58:52,729 [INFO] Telethon Wakeup-Ping
-2026-10-22 04:02:40,793 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 04:02:40,892 [INFO] ✅ Keine verpassten Signale
-2026-10-22 04:08:53,175 [INFO] Telethon Wakeup-Ping
-2026-10-22 04:12:40,894 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 04:12:40,982 [INFO] ✅ Keine verpassten Signale
-2026-10-22 04:18:53,396 [INFO] Telethon Wakeup-Ping
-2026-10-22 04:22:40,985 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 04:22:41,086 [INFO] ✅ Keine verpassten Signale
-2026-10-22 04:28:53,671 [INFO] Telethon Wakeup-Ping
-2026-10-22 04:32:41,088 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 04:32:41,205 [INFO] ✅ Keine verpassten Signale
-2026-10-22 04:38:53,894 [INFO] Telethon Wakeup-Ping
-2026-10-22 04:42:41,208 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 04:42:41,327 [INFO] ✅ Keine verpassten Signale
-2026-10-22 04:48:54,128 [INFO] Telethon Wakeup-Ping
-2026-10-22 04:52:41,328 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 04:52:41,474 [INFO] ✅ Keine verpassten Signale
-2026-10-22 04:58:54,396 [INFO] Telethon Wakeup-Ping
-2026-10-22 05:02:41,476 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 05:02:41,576 [INFO] ✅ Keine verpassten Signale
-2026-10-22 05:06:08,227 [INFO] Got difference for channel 1235349100 updates
-2026-10-22 05:08:54,596 [INFO] Telethon Wakeup-Ping
-2026-10-22 05:12:41,579 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 05:12:41,705 [INFO] ✅ Keine verpassten Signale
-2026-10-22 05:15:17,230 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🚀 +260 PIPS!'
-2026-10-22 05:15:17,232 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 05:15:19,693 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 05:18:55,031 [INFO] Telethon Wakeup-Ping
-2026-10-22 05:22:41,962 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 05:22:42,094 [INFO] ✅ Keine verpassten Signale
-2026-10-22 05:28:55,374 [INFO] Telethon Wakeup-Ping
-2026-10-22 05:32:42,096 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 05:32:42,201 [INFO] ✅ Keine verpassten Signale
-2026-10-22 05:38:55,757 [INFO] Telethon Wakeup-Ping
-2026-10-22 05:39:04,830 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🚀 +310 PIPS!'
-2026-10-22 05:39:04,832 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 05:39:05,203 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🚀 +360 PIPS!'
-2026-10-22 05:39:05,205 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 05:39:09,332 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 05:39:09,334 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 05:42:42,202 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 05:42:42,463 [INFO] ✅ Keine verpassten Signale
-2026-10-22 05:46:04,249 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🚀 +410 PIPS!'
-2026-10-22 05:46:04,250 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 05:46:09,723 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 05:48:04,635 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🚀 +460 PIPS!'
-2026-10-22 05:48:04,637 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 05:48:09,613 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 05:48:55,970 [INFO] Telethon Wakeup-Ping
-2026-10-22 05:52:42,465 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 05:52:42,559 [INFO] ✅ Keine verpassten Signale
-2026-10-22 05:58:56,197 [INFO] Telethon Wakeup-Ping
-2026-10-22 06:02:42,561 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 06:02:42,704 [INFO] ✅ Keine verpassten Signale
-2026-10-22 06:05:06,481 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4089.45'
-2026-10-22 06:05:06,484 [INFO] 🔇 NOISE: Regex: Markt 23.2 Pips GEGEN uns vom Entry 4089.45 weg (Kurs 4091.77, max 18.0 Pips)
-2026-10-22 06:05:09,516 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 06:08:40,965 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
-2026-10-22 06:08:40,968 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 06:08:49,533 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 06:08:56,403 [INFO] Telethon Wakeup-Ping
-2026-10-22 06:11:09,950 [INFO] Streak XAUUSD SCALP: +1 (Signal 29.27)
-2026-10-22 06:12:06,619 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP2 HIT! +80 PIPS 💰'
-2026-10-22 06:12:06,621 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 06:12:09,325 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 06:12:42,706 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 06:12:42,882 [INFO] ✅ Keine verpassten Signale
-2026-10-22 06:18:56,656 [INFO] Telethon Wakeup-Ping
-2026-10-22 06:19:44,662 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP3 HIT! +120 PIPS 💰'
-2026-10-22 06:19:44,664 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 06:19:49,534 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 06:22:42,884 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 06:22:42,997 [INFO] ✅ Keine verpassten Signale
-2026-10-22 06:28:57,383 [INFO] Telethon Wakeup-Ping
-2026-10-22 06:32:42,999 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 06:32:43,110 [INFO] ✅ Keine verpassten Signale
-2026-10-22 06:38:57,834 [INFO] Telethon Wakeup-Ping
-2026-10-22 06:40:05,532 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🔒 BE HIT! – Für jeden der SL auf BE gezogen hat'
-2026-10-22 06:40:05,537 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 06:40:09,415 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 06:42:43,112 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 06:42:43,274 [INFO] ✅ Keine verpassten Signale
-2026-10-22 06:48:58,579 [INFO] Telethon Wakeup-Ping
-2026-10-22 06:52:43,277 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 06:52:43,390 [INFO] ✅ Keine verpassten Signale
-2026-10-22 06:58:59,133 [INFO] Telethon Wakeup-Ping
-2026-10-22 07:02:43,392 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 07:02:43,524 [INFO] ✅ Keine verpassten Signale
-2026-10-22 07:08:59,388 [INFO] Telethon Wakeup-Ping
-2026-10-22 07:10:46,292 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: 'Seit der Asia Session, up 1,3k'
-2026-10-22 07:10:46,293 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 07:10:49,501 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 07:12:43,526 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 07:12:43,643 [INFO] ✅ Keine verpassten Signale
-2026-10-22 07:18:59,978 [INFO] Telethon Wakeup-Ping
-2026-10-22 07:22:43,645 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 07:22:43,773 [INFO] ✅ Keine verpassten Signale
-2026-10-22 07:29:00,625 [INFO] Telethon Wakeup-Ping
-2026-10-22 07:30:34,067 [INFO] Got difference for channel 1805057023 updates
-2026-10-22 07:32:43,774 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 07:32:43,873 [INFO] ✅ Keine verpassten Signale
-2026-10-22 07:35:05,766 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4091.8'
-2026-10-22 07:35:05,772 [INFO] Lot-Sizing: Balance=936.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-22 07:35:05,772 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4086.88) + 4 Runner (PARTIAL_AT_TP)
-
-⚡ SIGNAL [07:35:05] aus: XAUUSD SCALPING ⚡️
-  SELL XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4099.88 | TPs: [4086.88, 4083.88, 4079.88, 4075.88]
-  Verteilung: {4086.88: 1, 0: 4}
-2026-10-22 07:35:05,773 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.54 (Einstieg 4090.34 statt 4091.88)
-2026-10-22 07:35:05,774 [INFO] Lot-Sizing: Balance=936.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-22 07:35:05,775 [INFO] Lot-Normalisierung XAUUSD.s: 0.008380953655681376 -> 0.01 (min 0.01, step 0.01)
-2026-10-22 07:35:05,775 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 8.49, Budget 35.56)
-2026-10-22 07:35:05,775 [INFO] Zielrisiko 3.8%: SL=9.54 -> Lot 0.05 -> 0.01 x 4 Layer = 33.95 je Signal
-2026-10-22 07:35:05,777 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4086.88) + 3 Runner (PARTIAL_AT_TP)
-2026-10-22 07:35:05,779 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4086.88) + 3 Runner (PARTIAL_AT_TP)
-2026-10-22 07:35:05,781 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 07:35:06,187 [INFO] Runner markiert #418427499 -> runners.json
-2026-10-22 07:35:06,187 [INFO] Layer 1/4 Ticket #418427499 TP=4086.88
-2026-10-22 07:35:06,189 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 07:35:06,597 [INFO] Runner markiert #418427504 -> runners.json
-2026-10-22 07:35:06,597 [INFO] Layer 2/4 Ticket #418427504 TP=0
-2026-10-22 07:35:06,600 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 07:35:07,015 [INFO] Runner markiert #418427512 -> runners.json
-2026-10-22 07:35:07,015 [INFO] Layer 3/4 Ticket #418427512 TP=0
-2026-10-22 07:35:07,017 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 07:35:07,426 [INFO] Runner markiert #418427522 -> runners.json
-2026-10-22 07:35:07,427 [INFO] Layer 4/4 Ticket #418427522 TP=0
-2026-10-22 07:35:07,427 [INFO] TP-Layer Map: {'tp1': [418427499], 'tp2': [418427504, 418427512, 418427522]}
-2026-10-22 07:35:07,427 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
-2026-10-22 07:35:09,297 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 07:39:00,874 [INFO] Telethon Wakeup-Ping
-2026-10-22 07:42:43,877 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 07:42:43,934 [INFO] Verpasstes TRADE uebersprungen: Nachricht 07:35 ist 7.6 Min alt (> 5.0 Min) - kein Re-Fire
-2026-10-22 07:42:43,983 [INFO] ✅ Keine verpassten Signale
-2026-10-22 07:49:01,302 [INFO] Telethon Wakeup-Ping
-2026-10-22 07:49:31,187 [INFO] Trail-SL #418427504 XAUUSD.s SELL -> SL:4089.9 (+31.3p)
-2026-10-22 07:49:31,288 [INFO] Trail-SL #418427512 XAUUSD.s SELL -> SL:4089.9 (+31.7p)
-2026-10-22 07:49:31,389 [INFO] Trail-SL #418427522 XAUUSD.s SELL -> SL:4089.89 (+32.2p)
-2026-10-22 07:49:31,601 [INFO] SL-Leiter: #418427499 TP1 erreicht -> SL auf Entry/BE (4090.34)
-2026-10-22 07:49:32,516 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
-2026-10-22 07:49:32,518 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 07:49:34,670 [INFO] MFE #418427499 XAUUSD.s: Hoch +3.5 Punkte, Stufe 1
-2026-10-22 07:49:39,465 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 07:49:41,522 [INFO] Trail-SL #418427504 XAUUSD.s SELL -> SL:4089.36 (+34.5p)
-2026-10-22 07:49:41,640 [INFO] Trail-SL #418427512 XAUUSD.s SELL -> SL:4089.36 (+34.8p)
-2026-10-22 07:49:41,762 [INFO] Trail-SL #418427522 XAUUSD.s SELL -> SL:4089.36 (+35.6p)
-2026-10-22 07:50:11,891 [INFO] Trail-SL #418427504 XAUUSD.s SELL -> SL:4088.78 (+32.3p)
-2026-10-22 07:50:11,994 [INFO] Trail-SL #418427512 XAUUSD.s SELL -> SL:4088.78 (+32.7p)
-2026-10-22 07:50:12,097 [INFO] Trail-SL #418427522 XAUUSD.s SELL -> SL:4088.78 (+32.8p)
-2026-10-22 07:51:02,291 [INFO] Trail-SL #418427504 XAUUSD.s SELL -> SL:4088.58 (+42.5p)
-2026-10-22 07:51:02,392 [INFO] Trail-SL #418427512 XAUUSD.s SELL -> SL:4088.58 (+42.8p)
-2026-10-22 07:51:02,492 [INFO] Trail-SL #418427522 XAUUSD.s SELL -> SL:4088.58 (+43.6p)
-2026-10-22 07:52:43,986 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 07:52:44,258 [INFO] ✅ Keine verpassten Signale
-2026-10-22 07:52:45,335 [INFO] MFE #418427504 XAUUSD.s: Hoch +4.7 Punkte, Stufe 1
-2026-10-22 07:52:45,345 [INFO] MFE #418427512 XAUUSD.s: Hoch +4.8 Punkte, Stufe 1
-2026-10-22 07:52:45,353 [INFO] MFE #418427522 XAUUSD.s: Hoch +4.8 Punkte, Stufe 1
-2026-10-22 07:52:48,795 [INFO] Prioritaet freigegeben: XAUUSD.s (XAUUSD SCALPING ⚡️)
-2026-10-22 07:59:01,716 [INFO] Telethon Wakeup-Ping
-2026-10-22 08:02:02,603 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🔒 BE HIT! – Für jeden der SL auf BE gezogen hat'
-2026-10-22 08:02:02,604 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 08:02:09,320 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 08:02:44,261 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 08:02:44,366 [INFO] ✅ Keine verpassten Signale
-2026-10-22 08:07:57,503 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP2 HIT! +80 PIPS 💰'
-2026-10-22 08:07:57,505 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 08:07:59,447 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 08:09:02,344 [INFO] Telethon Wakeup-Ping
-2026-10-22 08:12:44,368 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 08:12:44,478 [INFO] ✅ Keine verpassten Signale
-2026-10-22 08:19:02,962 [INFO] Telethon Wakeup-Ping
-2026-10-22 08:22:44,480 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 08:22:44,583 [INFO] ✅ Keine verpassten Signale
-2026-10-22 08:25:07,566 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4089.98'
-2026-10-22 08:25:07,573 [INFO] Lot-Sizing: Balance=944.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-22 08:25:07,573 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4094.98) + 4 Runner (PARTIAL_AT_TP)
-
-⚡ SIGNAL [08:25:07] aus: XAUUSD SCALPING ⚡️
-  BUY XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4081.98 | TPs: [4094.98, 4097.98, 4101.98, 4105.98]
-  Verteilung: {4094.98: 1, 0: 4}
-2026-10-22 08:25:07,574 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.63 (Einstieg 4091.61 statt 4089.98)
-2026-10-22 08:25:07,574 [INFO] Lot-Sizing: Balance=944.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-22 08:25:07,576 [INFO] Lot-Normalisierung XAUUSD.s: 0.008373496120249128 -> 0.01 (min 0.01, step 0.01)
-2026-10-22 08:25:07,576 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 8.57, Budget 35.87)
-2026-10-22 08:25:07,576 [INFO] Zielrisiko 3.8%: SL=9.63 -> Lot 0.05 -> 0.01 x 4 Layer = 34.27 je Signal
-2026-10-22 08:25:07,579 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4094.98) + 3 Runner (PARTIAL_AT_TP)
-2026-10-22 08:25:07,582 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4094.98) + 3 Runner (PARTIAL_AT_TP)
-2026-10-22 08:25:07,584 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 08:25:07,996 [INFO] Runner markiert #418484732 -> runners.json
-2026-10-22 08:25:07,996 [INFO] Layer 1/4 Ticket #418484732 TP=4094.98
-2026-10-22 08:25:08,000 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 08:25:08,409 [INFO] Runner markiert #418484743 -> runners.json
-2026-10-22 08:25:08,409 [INFO] Layer 2/4 Ticket #418484743 TP=0
-2026-10-22 08:25:08,412 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 08:25:08,843 [INFO] Runner markiert #418484748 -> runners.json
-2026-10-22 08:25:08,843 [INFO] Layer 3/4 Ticket #418484748 TP=0
-2026-10-22 08:25:08,846 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 08:25:09,260 [INFO] Runner markiert #418484751 -> runners.json
-2026-10-22 08:25:09,261 [INFO] Layer 4/4 Ticket #418484751 TP=0
-2026-10-22 08:25:09,261 [INFO] TP-Layer Map: {'tp1': [418484743, 418484748, 418484751], 'tp2': [418484732]}
-2026-10-22 08:25:09,261 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
-2026-10-22 08:25:09,660 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 08:29:03,215 [INFO] Telethon Wakeup-Ping
-2026-10-22 08:32:44,584 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 08:32:44,671 [INFO] Scalp: besserer Einstieg als im Signal (5.6 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-22 08:32:44,672 [INFO] Verpasstes TRADE uebersprungen: Nachricht 08:25 ist 7.6 Min alt (> 5.0 Min) - kein Re-Fire
-2026-10-22 08:32:44,738 [INFO] ✅ Keine verpassten Signale
-2026-10-22 08:39:03,442 [INFO] Telethon Wakeup-Ping
-2026-10-22 08:42:44,739 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 08:42:44,819 [INFO] Verpasstes TRADE uebersprungen: Nachricht 08:25 ist 17.6 Min alt (> 5.0 Min) - kein Re-Fire
-2026-10-22 08:42:44,870 [INFO] ✅ Keine verpassten Signale
-2026-10-22 08:49:03,679 [INFO] Telethon Wakeup-Ping
-2026-10-22 08:52:44,872 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 08:52:45,177 [INFO] Scalp: besserer Einstieg als im Signal (30.7 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-22 08:52:45,177 [INFO] Verpasstes TRADE uebersprungen: Nachricht 08:25 ist 27.6 Min alt (> 5.0 Min) - kein Re-Fire
-2026-10-22 08:52:45,371 [INFO] ✅ Keine verpassten Signale
-2026-10-22 08:58:54,427 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '❌ SL HIT –80 PIPS'
-2026-10-22 08:58:54,430 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 08:58:54,606 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 08:59:03,987 [INFO] Telethon Wakeup-Ping
-2026-10-22 09:00:20,753 [INFO] MFE #418484732 XAUUSD.s: Hoch +2.4 Punkte, Stufe 0
-2026-10-22 09:00:20,761 [INFO] MFE #418484743 XAUUSD.s: Hoch +2.3 Punkte, Stufe 0
-2026-10-22 09:00:20,766 [INFO] MFE #418484748 XAUUSD.s: Hoch +2.3 Punkte, Stufe 0
-2026-10-22 09:00:20,770 [INFO] MFE #418484751 XAUUSD.s: Hoch +2.3 Punkte, Stufe 0
-2026-10-22 09:00:20,773 [INFO] prune_runners: 4 verwaiste entfernt
-2026-10-22 09:00:50,211 [INFO] Prioritaet freigegeben: XAUUSD.s (XAUUSD SCALPING ⚡️)
-2026-10-22 09:02:45,371 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 09:02:45,498 [INFO] ✅ Keine verpassten Signale
-2026-10-22 09:09:04,433 [INFO] Telethon Wakeup-Ping
-2026-10-22 09:12:45,500 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 09:12:45,631 [INFO] ✅ Keine verpassten Signale
-2026-10-22 09:17:18,545 [INFO] Got difference for channel 3909992762 updates
-2026-10-22 09:18:44,962 [INFO] Got difference for channel 3909992762 updates
-2026-10-22 09:19:04,735 [INFO] Telethon Wakeup-Ping
-2026-10-22 09:21:12,015 [INFO] Got difference for channel 3909992762 updates
-2026-10-22 09:22:45,632 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 09:22:45,744 [INFO] ✅ Keine verpassten Signale
-2026-10-22 09:29:04,991 [INFO] Telethon Wakeup-Ping
-2026-10-22 09:30:00,702 [INFO] Got difference for channel 3909992762 updates
-2026-10-22 09:30:09,321 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4084.7'
-2026-10-22 09:30:09,332 [INFO] Lot-Sizing: Balance=909.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-22 09:30:09,332 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4079.75) + 4 Runner (PARTIAL_AT_TP)
-
-⚡ SIGNAL [09:30:09] aus: XAUUSD SCALPING ⚡️
-  SELL XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4092.75 | TPs: [4079.75, 4076.75, 4072.75, 4068.75]
-  Verteilung: {4079.75: 1, 0: 4}
-2026-10-22 09:30:09,335 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 8.91 (Einstieg 4083.84 statt 4084.75)
-2026-10-22 09:30:09,335 [INFO] Lot-Sizing: Balance=909.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-22 09:30:09,336 [INFO] Lot-Normalisierung XAUUSD.s: 0.00871132559066232 -> 0.01 (min 0.01, step 0.01)
-2026-10-22 09:30:09,337 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 7.93, Budget 34.56)
-2026-10-22 09:30:09,337 [INFO] Zielrisiko 3.8%: SL=8.91 -> Lot 0.05 -> 0.01 x 4 Layer = 31.73 je Signal
-2026-10-22 09:30:09,340 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4079.75) + 3 Runner (PARTIAL_AT_TP)
-2026-10-22 09:30:09,343 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4079.75) + 3 Runner (PARTIAL_AT_TP)
-2026-10-22 09:30:09,345 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 09:30:09,762 [INFO] Runner markiert #418547713 -> runners.json
-2026-10-22 09:30:09,763 [INFO] Layer 1/4 Ticket #418547713 TP=4079.75
-2026-10-22 09:30:09,766 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 09:30:10,180 [INFO] Runner markiert #418547722 -> runners.json
-2026-10-22 09:30:10,182 [INFO] Layer 2/4 Ticket #418547722 TP=0
-2026-10-22 09:30:10,184 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 09:30:10,597 [INFO] Runner markiert #418547733 -> runners.json
-2026-10-22 09:30:10,598 [INFO] Layer 3/4 Ticket #418547733 TP=0
-2026-10-22 09:30:10,599 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 09:30:11,017 [INFO] Runner markiert #418547744 -> runners.json
-2026-10-22 09:30:11,018 [INFO] Layer 4/4 Ticket #418547744 TP=0
-2026-10-22 09:30:11,018 [INFO] TP-Layer Map: {'tp1': [418547713], 'tp2': [418547722, 418547733, 418547744]}
-2026-10-22 09:30:11,018 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
-2026-10-22 09:30:11,035 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 09:32:45,746 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 09:32:45,807 [INFO] Verpasstes Signal ausfuehren [XAUUSD SCALPING ⚡️] 09:30: TRADE conf=99%
-2026-10-22 09:32:45,808 [INFO] Verpasstes Signal uebersprungen: bereits 4 Position(en) offen
-2026-10-22 09:36:09,764 [INFO] Got difference for channel 1235349100 updates
-2026-10-22 09:39:05,727 [INFO] Telethon Wakeup-Ping
-2026-10-22 09:42:45,885 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 09:42:46,096 [INFO] ✅ Keine verpassten Signale
-2026-10-22 09:49:06,076 [INFO] Telethon Wakeup-Ping
-2026-10-22 09:52:46,098 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 09:52:46,248 [INFO] ✅ Keine verpassten Signale
-2026-10-22 09:59:06,315 [INFO] Telethon Wakeup-Ping
-2026-10-22 10:02:46,252 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 10:02:46,640 [INFO] ✅ Keine verpassten Signale
-2026-10-22 10:09:06,698 [INFO] Telethon Wakeup-Ping
-2026-10-22 10:12:46,644 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 10:12:46,772 [INFO] ✅ Keine verpassten Signale
-2026-10-22 10:19:07,550 [INFO] Telethon Wakeup-Ping
-2026-10-22 10:22:46,773 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 10:22:47,108 [INFO] ✅ Keine verpassten Signale
-2026-10-22 10:29:07,919 [INFO] Telethon Wakeup-Ping
-2026-10-22 10:32:47,112 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 10:32:47,293 [INFO] ✅ Keine verpassten Signale
-2026-10-22 10:39:08,487 [INFO] Telethon Wakeup-Ping
-2026-10-22 10:42:47,295 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 10:42:47,533 [INFO] ✅ Keine verpassten Signale
-2026-10-22 10:49:08,740 [INFO] Telethon Wakeup-Ping
-2026-10-22 10:52:47,536 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 10:52:47,750 [INFO] ✅ Keine verpassten Signale
-2026-10-22 10:55:27,792 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4083.77 (+30.8p)
-2026-10-22 10:56:57,997 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4083.47 (+30.5p)
-2026-10-22 10:57:28,124 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4082.71 (+39.0p)
-2026-10-22 10:57:28,225 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4082.71 (+39.4p)
-2026-10-22 10:57:28,344 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4082.71 (+41.3p)
-2026-10-22 10:57:28,475 [INFO] SL-Leiter: #418547713 TP1 erreicht -> SL auf Entry/BE (4083.84)
-2026-10-22 10:57:30,659 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
-2026-10-22 10:57:30,661 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 10:57:30,792 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 10:57:38,451 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4082.47 (+37.7p)
-2026-10-22 10:57:38,553 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4082.47 (+38.1p)
-2026-10-22 10:57:38,653 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4082.47 (+40.1p)
-2026-10-22 10:57:55,800 [INFO] MFE #418547713 XAUUSD.s: Hoch +4.4 Punkte, Stufe 1
-2026-10-22 10:57:58,774 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4082.05 (+44.3p)
-2026-10-22 10:57:58,876 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4082.05 (+44.6p)
-2026-10-22 10:57:58,978 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4082.05 (+46.7p)
-2026-10-22 10:58:09,086 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4082.02 (+41.8p)
-2026-10-22 10:58:09,189 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4082.02 (+42.2p)
-2026-10-22 10:58:09,293 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4082.02 (+44.1p)
-2026-10-22 10:59:09,514 [INFO] Telethon Wakeup-Ping
-2026-10-22 10:59:19,590 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4081.88 (+47.3p)
-2026-10-22 10:59:19,690 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4081.88 (+47.7p)
-2026-10-22 10:59:19,790 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4081.87 (+49.8p)
-2026-10-22 10:59:29,893 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4081.45 (+50.3p)
-2026-10-22 10:59:29,994 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4081.45 (+50.7p)
-2026-10-22 10:59:30,094 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4081.45 (+52.5p)
-2026-10-22 11:00:20,275 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4080.84 (+57.7p)
-2026-10-22 11:00:20,376 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4080.84 (+57.9p)
-2026-10-22 11:00:20,479 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4080.84 (+59.9p)
-2026-10-22 11:00:30,584 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4080.26 (+61.4p)
-2026-10-22 11:00:30,687 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4080.26 (+61.7p)
-2026-10-22 11:00:30,788 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4080.26 (+63.2p)
-2026-10-22 11:00:40,902 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4080.22 (+63.6p)
-2026-10-22 11:00:41,005 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4080.22 (+64.1p)
-2026-10-22 11:00:41,116 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4080.22 (+66.3p)
-2026-10-22 11:00:51,220 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4080.15 (+58.2p)
-2026-10-22 11:00:51,322 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4080.15 (+58.6p)
-2026-10-22 11:00:51,421 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4080.15 (+60.6p)
-2026-10-22 11:01:11,539 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4079.53 (+68.9p)
-2026-10-22 11:01:11,641 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4079.53 (+69.3p)
-2026-10-22 11:01:11,742 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4079.53 (+71.4p)
-2026-10-22 11:01:11,930 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP2 HIT! +80 PIPS 💰'
-2026-10-22 11:01:11,933 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 11:01:12,806 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 11:01:21,844 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4079.47 (+71.3p)
-2026-10-22 11:01:21,948 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4079.47 (+71.8p)
-2026-10-22 11:01:22,051 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4079.44 (+74.1p)
-2026-10-22 11:01:32,156 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4078.6 (+77.2p)
-2026-10-22 11:01:32,255 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4078.6 (+77.6p)
-2026-10-22 11:01:32,355 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4078.6 (+79.6p)
-2026-10-22 11:02:12,499 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4078.41 (+82.0p)
-2026-10-22 11:02:12,600 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4078.41 (+82.4p)
-2026-10-22 11:02:12,700 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4078.41 (+84.4p)
-2026-10-22 11:02:16,814 [INFO] Got difference for account updates
-2026-10-22 11:02:22,806 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4077.78 (+86.1p)
-2026-10-22 11:02:22,907 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4077.78 (+85.8p)
-2026-10-22 11:02:23,008 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4077.78 (+87.0p)
-2026-10-22 11:02:33,121 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4077.35 (+88.2p)
-2026-10-22 11:02:33,224 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4077.35 (+89.2p)
-2026-10-22 11:02:33,322 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4077.35 (+92.1p)
-2026-10-22 11:02:47,752 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 11:02:47,894 [INFO] ✅ Keine verpassten Signale
-2026-10-22 11:02:53,439 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4077.2 (+91.9p)
-2026-10-22 11:02:53,541 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4077.2 (+92.4p)
-2026-10-22 11:02:53,642 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4077.2 (+94.3p)
-2026-10-22 11:03:03,786 [INFO] Trail-SL #418547722 XAUUSD.s SELL -> SL:4077.14 (+92.2p)
-2026-10-22 11:03:03,927 [INFO] Trail-SL #418547733 XAUUSD.s SELL -> SL:4077.14 (+92.6p)
-2026-10-22 11:03:04,043 [INFO] Trail-SL #418547744 XAUUSD.s SELL -> SL:4077.14 (+94.6p)
-2026-10-22 11:03:38,458 [INFO] MFE #418547722 XAUUSD.s: Hoch +9.6 Punkte, Stufe 1
-2026-10-22 11:03:38,463 [INFO] MFE #418547733 XAUUSD.s: Hoch +9.8 Punkte, Stufe 1
-2026-10-22 11:03:38,481 [INFO] MFE #418547744 XAUUSD.s: Hoch +9.8 Punkte, Stufe 1
-2026-10-22 11:03:52,065 [INFO] Prioritaet freigegeben: XAUUSD.s (XAUUSD SCALPING ⚡️)
-2026-10-22 11:06:17,554 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP3 HIT! +120 PIPS 💰'
-2026-10-22 11:06:17,556 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 11:06:18,193 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 11:09:09,916 [INFO] Telethon Wakeup-Ping
-2026-10-22 11:12:47,896 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 11:12:48,094 [INFO] ✅ Keine verpassten Signale
-2026-10-22 11:12:54,308 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '**SMART MONEY KONZEPTE IN DER PRAXIS!**\n\nGenau solche Setups'
-2026-10-22 11:12:54,310 [INFO] 🔇 NOISE: Regex: unbekanntes Instrument 'unseren' - in _SCALP_SYMS ergaenzen
-2026-10-22 11:12:54,980 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 11:16:09,283 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP4 HIT! +160 PIPS 💰'
-2026-10-22 11:16:09,285 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 11:16:09,916 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 11:16:58,679 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: 'FULL TP IST DAS SWING LOW LINKS! 🚀'
-2026-10-22 11:16:58,681 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 11:16:59,319 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 11:19:10,242 [INFO] Telethon Wakeup-Ping
-2026-10-22 11:21:10,109 [INFO] Got difference for channel 1235349100 updates
-2026-10-22 11:22:05,477 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🚀 +210 PIPS!'
-2026-10-22 11:22:05,479 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 11:22:06,120 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 11:22:48,097 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 11:22:48,232 [INFO] ✅ Keine verpassten Signale
-2026-10-22 11:25:04,972 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🚀 +260 PIPS!'
-2026-10-22 11:25:04,974 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-22 11:25:05,660 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 11:29:10,883 [INFO] Telethon Wakeup-Ping
-2026-10-22 11:32:48,235 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 11:32:48,382 [INFO] ✅ Keine verpassten Signale
-2026-10-22 11:39:11,171 [INFO] Telethon Wakeup-Ping
-2026-10-22 11:42:48,384 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 11:42:48,647 [INFO] ✅ Keine verpassten Signale
-2026-10-22 11:49:11,570 [INFO] Telethon Wakeup-Ping
-2026-10-22 11:52:48,650 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 11:52:48,783 [INFO] ✅ Keine verpassten Signale
-2026-10-22 11:59:12,246 [INFO] Telethon Wakeup-Ping
-2026-10-22 12:02:48,784 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 12:02:48,891 [INFO] ✅ Keine verpassten Signale
-2026-10-22 12:09:12,816 [INFO] Telethon Wakeup-Ping
-2026-10-22 12:12:48,892 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 12:12:49,001 [INFO] ✅ Keine verpassten Signale
-2026-10-22 12:15:09,603 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4070.89'
-2026-10-22 12:15:09,606 [INFO] Scalp: besserer Einstieg als im Signal (7.1 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-22 12:15:09,610 [INFO] Lot-Sizing: Balance=931.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-22 12:15:09,611 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4075.89) + 4 Runner (PARTIAL_AT_TP)
-
-⚡ SIGNAL [12:15:09] aus: XAUUSD SCALPING ⚡️
-  BUY XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4062.89 | TPs: [4075.89, 4078.89, 4082.89, 4086.89]
-  Verteilung: {4075.89: 1, 0: 4}
-2026-10-22 12:15:09,612 [INFO] Lot-Sizing: Balance=931.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-22 12:15:09,613 [INFO] Lot-Normalisierung XAUUSD.s: 0.009916360307599998 -> 0.01 (min 0.01, step 0.01)
 2026-10-22 12:15:09,614 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 7.14, Budget 35.39)
 2026-10-22 12:15:09,614 [INFO] Zielrisiko 3.8%: SL=8.0 -> Lot 0.05 -> 0.01 x 4 Layer = 28.55 je Signal
 2026-10-22 12:15:09,617 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4075.89) + 3 Runner (PARTIAL_AT_TP)
@@ -7998,3 +6850,1151 @@
 2026-10-23 14:38:30,216 [INFO] Telethon Wakeup-Ping
 2026-10-23 14:42:26,124 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-23 14:42:26,237 [INFO] ✅ Keine verpassten Signale
+2026-10-23 14:48:30,459 [INFO] Telethon Wakeup-Ping
+2026-10-23 14:50:02,000 [INFO] AUTOPATCH: patch_48_meldung_nur_live.py angewendet - Patch 48 OK - TP-Meldung zaehlt nur noch am Live-Eingang
+2026-10-23 14:50:03,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
+2026-10-23 14:50:38,000 [INFO] AUTOPATCH: teletrader.service laeuft
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-10-23 14:52:03,321 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $934.77 EUR
+2026-10-23 14:52:03,478 [INFO] Connecting to 149.154.167.51:443/TcpFull...
+2026-10-23 14:52:03,492 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
+2026-10-23 14:52:03,653 [INFO] Telegram User-Client verbunden.
+2026-10-23 14:52:03,659 [INFO] Connecting to 149.154.167.51:443/TcpFull...
+2026-10-23 14:52:03,671 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
+2026-10-23 14:52:03,814 [INFO] Telegram Bot-Client verbunden.
+2026-10-23 14:52:03,814 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-10-23 14:52:06,205 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-10-23 14:52:07,464 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-10-23 14:52:07,489 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 2 Kanäle
+
+2026-10-23 14:52:22,557 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-10-23 14:52:22,772 [INFO] ✅ Keine verpassten Signale
+2026-10-23 14:52:24,084 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-10-23 14:52:52,775 [INFO] Equity Guardian: Start=934.77$
+2026-10-23 14:57:22,796 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 14:57:22,930 [INFO] ✅ Keine verpassten Signale
+2026-10-23 15:03:24,502 [INFO] Telethon Wakeup-Ping
+2026-10-23 15:07:22,933 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 15:07:23,093 [INFO] ✅ Keine verpassten Signale
+2026-10-23 15:13:24,857 [INFO] Telethon Wakeup-Ping
+2026-10-23 15:17:23,095 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 15:17:23,577 [INFO] ✅ Keine verpassten Signale
+2026-10-23 15:23:25,411 [INFO] Telethon Wakeup-Ping
+2026-10-23 15:27:23,578 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 15:27:23,685 [INFO] ✅ Keine verpassten Signale
+2026-10-23 15:33:25,939 [INFO] Telethon Wakeup-Ping
+2026-10-23 15:37:23,685 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 15:37:23,794 [INFO] ✅ Keine verpassten Signale
+2026-10-23 15:43:26,179 [INFO] Telethon Wakeup-Ping
+2026-10-23 15:47:23,796 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 15:47:23,908 [INFO] ✅ Keine verpassten Signale
+2026-10-23 15:53:26,434 [INFO] Telethon Wakeup-Ping
+2026-10-23 15:57:23,909 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 15:57:24,012 [INFO] ✅ Keine verpassten Signale
+2026-10-23 16:03:26,919 [INFO] Telethon Wakeup-Ping
+2026-10-23 16:07:24,014 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 16:07:24,136 [INFO] ✅ Keine verpassten Signale
+2026-10-23 16:13:27,189 [INFO] Telethon Wakeup-Ping
+2026-10-23 16:17:24,138 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 16:17:24,292 [INFO] ✅ Keine verpassten Signale
+2026-10-23 16:23:27,540 [INFO] Telethon Wakeup-Ping
+2026-10-23 16:27:24,295 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 16:27:24,477 [INFO] ✅ Keine verpassten Signale
+2026-10-23 16:33:27,774 [INFO] Telethon Wakeup-Ping
+2026-10-23 16:37:24,479 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 16:37:24,687 [INFO] ✅ Keine verpassten Signale
+2026-10-23 16:39:06,541 [INFO] Got difference for channel 1235349100 updates
+2026-10-23 16:43:28,185 [INFO] Telethon Wakeup-Ping
+2026-10-23 16:46:22,219 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
+2026-10-23 16:46:22,261 [INFO] Kanal meldet TP1 - Leiter darf die Stufe ohne eigenen Kursdruck setzen
+2026-10-23 16:46:22,262 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-10-23 16:46:22,338 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-23 16:47:24,689 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 16:47:24,778 [INFO] ✅ Keine verpassten Signale
+2026-10-23 16:53:28,508 [INFO] Telethon Wakeup-Ping
+2026-10-23 16:57:24,779 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 16:57:24,884 [INFO] ✅ Keine verpassten Signale
+2026-10-23 17:00:14,024 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4000.0'
+2026-10-23 17:00:14,030 [INFO] Scalp: besserer Einstieg als im Signal (4.0 Pips zu unseren Gunsten) - Trade wird genommen
+2026-10-23 17:00:14,043 [INFO] Lot-Sizing: Balance=935.0$  Lot=0.05  Kanal=XAUUSD SCALP
+2026-10-23 17:00:14,043 [INFO] Layer-Verteilung: 5 Layer = 2x TP1 (3995.09), 1x TP2 (3992.09), 1x TP3 (3988.09) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+
+⚡ SIGNAL [17:00:14] aus: XAUUSD SCALPING ⚡️
+  SELL XAUUSD.s | 5 Layer à 0.01 Lot
+  SL: 4008.09 | TPs: [3995.09, 3992.09, 3988.09, 3984.09]
+  Verteilung: {3995.09: 2, 3992.09: 1, 3988.09: 1, 0: 1}
+2026-10-23 17:00:14,048 [INFO] Lot-Sizing: Balance=935.0$  Lot=0.05  Kanal=XAUUSD SCALP
+2026-10-23 17:00:14,053 [INFO] Lot-Normalisierung XAUUSD.s: 0.0099397365795 -> 0.01 (min 0.01, step 0.01)
+2026-10-23 17:00:14,054 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 7.15, Budget 35.52)
+2026-10-23 17:00:14,054 [INFO] Zielrisiko 3.8%: SL=8.0 -> Lot 0.05 -> 0.01 x 4 Layer = 28.59 je Signal
+2026-10-23 17:00:14,057 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (3995.09), 1x TP2 (3992.09) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+2026-10-23 17:00:14,059 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (3995.09), 1x TP2 (3992.09) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+2026-10-23 17:00:14,061 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-23 17:00:14,472 [INFO] Runner markiert #420656461 -> runners.json
+2026-10-23 17:00:14,472 [INFO] Layer 1/4 Ticket #420656461 TP=3995.09
+2026-10-23 17:00:14,474 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-23 17:00:14,891 [INFO] Runner markiert #420656466 -> runners.json
+2026-10-23 17:00:14,892 [INFO] Layer 2/4 Ticket #420656466 TP=3995.09
+2026-10-23 17:00:14,894 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-23 17:00:15,309 [INFO] Runner markiert #420656473 -> runners.json
+2026-10-23 17:00:15,310 [INFO] Layer 3/4 Ticket #420656473 TP=3992.09
+2026-10-23 17:00:15,314 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-23 17:00:15,728 [INFO] Runner markiert #420656477 -> runners.json
+2026-10-23 17:00:15,728 [INFO] Layer 4/4 Ticket #420656477 TP=0
+2026-10-23 17:00:15,729 [INFO] TP-Layer Map: {'tp1': [420656461, 420656466], 'tp2': [420656473], 'tp3': [420656477]}
+2026-10-23 17:00:15,729 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
+2026-10-23 17:00:16,188 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-23 17:03:28,843 [INFO] Telethon Wakeup-Ping
+2026-10-23 17:06:06,299 [INFO] Ruecksetzer #420656477 4.1-14.3p vom Hoch 20.0p (Trail 30.0p)
+2026-10-23 17:07:25,132 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 17:07:25,189 [INFO] Verpasstes TRADE uebersprungen: Nachricht 17:00 ist 7.2 Min alt (> 5.0 Min) - kein Re-Fire
+2026-10-23 17:07:25,239 [INFO] ✅ Keine verpassten Signale
+2026-10-23 17:11:16,783 [INFO] Ruecksetzer #420656477 16.4-16.4p vom Hoch 41.6p (Trail 30.0p)
+2026-10-23 17:12:06,824 [INFO] Ruecksetzer #420656477 17.8-17.8p vom Hoch 41.6p (Trail 30.0p)
+2026-10-23 17:13:29,292 [INFO] Telethon Wakeup-Ping
+2026-10-23 17:15:48,119 [INFO] SL-Leiter: #420656461 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 17:15:48,126 [INFO] SL-Leiter: #420656466 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-23 17:15:48,235 [INFO] SL-Leiter: #420656473 TP1 erreicht -> SL auf Entry/BE (4000.53)
+2026-10-23 17:15:48,394 [INFO] SL-Leiter: #420656477 TP1 erreicht -> SL auf Entry/BE (4000.52)
+2026-10-23 17:15:52,733 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
+2026-10-23 17:15:52,735 [INFO] Kanal meldet TP1 - Leiter darf die Stufe ohne eigenen Kursdruck setzen
+2026-10-23 17:15:52,735 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-10-23 17:15:52,736 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-23 17:15:57,041 [INFO] Ruecksetzer #420656477 18.4-22.1p vom Hoch 55.0p (Trail 30.0p)
+2026-10-23 17:16:03,800 [INFO] MFE #420656461 XAUUSD.s: Hoch +5.6 Punkte, Stufe 0
+2026-10-23 17:16:03,807 [INFO] MFE #420656466 XAUUSD.s: Hoch +5.7 Punkte, Stufe 0
+2026-10-23 17:16:07,142 [INFO] Ruecksetzer #420656477 18.4-23.8p vom Hoch 60.0p (Trail 30.0p)
+2026-10-23 17:16:24,395 [INFO] Runner-BE: #420656477 SL -> 4000.51
+2026-10-23 17:17:25,240 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 17:17:25,308 [INFO] Nachholen vorgemerkt: XAUUSD SELL Entry 4000.09 (Markt 62.1 Pips weg, Fenster 18.0)
+2026-10-23 17:17:25,381 [INFO] ✅ Keine verpassten Signale
+2026-10-23 17:17:32,103 [INFO] Nachholen verworfen: XAUUSD.s SELL TP1 3995.09 schon durchlaufen
+2026-10-23 17:23:29,748 [INFO] Telethon Wakeup-Ping
+2026-10-23 17:25:40,147 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP2 HIT! +80 PIPS 💰'
+2026-10-23 17:25:40,149 [INFO] Kanal meldet TP2 - Leiter darf die Stufe ohne eigenen Kursdruck setzen
+2026-10-23 17:25:40,151 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-10-23 17:25:40,801 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-23 17:27:25,383 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 17:27:25,489 [INFO] ✅ Keine verpassten Signale
+2026-10-23 17:28:08,168 [INFO] Ruecksetzer #420656477 25.3-25.3p vom Hoch 85.0p (Trail 34.0p)
+2026-10-23 17:28:48,207 [INFO] Ruecksetzer #420656477 27.0-27.0p vom Hoch 85.0p (Trail 34.0p)
+2026-10-23 17:29:18,243 [INFO] Ruecksetzer #420656477 28.6-28.6p vom Hoch 85.0p (Trail 34.0p)
+2026-10-23 17:30:18,312 [INFO] Ruecksetzer #420656477 30.0-30.0p vom Hoch 85.0p (Trail 34.0p)
+2026-10-23 17:30:48,355 [INFO] Ruecksetzer #420656477 35.1-35.1p vom Hoch 85.0p (Trail 34.0p)
+2026-10-23 17:30:58,380 [INFO] Ruecksetzer #420656477 36.2-36.2p vom Hoch 85.0p (Trail 34.0p)
+2026-10-23 17:32:28,803 [INFO] Ruecksetzer #420656477 44.5-44.5p vom Hoch 85.0p (Trail 34.0p)
+2026-10-23 17:33:30,057 [INFO] Telethon Wakeup-Ping
+2026-10-23 17:34:19,277 [INFO] Ruecksetzer #420656477 47.9-47.9p vom Hoch 85.0p (Trail 34.0p)
+2026-10-23 17:37:25,492 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 17:37:25,593 [INFO] ✅ Keine verpassten Signale
+2026-10-23 17:40:34,551 [INFO] MFE #420656473 XAUUSD.s: Hoch +8.8 Punkte, Stufe 1
+2026-10-23 17:43:30,516 [INFO] Telethon Wakeup-Ping
+2026-10-23 17:47:25,594 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 17:47:25,678 [INFO] ✅ Keine verpassten Signale
+2026-10-23 17:50:11,304 [INFO] Ruecksetzer #420656477 49.6-49.6p vom Hoch 96.3p (Trail 38.5p)
+2026-10-23 17:50:21,325 [INFO] Ruecksetzer #420656477 56.7-56.7p vom Hoch 96.3p (Trail 38.5p)
+2026-10-23 17:50:31,341 [INFO] Ruecksetzer #420656477 61.6-61.6p vom Hoch 96.3p (Trail 38.5p)
+2026-10-23 17:50:41,351 [INFO] Ruecksetzer #420656477 64.9-64.9p vom Hoch 96.3p (Trail 38.5p)
+2026-10-23 17:50:51,358 [INFO] Ruecksetzer #420656477 72.3-72.3p vom Hoch 96.3p (Trail 38.5p)
+2026-10-23 17:53:30,777 [INFO] Telethon Wakeup-Ping
+2026-10-23 17:57:25,680 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 17:57:25,786 [INFO] ✅ Keine verpassten Signale
+2026-10-23 17:58:10,221 [INFO] MFE #420656477 XAUUSD.s: Hoch +9.6 Punkte, Stufe 1
+2026-10-23 17:58:28,484 [INFO] Prioritaet freigegeben: XAUUSD.s (XAUUSD SCALPING ⚡️)
+2026-10-23 17:59:07,262 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🔒 BE HIT! – Für jeden der SL auf BE gezogen hat'
+2026-10-23 17:59:07,264 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-10-23 17:59:07,378 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-23 18:00:27,739 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 3998.48'
+2026-10-23 18:00:27,745 [INFO] Lot-Sizing: Balance=952.0$  Lot=0.05  Kanal=XAUUSD SCALP
+2026-10-23 18:00:27,746 [INFO] Layer-Verteilung: 5 Layer = 2x TP1 (4003.48), 1x TP2 (4006.48), 1x TP3 (4010.48) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+
+⚡ SIGNAL [18:00:27] aus: XAUUSD SCALPING ⚡️
+  BUY XAUUSD.s | 5 Layer à 0.01 Lot
+  SL: 3990.48 | TPs: [4003.48, 4006.48, 4010.48, 4014.48]
+  Verteilung: {4003.48: 2, 4006.48: 1, 4010.48: 1, 0: 1}
+2026-10-23 18:00:27,747 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 8.56 (Einstieg 3999.04 statt 3998.48)
+2026-10-23 18:00:27,747 [INFO] Lot-Sizing: Balance=952.0$  Lot=0.05  Kanal=XAUUSD SCALP
+2026-10-23 18:00:27,749 [INFO] Lot-Normalisierung XAUUSD.s: 0.00946063051551408 -> 0.01 (min 0.01, step 0.01)
+2026-10-23 18:00:27,749 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 7.65, Budget 36.18)
+2026-10-23 18:00:27,749 [INFO] Zielrisiko 3.8%: SL=8.56 -> Lot 0.05 -> 0.01 x 4 Layer = 30.59 je Signal
+2026-10-23 18:00:27,751 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (4003.48), 1x TP2 (4006.48) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+2026-10-23 18:00:27,754 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (4003.48), 1x TP2 (4006.48) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+2026-10-23 18:00:27,755 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-23 18:00:28,169 [INFO] Runner markiert #420695041 -> runners.json
+2026-10-23 18:00:28,169 [INFO] Layer 1/4 Ticket #420695041 TP=4003.48
+2026-10-23 18:00:28,171 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-23 18:00:28,584 [INFO] Runner markiert #420695045 -> runners.json
+2026-10-23 18:00:28,585 [INFO] Layer 2/4 Ticket #420695045 TP=4003.48
+2026-10-23 18:00:28,587 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-23 18:00:29,000 [INFO] Runner markiert #420695048 -> runners.json
+2026-10-23 18:00:29,001 [INFO] Layer 3/4 Ticket #420695048 TP=4006.48
+2026-10-23 18:00:29,004 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-23 18:00:29,430 [INFO] Runner markiert #420695049 -> runners.json
+2026-10-23 18:00:29,430 [INFO] Layer 4/4 Ticket #420695049 TP=0
+2026-10-23 18:00:29,431 [INFO] TP-Layer Map: {'tp1': [420695049], 'tp2': [420695041, 420695045], 'tp3': [420695048]}
+2026-10-23 18:00:29,431 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
+2026-10-23 18:00:29,847 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-23 18:03:31,130 [INFO] Telethon Wakeup-Ping
+2026-10-23 18:07:25,789 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 18:07:25,844 [INFO] Verpasstes TRADE uebersprungen: Nachricht 18:00 ist 7.0 Min alt (> 5.0 Min) - kein Re-Fire
+2026-10-23 18:07:26,249 [INFO] ✅ Keine verpassten Signale
+2026-10-23 18:13:31,559 [INFO] Telethon Wakeup-Ping
+2026-10-23 18:17:26,252 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 18:17:26,317 [INFO] Verpasstes TRADE uebersprungen: Nachricht 18:00 ist 17.0 Min alt (> 5.0 Min) - kein Re-Fire
+2026-10-23 18:17:26,372 [INFO] ✅ Keine verpassten Signale
+2026-10-23 18:23:31,891 [INFO] Telethon Wakeup-Ping
+2026-10-23 18:25:53,858 [INFO] Ruecksetzer #420695049 0.0-24.2p vom Hoch 20.1p (Trail 30.0p)
+2026-10-23 18:27:26,375 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 18:27:26,428 [INFO] Nachholen vorgemerkt: XAUUSD BUY Entry 3998.48 (Markt 30.6 Pips weg, Fenster 18.0)
+2026-10-23 18:27:26,480 [INFO] ✅ Keine verpassten Signale
+2026-10-23 18:33:32,090 [INFO] Telethon Wakeup-Ping
+2026-10-23 18:37:04,755 [INFO] Got difference for account updates
+2026-10-23 18:37:26,482 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 18:37:26,633 [INFO] ✅ Keine verpassten Signale
+2026-10-23 18:37:35,784 [INFO] Ruecksetzer #420695049 26.9-26.9p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 18:37:45,792 [INFO] Ruecksetzer #420695049 30.3-30.3p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 18:38:05,814 [INFO] Ruecksetzer #420695049 33.3-33.3p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 18:38:25,845 [INFO] Ruecksetzer #420695049 34.3-34.3p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 18:38:35,854 [INFO] Ruecksetzer #420695049 35.4-35.4p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 18:39:05,885 [INFO] Ruecksetzer #420695049 38.0-38.0p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 18:39:16,168 [INFO] Ruecksetzer #420695049 49.2-49.2p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 18:39:36,194 [INFO] Ruecksetzer #420695049 52.8-52.8p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 18:39:46,202 [INFO] Ruecksetzer #420695049 63.3-63.3p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 18:39:56,218 [INFO] Ruecksetzer #420695049 64.9-64.9p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 18:40:06,226 [INFO] Ruecksetzer #420695049 69.6-69.6p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 18:40:16,236 [INFO] Ruecksetzer #420695049 74.1-74.1p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 18:40:46,261 [INFO] Ruecksetzer #420695049 76.5-76.5p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 18:43:32,404 [INFO] Telethon Wakeup-Ping
+2026-10-23 18:47:26,635 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 18:47:26,750 [INFO] ✅ Keine verpassten Signale
+2026-10-23 18:53:32,652 [INFO] Telethon Wakeup-Ping
+2026-10-23 18:57:26,753 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 18:57:27,094 [INFO] ✅ Keine verpassten Signale
+2026-10-23 19:03:33,002 [INFO] Telethon Wakeup-Ping
+2026-10-23 19:07:27,095 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 19:07:27,199 [INFO] ✅ Keine verpassten Signale
+2026-10-23 19:08:39,138 [INFO] Ruecksetzer #420695049 77.7-77.7p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 19:09:09,184 [INFO] Ruecksetzer #420695049 83.1-83.1p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 19:13:33,236 [INFO] Telethon Wakeup-Ping
+2026-10-23 19:17:27,477 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 19:17:27,586 [INFO] ✅ Keine verpassten Signale
+2026-10-23 19:23:33,646 [INFO] Telethon Wakeup-Ping
+2026-10-23 19:27:27,588 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 19:27:27,669 [INFO] ✅ Keine verpassten Signale
+2026-10-23 19:27:31,205 [INFO] Nachholen verfallen: XAUUSD.s BUY Entry 3998.48 nach 60.1 Min
+2026-10-23 19:33:33,890 [INFO] Telethon Wakeup-Ping
+2026-10-23 19:37:27,672 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 19:37:27,765 [INFO] ✅ Keine verpassten Signale
+2026-10-23 19:43:34,220 [INFO] Telethon Wakeup-Ping
+2026-10-23 19:47:27,767 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 19:47:27,935 [INFO] ✅ Keine verpassten Signale
+2026-10-23 19:53:34,888 [INFO] Telethon Wakeup-Ping
+2026-10-23 19:57:27,936 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 19:57:28,031 [INFO] ✅ Keine verpassten Signale
+2026-10-23 20:03:35,453 [INFO] Telethon Wakeup-Ping
+2026-10-23 20:07:28,034 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 20:07:28,263 [INFO] ✅ Keine verpassten Signale
+2026-10-23 20:13:35,655 [INFO] Telethon Wakeup-Ping
+2026-10-23 20:17:28,264 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 20:17:28,369 [INFO] ✅ Keine verpassten Signale
+2026-10-23 20:23:36,286 [INFO] Telethon Wakeup-Ping
+2026-10-23 20:27:28,370 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 20:27:28,481 [INFO] ✅ Keine verpassten Signale
+2026-10-23 20:33:36,598 [INFO] Telethon Wakeup-Ping
+2026-10-23 20:36:58,753 [INFO] Ruecksetzer #420695049 88.2-88.2p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 20:37:28,483 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 20:37:28,571 [INFO] ✅ Keine verpassten Signale
+2026-10-23 20:38:42,630 [INFO] Befehl empfangen: /status
+2026-10-23 20:42:39,421 [INFO] Ruecksetzer #420695049 89.3-89.3p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 20:43:36,878 [INFO] Telethon Wakeup-Ping
+2026-10-23 20:45:29,842 [INFO] Ruecksetzer #420695049 90.6-90.6p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 20:46:19,888 [INFO] Ruecksetzer #420695049 92.1-92.1p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 20:46:29,896 [INFO] Ruecksetzer #420695049 99.5-99.5p vom Hoch 30.6p (Trail 30.0p)
+2026-10-23 20:47:28,573 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 20:47:28,668 [INFO] ✅ Keine verpassten Signale
+2026-10-23 20:53:37,163 [INFO] Telethon Wakeup-Ping
+2026-10-23 20:57:28,868 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 20:57:28,957 [INFO] ✅ Keine verpassten Signale
+2026-10-23 21:03:37,431 [INFO] Telethon Wakeup-Ping
+2026-10-23 21:07:28,959 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 21:07:29,052 [INFO] ✅ Keine verpassten Signale
+2026-10-23 21:13:37,653 [INFO] Telethon Wakeup-Ping
+2026-10-23 21:17:29,054 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 21:17:29,166 [INFO] ✅ Keine verpassten Signale
+2026-10-23 21:23:37,894 [INFO] Telethon Wakeup-Ping
+2026-10-23 21:27:29,190 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 21:27:29,294 [INFO] ✅ Keine verpassten Signale
+2026-10-23 21:33:38,110 [INFO] Telethon Wakeup-Ping
+2026-10-23 21:37:29,297 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 21:37:29,498 [INFO] ✅ Keine verpassten Signale
+2026-10-23 21:43:38,377 [INFO] Telethon Wakeup-Ping
+2026-10-23 21:47:29,499 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 21:47:29,616 [INFO] ✅ Keine verpassten Signale
+2026-10-23 21:53:38,865 [INFO] Telethon Wakeup-Ping
+2026-10-23 21:57:29,619 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 21:57:29,713 [INFO] ✅ Keine verpassten Signale
+2026-10-23 22:00:36,817 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 TAGESZUSAMMENFASSUNG XAUUSD\n📅 23.10.2026\n\nSignale: 15\n✅ Ge'
+2026-10-23 22:00:36,824 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-10-23 22:00:36,861 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-23 22:03:39,196 [INFO] Telethon Wakeup-Ping
+2026-10-23 22:07:29,715 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 22:07:29,799 [INFO] ✅ Keine verpassten Signale
+2026-10-23 22:13:39,601 [INFO] Telethon Wakeup-Ping
+2026-10-23 22:17:29,801 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 22:17:29,902 [INFO] ✅ Keine verpassten Signale
+2026-10-23 22:23:39,793 [INFO] Telethon Wakeup-Ping
+2026-10-23 22:27:29,904 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 22:27:29,993 [INFO] ✅ Keine verpassten Signale
+2026-10-23 22:33:39,999 [INFO] Telethon Wakeup-Ping
+2026-10-23 22:37:29,997 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 22:37:30,163 [INFO] ✅ Keine verpassten Signale
+2026-10-23 22:43:40,176 [INFO] Telethon Wakeup-Ping
+2026-10-23 22:47:30,164 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 22:47:30,268 [INFO] ✅ Keine verpassten Signale
+2026-10-23 22:53:40,395 [INFO] Telethon Wakeup-Ping
+2026-10-23 22:57:30,271 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 22:57:30,350 [INFO] ✅ Keine verpassten Signale
+2026-10-23 23:03:40,604 [INFO] Telethon Wakeup-Ping
+2026-10-23 23:07:30,351 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 23:07:30,434 [INFO] ✅ Keine verpassten Signale
+2026-10-23 23:13:41,368 [INFO] Telethon Wakeup-Ping
+2026-10-23 23:17:30,436 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 23:17:30,559 [INFO] ✅ Keine verpassten Signale
+2026-10-23 23:23:41,555 [INFO] Telethon Wakeup-Ping
+2026-10-23 23:27:30,561 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 23:27:30,649 [INFO] ✅ Keine verpassten Signale
+2026-10-23 23:33:41,754 [INFO] Telethon Wakeup-Ping
+2026-10-23 23:37:30,655 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 23:37:30,750 [INFO] ✅ Keine verpassten Signale
+2026-10-23 23:43:42,166 [INFO] Telethon Wakeup-Ping
+2026-10-23 23:47:30,753 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 23:47:30,835 [INFO] ✅ Keine verpassten Signale
+2026-10-23 23:53:42,644 [INFO] Telethon Wakeup-Ping
+2026-10-23 23:57:30,837 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-23 23:57:30,923 [INFO] ✅ Keine verpassten Signale
+2026-10-24 00:03:42,854 [INFO] Telethon Wakeup-Ping
+2026-10-24 00:07:30,980 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 00:07:31,064 [INFO] ✅ Keine verpassten Signale
+2026-10-24 00:13:43,021 [INFO] Telethon Wakeup-Ping
+2026-10-24 00:17:31,066 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 00:17:31,226 [INFO] ✅ Keine verpassten Signale
+2026-10-24 00:23:43,209 [INFO] Telethon Wakeup-Ping
+2026-10-24 00:27:31,227 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 00:27:31,336 [INFO] ✅ Keine verpassten Signale
+2026-10-24 00:33:43,361 [INFO] Telethon Wakeup-Ping
+2026-10-24 00:35:17,142 [INFO] Got difference for channel 1235349100 updates
+2026-10-24 00:37:31,337 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 00:37:31,423 [INFO] ✅ Keine verpassten Signale
+2026-10-24 00:43:43,551 [INFO] Telethon Wakeup-Ping
+2026-10-24 00:47:31,424 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 00:47:31,530 [INFO] ✅ Keine verpassten Signale
+2026-10-24 00:53:43,734 [INFO] Telethon Wakeup-Ping
+2026-10-24 00:57:31,532 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 00:57:31,630 [INFO] ✅ Keine verpassten Signale
+2026-10-24 01:03:44,157 [INFO] Telethon Wakeup-Ping
+2026-10-24 01:07:31,632 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 01:07:31,983 [INFO] ✅ Keine verpassten Signale
+2026-10-24 01:13:45,444 [INFO] Telethon Wakeup-Ping
+2026-10-24 01:17:31,986 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 01:17:32,078 [INFO] ✅ Keine verpassten Signale
+2026-10-24 01:23:45,627 [INFO] Telethon Wakeup-Ping
+2026-10-24 01:27:32,080 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 01:27:32,188 [INFO] ✅ Keine verpassten Signale
+2026-10-24 01:33:45,825 [INFO] Telethon Wakeup-Ping
+2026-10-24 01:37:32,191 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 01:37:32,327 [INFO] ✅ Keine verpassten Signale
+2026-10-24 01:43:46,075 [INFO] Telethon Wakeup-Ping
+2026-10-24 01:47:32,328 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 01:47:32,499 [INFO] ✅ Keine verpassten Signale
+2026-10-24 01:53:46,260 [INFO] Telethon Wakeup-Ping
+2026-10-24 01:57:32,502 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 01:57:32,590 [INFO] ✅ Keine verpassten Signale
+2026-10-24 02:03:46,451 [INFO] Telethon Wakeup-Ping
+2026-10-24 02:07:32,592 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 02:07:32,787 [INFO] ✅ Keine verpassten Signale
+2026-10-24 02:13:46,680 [INFO] Telethon Wakeup-Ping
+2026-10-24 02:17:32,791 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 02:17:32,895 [INFO] ✅ Keine verpassten Signale
+2026-10-24 02:23:47,306 [INFO] Telethon Wakeup-Ping
+2026-10-24 02:27:32,898 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 02:27:32,996 [INFO] ✅ Keine verpassten Signale
+2026-10-24 02:33:47,483 [INFO] Telethon Wakeup-Ping
+2026-10-24 02:37:32,997 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 02:37:33,195 [INFO] ✅ Keine verpassten Signale
+2026-10-24 02:43:47,988 [INFO] Telethon Wakeup-Ping
+2026-10-24 02:47:33,198 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 02:47:33,293 [INFO] ✅ Keine verpassten Signale
+2026-10-24 02:53:48,218 [INFO] Telethon Wakeup-Ping
+2026-10-24 02:57:33,294 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 02:57:33,385 [INFO] ✅ Keine verpassten Signale
+2026-10-24 03:03:48,393 [INFO] Telethon Wakeup-Ping
+2026-10-24 03:07:33,387 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 03:07:33,474 [INFO] ✅ Keine verpassten Signale
+2026-10-24 03:13:48,591 [INFO] Telethon Wakeup-Ping
+2026-10-24 03:17:33,476 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 03:17:33,565 [INFO] ✅ Keine verpassten Signale
+2026-10-24 03:23:48,876 [INFO] Telethon Wakeup-Ping
+2026-10-24 03:27:33,567 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 03:27:33,659 [INFO] ✅ Keine verpassten Signale
+2026-10-24 03:33:49,201 [INFO] Telethon Wakeup-Ping
+2026-10-24 03:37:33,661 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 03:37:33,774 [INFO] ✅ Keine verpassten Signale
+2026-10-24 03:43:49,380 [INFO] Telethon Wakeup-Ping
+2026-10-24 03:47:33,777 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 03:47:33,895 [INFO] ✅ Keine verpassten Signale
+2026-10-24 03:53:49,776 [INFO] Telethon Wakeup-Ping
+2026-10-24 03:57:33,896 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 03:57:33,980 [INFO] ✅ Keine verpassten Signale
+2026-10-24 04:03:49,949 [INFO] Telethon Wakeup-Ping
+2026-10-24 04:07:33,982 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 04:07:34,080 [INFO] ✅ Keine verpassten Signale
+2026-10-24 04:13:50,135 [INFO] Telethon Wakeup-Ping
+2026-10-24 04:17:34,186 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 04:17:34,281 [INFO] ✅ Keine verpassten Signale
+2026-10-24 04:23:50,465 [INFO] Telethon Wakeup-Ping
+2026-10-24 04:27:34,283 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 04:27:34,384 [INFO] ✅ Keine verpassten Signale
+2026-10-24 04:33:50,670 [INFO] Telethon Wakeup-Ping
+2026-10-24 04:37:34,385 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 04:37:34,474 [INFO] ✅ Keine verpassten Signale
+2026-10-24 04:43:50,839 [INFO] Telethon Wakeup-Ping
+2026-10-24 04:47:34,475 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 04:47:34,574 [INFO] ✅ Keine verpassten Signale
+2026-10-24 04:53:51,098 [INFO] Telethon Wakeup-Ping
+2026-10-24 04:57:34,576 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 04:57:34,695 [INFO] ✅ Keine verpassten Signale
+2026-10-24 05:03:51,356 [INFO] Telethon Wakeup-Ping
+2026-10-24 05:07:34,696 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 05:07:34,786 [INFO] ✅ Keine verpassten Signale
+2026-10-24 05:13:51,534 [INFO] Telethon Wakeup-Ping
+2026-10-24 05:17:34,789 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 05:17:34,935 [INFO] ✅ Keine verpassten Signale
+2026-10-24 05:23:51,826 [INFO] Telethon Wakeup-Ping
+2026-10-24 05:27:34,939 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 05:27:35,040 [INFO] ✅ Keine verpassten Signale
+2026-10-24 05:33:52,064 [INFO] Telethon Wakeup-Ping
+2026-10-24 05:37:35,043 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 05:37:35,154 [INFO] ✅ Keine verpassten Signale
+2026-10-24 05:43:52,318 [INFO] Telethon Wakeup-Ping
+2026-10-24 05:47:35,155 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 05:47:35,260 [INFO] ✅ Keine verpassten Signale
+2026-10-24 05:53:52,507 [INFO] Telethon Wakeup-Ping
+2026-10-24 05:57:35,262 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 05:57:35,355 [INFO] ✅ Keine verpassten Signale
+2026-10-24 06:03:52,787 [INFO] Telethon Wakeup-Ping
+2026-10-24 06:07:35,357 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 06:07:35,476 [INFO] ✅ Keine verpassten Signale
+2026-10-24 06:13:53,067 [INFO] Telethon Wakeup-Ping
+2026-10-24 06:17:35,477 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 06:17:35,643 [INFO] ✅ Keine verpassten Signale
+2026-10-24 06:23:53,276 [INFO] Telethon Wakeup-Ping
+2026-10-24 06:27:35,645 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 06:27:35,748 [INFO] ✅ Keine verpassten Signale
+2026-10-24 06:32:00,473 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🏆 WOCHENZUSAMMENFASSUNG XAUUSD\n📅 19.10. – 23.10.2026\n\nMo 19.'
+2026-10-24 06:32:00,477 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-10-24 06:32:00,643 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-24 06:33:48,444 [INFO] Got difference for channel 3932293971 updates
+2026-10-24 06:33:53,522 [INFO] Telethon Wakeup-Ping
+2026-10-24 06:37:35,750 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 06:37:35,856 [INFO] ✅ Keine verpassten Signale
+2026-10-24 06:38:53,181 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: 'Wünsche euch alles ein wunderschönes Wochenende! 💪'
+2026-10-24 06:38:53,183 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-10-24 06:38:53,812 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-24 06:43:53,730 [INFO] Telethon Wakeup-Ping
+2026-10-24 06:47:35,858 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 06:47:35,949 [INFO] ✅ Keine verpassten Signale
+2026-10-24 06:53:53,999 [INFO] Telethon Wakeup-Ping
+2026-10-24 06:57:35,952 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 06:57:36,051 [INFO] ✅ Keine verpassten Signale
+2026-10-24 07:03:54,415 [INFO] Telethon Wakeup-Ping
+2026-10-24 07:05:55,005 [INFO] Got difference for channel 1235349100 updates
+2026-10-24 07:07:36,053 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 07:07:36,159 [INFO] ✅ Keine verpassten Signale
+2026-10-24 07:13:54,770 [INFO] Telethon Wakeup-Ping
+2026-10-24 07:17:36,161 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 07:17:36,274 [INFO] ✅ Keine verpassten Signale
+2026-10-24 07:23:55,025 [INFO] Telethon Wakeup-Ping
+2026-10-24 07:27:36,276 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 07:27:36,390 [INFO] ✅ Keine verpassten Signale
+2026-10-24 07:33:56,230 [INFO] Telethon Wakeup-Ping
+2026-10-24 07:37:36,392 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 07:37:36,543 [INFO] ✅ Keine verpassten Signale
+2026-10-24 07:43:56,429 [INFO] Telethon Wakeup-Ping
+2026-10-24 07:47:36,544 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 07:47:36,641 [INFO] ✅ Keine verpassten Signale
+2026-10-24 07:53:56,691 [INFO] Telethon Wakeup-Ping
+2026-10-24 07:57:36,644 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 07:57:36,746 [INFO] ✅ Keine verpassten Signale
+2026-10-24 08:03:57,110 [INFO] Telethon Wakeup-Ping
+2026-10-24 08:07:36,748 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 08:07:36,863 [INFO] ✅ Keine verpassten Signale
+2026-10-24 08:13:57,343 [INFO] Telethon Wakeup-Ping
+2026-10-24 08:17:36,865 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 08:17:36,971 [INFO] ✅ Keine verpassten Signale
+2026-10-24 08:23:57,582 [INFO] Telethon Wakeup-Ping
+2026-10-24 08:27:36,974 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 08:27:37,084 [INFO] ✅ Keine verpassten Signale
+2026-10-24 08:33:57,846 [INFO] Telethon Wakeup-Ping
+2026-10-24 08:37:10,112 [INFO] Got difference for channel 3909992762 updates
+2026-10-24 08:37:37,085 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 08:37:37,203 [INFO] ✅ Keine verpassten Signale
+2026-10-24 08:43:58,115 [INFO] Telethon Wakeup-Ping
+2026-10-24 08:47:37,206 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 08:47:37,326 [INFO] ✅ Keine verpassten Signale
+2026-10-24 08:53:58,595 [INFO] Telethon Wakeup-Ping
+2026-10-24 08:57:37,328 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 08:57:37,430 [INFO] ✅ Keine verpassten Signale
+2026-10-24 09:03:58,934 [INFO] Telethon Wakeup-Ping
+2026-10-24 09:07:37,431 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 09:07:37,776 [INFO] ✅ Keine verpassten Signale
+2026-10-24 09:13:59,194 [INFO] Telethon Wakeup-Ping
+2026-10-24 09:17:37,779 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 09:17:37,895 [INFO] ✅ Keine verpassten Signale
+2026-10-24 09:20:55,382 [INFO] Got difference for channel 1235349100 updates
+2026-10-24 09:23:59,821 [INFO] Telethon Wakeup-Ping
+2026-10-24 09:27:37,896 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 09:27:38,118 [INFO] ✅ Keine verpassten Signale
+2026-10-24 09:34:00,199 [INFO] Telethon Wakeup-Ping
+2026-10-24 09:37:38,120 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 09:37:38,239 [INFO] ✅ Keine verpassten Signale
+2026-10-24 09:44:00,437 [INFO] Telethon Wakeup-Ping
+2026-10-24 09:47:38,240 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 09:47:38,361 [INFO] ✅ Keine verpassten Signale
+2026-10-24 09:54:00,643 [INFO] Telethon Wakeup-Ping
+2026-10-24 09:57:38,363 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 09:57:38,460 [INFO] ✅ Keine verpassten Signale
+2026-10-24 10:04:01,187 [INFO] Telethon Wakeup-Ping
+2026-10-24 10:07:38,463 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 10:07:38,573 [INFO] ✅ Keine verpassten Signale
+2026-10-24 10:14:01,490 [INFO] Telethon Wakeup-Ping
+2026-10-24 10:17:38,575 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 10:17:38,693 [INFO] ✅ Keine verpassten Signale
+2026-10-24 10:24:02,120 [INFO] Telethon Wakeup-Ping
+2026-10-24 10:27:38,695 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 10:27:38,827 [INFO] ✅ Keine verpassten Signale
+2026-10-24 10:34:02,347 [INFO] Telethon Wakeup-Ping
+2026-10-24 10:37:38,828 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 10:37:38,991 [INFO] ✅ Keine verpassten Signale
+2026-10-24 10:44:02,659 [INFO] Telethon Wakeup-Ping
+2026-10-24 10:47:38,992 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 10:47:39,129 [INFO] ✅ Keine verpassten Signale
+2026-10-24 10:54:02,905 [INFO] Telethon Wakeup-Ping
+2026-10-24 10:57:39,128 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 10:57:39,245 [INFO] ✅ Keine verpassten Signale
+2026-10-24 11:04:03,181 [INFO] Telethon Wakeup-Ping
+2026-10-24 11:07:39,247 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 11:07:39,569 [INFO] ✅ Keine verpassten Signale
+2026-10-24 11:14:03,592 [INFO] Telethon Wakeup-Ping
+2026-10-24 11:17:39,571 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 11:17:39,683 [INFO] ✅ Keine verpassten Signale
+2026-10-24 11:24:03,898 [INFO] Telethon Wakeup-Ping
+2026-10-24 11:27:39,685 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 11:27:39,805 [INFO] ✅ Keine verpassten Signale
+2026-10-24 11:34:04,095 [INFO] Telethon Wakeup-Ping
+2026-10-24 11:37:39,807 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 11:37:39,962 [INFO] ✅ Keine verpassten Signale
+2026-10-24 11:44:04,591 [INFO] Telethon Wakeup-Ping
+2026-10-24 11:47:39,965 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 11:47:40,053 [INFO] ✅ Keine verpassten Signale
+2026-10-24 11:54:04,850 [INFO] Telethon Wakeup-Ping
+2026-10-24 11:57:40,055 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 11:57:40,159 [INFO] ✅ Keine verpassten Signale
+2026-10-24 12:04:05,208 [INFO] Telethon Wakeup-Ping
+2026-10-24 12:07:40,162 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 12:07:40,267 [INFO] ✅ Keine verpassten Signale
+2026-10-24 12:14:05,467 [INFO] Telethon Wakeup-Ping
+2026-10-24 12:17:40,270 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 12:17:40,374 [INFO] ✅ Keine verpassten Signale
+2026-10-24 12:24:05,917 [INFO] Telethon Wakeup-Ping
+2026-10-24 12:27:40,376 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 12:27:40,476 [INFO] ✅ Keine verpassten Signale
+2026-10-24 12:34:06,196 [INFO] Telethon Wakeup-Ping
+2026-10-24 12:37:40,477 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 12:37:40,576 [INFO] ✅ Keine verpassten Signale
+2026-10-24 12:44:06,396 [INFO] Telethon Wakeup-Ping
+2026-10-24 12:47:40,578 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 12:47:40,688 [INFO] ✅ Keine verpassten Signale
+2026-10-24 12:54:06,696 [INFO] Telethon Wakeup-Ping
+2026-10-24 12:57:40,691 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 12:57:40,800 [INFO] ✅ Keine verpassten Signale
+2026-10-24 13:04:07,117 [INFO] Telethon Wakeup-Ping
+2026-10-24 13:07:40,803 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 13:07:40,983 [INFO] ✅ Keine verpassten Signale
+2026-10-24 13:14:07,326 [INFO] Telethon Wakeup-Ping
+2026-10-24 13:17:41,545 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 13:17:41,754 [INFO] ✅ Keine verpassten Signale
+2026-10-24 13:24:07,511 [INFO] Telethon Wakeup-Ping
+2026-10-24 13:27:41,757 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 13:27:41,857 [INFO] ✅ Keine verpassten Signale
+2026-10-24 13:34:07,791 [INFO] Telethon Wakeup-Ping
+2026-10-24 13:37:41,858 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 13:37:41,962 [INFO] ✅ Keine verpassten Signale
+2026-10-24 13:44:08,007 [INFO] Telethon Wakeup-Ping
+2026-10-24 13:47:41,964 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 13:47:42,117 [INFO] ✅ Keine verpassten Signale
+2026-10-24 13:54:10,410 [INFO] Telethon Wakeup-Ping
+2026-10-24 13:57:42,119 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 13:57:42,397 [INFO] ✅ Keine verpassten Signale
+2026-10-24 14:04:11,128 [INFO] Telethon Wakeup-Ping
+2026-10-24 14:07:42,398 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 14:07:42,544 [INFO] ✅ Keine verpassten Signale
+2026-10-24 14:14:11,431 [INFO] Telethon Wakeup-Ping
+2026-10-24 14:17:42,546 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 14:17:42,657 [INFO] ✅ Keine verpassten Signale
+2026-10-24 14:24:11,890 [INFO] Telethon Wakeup-Ping
+2026-10-24 14:27:42,659 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 14:27:42,851 [INFO] ✅ Keine verpassten Signale
+2026-10-24 14:34:12,505 [INFO] Telethon Wakeup-Ping
+2026-10-24 14:37:43,149 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 14:37:43,314 [INFO] ✅ Keine verpassten Signale
+2026-10-24 14:44:12,752 [INFO] Telethon Wakeup-Ping
+2026-10-24 14:47:43,316 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 14:47:43,457 [INFO] ✅ Keine verpassten Signale
+2026-10-24 14:54:13,044 [INFO] Telethon Wakeup-Ping
+2026-10-24 14:57:43,481 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 14:57:43,593 [INFO] ✅ Keine verpassten Signale
+2026-10-24 15:04:13,433 [INFO] Telethon Wakeup-Ping
+2026-10-24 15:07:43,595 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 15:07:43,764 [INFO] ✅ Keine verpassten Signale
+2026-10-24 15:14:13,704 [INFO] Telethon Wakeup-Ping
+2026-10-24 15:17:43,766 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 15:17:43,863 [INFO] ✅ Keine verpassten Signale
+2026-10-24 15:24:13,926 [INFO] Telethon Wakeup-Ping
+2026-10-24 15:27:43,865 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 15:27:43,963 [INFO] ✅ Keine verpassten Signale
+2026-10-24 15:34:14,370 [INFO] Telethon Wakeup-Ping
+2026-10-24 15:37:43,965 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 15:37:44,208 [INFO] ✅ Keine verpassten Signale
+2026-10-24 15:44:14,672 [INFO] Telethon Wakeup-Ping
+2026-10-24 15:47:44,210 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 15:47:44,307 [INFO] ✅ Keine verpassten Signale
+2026-10-24 15:54:14,999 [INFO] Telethon Wakeup-Ping
+2026-10-24 15:57:44,309 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 15:57:44,503 [INFO] ✅ Keine verpassten Signale
+2026-10-24 16:04:15,618 [INFO] Telethon Wakeup-Ping
+2026-10-24 16:07:44,504 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 16:07:44,628 [INFO] ✅ Keine verpassten Signale
+2026-10-24 16:14:15,920 [INFO] Telethon Wakeup-Ping
+2026-10-24 16:17:44,631 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 16:17:44,735 [INFO] ✅ Keine verpassten Signale
+2026-10-24 16:24:16,212 [INFO] Telethon Wakeup-Ping
+2026-10-24 16:27:44,736 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 16:27:44,877 [INFO] ✅ Keine verpassten Signale
+2026-10-24 16:34:16,901 [INFO] Telethon Wakeup-Ping
+2026-10-24 16:37:44,881 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 16:37:45,043 [INFO] ✅ Keine verpassten Signale
+2026-10-24 16:44:17,193 [INFO] Telethon Wakeup-Ping
+2026-10-24 16:47:45,046 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 16:47:45,184 [INFO] ✅ Keine verpassten Signale
+2026-10-24 16:54:17,566 [INFO] Telethon Wakeup-Ping
+2026-10-24 16:57:45,176 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 16:57:45,276 [INFO] ✅ Keine verpassten Signale
+2026-10-24 17:04:17,921 [INFO] Telethon Wakeup-Ping
+2026-10-24 17:07:45,279 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 17:07:45,400 [INFO] ✅ Keine verpassten Signale
+2026-10-24 17:14:18,139 [INFO] Telethon Wakeup-Ping
+2026-10-24 17:17:45,402 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 17:17:45,599 [INFO] ✅ Keine verpassten Signale
+2026-10-24 17:24:18,526 [INFO] Telethon Wakeup-Ping
+2026-10-24 17:27:45,602 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 17:27:45,726 [INFO] ✅ Keine verpassten Signale
+2026-10-24 17:34:18,962 [INFO] Telethon Wakeup-Ping
+2026-10-24 17:37:45,729 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 17:37:45,829 [INFO] ✅ Keine verpassten Signale
+2026-10-24 17:44:19,573 [INFO] Telethon Wakeup-Ping
+2026-10-24 17:47:45,831 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 17:47:45,988 [INFO] ✅ Keine verpassten Signale
+2026-10-24 17:54:19,802 [INFO] Telethon Wakeup-Ping
+2026-10-24 17:57:45,988 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 17:57:46,097 [INFO] ✅ Keine verpassten Signale
+2026-10-24 18:04:20,104 [INFO] Telethon Wakeup-Ping
+2026-10-24 18:07:46,099 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 18:07:46,219 [INFO] ✅ Keine verpassten Signale
+2026-10-24 18:14:20,537 [INFO] Telethon Wakeup-Ping
+2026-10-24 18:17:46,220 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 18:17:46,335 [INFO] ✅ Keine verpassten Signale
+2026-10-24 18:24:20,772 [INFO] Telethon Wakeup-Ping
+2026-10-24 18:27:46,338 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 18:27:46,444 [INFO] ✅ Keine verpassten Signale
+2026-10-24 18:34:21,009 [INFO] Telethon Wakeup-Ping
+2026-10-24 18:37:46,446 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 18:37:46,625 [INFO] ✅ Keine verpassten Signale
+2026-10-24 18:44:21,585 [INFO] Telethon Wakeup-Ping
+2026-10-24 18:47:46,628 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 18:47:46,732 [INFO] ✅ Keine verpassten Signale
+2026-10-24 18:54:22,102 [INFO] Telethon Wakeup-Ping
+2026-10-24 18:57:46,733 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 18:57:46,869 [INFO] ✅ Keine verpassten Signale
+2026-10-24 19:04:22,487 [INFO] Telethon Wakeup-Ping
+2026-10-24 19:07:46,870 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 19:07:46,971 [INFO] ✅ Keine verpassten Signale
+2026-10-24 19:14:22,933 [INFO] Telethon Wakeup-Ping
+2026-10-24 19:17:46,973 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 19:17:47,081 [INFO] ✅ Keine verpassten Signale
+2026-10-24 19:24:23,172 [INFO] Telethon Wakeup-Ping
+2026-10-24 19:27:47,084 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 19:27:47,239 [INFO] ✅ Keine verpassten Signale
+2026-10-24 19:34:23,402 [INFO] Telethon Wakeup-Ping
+2026-10-24 19:37:47,240 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 19:37:47,371 [INFO] ✅ Keine verpassten Signale
+2026-10-24 19:44:23,669 [INFO] Telethon Wakeup-Ping
+2026-10-24 19:47:47,373 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 19:47:47,487 [INFO] ✅ Keine verpassten Signale
+2026-10-24 19:54:24,144 [INFO] Telethon Wakeup-Ping
+2026-10-24 19:57:47,489 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 19:57:47,657 [INFO] ✅ Keine verpassten Signale
+2026-10-24 20:04:24,461 [INFO] Telethon Wakeup-Ping
+2026-10-24 20:07:47,659 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 20:07:47,846 [INFO] ✅ Keine verpassten Signale
+2026-10-24 20:14:24,727 [INFO] Telethon Wakeup-Ping
+2026-10-24 20:17:47,848 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 20:17:47,956 [INFO] ✅ Keine verpassten Signale
+2026-10-24 20:24:25,047 [INFO] Telethon Wakeup-Ping
+2026-10-24 20:27:47,958 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 20:27:48,070 [INFO] ✅ Keine verpassten Signale
+2026-10-24 20:34:25,395 [INFO] Telethon Wakeup-Ping
+2026-10-24 20:37:48,074 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 20:37:48,166 [INFO] ✅ Keine verpassten Signale
+2026-10-24 20:44:25,641 [INFO] Telethon Wakeup-Ping
+2026-10-24 20:47:48,169 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 20:47:48,297 [INFO] ✅ Keine verpassten Signale
+2026-10-24 20:54:26,158 [INFO] Telethon Wakeup-Ping
+2026-10-24 20:57:48,300 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 20:57:48,403 [INFO] ✅ Keine verpassten Signale
+2026-10-24 20:59:23,636 [INFO] Got difference for channel 1805057023 updates
+2026-10-24 21:04:26,431 [INFO] Telethon Wakeup-Ping
+2026-10-24 21:07:48,406 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 21:07:48,497 [INFO] ✅ Keine verpassten Signale
+2026-10-24 21:14:26,662 [INFO] Telethon Wakeup-Ping
+2026-10-24 21:17:48,499 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 21:17:48,593 [INFO] ✅ Keine verpassten Signale
+2026-10-24 21:24:26,981 [INFO] Telethon Wakeup-Ping
+2026-10-24 21:27:48,596 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 21:27:48,695 [INFO] ✅ Keine verpassten Signale
+2026-10-24 21:34:27,464 [INFO] Telethon Wakeup-Ping
+2026-10-24 21:37:48,697 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 21:37:48,780 [INFO] ✅ Keine verpassten Signale
+2026-10-24 21:44:27,671 [INFO] Telethon Wakeup-Ping
+2026-10-24 21:47:48,784 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 21:47:48,871 [INFO] ✅ Keine verpassten Signale
+2026-10-24 21:54:27,895 [INFO] Telethon Wakeup-Ping
+2026-10-24 21:57:48,872 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 21:57:48,981 [INFO] ✅ Keine verpassten Signale
+2026-10-24 22:04:28,104 [INFO] Telethon Wakeup-Ping
+2026-10-24 22:07:48,982 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 22:07:49,105 [INFO] ✅ Keine verpassten Signale
+2026-10-24 22:11:57,455 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: 'Wünsche euch allen ein wunderschönes Wochenende! 💪'
+2026-10-24 22:11:57,488 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-10-24 22:14:28,374 [INFO] Telethon Wakeup-Ping
+2026-10-24 22:17:49,107 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 22:17:49,255 [INFO] ✅ Keine verpassten Signale
+2026-10-24 22:24:28,570 [INFO] Telethon Wakeup-Ping
+2026-10-24 22:27:49,256 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 22:27:49,348 [INFO] ✅ Keine verpassten Signale
+2026-10-24 22:34:28,775 [INFO] Telethon Wakeup-Ping
+2026-10-24 22:37:49,351 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 22:37:49,462 [INFO] ✅ Keine verpassten Signale
+2026-10-24 22:44:29,146 [INFO] Telethon Wakeup-Ping
+2026-10-24 22:47:49,463 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 22:47:49,618 [INFO] ✅ Keine verpassten Signale
+2026-10-24 22:48:52,044 [INFO] Got difference for channel 3932293971 updates
+2026-10-24 22:54:29,426 [INFO] Telethon Wakeup-Ping
+2026-10-24 22:57:49,620 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 22:57:49,710 [INFO] ✅ Keine verpassten Signale
+2026-10-24 23:04:29,661 [INFO] Telethon Wakeup-Ping
+2026-10-24 23:07:49,713 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 23:07:49,817 [INFO] ✅ Keine verpassten Signale
+2026-10-24 23:14:29,862 [INFO] Telethon Wakeup-Ping
+2026-10-24 23:17:49,818 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 23:17:49,913 [INFO] ✅ Keine verpassten Signale
+2026-10-24 23:24:30,287 [INFO] Telethon Wakeup-Ping
+2026-10-24 23:27:50,005 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 23:27:50,099 [INFO] ✅ Keine verpassten Signale
+2026-10-24 23:34:30,547 [INFO] Telethon Wakeup-Ping
+2026-10-24 23:37:50,102 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 23:37:50,214 [INFO] ✅ Keine verpassten Signale
+2026-10-24 23:44:30,723 [INFO] Telethon Wakeup-Ping
+2026-10-24 23:47:50,216 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 23:47:50,311 [INFO] ✅ Keine verpassten Signale
+2026-10-24 23:54:31,838 [INFO] Telethon Wakeup-Ping
+2026-10-24 23:57:50,314 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-24 23:57:50,406 [INFO] ✅ Keine verpassten Signale
+2026-10-25 00:04:32,085 [INFO] Telethon Wakeup-Ping
+2026-10-25 00:07:50,408 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 00:07:50,501 [INFO] ✅ Keine verpassten Signale
+2026-10-25 00:14:32,306 [INFO] Telethon Wakeup-Ping
+2026-10-25 00:17:50,503 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 00:17:50,591 [INFO] ✅ Keine verpassten Signale
+2026-10-25 00:24:32,766 [INFO] Telethon Wakeup-Ping
+2026-10-25 00:27:50,594 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 00:27:50,687 [INFO] ✅ Keine verpassten Signale
+2026-10-25 00:34:32,970 [INFO] Telethon Wakeup-Ping
+2026-10-25 00:37:50,689 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 00:37:50,785 [INFO] ✅ Keine verpassten Signale
+2026-10-25 00:44:33,187 [INFO] Telethon Wakeup-Ping
+2026-10-25 00:47:50,787 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 00:47:50,892 [INFO] ✅ Keine verpassten Signale
+2026-10-25 00:54:33,390 [INFO] Telethon Wakeup-Ping
+2026-10-25 00:57:50,894 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 00:57:50,984 [INFO] ✅ Keine verpassten Signale
+2026-10-25 01:04:33,572 [INFO] Telethon Wakeup-Ping
+2026-10-25 01:07:50,987 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 01:07:51,090 [INFO] ✅ Keine verpassten Signale
+2026-10-25 01:12:26,198 [WARNING] command_poller: 
+2026-10-25 01:14:33,846 [INFO] Telethon Wakeup-Ping
+2026-10-25 01:17:51,092 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 01:17:51,179 [INFO] ✅ Keine verpassten Signale
+2026-10-25 01:24:34,428 [INFO] Telethon Wakeup-Ping
+2026-10-25 01:27:51,181 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 01:27:51,292 [INFO] ✅ Keine verpassten Signale
+2026-10-25 01:34:34,699 [INFO] Telethon Wakeup-Ping
+2026-10-25 01:37:51,294 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 01:37:51,387 [INFO] ✅ Keine verpassten Signale
+2026-10-25 01:44:34,880 [INFO] Telethon Wakeup-Ping
+2026-10-25 01:47:51,388 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 01:47:51,489 [INFO] ✅ Keine verpassten Signale
+2026-10-25 01:54:35,199 [INFO] Telethon Wakeup-Ping
+2026-10-25 01:57:51,490 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 01:57:51,601 [INFO] ✅ Keine verpassten Signale
+2026-10-25 02:04:35,420 [INFO] Telethon Wakeup-Ping
+2026-10-25 02:07:51,594 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 02:07:51,704 [INFO] ✅ Keine verpassten Signale
+2026-10-25 02:14:35,620 [INFO] Telethon Wakeup-Ping
+2026-10-25 02:17:51,706 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 02:17:51,806 [INFO] ✅ Keine verpassten Signale
+2026-10-25 02:24:35,812 [INFO] Telethon Wakeup-Ping
+2026-10-25 02:27:51,807 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 02:27:51,913 [INFO] ✅ Keine verpassten Signale
+2026-10-25 02:34:36,216 [INFO] Telethon Wakeup-Ping
+2026-10-25 02:37:51,915 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 02:37:52,113 [INFO] ✅ Keine verpassten Signale
+2026-10-25 02:44:36,733 [INFO] Telethon Wakeup-Ping
+2026-10-25 02:47:52,115 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 02:47:52,220 [INFO] ✅ Keine verpassten Signale
+2026-10-25 02:54:36,921 [INFO] Telethon Wakeup-Ping
+2026-10-25 02:57:52,223 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 02:57:52,334 [INFO] ✅ Keine verpassten Signale
+2026-10-25 03:04:37,138 [INFO] Telethon Wakeup-Ping
+2026-10-25 03:07:52,337 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 03:07:52,419 [INFO] ✅ Keine verpassten Signale
+2026-10-25 03:14:37,591 [INFO] Telethon Wakeup-Ping
+2026-10-25 03:17:52,421 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 03:17:52,519 [INFO] ✅ Keine verpassten Signale
+2026-10-25 03:24:37,814 [INFO] Telethon Wakeup-Ping
+2026-10-25 03:27:52,520 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 03:27:52,599 [INFO] ✅ Keine verpassten Signale
+2026-10-25 03:34:38,076 [INFO] Telethon Wakeup-Ping
+2026-10-25 03:37:52,602 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 03:37:52,720 [INFO] ✅ Keine verpassten Signale
+2026-10-25 03:44:38,294 [INFO] Telethon Wakeup-Ping
+2026-10-25 03:47:52,722 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 03:47:52,863 [INFO] ✅ Keine verpassten Signale
+2026-10-25 03:54:38,578 [INFO] Telethon Wakeup-Ping
+2026-10-25 03:57:52,865 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 03:57:52,952 [INFO] ✅ Keine verpassten Signale
+2026-10-25 04:04:38,831 [INFO] Telethon Wakeup-Ping
+2026-10-25 04:07:52,955 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 04:07:53,054 [INFO] ✅ Keine verpassten Signale
+2026-10-25 04:14:39,078 [INFO] Telethon Wakeup-Ping
+2026-10-25 04:17:53,056 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 04:17:53,175 [INFO] ✅ Keine verpassten Signale
+2026-10-25 04:24:39,291 [INFO] Telethon Wakeup-Ping
+2026-10-25 04:27:53,176 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 04:27:53,263 [INFO] ✅ Keine verpassten Signale
+2026-10-25 04:34:39,488 [INFO] Telethon Wakeup-Ping
+2026-10-25 04:37:53,266 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 04:37:53,619 [INFO] ✅ Keine verpassten Signale
+2026-10-25 04:44:39,800 [INFO] Telethon Wakeup-Ping
+2026-10-25 04:47:53,728 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 04:47:53,856 [INFO] ✅ Keine verpassten Signale
+2026-10-25 04:54:40,333 [INFO] Telethon Wakeup-Ping
+2026-10-25 04:57:53,859 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 04:57:53,947 [INFO] ✅ Keine verpassten Signale
+2026-10-25 05:04:40,532 [INFO] Telethon Wakeup-Ping
+2026-10-25 05:07:53,950 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 05:07:54,043 [INFO] ✅ Keine verpassten Signale
+2026-10-25 05:14:40,780 [INFO] Telethon Wakeup-Ping
+2026-10-25 05:17:54,044 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 05:17:54,134 [INFO] ✅ Keine verpassten Signale
+2026-10-25 05:24:41,275 [INFO] Telethon Wakeup-Ping
+2026-10-25 05:27:54,137 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 05:27:54,257 [INFO] ✅ Keine verpassten Signale
+2026-10-25 05:34:41,509 [INFO] Telethon Wakeup-Ping
+2026-10-25 05:37:54,259 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 05:37:54,359 [INFO] ✅ Keine verpassten Signale
+2026-10-25 05:44:41,811 [INFO] Telethon Wakeup-Ping
+2026-10-25 05:47:54,362 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 05:47:54,451 [INFO] ✅ Keine verpassten Signale
+2026-10-25 05:54:42,089 [INFO] Telethon Wakeup-Ping
+2026-10-25 05:57:54,452 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 05:57:54,540 [INFO] ✅ Keine verpassten Signale
+2026-10-25 06:04:42,402 [INFO] Telethon Wakeup-Ping
+2026-10-25 06:07:54,542 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 06:07:54,709 [INFO] ✅ Keine verpassten Signale
+2026-10-25 06:14:42,748 [INFO] Telethon Wakeup-Ping
+2026-10-25 06:17:54,710 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 06:17:54,813 [INFO] ✅ Keine verpassten Signale
+2026-10-25 06:24:43,041 [INFO] Telethon Wakeup-Ping
+2026-10-25 06:27:54,814 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 06:27:54,905 [INFO] ✅ Keine verpassten Signale
+2026-10-25 06:34:43,275 [INFO] Telethon Wakeup-Ping
+2026-10-25 06:37:54,906 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 06:37:55,000 [INFO] ✅ Keine verpassten Signale
+2026-10-25 06:44:43,528 [INFO] Telethon Wakeup-Ping
+2026-10-25 06:47:55,003 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 06:47:55,133 [INFO] ✅ Keine verpassten Signale
+2026-10-25 06:54:44,155 [INFO] Telethon Wakeup-Ping
+2026-10-25 06:57:55,135 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 06:57:55,230 [INFO] ✅ Keine verpassten Signale
+2026-10-25 07:04:44,400 [INFO] Telethon Wakeup-Ping
+2026-10-25 07:07:55,233 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 07:07:55,540 [INFO] ✅ Keine verpassten Signale
+2026-10-25 07:14:45,626 [INFO] Telethon Wakeup-Ping
+2026-10-25 07:17:55,544 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 07:17:55,695 [INFO] ✅ Keine verpassten Signale
+2026-10-25 07:24:46,001 [INFO] Telethon Wakeup-Ping
+2026-10-25 07:27:55,696 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 07:27:55,787 [INFO] ✅ Keine verpassten Signale
+2026-10-25 07:34:46,213 [INFO] Telethon Wakeup-Ping
+2026-10-25 07:37:55,789 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 07:37:55,938 [INFO] ✅ Keine verpassten Signale
+2026-10-25 07:44:46,480 [INFO] Telethon Wakeup-Ping
+2026-10-25 07:47:55,939 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 07:47:56,076 [INFO] ✅ Keine verpassten Signale
+2026-10-25 07:54:46,742 [INFO] Telethon Wakeup-Ping
+2026-10-25 07:57:56,078 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 07:57:56,186 [INFO] ✅ Keine verpassten Signale
+2026-10-25 08:04:47,130 [INFO] Telethon Wakeup-Ping
+2026-10-25 08:07:56,188 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 08:07:56,291 [INFO] ✅ Keine verpassten Signale
+2026-10-25 08:14:47,713 [INFO] Telethon Wakeup-Ping
+2026-10-25 08:17:56,294 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 08:17:56,384 [INFO] ✅ Keine verpassten Signale
+2026-10-25 08:24:47,932 [INFO] Telethon Wakeup-Ping
+2026-10-25 08:27:56,385 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 08:27:56,487 [INFO] ✅ Keine verpassten Signale
+2026-10-25 08:34:48,302 [INFO] Telethon Wakeup-Ping
+2026-10-25 08:37:56,514 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 08:37:56,636 [INFO] ✅ Keine verpassten Signale
+2026-10-25 08:44:48,590 [INFO] Telethon Wakeup-Ping
+2026-10-25 08:47:56,638 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 08:47:56,742 [INFO] ✅ Keine verpassten Signale
+2026-10-25 08:54:48,844 [INFO] Telethon Wakeup-Ping
+2026-10-25 08:57:56,744 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 08:57:56,837 [INFO] ✅ Keine verpassten Signale
+2026-10-25 09:04:49,109 [INFO] Telethon Wakeup-Ping
+2026-10-25 09:07:56,840 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 09:07:56,948 [INFO] ✅ Keine verpassten Signale
+2026-10-25 09:14:49,595 [INFO] Telethon Wakeup-Ping
+2026-10-25 09:17:56,951 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 09:17:57,050 [INFO] ✅ Keine verpassten Signale
+2026-10-25 09:24:49,847 [INFO] Telethon Wakeup-Ping
+2026-10-25 09:27:57,053 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 09:27:57,151 [INFO] ✅ Keine verpassten Signale
+2026-10-25 09:34:50,405 [INFO] Telethon Wakeup-Ping
+2026-10-25 09:37:57,154 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 09:37:57,290 [INFO] ✅ Keine verpassten Signale
+2026-10-25 09:44:50,781 [INFO] Telethon Wakeup-Ping
+2026-10-25 09:47:57,420 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 09:47:57,599 [INFO] ✅ Keine verpassten Signale
+2026-10-25 09:54:51,233 [INFO] Telethon Wakeup-Ping
+2026-10-25 09:57:57,602 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 09:57:57,778 [INFO] ✅ Keine verpassten Signale
+2026-10-25 10:04:51,585 [INFO] Telethon Wakeup-Ping
+2026-10-25 10:07:57,779 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 10:07:57,932 [INFO] ✅ Keine verpassten Signale
+2026-10-25 10:14:51,967 [INFO] Telethon Wakeup-Ping
+2026-10-25 10:17:57,926 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 10:17:58,049 [INFO] ✅ Keine verpassten Signale
+2026-10-25 10:24:52,612 [INFO] Telethon Wakeup-Ping
+2026-10-25 10:27:58,056 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 10:27:58,159 [INFO] ✅ Keine verpassten Signale
+2026-10-25 10:34:52,871 [INFO] Telethon Wakeup-Ping
+2026-10-25 10:37:58,161 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 10:37:58,386 [INFO] ✅ Keine verpassten Signale
+2026-10-25 10:44:53,215 [INFO] Telethon Wakeup-Ping
+2026-10-25 10:46:06,579 [INFO] Got difference for channel 1235349100 updates
+2026-10-25 10:46:11,307 [INFO] Got difference for channel 1235349100 updates
+2026-10-25 10:46:53,814 [INFO] Got difference for channel 1235349100 updates
+2026-10-25 10:47:58,395 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 10:47:58,516 [INFO] ✅ Keine verpassten Signale
+2026-10-25 10:54:53,487 [INFO] Telethon Wakeup-Ping
+2026-10-25 10:57:58,517 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 10:57:58,625 [INFO] ✅ Keine verpassten Signale
+2026-10-25 11:04:54,099 [INFO] Telethon Wakeup-Ping
+2026-10-25 11:07:58,627 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 11:07:58,855 [INFO] ✅ Keine verpassten Signale
+2026-10-25 11:14:54,411 [INFO] Telethon Wakeup-Ping
+2026-10-25 11:16:53,975 [INFO] Got difference for channel 1235349100 updates
+2026-10-25 11:17:58,857 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 11:17:59,026 [INFO] ✅ Keine verpassten Signale
+2026-10-25 11:24:55,024 [INFO] Telethon Wakeup-Ping
+2026-10-25 11:27:59,028 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 11:27:59,231 [INFO] ✅ Keine verpassten Signale
+2026-10-25 11:34:56,109 [INFO] Telethon Wakeup-Ping
+2026-10-25 11:37:59,233 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 11:37:59,380 [INFO] ✅ Keine verpassten Signale
+2026-10-25 11:44:56,392 [INFO] Telethon Wakeup-Ping
+2026-10-25 11:47:59,383 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 11:47:59,495 [INFO] ✅ Keine verpassten Signale
+2026-10-25 11:54:57,029 [INFO] Telethon Wakeup-Ping
+2026-10-25 11:57:59,497 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 11:57:59,593 [INFO] ✅ Keine verpassten Signale
+2026-10-25 12:04:57,284 [INFO] Telethon Wakeup-Ping
+2026-10-25 12:07:59,594 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 12:07:59,694 [INFO] ✅ Keine verpassten Signale
+2026-10-25 12:14:57,620 [INFO] Telethon Wakeup-Ping
+2026-10-25 12:17:59,696 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 12:17:59,807 [INFO] ✅ Keine verpassten Signale
+2026-10-25 12:24:58,275 [INFO] Telethon Wakeup-Ping
+2026-10-25 12:27:59,809 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 12:27:59,913 [INFO] ✅ Keine verpassten Signale
+2026-10-25 12:34:58,628 [INFO] Telethon Wakeup-Ping
+2026-10-25 12:37:59,915 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 12:38:00,036 [INFO] ✅ Keine verpassten Signale
+2026-10-25 12:44:59,099 [INFO] Telethon Wakeup-Ping
+2026-10-25 12:48:00,037 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 12:48:00,156 [INFO] ✅ Keine verpassten Signale
+2026-10-25 12:54:59,370 [INFO] Telethon Wakeup-Ping
+2026-10-25 12:58:00,160 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 12:58:00,263 [INFO] ✅ Keine verpassten Signale
+2026-10-25 13:05:00,217 [INFO] Telethon Wakeup-Ping
+2026-10-25 13:08:00,267 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 13:08:00,371 [INFO] ✅ Keine verpassten Signale
+2026-10-25 13:15:00,505 [INFO] Telethon Wakeup-Ping
+2026-10-25 13:18:00,372 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 13:18:00,483 [INFO] ✅ Keine verpassten Signale
+2026-10-25 13:25:00,763 [INFO] Telethon Wakeup-Ping
+2026-10-25 13:28:00,486 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 13:28:00,670 [INFO] ✅ Keine verpassten Signale
+2026-10-25 13:35:01,230 [INFO] Telethon Wakeup-Ping
+2026-10-25 13:38:00,673 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 13:38:00,772 [INFO] ✅ Keine verpassten Signale
+2026-10-25 13:45:01,971 [INFO] Telethon Wakeup-Ping
+2026-10-25 13:48:00,992 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 13:48:01,235 [INFO] ✅ Keine verpassten Signale
+2026-10-25 13:55:02,401 [INFO] Telethon Wakeup-Ping
+2026-10-25 13:58:01,358 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 13:58:01,501 [INFO] ✅ Keine verpassten Signale
+2026-10-25 14:05:02,999 [INFO] Telethon Wakeup-Ping
+2026-10-25 14:08:01,502 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 14:08:01,618 [INFO] ✅ Keine verpassten Signale
+2026-10-25 14:15:03,276 [INFO] Telethon Wakeup-Ping
+2026-10-25 14:16:54,770 [INFO] Got difference for channel 1235349100 updates
+2026-10-25 14:18:01,622 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 14:18:01,716 [INFO] ✅ Keine verpassten Signale
+2026-10-25 14:25:03,506 [INFO] Telethon Wakeup-Ping
+2026-10-25 14:28:01,726 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 14:28:01,823 [INFO] ✅ Keine verpassten Signale
+2026-10-25 14:35:03,771 [INFO] Telethon Wakeup-Ping
+2026-10-25 14:38:01,826 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 14:38:02,045 [INFO] ✅ Keine verpassten Signale
+2026-10-25 14:45:04,072 [INFO] Telethon Wakeup-Ping
+2026-10-25 14:48:02,047 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 14:48:02,192 [INFO] ✅ Keine verpassten Signale
+2026-10-25 14:55:04,342 [INFO] Telethon Wakeup-Ping
+2026-10-25 14:58:02,497 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 14:58:02,613 [INFO] ✅ Keine verpassten Signale
+2026-10-25 15:05:04,659 [INFO] Telethon Wakeup-Ping
+2026-10-25 15:08:02,616 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 15:08:02,865 [INFO] ✅ Keine verpassten Signale
+2026-10-25 15:15:05,116 [INFO] Telethon Wakeup-Ping
+2026-10-25 15:18:02,868 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 15:18:03,072 [INFO] ✅ Keine verpassten Signale
+2026-10-25 15:25:05,495 [INFO] Telethon Wakeup-Ping
+2026-10-25 15:28:03,074 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 15:28:03,425 [INFO] ✅ Keine verpassten Signale
+2026-10-25 15:35:05,968 [INFO] Telethon Wakeup-Ping
+2026-10-25 15:38:03,428 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 15:38:03,535 [INFO] ✅ Keine verpassten Signale
+2026-10-25 15:45:06,634 [INFO] Telethon Wakeup-Ping
+2026-10-25 15:48:03,538 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 15:48:03,659 [INFO] ✅ Keine verpassten Signale
+2026-10-25 15:55:07,218 [INFO] Telethon Wakeup-Ping
+2026-10-25 15:58:03,661 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 15:58:03,816 [INFO] ✅ Keine verpassten Signale
+2026-10-25 16:01:55,432 [INFO] Got difference for channel 1235349100 updates
+2026-10-25 16:05:07,456 [INFO] Telethon Wakeup-Ping
+2026-10-25 16:08:03,819 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 16:08:03,924 [INFO] ✅ Keine verpassten Signale
+2026-10-25 16:15:07,776 [INFO] Telethon Wakeup-Ping
+2026-10-25 16:18:03,925 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 16:18:04,035 [INFO] ✅ Keine verpassten Signale
+2026-10-25 16:25:08,457 [INFO] Telethon Wakeup-Ping
+2026-10-25 16:28:04,037 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 16:28:04,277 [INFO] ✅ Keine verpassten Signale
+2026-10-25 16:35:09,134 [INFO] Telethon Wakeup-Ping
+2026-10-25 16:38:04,279 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 16:38:04,385 [INFO] ✅ Keine verpassten Signale
+2026-10-25 16:45:09,494 [INFO] Telethon Wakeup-Ping
+2026-10-25 16:48:04,387 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 16:48:04,498 [INFO] ✅ Keine verpassten Signale
+2026-10-25 16:55:09,759 [INFO] Telethon Wakeup-Ping
+2026-10-25 16:58:04,500 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 16:58:04,657 [INFO] ✅ Keine verpassten Signale
+2026-10-25 17:05:10,370 [INFO] Telethon Wakeup-Ping
+2026-10-25 17:08:04,659 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 17:08:04,756 [INFO] ✅ Keine verpassten Signale
+2026-10-25 17:15:10,729 [INFO] Telethon Wakeup-Ping
+2026-10-25 17:18:04,757 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 17:18:04,868 [INFO] ✅ Keine verpassten Signale
+2026-10-25 17:25:11,013 [INFO] Telethon Wakeup-Ping
+2026-10-25 17:28:04,871 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 17:28:05,015 [INFO] ✅ Keine verpassten Signale
+2026-10-25 17:35:11,295 [INFO] Telethon Wakeup-Ping
+2026-10-25 17:38:05,022 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 17:38:05,200 [INFO] ✅ Keine verpassten Signale
+2026-10-25 17:45:11,691 [INFO] Telethon Wakeup-Ping
+2026-10-25 17:48:05,492 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 17:48:05,676 [INFO] ✅ Keine verpassten Signale
+2026-10-25 17:55:11,981 [INFO] Telethon Wakeup-Ping
+2026-10-25 17:58:05,679 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 17:58:05,825 [INFO] ✅ Keine verpassten Signale
+2026-10-25 18:05:12,207 [INFO] Telethon Wakeup-Ping
+2026-10-25 18:08:05,827 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 18:08:05,935 [INFO] ✅ Keine verpassten Signale
+2026-10-25 18:15:12,687 [INFO] Telethon Wakeup-Ping
+2026-10-25 18:18:05,938 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 18:18:06,053 [INFO] ✅ Keine verpassten Signale
+2026-10-25 18:25:12,921 [INFO] Telethon Wakeup-Ping
+2026-10-25 18:28:06,056 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 18:28:06,152 [INFO] ✅ Keine verpassten Signale
+2026-10-25 18:35:13,306 [INFO] Telethon Wakeup-Ping
+2026-10-25 18:38:06,155 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 18:38:06,244 [INFO] ✅ Keine verpassten Signale
+2026-10-25 18:45:13,627 [INFO] Telethon Wakeup-Ping
+2026-10-25 18:48:06,246 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 18:48:06,352 [INFO] ✅ Keine verpassten Signale
+2026-10-25 18:55:13,861 [INFO] Telethon Wakeup-Ping
+2026-10-25 18:58:06,356 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 18:58:06,468 [INFO] ✅ Keine verpassten Signale
+2026-10-25 19:05:14,187 [INFO] Telethon Wakeup-Ping
+2026-10-25 19:08:06,470 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 19:08:06,579 [INFO] ✅ Keine verpassten Signale
+2026-10-25 19:15:14,567 [INFO] Telethon Wakeup-Ping
+2026-10-25 19:18:06,580 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 19:18:06,698 [INFO] ✅ Keine verpassten Signale
+2026-10-25 19:25:14,827 [INFO] Telethon Wakeup-Ping
+2026-10-25 19:28:06,700 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 19:28:06,919 [INFO] ✅ Keine verpassten Signale
+2026-10-25 19:35:15,183 [INFO] Telethon Wakeup-Ping
+2026-10-25 19:38:06,920 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 19:38:07,057 [INFO] ✅ Keine verpassten Signale
+2026-10-25 19:45:15,705 [INFO] Telethon Wakeup-Ping
+2026-10-25 19:48:07,058 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 19:48:07,155 [INFO] ✅ Keine verpassten Signale
+2026-10-25 19:55:15,944 [INFO] Telethon Wakeup-Ping
+2026-10-25 19:58:07,158 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 19:58:07,256 [INFO] ✅ Keine verpassten Signale
+2026-10-25 20:05:16,309 [INFO] Telethon Wakeup-Ping
+2026-10-25 20:08:07,259 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 20:08:07,362 [INFO] ✅ Keine verpassten Signale
+2026-10-25 20:15:16,514 [INFO] Telethon Wakeup-Ping
+2026-10-25 20:18:07,366 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 20:18:07,458 [INFO] ✅ Keine verpassten Signale
