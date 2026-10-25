@@ -4470,6 +4470,10 @@ async def process_signal(sig: TradeSignal):
     # wurde sonst als GTMo gewertet und umging den Lose-Streak-Schutz.
     _is_gtmo = any(k in sig.source_channel.lower()
                    for k in ("gtmo", "goldtrader"))
+    # PATCH49: Der Streak-Schutz war fuer GTMO fest abgeschaltet. Fuer einen
+    # Zweitkanal auf kleinem Risiko ist er gerade dort sinnvoll.
+    if os.getenv("LOSE_STREAK_GILT_AUCH_GTMO", "true").lower() == "true":
+        _is_gtmo = False
     try:
         _streak_lim = int(float(os.getenv("LOSE_STREAK_LIMIT", "3")))
     except (TypeError, ValueError):
@@ -4716,6 +4720,16 @@ async def main():
     )
 
     print(f"{Fore.GREEN}✅ Bereit – überwache {len(channel_entities)} Kanäle{Style.RESET_ALL}\n")
+    try:   # PATCH49: sichtbar machen, welche Slots belegt sind
+        _slots = [(i + 1, (c or "").strip()) for i, c in enumerate(TG_CHANNELS)]
+        log.info("Kanal-Slots: " + " | ".join(
+            "TG_CHANNEL_" + str(i) + "=" + (c if c else "(leer)")
+            for i, c in _slots))
+        log.info("Aufgeloeste Kanaele: " + ", ".join(
+            str(getattr(e, "title", None) or getattr(e, "username", None) or "?")
+            for e in channel_entities))
+    except Exception:
+        pass
 
     # ── Eingehende Nachrichten aus Signal-Kanälen ─────────────────────────────
     @user_client.on(events.Raw)
