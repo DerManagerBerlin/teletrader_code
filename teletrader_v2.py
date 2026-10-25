@@ -1794,6 +1794,7 @@ def _zurueck_auf_demo(grund: str) -> None:
         _ef = os.path.join(os.path.expanduser("~"), "teletrader", ".env")
         if not os.path.exists(_ef):
             _ef = ".env"
+        import shutil as _sh_heal      # PATCH59: nicht auf Modulebene vorhanden
         _zl = open(_ef, encoding="utf-8").read().splitlines()
         _neu, _hit = [], False
         for _z in _zl:
@@ -1803,7 +1804,10 @@ def _zurueck_auf_demo(grund: str) -> None:
                 _neu.append(_z)
         if not _hit:
             _neu.append("DEMO_MODE=true")
-        shutil.copyfile(_ef, _ef + ".bak_selbstheilung")
+        try:
+            _sh_heal.copyfile(_ef, _ef + ".bak_selbstheilung")
+        except Exception:
+            pass                       # Backup ist nett, aber nicht wichtig
         with open(_ef, "w", encoding="utf-8") as _f:
             _f.write("\n".join(_neu) + "\n")
         log.error("SELBSTHEILUNG: " + str(grund) + " -> DEMO_MODE=true gesetzt. "
