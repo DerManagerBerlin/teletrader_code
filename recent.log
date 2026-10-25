@@ -1,41 +1,3 @@
-  SL: 4084.06 | TPs: [4071.06, 4068.06, 4064.06, 4060.06]
-  Verteilung: {4071.06: 1, 0: 4}
-2026-10-22 13:25:09,587 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.03 (Einstieg 4075.03 statt 4076.06)
-2026-10-22 13:25:09,587 [INFO] Lot-Sizing: Balance=939.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-22 13:25:09,589 [INFO] Lot-Normalisierung XAUUSD.s: 0.00884547864854953 -> 0.01 (min 0.01, step 0.01)
-2026-10-22 13:25:09,589 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 8.06, Budget 35.67)
-2026-10-22 13:25:09,590 [INFO] Zielrisiko 3.8%: SL=9.03 -> Lot 0.05 -> 0.01 x 4 Layer = 32.26 je Signal
-2026-10-22 13:25:09,592 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4071.06) + 3 Runner (PARTIAL_AT_TP)
-2026-10-22 13:25:09,594 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4071.06) + 3 Runner (PARTIAL_AT_TP)
-2026-10-22 13:25:09,596 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 13:25:10,020 [INFO] Runner markiert #418896416 -> runners.json
-2026-10-22 13:25:10,021 [INFO] Layer 1/4 Ticket #418896416 TP=4071.06
-2026-10-22 13:25:10,029 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 13:25:10,462 [INFO] Runner markiert #418896426 -> runners.json
-2026-10-22 13:25:10,463 [INFO] Layer 2/4 Ticket #418896426 TP=0
-2026-10-22 13:25:10,468 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 13:25:10,882 [INFO] Runner markiert #418896429 -> runners.json
-2026-10-22 13:25:10,883 [INFO] Layer 3/4 Ticket #418896429 TP=0
-2026-10-22 13:25:10,884 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-22 13:25:11,302 [INFO] Runner markiert #418896460 -> runners.json
-2026-10-22 13:25:11,303 [INFO] Layer 4/4 Ticket #418896460 TP=0
-2026-10-22 13:25:11,304 [INFO] TP-Layer Map: {'tp1': [418896416], 'tp2': [418896426, 418896429, 418896460]}
-2026-10-22 13:25:11,305 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
-2026-10-22 13:25:11,399 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-22 13:26:05,963 [INFO] Ruecksetzer #418896426 3.7p vom Hoch 4.8p (Trail 30.0p)
-2026-10-22 13:26:05,966 [INFO] Ruecksetzer #418896429 3.7p vom Hoch 4.7p (Trail 30.0p)
-2026-10-22 13:26:05,970 [INFO] Ruecksetzer #418896460 3.7p vom Hoch 1.6p (Trail 30.0p)
-2026-10-22 13:26:15,983 [INFO] Ruecksetzer #418896426 9.9p vom Hoch 3.2p (Trail 30.0p)
-2026-10-22 13:26:15,986 [INFO] Ruecksetzer #418896429 9.9p vom Hoch 3.1p (Trail 30.0p)
-2026-10-22 13:26:15,990 [INFO] Ruecksetzer #418896460 9.9p vom Hoch 0.0p (Trail 30.0p)
-2026-10-22 13:26:26,005 [INFO] Ruecksetzer #418896426 10.9p vom Hoch 3.2p (Trail 30.0p)
-2026-10-22 13:26:26,012 [INFO] Ruecksetzer #418896429 10.9p vom Hoch 3.1p (Trail 30.0p)
-2026-10-22 13:26:26,022 [INFO] Ruecksetzer #418896460 10.9p vom Hoch 0.0p (Trail 30.0p)
-2026-10-22 13:27:06,294 [INFO] Ruecksetzer #418896426 20.8p vom Hoch 2.5p (Trail 30.0p)
-2026-10-22 13:27:06,298 [INFO] Ruecksetzer #418896429 20.8p vom Hoch 2.6p (Trail 30.0p)
-2026-10-22 13:27:06,301 [INFO] Ruecksetzer #418896460 20.8p vom Hoch 5.7p (Trail 30.0p)
-2026-10-22 13:27:22,776 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-22 13:27:22,870 [INFO] Scalp: besserer Einstieg als im Signal (11.4 Pips zu unseren Gunsten) - Trade wird genommen
 2026-10-22 13:27:22,870 [INFO] Verpasstes Signal ausfuehren [XAUUSD SCALPING ⚡️] 13:25: TRADE conf=99%
 2026-10-22 13:27:22,873 [INFO] Verpasstes Signal uebersprungen: bereits 4 Position(en) offen
 2026-10-22 13:27:26,336 [INFO] Ruecksetzer #418896426 23.0p vom Hoch 2.5p (Trail 30.0p)
@@ -7998,3 +7960,41 @@
 2026-10-25 20:52:20,242 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
 2026-10-25 20:52:49,179 [INFO] Equity Guardian: Start=952.01$
 2026-10-25 20:53:20,254 [INFO] Ruecksetzer #420695049 99.7-99.7p vom Hoch 30.6p (Trail 30.0p)
+2026-10-25 20:57:19,192 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 20:57:19,895 [INFO] ✅ Keine verpassten Signale
+2026-10-25 21:03:20,784 [INFO] Telethon Wakeup-Ping
+2026-10-25 21:05:02,000 [INFO] AUTOPATCH env: geaendert: LOSE_STREAK_LIMIT_GOLD: (fehlte) -> 3 | LOSE_STREAK_LIMIT_TRADER: (fehlte) -> 3 | LOSE_STREAK_LIMIT_GTMO: (fehlte) -> 3 | LOSE_STREAK_LIMIT_GTMOFX: (fehlte) -> 3 | LOSE_STREAK_PAUSE_MIN: (fehlte) -> 60
+2026-10-25 21:05:02,000 [INFO] AUTOPATCH env: Stand: TARGET_RISK_PCT=0.010 TARGET_RISK_PCT_XAUUSD=0.038 TARGET_RISK_PCT_GOLD=0.010 MAX_LAYERS_XAUUSD=5 MAX_LAYERS_GOLD=2 LOSE_STREAK_LIMIT=0 LOSE_STREAK_LIMIT_GOLD=3 LOSE_STREAK_PAUSE_MIN=60 LOSE_STREAK_GILT_AUCH_GTMO=true PARTIAL_GEWICHTE=2,1,1,1
+2026-10-25 21:05:02,000 [INFO] AUTOPATCH: patch_52_streak_je_kanal.py angewendet - Patch 52 Code OK - Lose-Streak-Grenzwert je Kanal env geaendert: LOSE_STREAK_LIMIT_GOLD: (fehlte) -> 3 | LOSE_STREAK_LIMIT_TRADER: (fehlte) -> 3 | LOSE_STREAK_LIMIT_GTMO: (fehlte) -> 3 | LOSE_STREAK_LIMIT_GTMOFX: (fehlte
+2026-10-25 21:05:03,000 [INFO] AUTOPATCH: patch_53_cut_loss.py angewendet - Patch 53 OK - 'cut loss' wird als Schliessbefehl erkannt
+2026-10-25 21:05:03,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
+2026-10-25 21:05:38,000 [INFO] AUTOPATCH: teletrader.service laeuft
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-10-25 21:07:03,627 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $952.01 EUR
+2026-10-25 21:07:03,766 [INFO] Connecting to 149.154.167.51:443/TcpFull...
+2026-10-25 21:07:03,784 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
+2026-10-25 21:07:03,922 [INFO] Telegram User-Client verbunden.
+2026-10-25 21:07:03,928 [INFO] Connecting to 149.154.167.51:443/TcpFull...
+2026-10-25 21:07:03,942 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
+2026-10-25 21:07:04,315 [INFO] Telegram Bot-Client verbunden.
+2026-10-25 21:07:04,316 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-10-25 21:07:06,325 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-10-25 21:07:07,515 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-10-25 21:07:07,548 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-25 21:07:07,572 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-10-25 21:07:07,699 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-10-25 21:07:07,699 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-25 21:07:22,699 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-10-25 21:07:22,889 [INFO] ✅ Keine verpassten Signale
+2026-10-25 21:07:24,509 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-10-25 21:07:52,893 [INFO] Equity Guardian: Start=952.01$
+2026-10-25 21:08:24,525 [INFO] Ruecksetzer #420695049 99.7-99.7p vom Hoch 30.6p (Trail 30.0p)
+2026-10-25 21:12:22,906 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-25 21:12:23,091 [INFO] ✅ Keine verpassten Signale

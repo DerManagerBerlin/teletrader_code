@@ -1101,6 +1101,9 @@ CLOSE_WORDS_STRONG = [
     "close now", "close all", "close position", "close trade",
     "close sell", "close buy", "exit now", "exit immediately",
     "get out now", "close everything", "close it",
+    # PATCH53: GTMO beendet Trades mit "cut loss", nicht mit "close".
+    "cut loss", "cut the loss", "cut losses", "cut it here",
+    "cut now", "cut here",
 ]
 # "close" alleine nur als einziges Wort in der Nachricht (max 3 Wörter gesamt)
 CLOSE_WORD_SOLO = "close"
@@ -4475,7 +4478,9 @@ async def process_signal(sig: TradeSignal):
     if os.getenv("LOSE_STREAK_GILT_AUCH_GTMO", "true").lower() == "true":
         _is_gtmo = False
     try:
-        _streak_lim = int(float(os.getenv("LOSE_STREAK_LIMIT", "3")))
+        # PATCH52: je Kanal ueberschreibbar, global als Rueckfallebene.
+        _streak_lim = int(float(_env_for_channel(
+            "LOSE_STREAK_LIMIT", sig.source_channel, "3")))
     except (TypeError, ValueError):
         _streak_lim = 3
     try:
