@@ -1779,6 +1779,47 @@ def connect_mt5() -> bool:
         return False
     account_type = "DEMO" if DEMO_MODE else "LIVE ⚠️"
     log.info(f"MT5 [{account_type}] → Konto {info.login} | Balance: ${info.balance:.2f} {info.currency}")
+    # PATCH54: Pruefwerte fuer den Umstieg auf live. Kontonummer maskiert,
+    # keine Zugangsdaten.
+    if os.getenv("LIVECHECK", "true").lower() == "true":
+        try:
+            _kt = str(info.login)
+            log.info("LIVECHECK Modus=" + ("DEMO" if DEMO_MODE else "LIVE") +
+                     " Server=" + str(getattr(info, "server", "?")) +
+                     " Konto=***" + _kt[-3:] +
+                     " Waehrung=" + str(info.currency) +
+                     " Balance=" + str(round(info.balance, 2)) +
+                     " Hebel=" + str(getattr(info, "leverage", "?")) +
+                     " TradeAllowed=" + str(getattr(info, "trade_allowed", "?")))
+            for _sym in [GOLD_SYMBOL, BTC_SYMBOL + FX_SUFFIX]:
+                try:
+                    _si = mt5.symbol_info(_sym)
+                    if _si is None:
+                        if not mt5.symbol_select(_sym, True):
+                            log.error("LIVECHECK " + str(_sym) +
+                                      " NICHT VERFUEGBAR - Symbolname pruefen")
+                            continue
+                        _si = mt5.symbol_info(_sym)
+                    if _si is None:
+                        log.error("LIVECHECK " + str(_sym) + " NICHT VERFUEGBAR")
+                        continue
+                    _tk = mt5.symbol_info_tick(_sym)
+                    _pip = (_si.point or 0.01) * 10
+                    _spr = ((_tk.ask - _tk.bid) / _pip) if (_tk and _pip) else -1
+                    log.info("LIVECHECK " + str(_sym) +
+                             " handelbar=" + str(getattr(_si, "trade_mode", "?")) +
+                             " lot " + str(_si.volume_min) + "-" + str(_si.volume_max) +
+                             " step " + str(_si.volume_step) +
+                             " stops=" + str(getattr(_si, "trade_stops_level", "?")) +
+                             " digits=" + str(_si.digits) +
+                             " bid=" + (str(_tk.bid) if _tk else "?") +
+                             " ask=" + (str(_tk.ask) if _tk else "?") +
+                             " spread=" + str(round(_spr, 1)) + " Pips")
+                except Exception as _se:
+                    log.error("LIVECHECK " + str(_sym) + " Fehler: " + str(_se))
+            log.info("LIVECHECK Handel pausiert=" + str(is_trading_paused()))
+        except Exception as _e:
+            log.error("LIVECHECK Fehler: " + str(_e))
     return True
 
 
