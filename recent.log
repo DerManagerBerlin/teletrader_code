@@ -673,3 +673,53 @@ Equity: 0.0$
 AUTO_CONFIRM_LIVE=true – Autostart
 Live-Modus bestaetigt.
 
+2026-10-26 20:27:23,662 [ERROR] MT5 Parameter-Login fehlgeschlagen: (-10005, 'IPC timeout')
+2026-10-26 20:27:23,665 [ERROR] MT5 Fehler: (-10005, 'IPC timeout')
+2026-10-26 20:27:23,674 [ERROR] SELBSTHEILUNG: Live-Login gescheitert: (-10005, 'IPC timeout') -> DEMO_MODE=true gesetzt. Naechster Start laeuft auf dem Demokonto, danach ist /live wieder moeglich.
+❌ MT5 Verbindung fehlgeschlagen.
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-10-26 20:28:55,691 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $886.60 EUR
+2026-10-26 20:28:55,714 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-10-26 20:28:55,739 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-10-26 20:28:55,769 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-10-26 20:28:55,800 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
+2026-10-26 20:28:55,803 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 20:28:55,805 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 20:28:55,808 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 20:28:55,816 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
+2026-10-26 20:28:55,817 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=886.6 Hebel=500 TradeAllowed=True
+2026-10-26 20:28:55,820 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4013.18 ask=4013.5 spread=3.2 Pips
+2026-10-26 20:28:55,823 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
+2026-10-26 20:28:55,825 [INFO] LIVECHECK Handel pausiert=False
+2026-10-26 20:28:55,826 [INFO] POSCHECK Balance=886.6 Equity=885.19 FreieMargin=856.46
+2026-10-26 20:28:55,827 [INFO] POSCHECK offen #422283920 XAUUSD.s BUY vol=0.01 open=4013.53 sl=4005.04 tp=4018.04 profit=-0.32 magic=88888
+2026-10-26 20:28:55,828 [INFO] POSCHECK offen #422283924 XAUUSD.s BUY vol=0.01 open=4013.56 sl=4005.04 tp=4018.04 profit=-0.35 magic=88888
+2026-10-26 20:28:55,828 [INFO] POSCHECK offen #422283926 XAUUSD.s BUY vol=0.01 open=4013.58 sl=4005.04 tp=4021.04 profit=-0.37 magic=88888
+2026-10-26 20:28:55,829 [INFO] POSCHECK offen #422283930 XAUUSD.s BUY vol=0.01 open=4013.58 sl=4005.04 tp=0.0 profit=-0.37 magic=88888
+2026-10-26 20:28:56,192 [INFO] Telegram User-Client verbunden.
+2026-10-26 20:28:56,413 [INFO] Telegram Bot-Client verbunden.
+2026-10-26 20:28:56,414 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-10-26 20:28:58,536 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-10-26 20:28:59,198 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-10-26 20:28:59,225 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 20:28:59,247 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-10-26 20:28:59,306 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-10-26 20:28:59,306 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 20:29:14,307 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-10-26 20:29:14,363 [INFO] Verpasstes TRADE uebersprungen: Nachricht 20:00 ist 29.1 Min alt (> 5.0 Min) - kein Re-Fire
+2026-10-26 20:29:14,508 [INFO] ✅ Keine verpassten Signale
+2026-10-26 20:29:15,717 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-10-26 20:29:15,825 [INFO] Command-Queue geleert (ab Update 101322879)
+2026-10-26 20:29:34,517 [INFO] Runner markiert #422283920 -> runners.json
+2026-10-26 20:29:34,521 [INFO] Runner markiert #422283924 -> runners.json
+2026-10-26 20:29:34,525 [INFO] Runner markiert #422283926 -> runners.json
+2026-10-26 20:29:34,526 [INFO] SL-Leiter: 3 offene Position(en) nachtraeglich aufgenommen
+2026-10-26 20:29:44,513 [INFO] Equity Guardian: Start=886.6$
+2026-10-26 20:29:44,517 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
