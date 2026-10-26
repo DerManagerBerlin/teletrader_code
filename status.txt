@@ -29,3 +29,22 @@
 2026-10-26 17:35:38 PATCH89 letzte Zeitmarke: 2026-10-26 15:47:04
 2026-10-26 17:35:38 PATCH89 neue Groesse: -rw-rw-r-- 1 alexander_lacher alexander_lacher 3417322 17:35:02 /home/alexander_lacher/teletrader/bot.log
 2026-10-26 17:35:38 PATCH89 Dienst: active
+2026-10-26 17:45:03 PATCH90 Groesse: -rw-rw-r-- 1 alexander_lacher alexander_lacher 3435098 17:45:01 /home/alexander_lacher/teletrader/bot.log
+2026-10-26 17:45:03 PATCH90 neueste Zeitmarke: 2026-10-26 15:47:04
+grep: /home/alexander_lacher/teletrader/bot.log: binary file matches
+2026-10-26 17:45:03 PATCH90 LIVECHECK letzte: 2026-10-26 15:47:04,930 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=937.68 Hebel=500 TradeAllowed=True
+grep: /home/alexander_lacher/teletrader/bot.log: 
+2026-10-26 17:45:03 PATCH90 POSCHECK letzte: 2026-10-26 15:39:23,065 [INFO] POSCHECK offen #422104645 XAUUSD.s SELL vol=0.01 open=4016.44 sl=4024.24 tp=4011.24 profit=-2.31 magic=88888 || 2026-10-26 15:39:23,066 [INFO] POSCHECK offen #422104648 XAUUSD.s SELL vol=0.01 open=4016.42 sl=4024.24 tp=4008.24 profit=-2.33 magic=88888 || 2026-10-26 15:
+2026-10-26 17:45:03 PATCH90 Algo-Warnungen (letzte 500 Zeilen): 0
+2026-10-26 17:45:03 PATCH90 TAIL 2026-10-26 17:43:51,634 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=0&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-10-26 17:45:03 PATCH90 TAIL 2026-10-26 17:43:58,040 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=0&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-10-26 17:45:03 PATCH90 TAIL 2026-10-26 17:44:04,380 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=0&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-10-26 17:45:03 PATCH90 TAIL 2026-10-26 17:44:10,839 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=0&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-10-26 17:45:03 PATCH90 TAIL 2026-10-26 17:44:17,158 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=0&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-10-26 17:45:03 PATCH90 TAIL 2026-10-26 17:44:23,681 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=0&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-10-26 17:45:03 PATCH90 TAIL 2026-10-26 17:44:30,067 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=0&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-10-26 17:45:03 PATCH90 TAIL 2026-10-26 17:44:36,443 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=0&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-10-26 17:45:03 PATCH90 TAIL 2026-10-26 17:44:42,770 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=0&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-10-26 17:45:03 PATCH90 TAIL 2026-10-26 17:44:49,167 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=0&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-10-26 17:45:03 PATCH90 TAIL 2026-10-26 17:44:55,505 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=0&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-10-26 17:45:03 PATCH90 TAIL 2026-10-26 17:45:01,895 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=0&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
