@@ -595,3 +595,46 @@ Live-Modus bestaetigt.
 2026-10-26 20:07:23,690 [INFO] Scalp: besserer Einstieg als im Signal (4.5 Pips zu unseren Gunsten) - Trade wird genommen
 2026-10-26 20:07:23,691 [INFO] Verpasstes TRADE uebersprungen: Nachricht 20:00 ist 7.2 Min alt (> 5.0 Min) - kein Re-Fire
 2026-10-26 20:07:23,883 [INFO] ✅ Keine verpassten Signale
+2026-10-26 20:10:02,000 [INFO] AUTOPATCH: patch_100_netz.py angewendet - 2026-10-26 20:10:02 PATCH100 externe IP: 34.141.14.126 2026-10-26 20:10:02 PATCH100 interne IP: 10.156.0.2 2026-10-26 20:10:02 PATCH100 Instanz: teletrader / Zone: europe-west3-a 2026-10-26 20:10:02 PATCH100 ufw: (ufw ni
+2026-10-26 20:10:02,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
+2026-10-26 20:10:37,000 [INFO] AUTOPATCH: teletrader.service laeuft
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-10-26 20:12:03,097 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $886.60 EUR
+2026-10-26 20:12:03,117 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-10-26 20:12:03,143 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-10-26 20:12:03,168 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-10-26 20:12:03,188 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
+2026-10-26 20:12:03,189 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 20:12:03,191 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 20:12:03,193 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 20:12:03,199 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
+2026-10-26 20:12:03,200 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=886.6 Hebel=500 TradeAllowed=True
+2026-10-26 20:12:03,202 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4012.47 ask=4012.79 spread=3.2 Pips
+2026-10-26 20:12:03,204 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
+2026-10-26 20:12:03,205 [INFO] LIVECHECK Handel pausiert=False
+2026-10-26 20:12:03,205 [INFO] POSCHECK Balance=886.6 Equity=882.7 FreieMargin=853.97
+2026-10-26 20:12:03,206 [INFO] POSCHECK offen #422283920 XAUUSD.s BUY vol=0.01 open=4013.53 sl=4005.04 tp=4018.04 profit=-0.95 magic=88888
+2026-10-26 20:12:03,206 [INFO] POSCHECK offen #422283924 XAUUSD.s BUY vol=0.01 open=4013.56 sl=4005.04 tp=4018.04 profit=-0.97 magic=88888
+2026-10-26 20:12:03,206 [INFO] POSCHECK offen #422283926 XAUUSD.s BUY vol=0.01 open=4013.58 sl=4005.04 tp=4021.04 profit=-0.99 magic=88888
+2026-10-26 20:12:03,207 [INFO] POSCHECK offen #422283930 XAUUSD.s BUY vol=0.01 open=4013.58 sl=4005.04 tp=0.0 profit=-0.99 magic=88888
+2026-10-26 20:12:03,566 [INFO] Telegram User-Client verbunden.
+2026-10-26 20:12:03,745 [INFO] Telegram Bot-Client verbunden.
+2026-10-26 20:12:03,745 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-10-26 20:12:05,532 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-10-26 20:12:06,197 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-10-26 20:12:06,236 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 20:12:06,258 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-10-26 20:12:06,319 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-10-26 20:12:06,320 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 20:12:21,321 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-10-26 20:12:21,411 [INFO] Verpasstes TRADE uebersprungen: Nachricht 20:00 ist 12.2 Min alt (> 5.0 Min) - kein Re-Fire
+2026-10-26 20:12:21,565 [INFO] ✅ Keine verpassten Signale
+2026-10-26 20:12:22,954 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-10-26 20:12:51,569 [INFO] Equity Guardian: Start=886.6$
