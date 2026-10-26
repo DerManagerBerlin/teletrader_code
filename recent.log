@@ -101,3 +101,49 @@
 AUTO_CONFIRM_LIVE=true – Autostart
 Live-Modus bestaetigt.
 
+2026-10-26 18:32:05,336 [ERROR] MT5 Parameter-Login fehlgeschlagen: (-10005, 'IPC timeout')
+2026-10-26 18:32:05,344 [ERROR] MT5 Fehler: (-10005, 'IPC timeout')
+2026-10-26 18:32:05,356 [ERROR] SELBSTHEILUNG: Live-Login gescheitert: (-10005, 'IPC timeout') -> DEMO_MODE=true gesetzt. Naechster Start laeuft auf dem Demokonto, danach ist /live wieder moeglich.
+❌ MT5 Verbindung fehlgeschlagen.
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-10-26 18:33:38,069 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $886.60 EUR
+2026-10-26 18:33:38,096 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-10-26 18:33:38,127 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-10-26 18:33:38,158 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-10-26 18:33:38,187 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
+2026-10-26 18:33:38,189 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 18:33:38,192 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 18:33:38,194 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 18:33:38,200 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
+2026-10-26 18:33:38,201 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=886.6 Hebel=500 TradeAllowed=True
+2026-10-26 18:33:38,203 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4015.59 ask=4015.91 spread=3.2 Pips
+2026-10-26 18:33:38,204 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
+2026-10-26 18:33:38,206 [INFO] LIVECHECK Handel pausiert=False
+2026-10-26 18:33:38,206 [INFO] POSCHECK Balance=886.6 Equity=886.6 FreieMargin=886.6
+2026-10-26 18:33:38,206 [INFO] POSCHECK keine offenen Positionen
+2026-10-26 18:33:38,629 [INFO] Telegram User-Client verbunden.
+2026-10-26 18:33:38,892 [INFO] Telegram Bot-Client verbunden.
+2026-10-26 18:33:38,893 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-10-26 18:33:40,075 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-10-26 18:33:40,076 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-10-26 18:33:40,106 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 18:33:40,128 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-10-26 18:33:40,183 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-10-26 18:33:40,183 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 18:33:55,183 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-10-26 18:33:55,404 [INFO] ✅ Keine verpassten Signale
+2026-10-26 18:33:56,552 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-10-26 18:33:56,639 [INFO] Command-Queue geleert (ab Update 101322877)
+2026-10-26 18:34:15,460 [INFO] MFE #422205608 XAUUSD.s: Hoch +-0.6 Punkte, Stufe 0
+2026-10-26 18:34:15,467 [INFO] MFE #422205610 XAUUSD.s: Hoch +-0.6 Punkte, Stufe 0
+2026-10-26 18:34:15,472 [INFO] MFE #422205620 XAUUSD.s: Hoch +-0.6 Punkte, Stufe 0
+2026-10-26 18:34:15,478 [INFO] MFE #422205626 XAUUSD.s: Hoch +-0.7 Punkte, Stufe 0
+2026-10-26 18:34:25,407 [INFO] Equity Guardian: Start=886.6$
+2026-10-26 18:34:25,409 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
