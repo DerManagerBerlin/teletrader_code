@@ -1889,10 +1889,13 @@ def connect_mt5() -> bool:
         try:
             import csv as _csv
             from datetime import datetime as _dt, timedelta as _td
-            _von = _dt.now() - _td(days=120)
-            _dl = mt5.history_deals_get(_von, _dt.now()) or []
-            _ziel = os.path.join(os.path.expanduser("~"), "ttpub", "deals.csv")
-            os.makedirs(os.path.dirname(_ziel), exist_ok=True)
+            _von = _dt(2026, 1, 1)
+            _dl = mt5.history_deals_get(_von, _dt.now() + _td(days=2)) or []
+            _ziel = "Z:\\home\\alexander_lacher\\ttpub\\deals.csv"
+            try:
+                os.makedirs(os.path.dirname(_ziel), exist_ok=True)
+            except Exception:
+                pass
             _n = 0
             with open(_ziel, "w", encoding="utf-8", newline="") as _fh:
                 _w = _csv.writer(_fh, delimiter=";")
@@ -1911,7 +1914,8 @@ def connect_mt5() -> bool:
                         _n += 1
                     except Exception:
                         continue
-            log.info("DEALEXPORT " + str(_n) + " Deals -> " + _ziel)
+            log.info("DEALEXPORT " + str(_n) + " Deals -> " + _ziel +
+                     " | vorhanden=" + str(os.path.exists(_ziel)))
         except Exception as _de:
             log.error("DEALEXPORT Fehler: " + str(_de))
     if os.getenv("LIVECHECK", "true").lower() == "true":
