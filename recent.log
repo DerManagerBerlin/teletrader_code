@@ -1082,3 +1082,47 @@ Live-Modus bestaetigt.
 
 2026-10-26 21:59:00,000 [INFO] AUTOPATCH: patch_109_test.py angewendet - 2026-10-26 21:55:03 PATCH109 Treffer fuer Testkonto vor dem Versuch: 0 | 0 2026-10-26 21:55:03 PATCH109 common.ini auf PUPrime-Live2 / ***951 gesetzt 2026-10-26 21:55:33 PATCH109 Neustart: OK 2026-10-26 21:58:04 PATCH109
 2026-10-26 21:59:00,000 [INFO] AUTOPATCH: patch_109_test.py ohne Neustart (NO_RESTART)
+2026-10-26 22:00:03,687 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $886.60 EUR
+2026-10-26 22:00:03,717 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-10-26 22:00:03,748 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-10-26 22:00:03,780 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-10-26 22:00:03,805 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
+2026-10-26 22:00:03,810 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 22:00:03,816 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 22:00:03,820 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 22:00:03,831 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
+2026-10-26 22:00:03,832 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=886.6 Hebel=500 TradeAllowed=True
+2026-10-26 22:00:03,837 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4016.65 ask=4017.01 spread=3.6 Pips
+2026-10-26 22:00:03,839 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
+2026-10-26 22:00:03,841 [INFO] LIVECHECK Handel pausiert=False
+2026-10-26 22:00:03,843 [INFO] POSCHECK Balance=886.6 Equity=894.93 FreieMargin=866.2
+2026-10-26 22:00:03,844 [INFO] POSCHECK offen #422283920 XAUUSD.s BUY vol=0.01 open=4013.53 sl=4005.04 tp=4018.04 profit=2.79 magic=88888
+2026-10-26 22:00:03,845 [INFO] POSCHECK offen #422283924 XAUUSD.s BUY vol=0.01 open=4013.56 sl=4005.04 tp=4018.04 profit=2.76 magic=88888
+2026-10-26 22:00:03,845 [INFO] POSCHECK offen #422283926 XAUUSD.s BUY vol=0.01 open=4013.58 sl=4005.04 tp=4021.04 profit=2.75 magic=88888
+2026-10-26 22:00:03,845 [INFO] POSCHECK offen #422283930 XAUUSD.s BUY vol=0.01 open=4013.58 sl=4005.04 tp=0.0 profit=2.75 magic=88888
+2026-10-26 22:00:04,182 [INFO] Telegram User-Client verbunden.
+2026-10-26 22:00:04,332 [INFO] Telegram Bot-Client verbunden.
+2026-10-26 22:00:04,333 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-10-26 22:00:05,329 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-10-26 22:00:05,330 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-10-26 22:00:05,357 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 22:00:05,384 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-10-26 22:00:05,438 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-10-26 22:00:05,439 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 22:00:20,438 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-10-26 22:00:20,666 [INFO] ✅ Keine verpassten Signale
+2026-10-26 22:00:22,089 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-10-26 22:00:31,139 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
+2026-10-26 22:00:31,142 [INFO] Kanal meldet TP1 - Leiter darf die Stufe ohne eigenen Kursdruck setzen
+2026-10-26 22:00:31,143 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-10-26 22:00:31,189 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-26 22:00:40,684 [INFO] SL-Leiter: #422283920 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-26 22:00:40,691 [INFO] SL-Leiter: #422283924 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-26 22:00:40,702 [INFO] SL-Leiter #422283926: Stufe 1 aus der Kanalmeldung (eigener Kurs hat sie nicht gedruckt)
+2026-10-26 22:00:40,703 [INFO] SL-Leiter: #422283926 hat eigenen TP1 - Leiter laesst ihn laufen
+2026-10-26 22:00:50,670 [INFO] Equity Guardian: Start=886.6$
+2026-10-26 22:01:22,101 [INFO] Ruecksetzer #422283930 18.1-24.0p vom Hoch 51.1p (Trail 30.0p)
+2026-10-26 22:03:12,239 [INFO] Ruecksetzer #422283930 27.3-27.3p vom Hoch 51.1p (Trail 30.0p)
+2026-10-26 22:03:32,257 [INFO] Ruecksetzer #422283930 29.4-29.4p vom Hoch 51.1p (Trail 30.0p)
