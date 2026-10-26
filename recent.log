@@ -1031,3 +1031,54 @@ Live-Modus bestaetigt.
 2026-10-26 21:52:47,482 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
 2026-10-26 21:53:29,243 [INFO] Telethon Wakeup-Ping
 2026-10-26 21:54:11,617 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
+2026-10-26 21:55:03,000 [INFO] AUTOPATCH: patch_108_wdanfang.py angewendet - 2026-10-26 21:55:02 PATCH108 Zeilen gesamt: 152 2026-10-26 21:55:02 PATCH108 Z1: #!/bin/bash 2026-10-26 21:55:02 PATCH108 Z2: # ================================================================ 2026-10-26 21:55:02 PATCH10
+2026-10-26 21:55:03,000 [INFO] AUTOPATCH: patch_108_wdanfang.py ohne Neustart (NO_RESTART)
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-10-26 21:57:04,424 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $886.60 EUR
+2026-10-26 21:57:04,456 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-10-26 21:57:04,477 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-10-26 21:57:04,503 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-10-26 21:57:04,519 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
+2026-10-26 21:57:04,559 [INFO] DEALDIAG Jahr: total=879 get=879 last_error=(1, 'Success')
+2026-10-26 21:57:04,562 [INFO] DEALDIAG 7Tage: total=437 get=437 last_error=(1, 'Success')
+2026-10-26 21:57:04,564 [INFO] DEALDIAG 24h: total=86 get=86 last_error=(1, 'Success')
+2026-10-26 21:57:04,586 [INFO] DEALEXPORT 879 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
+2026-10-26 21:57:04,587 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=886.6 Hebel=500 TradeAllowed=True
+2026-10-26 21:57:04,588 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4016.65 ask=4017.01 spread=3.6 Pips
+2026-10-26 21:57:04,589 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
+2026-10-26 21:57:04,590 [INFO] LIVECHECK Handel pausiert=False
+2026-10-26 21:57:04,591 [INFO] POSCHECK Balance=886.6 Equity=894.93 FreieMargin=866.2
+2026-10-26 21:57:04,591 [INFO] POSCHECK offen #422283920 XAUUSD.s BUY vol=0.01 open=4013.53 sl=4005.04 tp=4018.04 profit=2.79 magic=88888
+2026-10-26 21:57:04,592 [INFO] POSCHECK offen #422283924 XAUUSD.s BUY vol=0.01 open=4013.56 sl=4005.04 tp=4018.04 profit=2.76 magic=88888
+2026-10-26 21:57:04,592 [INFO] POSCHECK offen #422283926 XAUUSD.s BUY vol=0.01 open=4013.58 sl=4005.04 tp=4021.04 profit=2.75 magic=88888
+2026-10-26 21:57:04,592 [INFO] POSCHECK offen #422283930 XAUUSD.s BUY vol=0.01 open=4013.58 sl=4005.04 tp=0.0 profit=2.75 magic=88888
+2026-10-26 21:57:04,892 [INFO] Telegram User-Client verbunden.
+2026-10-26 21:57:05,061 [INFO] Telegram Bot-Client verbunden.
+2026-10-26 21:57:05,061 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-10-26 21:57:06,054 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-10-26 21:57:06,055 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-10-26 21:57:06,082 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 21:57:06,101 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-10-26 21:57:06,188 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-10-26 21:57:06,188 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 21:57:21,191 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-10-26 21:57:21,393 [INFO] ✅ Keine verpassten Signale
+2026-10-26 21:57:21,398 [INFO] Nachholen verfallen: XAUUSD.s BUY Entry 4013.04 nach 60.4 Min
+2026-10-26 21:57:22,480 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-10-26 21:57:51,395 [INFO] Equity Guardian: Start=886.6$
+2026-10-26 21:57:51,398 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-10-26 21:59:00,000 [INFO] AUTOPATCH: patch_109_test.py angewendet - 2026-10-26 21:55:03 PATCH109 Treffer fuer Testkonto vor dem Versuch: 0 | 0 2026-10-26 21:55:03 PATCH109 common.ini auf PUPrime-Live2 / ***951 gesetzt 2026-10-26 21:55:33 PATCH109 Neustart: OK 2026-10-26 21:58:04 PATCH109
+2026-10-26 21:59:00,000 [INFO] AUTOPATCH: patch_109_test.py ohne Neustart (NO_RESTART)
