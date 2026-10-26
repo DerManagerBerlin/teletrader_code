@@ -1,19 +1,3 @@
-2026-10-23 07:04:53,655 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 07:04:56,673 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 07:04:59,692 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 07:05:02,712 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 07:05:05,729 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 07:05:08,748 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 07:05:11,781 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 07:05:14,819 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 07:05:17,841 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 07:05:20,872 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 07:05:23,897 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 07:05:26,930 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 07:05:29,951 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 07:05:32,970 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 07:05:35,986 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 07:05:39,009 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
 2026-10-23 07:05:42,031 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
 2026-10-23 07:05:45,048 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
 2026-10-23 07:05:48,065 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
@@ -7998,3 +7982,19 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
 2026-10-26 11:18:18,381 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
 2026-10-26 11:18:19,037 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
 2026-10-26 11:18:33,833 [INFO] Telethon Wakeup-Ping
+2026-10-26 11:22:36,877 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-26 11:22:37,463 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 11:22:37,466 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 11:22:37,474 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 11:22:37,672 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 11:22:37,676 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 11:22:37,885 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 11:22:37,891 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 11:22:37,897 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 11:22:38,101 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 11:22:38,104 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 11:22:38,105 [INFO] ✅ Keine verpassten Signale
