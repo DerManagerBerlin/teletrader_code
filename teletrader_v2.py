@@ -1889,8 +1889,28 @@ def connect_mt5() -> bool:
         try:
             import csv as _csv
             from datetime import datetime as _dt, timedelta as _td
-            _von = _dt(2026, 1, 1)
-            _dl = mt5.history_deals_get(_von, _dt.now() + _td(days=2)) or []
+            _bis = _dt.now() + _td(days=2)
+            _spannen = [("Jahr", _dt(2026, 1, 1)),
+                        ("7Tage", _dt.now() - _td(days=7)),
+                        ("24h", _dt.now() - _td(days=1))]
+            _dl = []
+            try:
+                _ai = mt5.account_info()
+                log.info("DEALDIAG Konto=" + str(getattr(_ai, "login", "?")) +
+                         " Server=" + str(getattr(_ai, "server", "?")))
+            except Exception as _ae:
+                log.info("DEALDIAG account_info: " + str(_ae))
+            for _nm, _vb in _spannen:
+                try:
+                    _tot = mt5.history_deals_total(_vb, _bis)
+                except Exception as _te:
+                    _tot = "Fehler " + str(_te)
+                _r = mt5.history_deals_get(_vb, _bis)
+                log.info("DEALDIAG " + _nm + ": total=" + str(_tot) +
+                         " get=" + ("None" if _r is None else str(len(_r))) +
+                         " last_error=" + str(mt5.last_error()))
+                if _r and len(_r) > len(_dl):
+                    _dl = list(_r)
             _ziel = "Z:\\home\\alexander_lacher\\ttpub\\deals.csv"
             try:
                 os.makedirs(os.path.dirname(_ziel), exist_ok=True)
