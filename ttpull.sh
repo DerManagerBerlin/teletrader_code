@@ -12,9 +12,25 @@ LOG="$TT/bot.log"
 RESTART_CMD=""          # leer = Startweg automatisch aus /proc uebernehmen
 
 ts()  { date -u '+%Y-%m-%d %H:%M:%S,000'; }
-say() { echo "$(ts) [INFO] AUTOPATCH: $*"  >> "$LOG"; }
-err() { echo "$(ts) [ERROR] AUTOPATCH: $*" >> "$LOG"; }
+STATUS="$HOME/ttpub/status.txt"
+# Doppelt melden: bot.log wie bisher, zusaetzlich status.txt. Das
+# bot.log kann beschaedigt sein, status.txt ist klein und ehrlich.
+say() { echo "$(ts) [INFO] AUTOPATCH: $*"  >> "$LOG";
+        mkdir -p "$(dirname "$STATUS")" 2>/dev/null;
+        echo "$(date -u '+%Y-%m-%d %H:%M:%S') TTPULL $*" >> "$STATUS"; }
+err() { echo "$(ts) [ERROR] AUTOPATCH: $*" >> "$LOG";
+        mkdir -p "$(dirname "$STATUS")" 2>/dev/null;
+        echo "$(date -u '+%Y-%m-%d %H:%M:%S') TTPULL FEHLER: $*" >> "$STATUS"; }
 
+# Groessenbremse: in place kuerzen, NICHT per mv. Ein mv waehrend
+# offener Dateihandles hat bot.log heute zerloechert.
+if [ -f "$LOG" ]; then
+    _sz=$(stat -c %s "$LOG" 2>/dev/null || echo 0)
+    if [ "$_sz" -gt 83886080 ]; then
+        tail -n 20000 "$LOG" > "$LOG.kurz" 2>/dev/null && \
+          cat "$LOG.kurz" > "$LOG" && rm -f "$LOG.kurz"
+    fi
+fi
 [ -e "$TT/NO_AUTOPATCH" ] && exit 0
 [ -f "$BOT" ] || exit 0
 touch "$STATE"
@@ -42,7 +58,16 @@ while IFS= read -r LINE; do
     OUT=$(printf '%s' "$OUT" | tr '\n' ' ' | cut -c1-220)
     if [ $RC -eq 0 ] && python3 -c "import py_compile; py_compile.compile('$BOT', doraise=True)" 2>/dev/null; then
         say "$NAME angewendet - $OUT"
-        echo "$NAME" >> "$STATE"; APPLIED=1
+        echo "$NAME" >> "$STATE"
+        # Patches mit "# NO_RESTART" in den ersten 40 Zeilen fassen
+        # den laufenden Bot nicht an. Lesende Patches brauchen keinen
+        # Neustart, und jeder Neustart kostet Handelszeit und schaltet
+        # AutoTrading ab.
+        if head -40 "$TMP" 2>/dev/null | grep -q "NO_RESTART"; then
+            say "$NAME ohne Neustart (NO_RESTART)"
+        else
+            APPLIED=1
+        fi
     else
         cp -f "$BOT.autobak" "$BOT"
         err "$NAME FEHLGESCHLAGEN (rc=$RC), zurueckgerollt - $OUT"

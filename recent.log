@@ -729,3 +729,48 @@ Live-Modus bestaetigt.
 2026-10-26 20:34:14,521 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-26 20:34:14,583 [INFO] Verpasstes TRADE uebersprungen: Nachricht 20:00 ist 34.1 Min alt (> 5.0 Min) - kein Re-Fire
 2026-10-26 20:34:14,696 [INFO] ✅ Keine verpassten Signale
+2026-10-26 20:35:03,000 [INFO] AUTOPATCH: patch_101_ttpull.py angewendet - 2026-10-26 20:35:03 PATCH101 Datei: /home/alexander_lacher/ttpub/ttpull.sh 2026-10-26 20:35:03 PATCH101 geaendert: status.txt-Meldungen, Groessenbremse, NO_RESTART 2026-10-26 20:35:03 PATCH101 Gegenprobe: ok 2026-10-26 2
+2026-10-26 20:35:03,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
+2026-10-26 20:35:38,000 [INFO] AUTOPATCH: teletrader.service laeuft
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-10-26 20:37:02,943 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $886.60 EUR
+2026-10-26 20:37:02,967 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-10-26 20:37:02,991 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-10-26 20:37:03,016 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-10-26 20:37:03,034 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
+2026-10-26 20:37:03,036 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 20:37:03,040 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 20:37:03,042 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 20:37:03,048 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
+2026-10-26 20:37:03,048 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=886.6 Hebel=500 TradeAllowed=True
+2026-10-26 20:37:03,050 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4013.03 ask=4013.4 spread=3.7 Pips
+2026-10-26 20:37:03,052 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
+2026-10-26 20:37:03,053 [INFO] LIVECHECK Handel pausiert=False
+2026-10-26 20:37:03,053 [INFO] POSCHECK Balance=886.6 Equity=884.7 FreieMargin=855.97
+2026-10-26 20:37:03,054 [INFO] POSCHECK offen #422283920 XAUUSD.s BUY vol=0.01 open=4013.53 sl=4005.04 tp=4018.04 profit=-0.45 magic=88888
+2026-10-26 20:37:03,054 [INFO] POSCHECK offen #422283924 XAUUSD.s BUY vol=0.01 open=4013.56 sl=4005.04 tp=4018.04 profit=-0.47 magic=88888
+2026-10-26 20:37:03,054 [INFO] POSCHECK offen #422283926 XAUUSD.s BUY vol=0.01 open=4013.58 sl=4005.04 tp=4021.04 profit=-0.49 magic=88888
+2026-10-26 20:37:03,054 [INFO] POSCHECK offen #422283930 XAUUSD.s BUY vol=0.01 open=4013.58 sl=4005.04 tp=0.0 profit=-0.49 magic=88888
+2026-10-26 20:37:03,571 [INFO] Telegram User-Client verbunden.
+2026-10-26 20:37:03,796 [INFO] Telegram Bot-Client verbunden.
+2026-10-26 20:37:03,796 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-10-26 20:37:05,508 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-10-26 20:37:06,130 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-10-26 20:37:06,157 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 20:37:06,200 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-10-26 20:37:06,262 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-10-26 20:37:06,262 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 20:37:21,263 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-10-26 20:37:21,336 [INFO] Verpasstes TRADE uebersprungen: Nachricht 20:00 ist 37.2 Min alt (> 5.0 Min) - kein Re-Fire
+2026-10-26 20:37:21,482 [INFO] ✅ Keine verpassten Signale
+2026-10-26 20:37:22,834 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-10-26 20:37:51,486 [INFO] Equity Guardian: Start=886.6$
+2026-10-26 20:37:51,488 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
+2026-10-26 20:39:15,851 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
