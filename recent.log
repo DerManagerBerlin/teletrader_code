@@ -486,3 +486,33 @@ Live-Modus bestaetigt.
   Modus: 🟡 DEMO | Phase: 3
 ══════════════════════════════════════════════════════════
 
+2026-10-26 19:40:06,277 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $886.60 EUR
+2026-10-26 19:40:06,305 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-10-26 19:40:06,334 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-10-26 19:40:06,369 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-10-26 19:40:06,389 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
+2026-10-26 19:40:06,394 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 19:40:06,400 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 19:40:06,407 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 19:40:06,414 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
+2026-10-26 19:40:06,414 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=886.6 Hebel=500 TradeAllowed=True
+2026-10-26 19:40:06,416 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4013.39 ask=4013.71 spread=3.2 Pips
+2026-10-26 19:40:06,418 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
+2026-10-26 19:40:06,420 [INFO] LIVECHECK Handel pausiert=False
+2026-10-26 19:40:06,421 [INFO] POSCHECK Balance=886.6 Equity=886.6 FreieMargin=886.6
+2026-10-26 19:40:06,422 [INFO] POSCHECK keine offenen Positionen
+2026-10-26 19:40:06,783 [INFO] Telegram User-Client verbunden.
+2026-10-26 19:40:06,947 [INFO] Telegram Bot-Client verbunden.
+2026-10-26 19:40:06,948 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-10-26 19:40:08,091 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-10-26 19:40:08,092 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-10-26 19:40:08,156 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 19:40:08,242 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-10-26 19:40:08,300 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-10-26 19:40:08,301 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 19:40:23,302 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-10-26 19:40:23,503 [INFO] ✅ Keine verpassten Signale
+2026-10-26 19:40:24,833 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-10-26 19:40:53,506 [INFO] Equity Guardian: Start=886.6$
