@@ -341,6 +341,10 @@ class IntelligentInterpreterV2:
             "confidence": 99, "reasoning": "Pre-filter: NOISE"
         }
 
+        if os.getenv("LLM_AKTIV", "false").lower() != "true":
+            fallback["reasoning"] = "LLM aus - nur Regex-Parser"
+            return fallback
+
         self._stats["total"] += 1
 
         # ── Stage 1: Haiku pre-filter ─────────────────────────────────────────

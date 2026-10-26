@@ -6214,7 +6214,8 @@ async def main():
         _last = 0.0
         while True:
             try:
-                if os.path.exists("API_ALERT.flag"):
+                if (os.getenv("LLM_AKTIV", "false").lower() == "true"
+                        and os.path.exists("API_ALERT.flag")):
                     _now = time.time()
                     if _now - _last > 1800:
                         try:
