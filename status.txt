@@ -18,3 +18,14 @@
 2026-10-26 17:20:12 PATCH88 === systemd ===
 2026-10-26 17:20:12 PATCH88 teletrader: 4054954 | 0 | active
 2026-10-26 17:20:12 PATCH88 Dienst seit: Mon 2026-10-26 17:10:33 UTC
+2026-10-26 17:35:02 PATCH89 Platte vorher: /dev/sda1        49G   18G   30G  38% /
+2026-10-26 17:35:02 PATCH89 bot.log: 292079321 Bytes
+2026-10-26 17:35:03 PATCH89 rette letzte 20000 Zeilen: 20000 | ok
+2026-10-26 17:35:03 PATCH89 ersetzen: ok
+2026-10-26 17:35:03 PATCH89 alte Datei loeschen: ok
+2026-10-26 17:35:03 PATCH89 Platte nachher: /dev/sda1        49G   18G   30G  38% /
+2026-10-26 17:35:33 PATCH89 Neustart, damit keine alten Dateihandles bleiben: OK
+2026-10-26 17:35:38 PATCH89 LIVECHECK nach Neustart: 2026-10-26 15:47:04,930 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=937.68 Hebel=500 TradeAllowed=True
+2026-10-26 17:35:38 PATCH89 letzte Zeitmarke: 2026-10-26 15:47:04
+2026-10-26 17:35:38 PATCH89 neue Groesse: -rw-rw-r-- 1 alexander_lacher alexander_lacher 3417322 17:35:02 /home/alexander_lacher/teletrader/bot.log
+2026-10-26 17:35:38 PATCH89 Dienst: active
