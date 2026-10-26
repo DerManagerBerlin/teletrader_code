@@ -860,3 +860,48 @@ Live-Modus bestaetigt.
 2026-10-26 21:01:55,077 [INFO] ✅ Keine verpassten Signale
 2026-10-26 21:03:01,837 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
 2026-10-26 21:04:26,078 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
+2026-10-26 21:05:33,000 [INFO] AUTOPATCH: patch_104_wdcfg.py angewendet - 2026-10-26 21:05:03 PATCH104 watchdog.sh erweitert, Sicherung .bak_104 2026-10-26 21:05:03 PATCH104 Gegenprobe: ok 2026-10-26 21:05:33 PATCH104 Neustart, damit der neue Watchdog laeuft: OK Patch 104 fertig
+2026-10-26 21:05:33,000 [ERROR] AUTOPATCH: Patch angewendet, aber kein laufender Bot gefunden - Neustart noetig
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-10-26 21:07:32,421 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $886.60 EUR
+2026-10-26 21:07:32,443 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-10-26 21:07:32,468 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-10-26 21:07:32,492 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-10-26 21:07:32,502 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
+2026-10-26 21:07:32,504 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 21:07:32,506 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 21:07:32,508 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 21:07:32,515 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
+2026-10-26 21:07:32,516 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=886.6 Hebel=500 TradeAllowed=True
+2026-10-26 21:07:32,518 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4016.65 ask=4017.01 spread=3.6 Pips
+2026-10-26 21:07:32,520 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
+2026-10-26 21:07:32,522 [INFO] LIVECHECK Handel pausiert=False
+2026-10-26 21:07:32,522 [INFO] POSCHECK Balance=886.6 Equity=894.94 FreieMargin=866.21
+2026-10-26 21:07:32,524 [INFO] POSCHECK offen #422283920 XAUUSD.s BUY vol=0.01 open=4013.53 sl=4005.04 tp=4018.04 profit=2.79 magic=88888
+2026-10-26 21:07:32,525 [INFO] POSCHECK offen #422283924 XAUUSD.s BUY vol=0.01 open=4013.56 sl=4005.04 tp=4018.04 profit=2.77 magic=88888
+2026-10-26 21:07:32,525 [INFO] POSCHECK offen #422283926 XAUUSD.s BUY vol=0.01 open=4013.58 sl=4005.04 tp=4021.04 profit=2.75 magic=88888
+2026-10-26 21:07:32,525 [INFO] POSCHECK offen #422283930 XAUUSD.s BUY vol=0.01 open=4013.58 sl=4005.04 tp=0.0 profit=2.75 magic=88888
+2026-10-26 21:07:32,842 [INFO] Telegram User-Client verbunden.
+2026-10-26 21:07:33,267 [INFO] Telegram Bot-Client verbunden.
+2026-10-26 21:07:33,268 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-10-26 21:07:34,666 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-10-26 21:07:35,284 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-10-26 21:07:35,306 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 21:07:35,325 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-10-26 21:07:35,372 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-10-26 21:07:35,373 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 21:07:50,374 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-10-26 21:07:50,562 [INFO] ✅ Keine verpassten Signale
+2026-10-26 21:07:51,546 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-10-26 21:07:51,618 [INFO] Command-Queue geleert (ab Update 101322883)
+2026-10-26 21:08:20,566 [INFO] Equity Guardian: Start=886.6$
+2026-10-26 21:08:20,569 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
+2026-10-26 21:08:51,554 [INFO] Ruecksetzer #422283930 14.5-16.4p vom Hoch 40.5p (Trail 30.0p)
+2026-10-26 21:09:44,945 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
