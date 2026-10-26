@@ -1,57 +1,3 @@
-  SELL XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4022.02 | TPs: [4009.02, 4006.02, 4002.02, 3998.02]
-  Verteilung: {4009.02: 1, 0: 4}
-2026-10-23 03:20:03,676 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 8.96 (Einstieg 4013.06 statt 4014.02)
-2026-10-23 03:20:03,676 [INFO] Lot-Sizing: Balance=933.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-23 03:20:03,677 [INFO] Lot-Normalisierung XAUUSD.s: 0.008872960554642822 -> 0.01 (min 0.01, step 0.01)
-2026-10-23 03:20:03,678 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 7.99, Budget 35.44)
-2026-10-23 03:20:03,678 [INFO] Zielrisiko 3.8%: SL=8.96 -> Lot 0.05 -> 0.01 x 4 Layer = 31.96 je Signal
-2026-10-23 03:20:03,680 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4009.02) + 3 Runner (PARTIAL_AT_TP)
-2026-10-23 03:20:03,682 [INFO] Layer-Verteilung: 4 Layer = 1 Partial auf TP1 (4009.02) + 3 Runner (PARTIAL_AT_TP)
-2026-10-23 03:20:03,683 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-23 03:20:04,089 [INFO] Runner markiert #419795053 -> runners.json
-2026-10-23 03:20:04,090 [INFO] Layer 1/4 Ticket #419795053 TP=4009.02
-2026-10-23 03:20:04,092 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-23 03:20:04,500 [INFO] Runner markiert #419795054 -> runners.json
-2026-10-23 03:20:04,500 [INFO] Layer 2/4 Ticket #419795054 TP=0
-2026-10-23 03:20:04,502 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-23 03:20:04,910 [INFO] Runner markiert #419795055 -> runners.json
-2026-10-23 03:20:04,911 [INFO] Layer 3/4 Ticket #419795055 TP=0
-2026-10-23 03:20:04,912 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-23 03:20:05,322 [INFO] Runner markiert #419795056 -> runners.json
-2026-10-23 03:20:05,323 [INFO] Layer 4/4 Ticket #419795056 TP=0
-2026-10-23 03:20:05,323 [INFO] TP-Layer Map: {'tp1': [419795053], 'tp2': [419795054, 419795055, 419795056]}
-2026-10-23 03:20:05,323 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
-2026-10-23 03:20:05,332 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-23 03:20:06,324 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:20:09,368 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:20:12,577 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:20:15,590 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:20:18,603 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:20:21,619 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:20:24,635 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:20:27,653 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:20:30,667 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:20:33,681 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:20:36,696 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:20:39,709 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:20:42,726 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:20:45,752 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:20:48,796 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:20:51,810 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:20:54,823 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:20:57,845 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:21:00,876 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:21:03,904 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:21:06,930 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:21:07,365 [INFO] Ruecksetzer #419795054 6.0p vom Hoch 12.7p (Trail 30.0p)
-2026-10-23 03:21:07,368 [INFO] Ruecksetzer #419795055 6.0p vom Hoch 12.6p (Trail 30.0p)
-2026-10-23 03:21:07,371 [INFO] Ruecksetzer #419795056 6.0p vom Hoch 12.6p (Trail 30.0p)
-2026-10-23 03:21:09,949 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:21:12,965 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:21:15,966 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 03:21:17,378 [INFO] Ruecksetzer #419795054 9.5p vom Hoch 12.7p (Trail 30.0p)
-2026-10-23 03:21:17,381 [INFO] Ruecksetzer #419795055 9.5p vom Hoch 12.6p (Trail 30.0p)
 2026-10-23 03:21:17,384 [INFO] Ruecksetzer #419795056 9.5p vom Hoch 12.6p (Trail 30.0p)
 2026-10-23 03:21:18,980 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
 2026-10-23 03:21:21,995 [INFO] SL-Leiter: #419795053 hat eigenen TP1 - Leiter laesst ihn laufen
@@ -7998,3 +7944,57 @@ Live-Modus bestaetigt.
 2026-10-25 23:58:06,818 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
 2026-10-25 23:58:58,837 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
 2026-10-25 23:59:40,666 [INFO] Telethon Wakeup-Ping
+2026-10-26 00:00:02,000 [INFO] AUTOPATCH befund: XTEST: XInputExtension |     XTEST
+2026-10-26 00:00:02,000 [INFO] AUTOPATCH befund: Xvfb: Xvfb :99 -screen 0 1024x768x24
+2026-10-26 00:00:02,000 [INFO] AUTOPATCH befund: X-Hilfsprogramme: xmessage xdpyinfo xwininfo
+2026-10-26 00:00:02,000 [INFO] AUTOPATCH befund: MT5-Prozess: C:\Program Files\PU Prime MT5 Terminal\terminal64.exe
+2026-10-26 00:00:02,000 [INFO] AUTOPATCH befund: Wine-Prefix: /opt/wine-stable/lib/wine/../../bin/wineserver
+2026-10-26 00:00:02,000 [INFO] AUTOPATCH befund: MT5-Start-Einheit: teletrader.service                                                                            loaded    active   running TeleTrader Bot (Watchdog -> Xvfb + MT5 + Bot)
+2026-10-26 00:00:02,000 [INFO] AUTOPATCH befund: MT5-Startskripte: /home/alexander_lacher/autostart.sh | /home/alexander_lacher/diag.sh | /home/alexander_lacher/setup_vps.sh | /home/alexander_lacher/setup_wine.sh | /home/alexander_lacher/teletrader/algo_enabler.sh | /home/alexander_lacher/teletrader/live_setup.sh | /home/alexander_lacher/teletrader/watchdog.sh | /home/alexander_lacher/teletrader/watchdog_backup_1209.sh | /home/alexander_lacher/watchdog_(1).sh
+2026-10-26 00:00:02,000 [INFO] AUTOPATCH befund: drive_c: /home/alexander_lacher/.wine/drive_c | /home/alexander_lacher/.wine_mt5/drive_c
+2026-10-26 00:00:03,000 [INFO] AUTOPATCH befund: common.ini: (keine gefunden)
+2026-10-26 00:00:03,000 [INFO] AUTOPATCH befund: terminal.ini/Origin: /home/alexander_lacher/.wine/drive_c/Program Files/PU Prime MT5 Terminal/Config/terminal.ini
+2026-10-26 00:00:04,000 [INFO] AUTOPATCH: patch_68_befund.py angewendet - XTEST: XInputExtension |     XTEST Xvfb: Xvfb :99 -screen 0 1024x768x24 X-Hilfsprogramme: xmessage xdpyinfo xwininfo MT5-Prozess: C:\Program Files\PU Prime MT5 Terminal\terminal64.exe Wine-Prefix: /opt/wine-stable/lib/wi
+2026-10-26 00:00:04,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
+2026-10-26 00:00:39,000 [INFO] AUTOPATCH: teletrader.service laeuft
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-10-26 00:02:04,287 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $957.23 EUR
+2026-10-26 00:02:04,314 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-10-26 00:02:04,342 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-10-26 00:02:04,362 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-10-26 00:02:04,362 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=957.23 Hebel=500 TradeAllowed=True
+2026-10-26 00:02:04,363 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=3990.79 ask=3991.11 spread=3.2 Pips
+2026-10-26 00:02:04,365 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
+2026-10-26 00:02:04,366 [INFO] LIVECHECK Handel pausiert=False
+2026-10-26 00:02:04,487 [INFO] Connecting to 149.154.167.51:443/TcpFull...
+2026-10-26 00:02:04,503 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
+2026-10-26 00:02:04,934 [INFO] Telegram User-Client verbunden.
+2026-10-26 00:02:04,940 [INFO] Connecting to 149.154.167.51:443/TcpFull...
+2026-10-26 00:02:04,951 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
+2026-10-26 00:02:05,077 [INFO] Telegram Bot-Client verbunden.
+2026-10-26 00:02:05,078 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-10-26 00:02:07,523 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-10-26 00:02:08,867 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-10-26 00:02:08,904 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 00:02:08,933 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-10-26 00:02:09,032 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-10-26 00:02:09,033 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 00:02:24,033 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-10-26 00:02:24,092 [INFO] Nachholen vorgemerkt: XAUUSD SELL Entry 3997.34 (Markt 78.6 Pips weg, Fenster 18.0)
+2026-10-26 00:02:24,218 [INFO] ✅ Keine verpassten Signale
+2026-10-26 00:02:24,223 [INFO] Nachholen verworfen: XAUUSD.s SELL TP1 3992.34 schon durchlaufen
+2026-10-26 00:02:25,276 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-10-26 00:02:27,913 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP2 HIT! +80 PIPS 💰'
+2026-10-26 00:02:27,915 [INFO] Kanal meldet TP2 - Leiter darf die Stufe ohne eigenen Kursdruck setzen
+2026-10-26 00:02:27,918 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-10-26 00:02:28,528 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-26 00:02:54,222 [INFO] Equity Guardian: Start=957.23$
+2026-10-26 00:02:54,225 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
+2026-10-26 00:04:18,405 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
