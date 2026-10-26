@@ -804,3 +804,7 @@ Live-Modus bestaetigt.
 AUTO_CONFIRM_LIVE=true – Autostart
 Live-Modus bestaetigt.
 
+2026-10-26 20:54:59,512 [ERROR] MT5 Parameter-Login fehlgeschlagen: (-10005, 'IPC timeout')
+2026-10-26 20:54:59,517 [ERROR] MT5 Fehler: (-10005, 'IPC timeout')
+2026-10-26 20:54:59,528 [ERROR] SELBSTHEILUNG: Live-Login gescheitert: (-10005, 'IPC timeout') -> DEMO_MODE=true gesetzt. Naechster Start laeuft auf dem Demokonto, danach ist /live wieder moeglich.
+❌ MT5 Verbindung fehlgeschlagen.
