@@ -138,6 +138,11 @@ for _h in logging.getLogger().handlers:
 for _lname in ('httpx', 'httpcore', 'telegram'):
     logging.getLogger(_lname).addFilter(_tok_filter)
 logging.getLogger().addFilter(_tok_filter)
+# LOGRUHE (Patch 91): Die Telegram-Abfrage schrieb alle 6 Sekunden
+# eine Erfolgszeile. Das hat bot.log auf 292 MB getrieben. Fehler
+# bleiben sichtbar, nur der Normalfall schweigt jetzt.
+for _lname in ('httpx', 'httpcore', 'telegram', 'telethon'):
+    logging.getLogger(_lname).setLevel(logging.WARNING)
 # --- END token redaction ---
 
 log = logging.getLogger("TeleTrader")

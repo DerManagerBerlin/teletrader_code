@@ -48,3 +48,12 @@ grep: /home/alexander_lacher/teletrader/bot.log:
 2026-10-26 17:45:03 PATCH90 TAIL 2026-10-26 17:44:49,167 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=0&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
 2026-10-26 17:45:03 PATCH90 TAIL 2026-10-26 17:44:55,505 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=0&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
 2026-10-26 17:45:03 PATCH90 TAIL 2026-10-26 17:45:01,895 [INFO] HTTP Request: GET https://api.telegram.org/bot***REDACTED***/getUpdates?offset=0&timeout=3&allowed_updates=message "HTTP/1.1 200 OK"
+2026-10-26 17:55:03 PATCH91 Logruhe eingebaut, Syntax ok
+2026-10-26 17:55:03 PATCH91 altes Log: -rw-rw-r-- 1 alexander_lacher alexander_lacher 3451501 17:54:58 /home/alexander_lacher/teletrader/bot.log
+2026-10-26 17:55:03 PATCH91 leeren: ok
+2026-10-26 17:55:33 PATCH91 Neustart: OK
+2026-10-26 17:57:04 PATCH91 LIVECHECK neu: 2026-10-26 17:57:01,652 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=909.79 Hebel=500 TradeAllowed=True
+2026-10-26 17:57:04 PATCH91 POSCHECK: 2026-10-26 17:57:01,659 [INFO] POSCHECK offen #422205620 XAUUSD.s BUY vol=0.01 open=4022.69 sl=4016.19 tp=4032.19 profit=-1.31 magic=88888 | 2026-10-26 17:57:01,659 [INFO] POSCHECK offen #422205626 XAUUSD.s BUY vol=0.01 open=4022.67 sl=4016.19 tp=0.0
+2026-10-26 17:57:04 PATCH91 Groesse jetzt: -rw-rw-r-- 1 alexander_lacher alexander_lacher 2522 17:57:02 /home/alexander_lacher/teletrader/bot.log
+2026-10-26 17:57:04 PATCH91 getUpdates-Zeilen: 0 | 0
+2026-10-26 17:57:04 PATCH91 Dienst: active
