@@ -2018,6 +2018,29 @@ def connect_mt5() -> bool:
                 except Exception as _se:
                     log.error("LIVECHECK " + str(_sym) + " Fehler: " + str(_se))
             log.info("LIVECHECK Handel pausiert=" + str(is_trading_paused()))
+            try:  # POSCHECK
+                _eq = getattr(info, "equity", None)
+                _fm = getattr(info, "margin_free", None)
+                log.info("POSCHECK Balance=" + str(round(info.balance, 2)) +
+                         " Equity=" + (str(round(_eq, 2)) if _eq is not None else "?") +
+                         " FreieMargin=" + (str(round(_fm, 2)) if _fm is not None else "?"))
+                _ps = mt5.positions_get() or []
+                if not _ps:
+                    log.info("POSCHECK keine offenen Positionen")
+                for _p in _ps[:12]:
+                    log.info("POSCHECK offen #" + str(_p.ticket) +
+                             " " + str(_p.symbol) +
+                             " " + ("BUY" if _p.type == 0 else "SELL") +
+                             " vol=" + str(_p.volume) +
+                             " open=" + str(_p.price_open) +
+                             " sl=" + str(_p.sl) + " tp=" + str(_p.tp) +
+                             " profit=" + str(round(_p.profit, 2)) +
+                             " magic=" + str(_p.magic))
+                _os_ = mt5.orders_get() or []
+                if _os_:
+                    log.info("POSCHECK " + str(len(_os_)) + " offene Auftraege")
+            except Exception as _pe:
+                log.error("POSCHECK Fehler: " + str(_pe))
         except Exception as _e:
             log.error("LIVECHECK Fehler: " + str(_e))
     return True
