@@ -430,6 +430,30 @@ def calculate_layers(balance: float, channel: str = "", is_backup: bool = False)
     elif is_backup and not is_ghp:
         log.info("Backup-Flag ignoriert: nur GHP erhaelt doppeltes Lot")
 
+    try:  # KONTOSTANDREIHE - eine Zeile je Trade fuer das Briefing
+        _kr = "Z:\\home\\alexander_lacher\\ttpub\\kontostand.csv"
+        _letzt = None
+        if os.path.exists(_kr):
+            try:
+                with open(_kr, "r", encoding="utf-8") as _fh:
+                    _zz = [z for z in _fh.read().splitlines() if z.strip()]
+                if len(_zz) > 1:
+                    _letzt = _zz[-1].split(";")[1]
+            except Exception:
+                _letzt = None
+        else:
+            try:
+                with open(_kr, "w", encoding="utf-8") as _fh:
+                    _fh.write("zeit;balance;kanal\n")
+            except Exception:
+                pass
+        _jetzt = str(round(balance, 2))
+        if _jetzt != _letzt:
+            with open(_kr, "a", encoding="utf-8") as _fh:
+                _fh.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S") +
+                          ";" + _jetzt + ";" + str(channel)[:40] + "\n")
+    except Exception:
+        pass
     log.info("Lot-Sizing: Balance=" + str(round(balance, 0)) + "$" +
              "  Lot=" + str(lot_per_layer) + "  Kanal=" + str(channel[:12]))
     return num_layers, lot_per_layer
