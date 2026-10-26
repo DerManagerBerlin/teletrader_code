@@ -4,3 +4,17 @@
 2026-10-26 17:10:33 PATCH87 Neustart: OK
 2026-10-26 17:10:39 PATCH87 DEMO steht: 2026-10-26 15:17:04,080 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=926.37 Hebel=500 TradeAllowed=True
 2026-10-26 17:10:39 PATCH87 Dienst: active
+2026-10-26 17:20:02 PATCH88 === Prozesse ===
+2026-10-26 17:20:02 PATCH88 PS 4055149 Mon Oct 26 17:10:54 2026     547 C:\Program Files\Python311\python.exe -X utf8 teletrader_v2.py
+2026-10-26 17:20:02 PATCH88 Anzahl Bot-Prozesse: 1
+2026-10-26 17:20:02 PATCH88 terminal64: 4055067     562 C:\Program Files\PU Prime MT5 Terminal\terminal64.exe
+2026-10-26 17:20:02 PATCH88 Xvfb: 4054979     568 Xvfb :99 -screen 0 1024x768x24
+2026-10-26 17:20:02 PATCH88 watchdog: 4054954     569 /bin/bash /home/alexander_lacher/teletrader/watchdog.sh
+2026-10-26 17:20:02 PATCH88 === bot.log ===
+2026-10-26 17:20:02 PATCH88 Groesse/Zeit: -rw-rw-r-- 1 alexander_lacher alexander_lacher 292055759 17:20:00 /home/alexander_lacher/teletrader/bot.log
+2026-10-26 17:20:11 PATCH88 letzte Zeitmarke: 2026-10-26 15:19:46
+2026-10-26 17:20:11 PATCH88 offene Schreiber: (lsof fehlt)
+2026-10-26 17:20:12 PATCH88 Prozesse mit bot.log offen: 4054993(/opt/wine-stable/lib/wine/../../bin/wine) 4055146(start.exe /exec /home/alexander_lacher/.) 4055149(C:\Program Files\Python311\python.exe -X)
+2026-10-26 17:20:12 PATCH88 === systemd ===
+2026-10-26 17:20:12 PATCH88 teletrader: 4054954 | 0 | active
+2026-10-26 17:20:12 PATCH88 Dienst seit: Mon 2026-10-26 17:10:33 UTC
