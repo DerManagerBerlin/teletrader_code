@@ -1870,9 +1870,28 @@ def connect_mt5() -> bool:
             mt5.shutdown()
     # 2) Nur wenn kein oder falsches Konto anliegt: expliziter Login
     if not _ok:
-        _ok = mt5.initialize(login=MT5_LOGIN, password=MT5_PASSWORD, server=MT5_SERVER)
+        _ok = mt5.initialize(login=MT5_LOGIN, password=MT5_PASSWORD,
+                             server=MT5_SERVER, timeout=180000)
         if not _ok:
-            log.error('MT5 Parameter-Login fehlgeschlagen: %s', mt5.last_error())
+            # PATCH78: Ein IPC-Timeout heisst nicht, dass der Login
+            # scheiterte. Nachsehen, ob das Konto trotzdem steht.
+            # Kein zweiter Anmeldeversuch, nur ein Blick.
+            _fehler = mt5.last_error()
+            try:
+                import time as _t78
+                _t78.sleep(10)
+                if mt5.initialize():
+                    _nach = mt5.account_info()
+                    if _nach and int(_nach.login) == int(MT5_LOGIN):
+                        _ok = True
+                        log.info('MT5: Login lag nur am IPC-Timeout, Konto %s steht', _nach.login)
+                    else:
+                        log.warning('MT5: nach Timeout weiterhin Konto %s',
+                                    getattr(_nach, 'login', None))
+            except Exception as _e78:
+                log.warning('MT5 Nachkontrolle: %s', _e78)
+        if not _ok:
+            log.error('MT5 Parameter-Login fehlgeschlagen: %s', _fehler)
             if not DEMO_MODE:
                 _login_fail_note()            # PATCH56
     if not _ok:
@@ -4188,9 +4207,18 @@ async def handle_phase_command(text: str) -> bool:
                 icon + " Wechsle zu " + mode + "\n"
                 "Bot wird neu gestartet..."
             )
-            # Watchdog übernimmt Neustart – kein execv unter Wine
-            import os as _os, signal as _sig
-            _os.kill(_os.getpid(), _sig.SIGTERM)
+            # PATCH78: Nicht nur den Bot beenden. Das Terminal muss
+            # mit neu starten, sonst bleibt es auf dem alten Konto und
+            # AutoTrading bleibt aus (MT5 schaltet es beim Kontowechsel
+            # selbst ab). Der Linux-Watcher erledigt beides.
+            try:
+                with open('/home/alexander_lacher/teletrader/TERMINAL_RESTART_REQUEST', 'w', encoding='utf-8') as _rf:
+                    _rf.write(datetime.now().isoformat() + '\n')
+                log.info('Terminal-Neustart angefordert (Kontowechsel)')
+            except Exception as _re:
+                log.error('Neustart-Flagge nicht schreibbar: %s', _re)
+                import os as _os, signal as _sig
+                _os.kill(_os.getpid(), _sig.SIGTERM)
         except Exception as e:
             await send_notification("Fehler beim Wechsel: " + str(e))
         return True
@@ -4201,19 +4229,18 @@ async def handle_phase_command(text: str) -> bool:
             if tinfo and tinfo.trade_allowed:
                 await send_notification("Algo Trading ist bereits aktiv")
             else:
-                ok = False
-                for _versuch in range(3):
-                    if await _enable_algo_trading_via_gui():
-                        ok = True
-                        break
-                    await asyncio.sleep(2)
-                if ok:
-                    await send_notification("Algo Trading aktiviert")
-                else:
+                # PATCH78: Tastendruecke erreichen Wine nicht. Der
+                # wirksame Weg ist [Experts] Enabled=1 plus Neustart
+                # des Terminals, erledigt vom Linux-Watcher.
+                try:
+                    with open('/home/alexander_lacher/teletrader/TERMINAL_RESTART_REQUEST', 'w', encoding='utf-8') as _rf:
+                        _rf.write(datetime.now().isoformat() + '\n')
                     await send_notification(
-                        "Algo Trading konnte nicht aktiviert werden.\n"
-                        "Bitte in MT5 manuell aktivieren (gruener Button oben)."
-                    )
+                        "Algo Trading wird gesetzt.\n"
+                        "Terminal startet neu, das dauert etwa eine Minute.")
+                except Exception as _ae:
+                    await send_notification("Anforderung fehlgeschlagen: "
+                                            + str(_ae))
         except Exception as e:
             await send_notification("Fehler: " + str(e))
         return True
