@@ -208,3 +208,49 @@ Live-Modus bestaetigt.
 2026-10-26 18:57:28,436 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
 2026-10-26 18:58:20,441 [INFO] Telethon Wakeup-Ping
 2026-10-26 18:58:52,502 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
+2026-10-26 19:00:16,553 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
+2026-10-26 19:00:45,000 [INFO] AUTOPATCH: patch_93_vnc.py angewendet - 2026-10-26 19:00:02 PATCH93 x11vnc vorhanden: /usr/bin/x11vnc 2026-10-26 19:00:02 PATCH93 laeuft schon: nein 2026-10-26 19:00:42 PATCH93 starte: Fehler: Command '['bash', '-lc', 'cd /home/alexander_lacher && DISPLAY=:99 
+2026-10-26 19:00:45,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
+2026-10-26 19:01:20,000 [INFO] AUTOPATCH: teletrader.service laeuft
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-10-26 19:02:46,161 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $886.60 EUR
+2026-10-26 19:02:46,192 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-10-26 19:02:46,225 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-10-26 19:02:46,252 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-10-26 19:02:46,270 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
+2026-10-26 19:02:46,274 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 19:02:46,277 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 19:02:46,280 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
+2026-10-26 19:02:46,289 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
+2026-10-26 19:02:46,290 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=886.6 Hebel=500 TradeAllowed=True
+2026-10-26 19:02:46,293 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4009.74 ask=4010.06 spread=3.2 Pips
+2026-10-26 19:02:46,295 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
+2026-10-26 19:02:46,296 [INFO] LIVECHECK Handel pausiert=False
+2026-10-26 19:02:46,296 [INFO] POSCHECK Balance=886.6 Equity=886.6 FreieMargin=886.6
+2026-10-26 19:02:46,298 [INFO] POSCHECK keine offenen Positionen
+2026-10-26 19:02:46,637 [INFO] Telegram User-Client verbunden.
+2026-10-26 19:02:46,843 [INFO] Telegram Bot-Client verbunden.
+2026-10-26 19:02:46,844 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-10-26 19:02:47,895 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-10-26 19:02:47,895 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-10-26 19:02:47,944 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 19:02:47,970 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-10-26 19:02:48,108 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-10-26 19:02:48,109 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-26 19:03:03,110 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-10-26 19:03:03,304 [INFO] ✅ Keine verpassten Signale
+2026-10-26 19:03:04,710 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-10-26 19:03:18,952 [INFO] Befehl empfangen: /algotrading
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
