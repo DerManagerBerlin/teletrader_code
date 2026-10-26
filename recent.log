@@ -1,136 +1,3 @@
-2026-10-23 05:32:21,561 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-23 05:32:22,177 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-23 05:32:24,536 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-23 05:32:24,582 [INFO] Nachholen vorgemerkt: XAUUSD BUY Entry 4009.02 (Markt 128.3 Pips weg, Fenster 18.0)
-2026-10-23 05:32:24,641 [INFO] ✅ Keine verpassten Signale
-2026-10-23 05:32:34,088 [INFO] Nachholen verworfen: XAUUSD.s BUY TP1 4014.02 schon durchlaufen
-2026-10-23 05:38:33,864 [INFO] Telethon Wakeup-Ping
-2026-10-23 05:41:03,303 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP4 HIT! +160 PIPS 💰'
-2026-10-23 05:41:03,305 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-23 05:41:03,929 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-23 05:42:03,373 [INFO] Got difference for channel 1235349100 updates
-2026-10-23 05:42:24,643 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-23 05:42:24,703 [INFO] Nachholen vorgemerkt: XAUUSD BUY Entry 4009.02 (Markt 192.2 Pips weg, Fenster 18.0)
-2026-10-23 05:42:24,746 [INFO] ✅ Keine verpassten Signale
-2026-10-23 05:42:24,791 [INFO] Nachholen verworfen: XAUUSD.s BUY TP1 4014.02 schon durchlaufen
-2026-10-23 05:46:12,071 [WARNING] Server closed the connection: [WinError 64] Network name deleted
-2026-10-23 05:46:12,072 [INFO] Connection closed while receiving data: [WinError 64] Network name deleted
-2026-10-23 05:46:12,073 [INFO] Closing current connection to begin reconnect...
-2026-10-23 05:46:12,073 [INFO] Connecting to 149.154.167.51:443/TcpFull...
-2026-10-23 05:46:12,075 [INFO] <class 'ConnectionResetError'> during disconnect: [WinError 64] Network name deleted
-2026-10-23 05:46:12,083 [INFO] Connection to 149.154.167.51:443/TcpFull complete!
-2026-10-23 05:48:34,195 [INFO] Telethon Wakeup-Ping
-2026-10-23 05:52:24,747 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-23 05:52:24,844 [INFO] ✅ Keine verpassten Signale
-2026-10-23 05:58:34,391 [INFO] Telethon Wakeup-Ping
-2026-10-23 06:02:24,848 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-23 06:02:24,940 [INFO] ✅ Keine verpassten Signale
-2026-10-23 06:08:34,707 [INFO] Telethon Wakeup-Ping
-2026-10-23 06:12:24,942 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-23 06:12:25,043 [INFO] ✅ Keine verpassten Signale
-2026-10-23 06:18:34,915 [INFO] Telethon Wakeup-Ping
-2026-10-23 06:22:25,046 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-23 06:22:25,133 [INFO] ✅ Keine verpassten Signale
-2026-10-23 06:28:35,169 [INFO] Telethon Wakeup-Ping
-2026-10-23 06:30:16,305 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4015.7'
-2026-10-23 06:30:16,312 [INFO] Lot-Sizing: Balance=955.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-23 06:30:16,313 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4010.79) + 4 Runner (PARTIAL_AT_TP)
-
-⚡ SIGNAL [06:30:16] aus: XAUUSD SCALPING ⚡️
-  SELL XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4023.79 | TPs: [4010.79, 4007.79, 4003.79, 3999.79]
-  Verteilung: {4010.79: 1, 0: 4}
-2026-10-23 06:30:16,314 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 8.12 (Einstieg 4015.67 statt 4015.79)
-2026-10-23 06:30:16,315 [INFO] Lot-Sizing: Balance=955.0$  Lot=0.05  Kanal=XAUUSD SCALP
-2026-10-23 06:30:16,316 [INFO] Lot-Normalisierung XAUUSD.s: 0.010023213688670088 -> 0.01 (min 0.01, step 0.01)
-2026-10-23 06:30:16,317 [INFO] Zielrisiko 3.8%: SL=8.12 -> Lot 0.05 -> 0.01 x 5 Layer = 36.2 je Signal
-2026-10-23 06:30:16,320 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4010.79) + 4 Runner (PARTIAL_AT_TP)
-2026-10-23 06:30:16,323 [INFO] Layer-Verteilung: 5 Layer = 1 Partial auf TP1 (4010.79) + 4 Runner (PARTIAL_AT_TP)
-2026-10-23 06:30:16,325 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-23 06:30:16,755 [INFO] Runner markiert #419948603 -> runners.json
-2026-10-23 06:30:16,756 [INFO] Layer 1/5 Ticket #419948603 TP=4010.79
-2026-10-23 06:30:16,758 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-23 06:30:17,168 [INFO] Runner markiert #419948611 -> runners.json
-2026-10-23 06:30:17,170 [INFO] Layer 2/5 Ticket #419948611 TP=0
-2026-10-23 06:30:17,174 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-23 06:30:17,595 [INFO] Runner markiert #419948617 -> runners.json
-2026-10-23 06:30:17,595 [INFO] Layer 3/5 Ticket #419948617 TP=0
-2026-10-23 06:30:17,598 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-23 06:30:18,009 [INFO] Runner markiert #419948621 -> runners.json
-2026-10-23 06:30:18,010 [INFO] Layer 4/5 Ticket #419948621 TP=0
-2026-10-23 06:30:18,013 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-23 06:30:18,428 [INFO] Runner markiert #419948627 -> runners.json
-2026-10-23 06:30:18,429 [INFO] Layer 5/5 Ticket #419948627 TP=0
-2026-10-23 06:30:18,430 [INFO] TP-Layer Map: {'tp1': [419948603], 'tp2': [419948611, 419948617, 419948621, 419948627]}
-2026-10-23 06:30:18,430 [INFO] Phase 3: Auto-Trade XAUUSD.s | 5 Tickets
-2026-10-23 06:30:18,477 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:30:18,525 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-23 06:30:21,519 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:30:24,534 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:30:27,560 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:30:30,588 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:30:33,609 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:30:36,629 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:30:39,649 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:30:42,675 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:30:45,695 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:30:48,742 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:30:51,806 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:30:54,841 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:30:57,867 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:00,916 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:03,982 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:07,005 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:08,624 [INFO] Ruecksetzer #419948611 4.6p vom Hoch 0.0p (Trail 30.0p)
-2026-10-23 06:31:08,628 [INFO] Ruecksetzer #419948617 4.6p vom Hoch 0.1p (Trail 30.0p)
-2026-10-23 06:31:08,633 [INFO] Ruecksetzer #419948621 4.6p vom Hoch 0.0p (Trail 30.0p)
-2026-10-23 06:31:08,640 [INFO] Ruecksetzer #419948627 4.6p vom Hoch 1.5p (Trail 30.0p)
-2026-10-23 06:31:10,028 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:13,049 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:16,083 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:19,113 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:22,134 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:25,199 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:28,317 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:28,672 [INFO] Ruecksetzer #419948611 11.8p vom Hoch 7.2p (Trail 30.0p)
-2026-10-23 06:31:28,676 [INFO] Ruecksetzer #419948617 11.8p vom Hoch 7.3p (Trail 30.0p)
-2026-10-23 06:31:28,681 [INFO] Ruecksetzer #419948621 11.8p vom Hoch 7.2p (Trail 30.0p)
-2026-10-23 06:31:28,686 [INFO] Ruecksetzer #419948627 11.8p vom Hoch 8.7p (Trail 30.0p)
-2026-10-23 06:31:31,349 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:34,367 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:37,384 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:40,411 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:43,433 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:46,453 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:49,472 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:52,494 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:55,512 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:31:58,760 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:32:01,787 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:32:04,808 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:32:07,836 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:32:08,796 [INFO] Ruecksetzer #419948611 16.5p vom Hoch 7.2p (Trail 30.0p)
-2026-10-23 06:32:08,801 [INFO] Ruecksetzer #419948617 16.5p vom Hoch 7.3p (Trail 30.0p)
-2026-10-23 06:32:08,806 [INFO] Ruecksetzer #419948621 16.5p vom Hoch 7.2p (Trail 30.0p)
-2026-10-23 06:32:08,809 [INFO] Ruecksetzer #419948627 16.5p vom Hoch 8.7p (Trail 30.0p)
-2026-10-23 06:32:10,866 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:32:13,886 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:32:16,904 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:32:19,920 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:32:22,945 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:32:25,137 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-23 06:32:25,308 [INFO] Scalp: besserer Einstieg als im Signal (3.9 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-23 06:32:25,308 [INFO] Verpasstes Signal ausfuehren [XAUUSD SCALPING ⚡️] 06:30: TRADE conf=99%
-2026-10-23 06:32:25,309 [INFO] Verpasstes Signal uebersprungen: bereits 5 Position(en) offen
-2026-10-23 06:32:25,964 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:32:28,980 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:32:31,997 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:32:35,012 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:32:38,030 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:32:41,050 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:32:44,071 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:32:47,090 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-23 06:32:50,090 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
 2026-10-23 06:32:53,100 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
 2026-10-23 06:32:56,133 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
 2026-10-23 06:32:59,164 [INFO] SL-Leiter: #419948603 hat eigenen TP1 - Leiter laesst ihn laufen
@@ -7998,3 +7865,136 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
 For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
 2026-10-26 09:49:01,123 [INFO] ✅ Keine verpassten Signale
 2026-10-26 09:54:40,278 [INFO] Telethon Wakeup-Ping
+2026-10-26 09:55:58,491 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'Moh 🔥🔥🔥🔥\n\nIttttt massive 💪🔥'
+2026-10-26 09:55:58,502 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'YOUR ANALYSIS ARE THE BESTTT WHAT A SNIPER TRADEEEE'
+2026-10-26 09:55:58,536 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'Ur a Legend Mo....Respect'
+2026-10-26 09:55:58,540 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'I love Mo bro 🤍🤍🥷🏽🔥'
+2026-10-26 09:55:58,562 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'Gtmo the xauusd menace 🦁🦁🦁🦁very glad to be in your winning c'
+2026-10-26 09:55:58,933 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:55:58,937 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 09:55:58,942 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 09:55:58,964 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:55:58,968 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 09:55:58,975 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 09:55:58,985 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:55:58,995 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 09:55:59,005 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 09:55:59,009 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:55:59,013 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 09:55:59,020 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 09:55:59,025 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:55:59,029 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 09:55:59,037 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 09:55:59,154 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:55:59,157 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 09:55:59,158 [INFO] 🔇 NOISE: Pre-filter: NOISE
+2026-10-26 09:55:59,172 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:55:59,176 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 09:55:59,177 [INFO] 🔇 NOISE: Pre-filter: NOISE
+2026-10-26 09:55:59,210 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:55:59,217 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 09:55:59,218 [INFO] 🔇 NOISE: Pre-filter: NOISE
+2026-10-26 09:55:59,223 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:55:59,227 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 09:55:59,228 [INFO] 🔇 NOISE: Pre-filter: NOISE
+2026-10-26 09:55:59,233 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:55:59,239 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 09:55:59,239 [INFO] 🔇 NOISE: Pre-filter: NOISE
+2026-10-26 09:58:40,417 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'Looks like the team is up ?'
+2026-10-26 09:58:40,667 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:58:40,682 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 09:58:40,695 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 09:58:41,468 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:58:41,514 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 09:58:41,515 [INFO] 🔇 NOISE: Pre-filter: NOISE
+2026-10-26 09:59:01,125 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-26 09:59:01,574 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:01,577 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 09:59:01,582 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 09:59:01,793 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:01,801 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 09:59:01,995 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:01,997 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 09:59:02,002 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 09:59:02,194 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:02,198 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 09:59:02,394 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:02,396 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 09:59:02,401 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 09:59:02,595 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:02,598 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 09:59:02,797 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:02,800 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 09:59:02,806 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 09:59:03,001 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:03,005 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 09:59:03,218 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:03,221 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 09:59:03,227 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 09:59:03,422 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:03,426 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 09:59:03,637 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:03,644 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 09:59:03,656 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 09:59:03,852 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:03,854 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 09:59:04,070 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:04,073 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 09:59:04,082 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 09:59:04,298 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:04,301 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 09:59:04,524 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:04,527 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 09:59:04,533 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 09:59:04,733 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:04,736 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 09:59:04,926 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:04,928 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 09:59:04,933 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 09:59:05,135 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:05,139 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 09:59:05,359 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:05,365 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 09:59:05,376 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 09:59:05,573 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:05,577 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 09:59:05,773 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:05,777 [WARNING] Prefilter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400 - treating as RELEVANT
+2026-10-26 09:59:05,783 [INFO] Signal-Library geladen: Z:\home\alexander_lacher\teletrader\signal_examples.json
+2026-10-26 09:59:05,986 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-10-26 09:59:05,988 [ERROR] V2 interpreter error: Client error '400 Bad Request' for url 'https://api.anthropic.com/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-10-26 09:59:05,989 [INFO] ✅ Keine verpassten Signale
