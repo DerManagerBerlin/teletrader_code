@@ -911,9 +911,24 @@ def parse_scalp_signal(text: str) -> dict:
     if not _raw_sym:
         return _noise("kein Instrument im Kopf")
     if _raw_sym not in _SCALP_SYMS:
-        return _noise("unbekanntes Instrument '" + _raw_sym +
-                      "' - in _SCALP_SYMS ergaenzen")
-    symbol = _SCALP_SYMS[_raw_sym]
+        # KOPFSUCHE (Patch 111): Fuellwoerter wie in "ICH GEHE JETZT BUY"
+        # haben den Parser auf "jetzt" gelenkt. Die Richtung bleibt am
+        # strengen Muster, nur das Instrument darf aus dem Kopf kommen,
+        # und nur wenn dort genau eines vorkommt.
+        _kopf = t[:140].lower()
+        _treffer = set()
+        for _k, _v in _SCALP_SYMS.items():
+            if re.search(r"\b" + re.escape(_k) + r"\b", _kopf):
+                _treffer.add(_v)
+        if len(_treffer) == 1:
+            symbol = _treffer.pop()
+            log.info("Instrument aus dem Kopf gelesen: " + symbol +
+                     " (direkt vor BUY/SELL stand '" + str(_raw_sym) + "')")
+        else:
+            return _noise("unbekanntes Instrument '" + _raw_sym +
+                          "', Kopf ergab " + str(len(_treffer)) + " Treffer")
+    else:
+        symbol = _SCALP_SYMS[_raw_sym]
 
     # Trenner zwischen Label und Zahl: ":", Pfeil-Emoji, Sternchen, Leerzeichen.
     # Bewusst ohne Zeilenumbruch, damit "TP4 -> OPEN" nicht die naechste Zahl greift.
@@ -2003,6 +2018,16 @@ def connect_mt5() -> bool:
                         if not mt5.symbol_select(_sym, True):
                             log.error("LIVECHECK " + str(_sym) +
                                       " NICHT VERFUEGBAR - Symbolname pruefen")
+                            try:  # Patch 111: passende Namen zeigen
+                                _basis = str(_sym)[:3].upper()
+                                _alle = mt5.symbols_get() or []
+                                _pass = [s.name for s in _alle
+                                         if _basis in s.name.upper()][:12]
+                                log.error("LIVECHECK Kandidaten fuer " +
+                                          _basis + ": " + (", ".join(_pass)
+                                          or "(keine)"))
+                            except Exception as _ke:
+                                log.error("LIVECHECK Kandidatensuche: " + str(_ke))
                             continue
                         _si = mt5.symbol_info(_sym)
                     if _si is None:

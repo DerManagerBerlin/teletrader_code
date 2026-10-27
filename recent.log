@@ -2374,3 +2374,58 @@ Set breakeven now🤑🤑**
 2026-10-27 15:41:58,527 [INFO] Telethon Wakeup-Ping
 2026-10-27 15:45:46,414 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-27 15:45:46,792 [INFO] ✅ Keine verpassten Signale
+2026-10-27 15:50:03,000 [INFO] AUTOPATCH: patch_111_btc.py angewendet - 2026-10-27 15:50:03 PATCH111 fertig: Kopfsuche fuer Instrument, doppelte Zuweisung entfernt, BTC-Kandidaten auflisten Patch 111 fertig
+2026-10-27 15:50:03,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
+2026-10-27 15:50:38,000 [INFO] AUTOPATCH: teletrader.service laeuft
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-10-27 15:52:10,314 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $810.80 EUR
+2026-10-27 15:52:10,361 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-10-27 15:52:10,409 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-10-27 15:52:10,460 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-10-27 15:52:10,487 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
+2026-10-27 15:52:10,492 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
+2026-10-27 15:52:10,495 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
+2026-10-27 15:52:10,498 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
+2026-10-27 15:52:10,505 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
+2026-10-27 15:52:10,506 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=810.8 Hebel=500 TradeAllowed=True
+2026-10-27 15:52:10,509 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4062.66 ask=4062.98 spread=3.2 Pips
+2026-10-27 15:52:10,512 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
+2026-10-27 15:52:10,802 [ERROR] LIVECHECK Kandidaten fuer BTC: BTCUSD, BTCEUR, BTCBCH, BTCETH, BTCLTC, BTCJPY, BTCO, GBTC, BTCXAU
+2026-10-27 15:52:10,804 [INFO] LIVECHECK Handel pausiert=False
+2026-10-27 15:52:10,806 [INFO] POSCHECK Balance=810.8 Equity=810.8 FreieMargin=810.8
+2026-10-27 15:52:10,807 [INFO] POSCHECK keine offenen Positionen
+2026-10-27 15:52:11,338 [INFO] Telegram User-Client verbunden.
+2026-10-27 15:52:11,590 [INFO] Telegram Bot-Client verbunden.
+2026-10-27 15:52:11,592 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-10-27 15:52:13,455 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-10-27 15:52:14,056 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-10-27 15:52:14,159 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-27 15:52:14,250 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-10-27 15:52:14,318 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-10-27 15:52:14,318 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-27 15:52:29,319 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-10-27 15:52:29,433 [INFO] Instrument aus dem Kopf gelesen: BTCUSD (direkt vor BUY/SELL stand 'jetzt')
+2026-10-27 15:52:29,443 [INFO] Nachholen vorgemerkt: BTCUSD BUY Entry 80546.64 (Markt 110.0% der SL-Distanz weg)
+2026-10-27 15:52:29,445 [INFO] Instrument aus dem Kopf gelesen: BTCUSD (direkt vor BUY/SELL stand 'jetzt')
+2026-10-27 15:52:29,446 [INFO] Verpasstes Signal ausfuehren [BTC SCALPING⚡️] 15:50: TRADE conf=99%
+2026-10-27 15:52:29,448 [INFO] Verpasstes Limit-Signal: BUY @ 80622.78 (Markt=80661.6) → als Pending setzen
+2026-10-27 15:52:29,450 [INFO] SL-Distanz vom Markt statt vom Signal: 120.0 -> 175.91 (Einstieg 80678.69 statt 80622.78)
+2026-10-27 15:52:29,459 [INFO] Lot-Sizing: Balance=811.0$  Lot=0.04  Kanal=BTC SCALPING
+2026-10-27 15:52:29,460 [INFO] Lot-Normalisierung BTCUSD: 0.05136695241884952 -> 0.05 (min 0.01, step 0.01)
+2026-10-27 15:52:29,461 [INFO] Zielrisiko 1.0%: SL=175.91 -> Lot 0.04 -> 0.05 x 1 Layer = 7.89 je Signal
+2026-10-27 15:52:29,462 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-10-27 15:52:29,465 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-10-27 15:52:29,874 [INFO] Runner markiert #423431540 -> runners.json
+2026-10-27 15:52:29,875 [INFO] Layer 1/1 Ticket #423431540 TP=0
+2026-10-27 15:52:29,875 [INFO] TP-Layer Map: {'tp1': [423431540]}
+2026-10-27 15:52:29,876 [INFO] Nachtraglich ausgefuhrt: 1 Layer
+2026-10-27 15:52:30,035 [INFO] Nachholen verworfen: BTCUSD BUY TP1 80616.64 schon durchlaufen
+2026-10-27 15:52:31,370 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-10-27 15:53:00,035 [INFO] Equity Guardian: Start=810.8$
