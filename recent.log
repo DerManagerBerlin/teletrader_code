@@ -2527,3 +2527,40 @@ Set breakeven now🤑🤑**
 2026-10-27 16:12:24,089 [INFO] ✅ Keine verpassten Signale
 2026-10-27 16:12:25,269 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
 2026-10-27 16:12:54,091 [INFO] Equity Guardian: Start=802.91$
+2026-10-27 16:15:27,470 [INFO] 📨 Neue Nachricht aus BTC SCALPING⚡️: '📊 BTC – SCALP IDEE\n\n🔴 ICH GEHE JETZT SELL\n\n📍 Entry Zone: 804'
+2026-10-27 16:15:27,472 [INFO] Instrument aus dem Kopf gelesen: BTCUSD (direkt vor BUY/SELL stand 'jetzt')
+2026-10-27 16:15:27,486 [INFO] Lot-Sizing: Balance=803.0$  Lot=0.04  Kanal=BTC SCALPING
+2026-10-27 16:15:27,487 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+
+⚡ SIGNAL [16:15:27] aus: BTC SCALPING⚡️
+  SELL BTCUSD | 1 Layer à 0.01 Lot
+  SL: 80590.22 | TPs: [80400.22, 80350.22, 80230.22, 80080.22]
+  Verteilung: {0: 1}
+2026-10-27 16:15:27,490 [INFO] SL-Distanz vom Markt statt vom Signal: 120.0 -> 123.6 (Einstieg 80466.62 statt 80470.22)
+2026-10-27 16:15:27,494 [INFO] Lot-Sizing: Balance=803.0$  Lot=0.04  Kanal=BTC SCALPING
+2026-10-27 16:15:27,497 [INFO] Lot-Normalisierung BTCUSD: 0.07235739172329755 -> 0.07 (min 0.01, step 0.01)
+2026-10-27 16:15:27,497 [INFO] Zielrisiko 1.0%: SL=123.6 -> Lot 0.04 -> 0.07 x 1 Layer = 7.77 je Signal
+2026-10-27 16:15:27,503 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-10-27 16:15:27,506 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-10-27 16:15:27,924 [INFO] Runner markiert #423453058 -> runners.json
+2026-10-27 16:15:27,925 [INFO] Layer 1/1 Ticket #423453058 TP=0
+2026-10-27 16:15:27,925 [INFO] TP-Layer Map: {'tp1': [423453058]}
+2026-10-27 16:15:27,926 [INFO] Phase 3: Auto-Trade BTCUSD | 1 Tickets
+2026-10-27 16:16:05,337 [INFO] Ruecksetzer #423453058 0.0-20.4p vom Hoch 83.9p (Trail 250.0p)
+2026-10-27 16:16:15,346 [INFO] Ruecksetzer #423453058 0.0-37.2p vom Hoch 97.9p (Trail 250.0p)
+2026-10-27 16:16:25,355 [INFO] Ruecksetzer #423453058 0.0-226.0p vom Hoch 97.9p (Trail 250.0p)
+2026-10-27 16:16:45,375 [INFO] Ruecksetzer #423453058 0.0-272.1p vom Hoch 97.9p (Trail 250.0p)
+2026-10-27 16:16:55,371 [INFO] Ruecksetzer #423453058 0.0-447.0p vom Hoch 97.9p (Trail 250.0p)
+2026-10-27 16:17:05,382 [INFO] Ruecksetzer #423453058 515.6-515.6p vom Hoch 97.9p (Trail 250.0p)
+2026-10-27 16:17:15,394 [INFO] Ruecksetzer #423453058 532.7-532.7p vom Hoch 97.9p (Trail 250.0p)
+2026-10-27 16:17:24,103 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-27 16:17:24,248 [INFO] Instrument aus dem Kopf gelesen: BTCUSD (direkt vor BUY/SELL stand 'jetzt')
+2026-10-27 16:17:24,251 [INFO] Instrument aus dem Kopf gelesen: BTCUSD (direkt vor BUY/SELL stand 'jetzt')
+2026-10-27 16:17:24,315 [INFO] ✅ Keine verpassten Signale
+2026-10-27 16:17:25,405 [INFO] Ruecksetzer #423453058 894.2-894.2p vom Hoch 97.9p (Trail 250.0p)
+2026-10-27 16:17:35,415 [INFO] Ruecksetzer #423453058 1050.0-1050.0p vom Hoch 97.9p (Trail 250.0p)
+2026-10-27 16:17:45,425 [INFO] Ruecksetzer #423453058 1153.8-1153.8p vom Hoch 97.9p (Trail 250.0p)
+2026-10-27 16:17:48,699 [INFO] MFE #423453058 BTCUSD: Hoch +9.8 Punkte, Stufe 0
+2026-10-27 16:17:51,292 [INFO] 📨 Neue Nachricht aus BTC SCALPING⚡️: '❌ SL HIT –120 PIPS'
+2026-10-27 16:17:51,310 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-10-27 16:17:55,336 [INFO] Prioritaet freigegeben: BTCUSD (BTC SCALPING⚡️)
