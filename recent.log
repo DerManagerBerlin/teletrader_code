@@ -2484,3 +2484,46 @@ Set breakeven now🤑🤑**
 2026-10-27 16:07:24,069 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-27 16:07:24,208 [INFO] Instrument aus dem Kopf gelesen: BTCUSD (direkt vor BUY/SELL stand 'jetzt')
 2026-10-27 16:07:24,296 [INFO] ✅ Keine verpassten Signale
+2026-10-27 16:10:04,000 [INFO] AUTOPATCH: patch_113_fix.py angewendet - 2026-10-27 16:10:03 PATCH113 Startpruefung prueft GOLD_SYMBOL und BTC_SYMBOL unveraendert Patch 113 fertig
+2026-10-27 16:10:04,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
+2026-10-27 16:10:39,000 [INFO] AUTOPATCH: teletrader.service laeuft
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-10-27 16:12:05,479 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $802.91 EUR
+2026-10-27 16:12:05,513 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-10-27 16:12:05,537 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-10-27 16:12:05,563 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-10-27 16:12:05,578 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
+2026-10-27 16:12:05,580 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
+2026-10-27 16:12:05,582 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
+2026-10-27 16:12:05,585 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
+2026-10-27 16:12:05,596 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
+2026-10-27 16:12:05,596 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=802.91 Hebel=500 TradeAllowed=True
+2026-10-27 16:12:05,601 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4058.65 ask=4058.97 spread=3.2 Pips
+2026-10-27 16:12:05,608 [INFO] LIVECHECK BTCUSD handelbar=4 lot 0.01-50.0 step 0.01 stops=0 digits=2 bid=80457.21 ask=80474.15 spread=169.4 Pips
+2026-10-27 16:12:05,610 [INFO] LIVECHECK Handel pausiert=False
+2026-10-27 16:12:05,610 [INFO] POSCHECK Balance=802.91 Equity=802.91 FreieMargin=802.91
+2026-10-27 16:12:05,611 [INFO] POSCHECK keine offenen Positionen
+2026-10-27 16:12:05,975 [INFO] Telegram User-Client verbunden.
+2026-10-27 16:12:06,608 [INFO] Telegram Bot-Client verbunden.
+2026-10-27 16:12:06,608 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-10-27 16:12:08,087 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-10-27 16:12:08,779 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-10-27 16:12:08,811 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-27 16:12:08,830 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-10-27 16:12:08,886 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-10-27 16:12:08,887 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-27 16:12:23,887 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-10-27 16:12:24,017 [INFO] Instrument aus dem Kopf gelesen: BTCUSD (direkt vor BUY/SELL stand 'jetzt')
+2026-10-27 16:12:24,019 [INFO] Scalp: besserer Einstieg als im Signal (559.9 Pips zu unseren Gunsten) - Trade wird genommen
+2026-10-27 16:12:24,020 [INFO] Verpasstes TRADE uebersprungen: Nachricht 15:25 ist 47.4 Min alt (> 5.0 Min) - kein Re-Fire
+2026-10-27 16:12:24,021 [INFO] Instrument aus dem Kopf gelesen: BTCUSD (direkt vor BUY/SELL stand 'jetzt')
+2026-10-27 16:12:24,089 [INFO] ✅ Keine verpassten Signale
+2026-10-27 16:12:25,269 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-10-27 16:12:54,091 [INFO] Equity Guardian: Start=802.91$

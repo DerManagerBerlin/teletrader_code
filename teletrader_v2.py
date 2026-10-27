@@ -2014,8 +2014,9 @@ def connect_mt5() -> bool:
             # Patch 112: denselben Aufloeser wie der Handel benutzen.
             # BTC_SYMBOL + FX_SUFFIX ergab 'BTCUSD.s', das es beim
             # Broker nicht gibt. Gehandelt wird 'BTCUSD'.
-            for _sym in [resolve_symbol(GOLD_SYMBOL),
-                         resolve_symbol(BTC_SYMBOL)]:
+            # Patch 113: Namen unveraendert pruefen. resolve_symbol
+            # macht im Fallback aus 'XAUUSD.s' ein 'XAUUSD.S'.
+            for _sym in [GOLD_SYMBOL, BTC_SYMBOL]:
                 try:
                     _si = mt5.symbol_info(_sym)
                     if _si is None:
