@@ -2433,3 +2433,51 @@ Set breakeven now🤑🤑**
 2026-10-27 15:57:30,184 [INFO] Instrument aus dem Kopf gelesen: BTCUSD (direkt vor BUY/SELL stand 'jetzt')
 2026-10-27 15:57:30,186 [INFO] Verpasstes TRADE uebersprungen: Nachricht 15:25 ist 32.5 Min alt (> 5.0 Min) - kein Re-Fire
 2026-10-27 15:57:30,260 [INFO] ✅ Keine verpassten Signale
+2026-10-27 16:00:03,000 [INFO] AUTOPATCH: patch_112_btccheck.py angewendet - 2026-10-27 16:00:03 PATCH112 Startpruefung nutzt jetzt resolve_symbol Patch 112 fertig
+2026-10-27 16:00:03,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
+2026-10-27 16:00:38,000 [INFO] AUTOPATCH: teletrader.service laeuft
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-10-27 16:02:04,763 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $810.80 EUR
+2026-10-27 16:02:04,787 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-10-27 16:02:04,818 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-10-27 16:02:04,846 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-10-27 16:02:04,864 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
+2026-10-27 16:02:04,865 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
+2026-10-27 16:02:04,867 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
+2026-10-27 16:02:04,870 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
+2026-10-27 16:02:04,877 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
+2026-10-27 16:02:04,878 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=810.8 Hebel=500 TradeAllowed=True
+2026-10-27 16:02:04,878 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-27 16:02:04,880 [ERROR] LIVECHECK XAUUSD.S NICHT VERFUEGBAR - Symbolname pruefen
+2026-10-27 16:02:05,042 [ERROR] LIVECHECK Kandidaten fuer XAU: XAUUSD.s, XAUUSD.crp, XAUEUR.s, XAUJPY.s, BTCXAU, ETHXAU
+2026-10-27 16:02:05,044 [INFO] LIVECHECK BTCUSD handelbar=4 lot 0.01-50.0 step 0.01 stops=0 digits=2 bid=80523.61 ask=80540.67 spread=170.6 Pips
+2026-10-27 16:02:05,046 [INFO] LIVECHECK Handel pausiert=False
+2026-10-27 16:02:05,046 [INFO] POSCHECK Balance=810.8 Equity=804.44 FreieMargin=797.2
+2026-10-27 16:02:05,047 [INFO] POSCHECK offen #423431540 BTCUSD BUY vol=0.05 open=80678.69 sl=80502.78 tp=0.0 profit=-6.95 magic=88888
+2026-10-27 16:02:05,708 [INFO] Telegram User-Client verbunden.
+2026-10-27 16:02:06,017 [INFO] Telegram Bot-Client verbunden.
+2026-10-27 16:02:06,017 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-10-27 16:02:07,835 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-10-27 16:02:08,593 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-10-27 16:02:08,626 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-27 16:02:08,644 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-10-27 16:02:08,801 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-10-27 16:02:08,801 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-27 16:02:23,802 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-10-27 16:02:23,942 [INFO] Instrument aus dem Kopf gelesen: BTCUSD (direkt vor BUY/SELL stand 'jetzt')
+2026-10-27 16:02:23,946 [INFO] Scalp: besserer Einstieg als im Signal (160.1 Pips zu unseren Gunsten) - Trade wird genommen
+2026-10-27 16:02:23,947 [INFO] Verpasstes TRADE uebersprungen: Nachricht 15:25 ist 37.4 Min alt (> 5.0 Min) - kein Re-Fire
+2026-10-27 16:02:23,951 [INFO] Instrument aus dem Kopf gelesen: BTCUSD (direkt vor BUY/SELL stand 'jetzt')
+2026-10-27 16:02:24,049 [INFO] ✅ Keine verpassten Signale
+2026-10-27 16:02:25,361 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-10-27 16:02:54,053 [INFO] Equity Guardian: Start=810.8$
+2026-10-27 16:03:02,136 [INFO] MFE #423431540 BTCUSD: Hoch +-19.1 Punkte, Stufe 0
+2026-10-27 16:03:05,193 [INFO] 📨 Neue Nachricht aus BTC SCALPING⚡️: '❌ SL HIT –120 PIPS'
+2026-10-27 16:03:05,198 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
