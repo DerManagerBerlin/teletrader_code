@@ -3865,3 +3865,44 @@ Set breakevennn man t
 2026-10-28 18:58:05,858 [INFO] ✅ Keine verpassten Signale
 2026-10-28 19:03:14,020 [INFO] Streak XAUUSD SCALP: +1 (Signal 22.02)
 2026-10-28 19:04:19,103 [INFO] Telethon Wakeup-Ping
+2026-10-28 19:05:06,768 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4039.0'
+2026-10-28 19:05:06,772 [INFO] Scalp: besserer Einstieg als im Signal (37.7 Pips zu unseren Gunsten) - Trade wird genommen
+2026-10-28 19:05:06,780 [INFO] Lot-Sizing: Balance=789.0$  Lot=0.04  Kanal=XAUUSD SCALP
+2026-10-28 19:05:06,780 [INFO] Layer-Verteilung: 5 Layer = 2x TP1 (4034.09), 1x TP2 (4031.09), 1x TP3 (4027.09) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+
+⚡ SIGNAL [19:05:06] aus: XAUUSD SCALPING ⚡️
+  SELL XAUUSD.s | 5 Layer à 0.01 Lot
+  SL: 4047.09 | TPs: [4034.09, 4031.09, 4027.09, 4023.09]
+  Verteilung: {4034.09: 2, 4031.09: 1, 4027.09: 1, 0: 1}
+2026-10-28 19:05:06,785 [INFO] Lot-Sizing: Balance=789.0$  Lot=0.04  Kanal=XAUUSD SCALP
+2026-10-28 19:05:06,786 [INFO] Lot-Normalisierung XAUUSD.s: 0.0083602915455 -> 0.01 (min 0.01, step 0.01)
+2026-10-28 19:05:06,786 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 7.17, Budget 29.97)
+2026-10-28 19:05:06,787 [INFO] Zielrisiko 3.8%: SL=8.0 -> Lot 0.04 -> 0.01 x 4 Layer = 28.68 je Signal
+2026-10-28 19:05:06,790 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (4034.09), 1x TP2 (4031.09) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+2026-10-28 19:05:06,792 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (4034.09), 1x TP2 (4031.09) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+2026-10-28 19:05:06,794 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-28 19:05:07,205 [INFO] Runner markiert #424788288 -> runners.json
+2026-10-28 19:05:07,205 [INFO] Layer 1/4 Ticket #424788288 TP=4034.09
+2026-10-28 19:05:07,207 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-28 19:05:07,626 [INFO] Runner markiert #424788388 -> runners.json
+2026-10-28 19:05:07,626 [INFO] Layer 2/4 Ticket #424788388 TP=4034.09
+2026-10-28 19:05:07,629 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-28 19:05:08,040 [INFO] Runner markiert #424788479 -> runners.json
+2026-10-28 19:05:08,041 [INFO] Layer 3/4 Ticket #424788479 TP=4031.09
+2026-10-28 19:05:08,043 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-28 19:05:08,469 [INFO] Runner markiert #424788536 -> runners.json
+2026-10-28 19:05:08,469 [INFO] Layer 4/4 Ticket #424788536 TP=0
+2026-10-28 19:05:08,470 [INFO] TP-Layer Map: {'tp1': [424788288, 424788388], 'tp2': [424788479], 'tp3': [424788536]}
+2026-10-28 19:05:08,470 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
+2026-10-28 19:05:08,474 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-28 19:05:21,646 [INFO] MFE #424788288 XAUUSD.s: Hoch +0.9 Punkte, Stufe 0
+2026-10-28 19:05:21,657 [INFO] MFE #424788388 XAUUSD.s: Hoch +0.7 Punkte, Stufe 0
+2026-10-28 19:05:21,669 [INFO] MFE #424788479 XAUUSD.s: Hoch +0.2 Punkte, Stufe 0
+2026-10-28 19:05:21,676 [INFO] MFE #424788536 XAUUSD.s: Hoch +0.7 Punkte, Stufe 0
+2026-10-28 19:05:24,446 [INFO] Prioritaet freigegeben: XAUUSD.s (XAUUSD SCALPING ⚡️)
+2026-10-28 19:06:21,628 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
+2026-10-28 19:06:21,630 [INFO] Kanal meldet TP1 - Leiter darf die Stufe ohne eigenen Kursdruck setzen
+2026-10-28 19:06:21,631 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-10-28 19:06:22,263 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-28 19:08:05,861 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-28 19:08:06,143 [INFO] ✅ Keine verpassten Signale
