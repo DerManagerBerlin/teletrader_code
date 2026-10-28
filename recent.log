@@ -3907,3 +3907,47 @@ Set breakevennn man t
 2026-10-28 19:08:05,861 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-28 19:08:06,143 [INFO] ✅ Keine verpassten Signale
 2026-10-28 19:14:19,333 [INFO] Telethon Wakeup-Ping
+2026-10-28 19:15:14,164 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4048.33'
+2026-10-28 19:15:14,174 [INFO] Nachholen vorgemerkt: XAUUSD BUY Entry 4048.33 (Markt 39.1 Pips weg, Fenster 18.0)
+2026-10-28 19:15:14,174 [INFO] 🔇 NOISE: Regex: Markt 39.1 Pips GEGEN uns vom Entry 4048.33 weg (Kurs 4052.24, max 18.0 Pips)
+2026-10-28 19:15:14,785 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-28 19:15:55,846 [INFO] Signal nachgeholt: XAUUSD.s BUY Entry 4048.33, Kurs 4050.01 (16.8 Pips, 0.7 Min nach dem Signal)
+2026-10-28 19:15:55,853 [INFO] Lot-Sizing: Balance=772.0$  Lot=0.04  Kanal=nachgeholt
+2026-10-28 19:15:55,854 [INFO] Layer-Verteilung: 6 Layer = 2x TP1 (4053.33), 1x TP2 (4056.33), 1x TP3 (4060.33), 1x TP4 (4064.33) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+
+⚡ SIGNAL [19:15:55] aus: nachgeholt
+  BUY XAUUSD.s | 6 Layer à 0.01 Lot
+  SL: 4040.33 | TPs: [4053.33, 4056.33, 4060.33, 4064.33]
+  Verteilung: {4053.33: 2, 4056.33: 1, 4060.33: 1, 4064.33: 1, 0: 1}
+2026-10-28 19:15:55,855 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.68 (Einstieg 4050.01 statt 4048.33)
+2026-10-28 19:15:55,859 [INFO] Lot-Sizing: Balance=772.0$  Lot=0.04  Kanal=nachgeholt
+2026-10-28 19:15:55,861 [INFO] Lot-Normalisierung XAUUSD.s: 0.001779340772727219 -> 0.01 (min 0.01, step 0.01)
+2026-10-28 19:15:55,861 [INFO] Layerzahl ans Risiko angepasst: 5 -> 1 (je Layer 8.67, Budget 7.72)
+2026-10-28 19:15:55,862 [INFO] Zielrisiko 1.0%: SL=9.68 -> Lot 0.04 -> 0.01 x 1 Layer = 8.67 je Signal
+2026-10-28 19:15:55,865 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-10-28 19:15:55,868 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-10-28 19:15:55,869 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-28 19:15:56,283 [INFO] Runner markiert #424832126 -> runners.json
+2026-10-28 19:15:56,284 [INFO] Layer 1/1 Ticket #424832126 TP=0
+2026-10-28 19:15:56,284 [INFO] TP-Layer Map: {'tp1': [424832126]}
+2026-10-28 19:15:56,284 [INFO] Phase 3: Auto-Trade XAUUSD.s | 1 Tickets
+2026-10-28 19:16:15,862 [INFO] Ruecksetzer #424832126 0.0-20.6p vom Hoch 21.8p (Trail 30.0p)
+2026-10-28 19:16:25,872 [INFO] Ruecksetzer #424832126 0.0-23.3p vom Hoch 24.5p (Trail 30.0p)
+2026-10-28 19:16:35,884 [INFO] Ruecksetzer #424832126 0.0-29.7p vom Hoch 24.5p (Trail 30.0p)
+2026-10-28 19:16:45,894 [INFO] Ruecksetzer #424832126 0.0-32.7p vom Hoch 24.5p (Trail 30.0p)
+2026-10-28 19:16:55,907 [INFO] Ruecksetzer #424832126 0.0-45.5p vom Hoch 24.5p (Trail 30.0p)
+2026-10-28 19:17:05,921 [INFO] Ruecksetzer #424832126 64.5-64.5p vom Hoch 24.5p (Trail 30.0p)
+2026-10-28 19:17:15,932 [INFO] Ruecksetzer #424832126 71.8-71.8p vom Hoch 24.5p (Trail 30.0p)
+2026-10-28 19:17:26,201 [INFO] Ruecksetzer #424832126 79.2-79.2p vom Hoch 24.5p (Trail 30.0p)
+2026-10-28 19:17:36,215 [INFO] Ruecksetzer #424832126 107.9-107.9p vom Hoch 24.5p (Trail 30.0p)
+2026-10-28 19:17:40,685 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '❌ SL HIT –80 PIPS'
+2026-10-28 19:17:40,687 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-10-28 19:17:41,413 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📚 Kurz erklärt:\nRund um diese Zeit kamen wichtige USD-News ('
+2026-10-28 19:17:41,415 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-10-28 19:17:41,415 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-28 19:17:41,416 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-28 19:17:46,224 [INFO] Ruecksetzer #424832126 117.8-117.8p vom Hoch 24.5p (Trail 30.0p)
+2026-10-28 19:18:06,152 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-28 19:18:06,222 [INFO] Scalp: besserer Einstieg als im Signal (36.0 Pips zu unseren Gunsten) - Trade wird genommen
+2026-10-28 19:18:06,223 [INFO] Verpasstes TRADE uebersprungen: Nachricht 19:05 ist 13.0 Min alt (> 5.0 Min) - kein Re-Fire
+2026-10-28 19:18:06,362 [INFO] ✅ Keine verpassten Signale
