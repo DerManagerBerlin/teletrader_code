@@ -5656,3 +5656,27 @@ Set breakeven nowww**
 2026-10-29 20:45:12,087 [INFO] Telethon Wakeup-Ping
 2026-10-29 20:48:43,063 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-29 20:48:43,223 [INFO] ✅ Keine verpassten Signale
+2026-10-29 20:50:12,604 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4021.8'
+2026-10-29 20:50:12,616 [INFO] Nachholen vorgemerkt: XAUUSD SELL Entry 4021.84 (Markt 25.1 Pips weg, Fenster 18.0)
+2026-10-29 20:50:12,617 [INFO] 🔇 NOISE: Regex: Markt 25.1 Pips GEGEN uns vom Entry 4021.84 weg (Kurs 4019.33, max 18.0 Pips)
+2026-10-29 20:50:12,618 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-29 20:50:24,806 [INFO] Signal nachgeholt: XAUUSD.s SELL Entry 4021.84, Kurs 4020.38 (14.6 Pips, 0.2 Min nach dem Signal)
+2026-10-29 20:50:24,819 [INFO] Lot-Sizing: Balance=816.0$  Lot=0.04  Kanal=nachgeholt
+2026-10-29 20:50:24,819 [INFO] Layer-Verteilung: 6 Layer = 2x TP1 (4016.84), 1x TP2 (4013.84), 1x TP3 (4009.84), 1x TP4 (4005.84) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+
+⚡ SIGNAL [20:50:24] aus: nachgeholt
+  SELL XAUUSD.s | 6 Layer à 0.01 Lot
+  SL: 4029.84 | TPs: [4016.84, 4013.84, 4009.84, 4005.84]
+  Verteilung: {4016.84: 2, 4013.84: 1, 4009.84: 1, 4005.84: 1, 0: 1}
+2026-10-29 20:50:24,821 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.46 (Einstieg 4020.38 statt 4021.84)
+2026-10-29 20:50:24,824 [INFO] Lot-Sizing: Balance=816.0$  Lot=0.04  Kanal=nachgeholt
+2026-10-29 20:50:24,826 [INFO] Lot-Normalisierung XAUUSD.s: 0.0019290498701902672 -> 0.01 (min 0.01, step 0.01)
+2026-10-29 20:50:24,826 [INFO] Layerzahl ans Risiko angepasst: 5 -> 1 (je Layer 8.46, Budget 8.16)
+2026-10-29 20:50:24,826 [INFO] Zielrisiko 1.0%: SL=9.46 -> Lot 0.04 -> 0.01 x 1 Layer = 8.46 je Signal
+2026-10-29 20:50:24,829 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-10-29 20:50:24,831 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-10-29 20:50:24,833 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-29 20:50:25,241 [INFO] Runner markiert #426488698 -> runners.json
+2026-10-29 20:50:25,241 [INFO] Layer 1/1 Ticket #426488698 TP=0
+2026-10-29 20:50:25,242 [INFO] TP-Layer Map: {'tp1': [426488698]}
+2026-10-29 20:50:25,242 [INFO] Phase 3: Auto-Trade XAUUSD.s | 1 Tickets
