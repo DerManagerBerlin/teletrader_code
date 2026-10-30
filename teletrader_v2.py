@@ -194,6 +194,32 @@ TRAILING_STOP_MIN_PROFIT = float(os.getenv("TRAILING_STOP_MIN_PROFIT_PIPS", "15"
 
 _rs_max = {}   # PATCH41: Ticket -> bisher tiefster Ruecksetzer in Pips
 
+_leine_gemeldet = set()   # PATCH115: Tickets, fuer die die Leine schon gemeldet hat
+
+
+def _runner_frei(_pos, _hoch_pips):
+    """PATCH115: True, solange der Runner nur auf BE gesichert werden soll.
+
+    Der Runner ist der Layer ohne eigenen TP. Trail (40 % Giveback) und
+    SL-Leiter (ein TP hinterher) nehmen ihn regelmaessig bei 60-130 Pips aus
+    Bewegungen heraus, die der Kanal bis 400-900 Pips laufen laesst. Unter
+    RUNNER_LEINE_AB_PIPS bleibt sein Stop deshalb auf Entry stehen, darueber
+    arbeiten Trail und Leiter wieder normal.
+    RUNNER_FREI=false schaltet zurueck auf das alte Verhalten."""
+    try:
+        if os.getenv("RUNNER_FREI", "true").lower() != "true":
+            return False
+        if getattr(_pos, "tp", 0) and float(_pos.tp) > 0:
+            return False          # Layer mit eigenem Ziel: unveraendert
+        _ab = float(os.getenv("RUNNER_LEINE_AB_PIPS", "250"))
+    except Exception:
+        return False
+    try:
+        return float(_hoch_pips or 0.0) < _ab
+    except Exception:
+        return False
+
+
 def _trail_breite(_basis_pips, _hoch_pips, _pip):
     """Trail-Breite in Kurspunkten, waechst mit dem Hoechststand (PATCH40).
     Ein fester Trail gibt bei jedem Trade gleich viel zurueck, auch wenn der
@@ -5633,6 +5659,11 @@ async def main():
                             # NIE schlechter als Entry: sonst schreibt der Trail
                             # einen Verlust fest, obwohl die Position im Plus ist.
                             new_sl = max(new_sl, round(pos.price_open, sym_info.digits))
+                            # PATCH115: Runner unterhalb der Schwelle nur BE
+                            if _runner_frei(pos,
+                                            (_ref - pos.price_open) / pip):
+                                new_sl = round(pos.price_open,
+                                               sym_info.digits)
                             if new_sl > current - _mind:
                                 continue   # zu nah am Kurs, naechster Durchlauf
                             if pos.sl and new_sl <= pos.sl:
@@ -5647,6 +5678,11 @@ async def main():
                                 _tp_pips, (pos.price_open - _ref) / pip, pip)
                             new_sl = round(_ref + trail_dist, sym_info.digits)
                             new_sl = min(new_sl, round(pos.price_open, sym_info.digits))
+                            # PATCH115: Runner unterhalb der Schwelle nur BE
+                            if _runner_frei(pos,
+                                            (pos.price_open - _ref) / pip):
+                                new_sl = round(pos.price_open,
+                                               sym_info.digits)
                             if new_sl < current + _mind:
                                 continue   # zu nah am Kurs, naechster Durchlauf
                             if pos.sl and new_sl >= pos.sl:
@@ -6240,6 +6276,29 @@ async def main():
                             continue
                     if _reached <= _stage_old or _reached < _lstart:
                         continue
+                    # PATCH115: Der Runner bleibt bis zur Schwelle auf BE.
+                    # Eine Leiterstufe auf dem gerade durchlaufenen TP
+                    # holt ihn sonst beim naechsten Ruecksetzer heraus.
+                    if _reached > _lstart:
+                        try:
+                            _i2 = mt5.symbol_info(pos.symbol)
+                            _px = ((_i2.point if _i2 else 0.01) * 10) or 0.1
+                            _e2 = float(rec.get("entry") or pos.price_open)
+                            _h2 = abs(float(_ext) - _e2) / _px
+                        except Exception:
+                            _h2 = None
+                        if _h2 is not None and _runner_frei(pos, _h2):
+                            if tk not in _leine_gemeldet:
+                                _leine_gemeldet.add(tk)
+                                if len(_leine_gemeldet) > 500:
+                                    _leine_gemeldet.clear()
+                                log.info("LEINE #" + str(tk) + " Runner "
+                                         "bleibt auf BE, Hoch " +
+                                         str(round(_h2, 1)) + "p < " +
+                                         os.getenv(
+                                             "RUNNER_LEINE_AB_PIPS",
+                                             "250") + "p")
+                            continue
                     entry = float(rec.get("entry") or pos.price_open)
                     info = mt5.symbol_info(pos.symbol)
                     dig = info.digits if info else 2
