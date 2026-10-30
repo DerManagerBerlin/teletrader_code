@@ -6387,3 +6387,38 @@ Set breakeven nowww**
 2026-10-30 08:15:57,061 [INFO] 🔁 Duplikat ignoriert aus: Gold Trader Mo🤴🏽(Gtmofx)
 2026-10-30 08:18:59,500 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-30 08:18:59,673 [INFO] ⏮ Verpasst [Gold Trader Mo🤴🏽(Gtmofx)] 08:10: BREAKEVEN → SET BREAKEVEN FOR ZERO RISK NOWWW!!!
+2026-10-30 08:20:07,479 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 3986.48'
+2026-10-30 08:20:07,490 [INFO] Nachholen vorgemerkt: XAUUSD BUY Entry 3986.48 (Markt 30.1 Pips weg, Fenster 18.0)
+2026-10-30 08:20:07,491 [INFO] 🔇 NOISE: Regex: Markt 30.1 Pips GEGEN uns vom Entry 3986.48 weg (Kurs 3989.49, max 18.0 Pips)
+2026-10-30 08:20:07,641 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-30 08:21:04,943 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 3986.48'
+2026-10-30 08:21:04,947 [INFO] 🔇 NOISE: Regex: Markt 22.8 Pips GEGEN uns vom Entry 3986.48 weg (Kurs 3988.76, max 18.0 Pips)
+2026-10-30 08:21:05,527 [INFO] 🔁 Duplikat ignoriert aus: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-30 08:21:05,528 [INFO] 🔁 Duplikat ignoriert aus: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-30 08:21:05,529 [INFO] 🔁 Duplikat ignoriert aus: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-30 08:21:05,530 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): '**⏩****🔔****\xa0 LIVE ACCOUNT\xa0\xa0 MANAGEMENT PERFORMANCE ****🎭***'
+2026-10-30 08:21:05,532 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-10-30 08:21:12,765 [INFO] 🔁 Duplikat ignoriert aus: Gold Trader Mo🤴🏽(Gtmofx)
+2026-10-30 08:23:30,262 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): '**➡️****📊****\xa0LIVE ACCOUNT MANAGEMENT PERFORMANCE ****✅**'
+2026-10-30 08:23:30,265 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-10-30 08:23:55,577 [INFO] Signal nachgeholt: XAUUSD.s BUY Entry 3986.48, Kurs 3988.26 (17.8 Pips, 3.8 Min nach dem Signal)
+2026-10-30 08:23:55,595 [INFO] Lot-Sizing: Balance=871.0$  Lot=0.04  Kanal=nachgeholt
+2026-10-30 08:23:55,596 [INFO] Layer-Verteilung: 6 Layer = 2x TP1 (3991.48), 1x TP2 (3994.48), 1x TP3 (3998.48), 1x TP4 (4002.48) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+
+⚡ SIGNAL [08:23:55] aus: nachgeholt
+  BUY XAUUSD.s | 6 Layer à 0.01 Lot
+  SL: 3978.48 | TPs: [3991.48, 3994.48, 3998.48, 4002.48]
+  Verteilung: {3991.48: 2, 3994.48: 1, 3998.48: 1, 4002.48: 1, 0: 1}
+2026-10-30 08:23:55,600 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.78 (Einstieg 3988.26 statt 3986.48)
+2026-10-30 08:23:55,610 [INFO] Lot-Sizing: Balance=871.0$  Lot=0.04  Kanal=nachgeholt
+2026-10-30 08:23:55,612 [INFO] Lot-Normalisierung XAUUSD.s: 0.001995503417382372 -> 0.01 (min 0.01, step 0.01)
+2026-10-30 08:23:55,612 [INFO] Layerzahl ans Risiko angepasst: 5 -> 1 (je Layer 8.73, Budget 8.71)
+2026-10-30 08:23:55,613 [INFO] Zielrisiko 1.0%: SL=9.78 -> Lot 0.04 -> 0.01 x 1 Layer = 8.73 je Signal
+2026-10-30 08:23:55,616 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-10-30 08:23:55,625 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-10-30 08:23:55,628 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-30 08:23:56,040 [INFO] Runner markiert #427374548 -> runners.json
+2026-10-30 08:23:56,041 [INFO] Layer 1/1 Ticket #427374548 TP=0
+2026-10-30 08:23:56,041 [INFO] TP-Layer Map: {'tp1': [427374548]}
+2026-10-30 08:23:56,042 [INFO] Phase 3: Auto-Trade XAUUSD.s | 1 Tickets
+2026-10-30 08:23:56,103 [INFO] 🔁 Duplikat ignoriert aus: Gold Trader Mo🤴🏽(Gtmofx)
