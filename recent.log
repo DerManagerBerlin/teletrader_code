@@ -5869,3 +5869,37 @@ Set breakeven nowww**
 2026-10-30 00:55:19,999 [INFO] Telethon Wakeup-Ping
 2026-10-30 00:58:48,904 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-30 00:58:49,056 [INFO] ✅ Keine verpassten Signale
+2026-10-30 01:00:26,283 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4007.0'
+2026-10-30 01:00:26,290 [INFO] Nachholen vorgemerkt: XAUUSD SELL Entry 4007.05 (Markt 18.2 Pips weg, Fenster 18.0)
+2026-10-30 01:00:26,290 [INFO] 🔇 NOISE: Regex: Markt 18.2 Pips GEGEN uns vom Entry 4007.05 weg (Kurs 4005.23, max 18.0 Pips)
+2026-10-30 01:00:26,869 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-30 01:00:36,433 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4007.0'
+2026-10-30 01:00:36,437 [INFO] 🔇 NOISE: Regex: Markt 48.4 Pips GEGEN uns vom Entry 4007.05 weg (Kurs 4002.21, max 18.0 Pips)
+2026-10-30 01:00:45,411 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-30 01:00:52,609 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-30 01:02:09,836 [INFO] Signal nachgeholt: XAUUSD.s SELL Entry 4007.05, Kurs 4005.31 (17.4 Pips, 1.7 Min nach dem Signal)
+2026-10-30 01:02:09,850 [INFO] Lot-Sizing: Balance=831.0$  Lot=0.04  Kanal=nachgeholt
+2026-10-30 01:02:09,850 [INFO] Layer-Verteilung: 6 Layer = 2x TP1 (4002.05), 1x TP2 (3999.05), 1x TP3 (3995.05), 1x TP4 (3991.05) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+
+⚡ SIGNAL [01:02:09] aus: nachgeholt
+  SELL XAUUSD.s | 6 Layer à 0.01 Lot
+  SL: 4015.05 | TPs: [4002.05, 3999.05, 3995.05, 3991.05]
+  Verteilung: {4002.05: 2, 3999.05: 1, 3995.05: 1, 3991.05: 1, 0: 1}
+2026-10-30 01:02:09,852 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.74 (Einstieg 4005.31 statt 4007.05)
+2026-10-30 01:02:09,855 [INFO] Lot-Sizing: Balance=831.0$  Lot=0.04  Kanal=nachgeholt
+2026-10-30 01:02:09,857 [INFO] Lot-Normalisierung XAUUSD.s: 0.0019102436535933828 -> 0.01 (min 0.01, step 0.01)
+2026-10-30 01:02:09,857 [INFO] Layerzahl ans Risiko angepasst: 5 -> 1 (je Layer 8.7, Budget 8.31)
+2026-10-30 01:02:09,857 [INFO] Zielrisiko 1.0%: SL=9.74 -> Lot 0.04 -> 0.01 x 1 Layer = 8.7 je Signal
+2026-10-30 01:02:09,860 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-10-30 01:02:09,862 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-10-30 01:02:09,864 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-30 01:02:10,273 [INFO] Runner markiert #426722576 -> runners.json
+2026-10-30 01:02:10,274 [INFO] Layer 1/1 Ticket #426722576 TP=0
+2026-10-30 01:02:10,275 [INFO] TP-Layer Map: {'tp1': [426722576]}
+2026-10-30 01:02:10,275 [INFO] Phase 3: Auto-Trade XAUUSD.s | 1 Tickets
+2026-10-30 01:03:09,891 [INFO] Ruecksetzer #426722576 0.0-8.8p vom Hoch 25.0p (Trail 30.0p)
+2026-10-30 01:03:19,901 [INFO] Ruecksetzer #426722576 0.0-15.5p vom Hoch 29.9p (Trail 30.0p)
+2026-10-30 01:03:22,980 [INFO] SL-Leiter: #426722576 TP1 erreicht -> SL auf Entry/BE (4005.31)
+2026-10-30 01:03:29,912 [INFO] Ruecksetzer #426722576 0.0-22.6p vom Hoch 37.0p (Trail 30.0p)
+2026-10-30 01:03:49,930 [INFO] Ruecksetzer #426722576 0.0-36.8p vom Hoch 51.2p (Trail 30.0p)
+2026-10-30 01:05:00,002 [INFO] Ruecksetzer #426722576 47.4-47.4p vom Hoch 51.2p (Trail 30.0p)
