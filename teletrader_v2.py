@@ -5287,6 +5287,21 @@ async def main():
                     start_balance = info.balance
                     log.info("Equity Guardian: Start=" + str(round(start_balance, 2)) + "$")
 
+                try:  # REIHE_LAUFEND (Patch 114)
+                    _kr = "Z:\\home\\alexander_lacher\\ttpub\\kontostand.csv"
+                    _letzt = None
+                    if os.path.exists(_kr):
+                        with open(_kr, "r", encoding="utf-8") as _fh:
+                            _zz = [z for z in _fh.read().splitlines() if z.strip()]
+                        if len(_zz) > 1:
+                            _letzt = _zz[-1].split(";")[1]
+                    _jetzt = str(round(info.balance, 2))
+                    if _letzt is not None and _jetzt != _letzt:
+                        with open(_kr, "a", encoding="utf-8") as _fh:
+                            _fh.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S") +
+                                      ";" + _jetzt + ";Abschluss\n")
+                except Exception:
+                    pass
                 equity    = info.equity
                 # Schwelle jetzt per .env (EQUITY_GUARD_PCT, Anteil vom Startkapital).
                 # Default 0.70 = bisheriges Verhalten (die Texte sagten faelschlich "50%").
