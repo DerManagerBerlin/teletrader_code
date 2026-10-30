@@ -5934,3 +5934,50 @@ Set breakeven nowww**
 2026-10-30 01:55:21,762 [INFO] Telethon Wakeup-Ping
 2026-10-30 01:58:50,479 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-30 01:58:50,659 [INFO] ✅ Keine verpassten Signale
+2026-10-30 02:05:03,118 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4007.61'
+2026-10-30 02:05:03,131 [INFO] Lot-Sizing: Balance=831.0$  Lot=0.04  Kanal=XAUUSD SCALP
+2026-10-30 02:05:03,132 [INFO] Layer-Verteilung: 5 Layer = 2x TP1 (4012.61), 1x TP2 (4015.61), 1x TP3 (4019.61) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+
+⚡ SIGNAL [02:05:03] aus: XAUUSD SCALPING ⚡️
+  BUY XAUUSD.s | 5 Layer à 0.01 Lot
+  SL: 3999.61 | TPs: [4012.61, 4015.61, 4019.61, 4023.61]
+  Verteilung: {4012.61: 2, 4015.61: 1, 4019.61: 1, 0: 1}
+2026-10-30 02:05:03,135 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 8.13 (Einstieg 4007.74 statt 4007.61)
+2026-10-30 02:05:03,145 [INFO] Lot-Sizing: Balance=831.0$  Lot=0.04  Kanal=XAUUSD SCALP
+2026-10-30 02:05:03,147 [INFO] Lot-Normalisierung XAUUSD.s: 0.00869251901215289 -> 0.01 (min 0.01, step 0.01)
+2026-10-30 02:05:03,147 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 7.26, Budget 31.56)
+2026-10-30 02:05:03,147 [INFO] Zielrisiko 3.8%: SL=8.13 -> Lot 0.04 -> 0.01 x 4 Layer = 29.05 je Signal
+2026-10-30 02:05:03,152 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (4012.61), 1x TP2 (4015.61) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+2026-10-30 02:05:03,155 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (4012.61), 1x TP2 (4015.61) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+2026-10-30 02:05:03,156 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-30 02:05:03,566 [INFO] Runner markiert #426880025 -> runners.json
+2026-10-30 02:05:03,567 [INFO] Layer 1/4 Ticket #426880025 TP=4012.61
+2026-10-30 02:05:03,568 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-30 02:05:03,975 [INFO] Runner markiert #426880033 -> runners.json
+2026-10-30 02:05:03,975 [INFO] Layer 2/4 Ticket #426880033 TP=4012.61
+2026-10-30 02:05:03,978 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-30 02:05:04,383 [INFO] Runner markiert #426880062 -> runners.json
+2026-10-30 02:05:04,383 [INFO] Layer 3/4 Ticket #426880062 TP=4015.61
+2026-10-30 02:05:04,385 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-10-30 02:05:04,790 [INFO] Runner markiert #426880076 -> runners.json
+2026-10-30 02:05:04,791 [INFO] Layer 4/4 Ticket #426880076 TP=0
+2026-10-30 02:05:04,791 [INFO] TP-Layer Map: {'tp1': [426880076], 'tp2': [426880025, 426880033], 'tp3': [426880062]}
+2026-10-30 02:05:04,791 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
+2026-10-30 02:05:04,832 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-10-30 02:05:21,964 [INFO] Telethon Wakeup-Ping
+2026-10-30 02:06:03,915 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4007.61'
+2026-10-30 02:06:03,919 [INFO] Scalp: besserer Einstieg als im Signal (3.1 Pips zu unseren Gunsten) - Trade wird genommen
+2026-10-30 02:06:03,925 [INFO] Entry-Dup [XAUUSD SCALPING ⚡️]: BUY XAUUSD.s @ 4007.61 = 4007.6 vor 1 Min (Toleranz 0.4, Fenster 15 Min)
+2026-10-30 02:07:14,934 [INFO] Ruecksetzer #426880076 0.0-11.5p vom Hoch 24.4p (Trail 30.0p)
+2026-10-30 02:07:24,942 [INFO] Ruecksetzer #426880076 0.0-13.7p vom Hoch 26.6p (Trail 30.0p)
+2026-10-30 02:07:34,950 [INFO] Ruecksetzer #426880076 0.0-15.5p vom Hoch 28.4p (Trail 30.0p)
+2026-10-30 02:08:14,988 [INFO] Ruecksetzer #426880076 19.1-19.1p vom Hoch 28.4p (Trail 30.0p)
+2026-10-30 02:08:35,237 [INFO] Ruecksetzer #426880076 19.1-20.4p vom Hoch 29.7p (Trail 30.0p)
+2026-10-30 02:08:50,660 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-10-30 02:08:50,728 [INFO] Nachholen vorgemerkt: XAUUSD BUY Entry 4007.61 (Markt 31.8 Pips weg, Fenster 18.0)
+2026-10-30 02:08:50,840 [INFO] ✅ Keine verpassten Signale
+2026-10-30 02:09:14,197 [INFO] MFE #426880025 XAUUSD.s: Hoch +4.7 Punkte, Stufe 0
+2026-10-30 02:09:14,203 [INFO] MFE #426880033 XAUUSD.s: Hoch +4.7 Punkte, Stufe 0
+2026-10-30 02:09:14,316 [INFO] SL-Leiter: #426880062 TP1 erreicht -> SL auf Entry/BE (4007.71)
+2026-10-30 02:09:14,467 [INFO] SL-Leiter: #426880076 TP1 erreicht -> SL auf Entry/BE (4007.81)
+2026-10-30 02:09:15,278 [INFO] Ruecksetzer #426880076 19.1-28.1p vom Hoch 48.5p (Trail 30.0p)
