@@ -4982,6 +4982,14 @@ async def process_signal(sig: TradeSignal):
             _sti = mt5.symbol_info_tick(sig.symbol)
             _ssi = mt5.symbol_info(sig.symbol)
             if _sti and _ssi and _ssi.point:
+                # PATCH135: Nullkurs abfangen. Beim Wochenstart steht
+                # der Kurs kurz auf 0,0 und die Spanne waere dann
+                # rechnerisch null, also kleiner als jede Grenze.
+                if not float(_sti.bid) or not float(_sti.ask):
+                    log.info("SKIP Nullkurs: " + str(sig.symbol) +
+                             " bid=" + str(_sti.bid) +
+                             " ask=" + str(_sti.ask))
+                    return
                 _spip = _ssi.point * 10
                 _spr = (float(_sti.ask) - float(_sti.bid)) / _spip
                 if _spr > _msp:
