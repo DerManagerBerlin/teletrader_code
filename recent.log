@@ -1,7 +1,3 @@
-2026-10-26 19:52:06,056 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
-2026-10-26 19:52:06,057 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=886.6 Hebel=500 TradeAllowed=True
-2026-10-26 19:52:06,059 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4012.33 ask=4012.65 spread=3.2 Pips
-2026-10-26 19:52:06,060 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
 2026-10-26 19:52:06,062 [INFO] LIVECHECK Handel pausiert=False
 2026-10-26 19:52:06,062 [INFO] POSCHECK Balance=886.6 Equity=886.6 FreieMargin=886.6
 2026-10-26 19:52:06,063 [INFO] POSCHECK keine offenen Positionen
@@ -7998,3 +7994,7 @@ Live-Modus bestaetigt.
 2026-11-01 22:27:26,846 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-01 22:27:27,069 [INFO] ✅ Keine verpassten Signale
 2026-11-01 22:33:28,375 [INFO] Telethon Wakeup-Ping
+2026-11-01 22:35:15,000 [INFO] AUTOPATCH: patch_141_goldtick.py angewendet - PATCH141 INIT True (1, 'Success') PATCH141 SICHTBAR True PATCH141 TICK Versuch 1 noch keiner PATCH141 TICK bid 3875.69 ask 3876.16 zeit 1793404619 | Spread 4.7 Pips PATCH141 VERGLEICH BTCUSD bid 77765.53 zeit 1793579714 
+2026-11-01 22:35:15,000 [INFO] AUTOPATCH: patch_141_goldtick.py ohne Neustart (NO_RESTART)
+2026-11-01 22:37:27,073 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-11-01 22:37:27,254 [INFO] ✅ Keine verpassten Signale
