@@ -7850,3 +7850,44 @@ Set breakeven nowww**
 2026-11-01 14:35:17,858 [INFO] Telethon Wakeup-Ping
 2026-11-01 14:38:38,653 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-01 14:38:38,833 [INFO] ✅ Keine verpassten Signale
+2026-11-01 14:45:04,000 [INFO] AUTOPATCH: patch_116_befund.py angewendet - PATCH116 env teletrader/.env: ANTHROPIC_API_KEY+ ANTHROPIC_API_KEY_V2- AUTO_CLOSE_PCT+ AUTO_CONFIRM_LIVE+ BACKTEST_API_KEY+ BACKUP_LOT_MULTIPLIER+ BRENT_SYMBOL+ DEMO_FX_SUFFIX+ DEMO_GOLD_SYMBOL+ DEMO_MODE+ DEMO_MT5_LOGIN
+2026-11-01 14:45:04,000 [INFO] AUTOPATCH: patch_116_befund.py ohne Neustart (NO_RESTART)
+2026-11-01 14:45:05,000 [INFO] AUTOPATCH: patch_117_bremsen.py angewendet - PATCH117 Helfer _periodenbremse eingesetzt PATCH117 Streak erkennt Abschluesse jetzt ueber positions_get und Balance PATCH117 Tages- und Wochenstop im Equity Guardian verankert PATCH117 fertig: Streak-Bremse reparierbar,
+2026-11-01 14:45:05,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
+2026-11-01 14:45:40,000 [INFO] AUTOPATCH: teletrader.service laeuft
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-11-01 14:47:09,658 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $882.26 EUR
+2026-11-01 14:47:09,687 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-11-01 14:47:09,717 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-11-01 14:47:09,743 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-11-01 14:47:09,760 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
+2026-11-01 14:47:09,762 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
+2026-11-01 14:47:09,767 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
+2026-11-01 14:47:09,771 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
+2026-11-01 14:47:09,781 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
+2026-11-01 14:47:09,781 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=882.26 Hebel=500 TradeAllowed=True
+2026-11-01 14:47:09,783 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=3875.8 ask=3876.17 spread=3.7 Pips
+2026-11-01 14:47:09,785 [INFO] LIVECHECK BTCUSD handelbar=4 lot 0.01-50.0 step 0.01 stops=0 digits=2 bid=78035.84 ask=78052.88 spread=170.4 Pips
+2026-11-01 14:47:09,786 [INFO] LIVECHECK Handel pausiert=False
+2026-11-01 14:47:09,786 [INFO] POSCHECK Balance=882.26 Equity=882.26 FreieMargin=882.26
+2026-11-01 14:47:09,787 [INFO] POSCHECK keine offenen Positionen
+2026-11-01 14:47:10,176 [INFO] Telegram User-Client verbunden.
+2026-11-01 14:47:10,366 [INFO] Telegram Bot-Client verbunden.
+2026-11-01 14:47:10,367 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-11-01 14:47:11,886 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-11-01 14:47:12,467 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-11-01 14:47:12,527 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-11-01 14:47:12,579 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-11-01 14:47:12,645 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-11-01 14:47:12,646 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-11-01 14:47:27,647 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-11-01 14:47:27,977 [INFO] ✅ Keine verpassten Signale
+2026-11-01 14:47:29,081 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-11-01 14:47:57,980 [INFO] Equity Guardian: Start=882.26$
