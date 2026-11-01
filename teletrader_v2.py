@@ -3868,6 +3868,20 @@ def _periodenbremse(_info):
         if _d.pop("woche_pause", False):
             _frei.append("Wochenstop")
         _neu = True
+    # PATCH142: Kontowechsel oder Einzahlung erkennen. Weicht die
+    # Balance um mehr als die Haelfte vom gespeicherten Startwert
+    # ab, ist das kein Verlust, sondern ein anderes Konto.
+    for _pa, _ps in (("tag", "tag_start"), ("woche", "woche_start")):
+        try:
+            _ref = float(_d.get(_ps) or 0)
+        except Exception:
+            _ref = 0.0
+        if _ref > 0 and (_bal < _ref * 0.5 or _bal > _ref * 2.0):
+            _d[_ps] = _bal
+            _d.pop(_pa + "_pause", None)
+            _neu = True
+            _frei.append("Messlatte " + _pa + " neu auf " +
+                         str(round(_bal, 2)))
     _meld = None
     if _frei and not _d.get("tag_pause") and not _d.get("woche_pause"):
         set_trading_paused(False)
@@ -4992,6 +5006,27 @@ async def process_signal(sig: TradeSignal):
                 log.info("Symbolauswahl nachgeholt: " + str(sig.symbol) +
                          " sichtbar=" + str(getattr(_ssi, 'visible', None)))
             _sti = mt5.symbol_info_tick(sig.symbol)
+            # PATCH142: Veralteten Kurs abweisen. Die Tickzeit kommt
+            # in Serverzeit, darum gegen ein sicher handelndes
+            # Symbol vergleichen statt gegen die Ortszeit.
+            try:
+                _alt = float(os.getenv("MAX_TICK_ALTER_SEK", "300"))
+            except Exception:
+                _alt = 300.0
+            if _alt > 0 and _sti and getattr(_sti, "time", 0):
+                _rsym = os.getenv("REFERENZ_SYMBOL", "EURUSD")
+                _rt = mt5.symbol_info_tick(_rsym)
+                if _rt is None:
+                    mt5.symbol_select(_rsym, True)
+                    _rt = mt5.symbol_info_tick(_rsym)
+                if _rt and getattr(_rt, "time", 0):
+                    _delta = float(_rt.time) - float(_sti.time)
+                    if _delta > _alt:
+                        log.info("SKIP Kurs veraltet: " +
+                                 str(sig.symbol) + " ist " +
+                                 str(int(_delta)) + " s aelter als " +
+                                 _rsym + " - Markt wohl zu")
+                        return
             if _sti and _ssi and _ssi.point:
                 # PATCH135: Nullkurs abfangen. Beim Wochenstart steht
                 # der Kurs kurz auf 0,0 und die Spanne waere dann

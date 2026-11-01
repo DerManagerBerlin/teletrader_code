@@ -1,58 +1,3 @@
-2026-10-26 19:52:06,416 [INFO] Telegram User-Client verbunden.
-2026-10-26 19:52:06,887 [INFO] Telegram Bot-Client verbunden.
-2026-10-26 19:52:06,888 [INFO] Lade Dialoge für private Kanal-Auflösung...
-2026-10-26 19:52:07,822 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
-2026-10-26 19:52:07,823 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
-2026-10-26 19:52:07,849 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
-2026-10-26 19:52:07,870 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
-✅ Bereit – überwache 3 Kanäle
-
-2026-10-26 19:52:07,930 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
-2026-10-26 19:52:07,931 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
-2026-10-26 19:52:22,931 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
-2026-10-26 19:52:23,292 [INFO] ✅ Keine verpassten Signale
-2026-10-26 19:52:24,577 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
-2026-10-26 19:52:53,294 [INFO] Equity Guardian: Start=886.6$
-2026-10-26 19:57:23,408 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-26 19:57:23,625 [INFO] ✅ Keine verpassten Signale
-2026-10-26 20:00:11,922 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4013.04'
-2026-10-26 20:00:11,977 [INFO] Lot-Sizing: Balance=887.0$  Lot=0.04  Kanal=XAUUSD SCALP
-2026-10-26 20:00:11,977 [INFO] Layer-Verteilung: 5 Layer = 2x TP1 (4018.04), 1x TP2 (4021.04), 1x TP3 (4025.04) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
-
-⚡ SIGNAL [20:00:11] aus: XAUUSD SCALPING ⚡️
-  BUY XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4005.04 | TPs: [4018.04, 4021.04, 4025.04, 4029.04]
-  Verteilung: {4018.04: 2, 4021.04: 1, 4025.04: 1, 0: 1}
-2026-10-26 20:00:11,979 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 8.52 (Einstieg 4013.56 statt 4013.04)
-2026-10-26 20:00:11,983 [INFO] Lot-Sizing: Balance=887.0$  Lot=0.04  Kanal=XAUUSD SCALP
-2026-10-26 20:00:11,988 [INFO] Lot-Normalisierung XAUUSD.s: 0.008839801594366216 -> 0.01 (min 0.01, step 0.01)
-2026-10-26 20:00:11,988 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 7.62, Budget 33.69)
-2026-10-26 20:00:11,989 [INFO] Zielrisiko 3.8%: SL=8.52 -> Lot 0.04 -> 0.01 x 4 Layer = 30.49 je Signal
-2026-10-26 20:00:11,993 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (4018.04), 1x TP2 (4021.04) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
-2026-10-26 20:00:11,999 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (4018.04), 1x TP2 (4021.04) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
-2026-10-26 20:00:12,002 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-26 20:00:12,412 [INFO] Runner markiert #422283920 -> runners.json
-2026-10-26 20:00:12,413 [INFO] Layer 1/4 Ticket #422283920 TP=4018.04
-2026-10-26 20:00:12,416 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-26 20:00:12,827 [INFO] Runner markiert #422283924 -> runners.json
-2026-10-26 20:00:12,828 [INFO] Layer 2/4 Ticket #422283924 TP=4018.04
-2026-10-26 20:00:12,830 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-26 20:00:13,249 [INFO] Runner markiert #422283926 -> runners.json
-2026-10-26 20:00:13,249 [INFO] Layer 3/4 Ticket #422283926 TP=4021.04
-2026-10-26 20:00:13,252 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-26 20:00:13,663 [INFO] Runner markiert #422283930 -> runners.json
-2026-10-26 20:00:13,663 [INFO] Layer 4/4 Ticket #422283930 TP=0
-2026-10-26 20:00:13,664 [INFO] TP-Layer Map: {'tp1': [422283930], 'tp2': [422283920, 422283924], 'tp3': [422283926]}
-2026-10-26 20:00:13,664 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
-2026-10-26 20:00:13,683 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-26 20:03:24,788 [INFO] Telethon Wakeup-Ping
-2026-10-26 20:07:23,628 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-26 20:07:23,690 [INFO] Scalp: besserer Einstieg als im Signal (4.5 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-26 20:07:23,691 [INFO] Verpasstes TRADE uebersprungen: Nachricht 20:00 ist 7.2 Min alt (> 5.0 Min) - kein Re-Fire
-2026-10-26 20:07:23,883 [INFO] ✅ Keine verpassten Signale
-2026-10-26 20:10:02,000 [INFO] AUTOPATCH: patch_100_netz.py angewendet - 2026-10-26 20:10:02 PATCH100 externe IP: 34.141.14.126 2026-10-26 20:10:02 PATCH100 interne IP: 10.156.0.2 2026-10-26 20:10:02 PATCH100 Instanz: teletrader / Zone: europe-west3-a 2026-10-26 20:10:02 PATCH100 ufw: (ufw ni
-2026-10-26 20:10:02,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
-2026-10-26 20:10:37,000 [INFO] AUTOPATCH: teletrader.service laeuft
 
 ══════════════════════════════════════════════════════════
   TeleTrader AI  –  Finale Version
@@ -7998,3 +7943,58 @@ Live-Modus bestaetigt.
 2026-11-01 22:43:28,625 [INFO] Telethon Wakeup-Ping
 2026-11-01 22:47:27,256 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-01 22:47:27,490 [INFO] ✅ Keine verpassten Signale
+2026-11-01 22:50:03,000 [INFO] AUTOPATCH: patch_142_referenz.py angewendet - PATCH142 Kontowechsel-Erkennung und Kursalter-Pruefung eingesetzt PATCH142 bremse.json geloescht, Inhalt war: {"tag": "2026-11-01", "tag_start": 882.26, "woche": "2026-KW44", "woche_start": 882.26, "tag_pause": true, "wo
+2026-11-01 22:50:03,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
+2026-11-01 22:50:38,000 [INFO] AUTOPATCH: teletrader.service laeuft
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🔴 LIVE | Phase: 3
+══════════════════════════════════════════════════════════
+
+
+======================================================
+  LIVE-MODUS AKTIV - ECHTES GELD!
+======================================================
+
+  [OK] ANTHROPIC_API_KEY gesetzt
+  [OK] RISK_PER_100=0.03 (empfohlen <= 0.07)
+  [OK] Lot-Sizing: 0.02/100$ Standard, GHP-Backup 2x
+  [OK] MAX_POS_PER_SYMBOL=1 (empfohlen <= 10)
+  [OK] TRAILING_STOP_ENABLED=true
+  [OK] MAGIC_NUMBER=88888
+
+AUTO_CONFIRM_LIVE=true – Autostart
+Live-Modus bestaetigt.
+
+2026-11-01 22:51:05,741 [INFO] MT5 Terminal laut MT5_TERMINAL_PATH: C:\Program Files\Ultima Markets MT5 Terminal\terminal64.exe
+2026-11-01 22:52:08,999 [INFO] MT5 [LIVE ⚠️] → Konto 34706330 | Balance: $112.32 EUR
+2026-11-01 22:52:09,065 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-11-01 22:52:09,116 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-11-01 22:52:09,163 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-11-01 22:52:09,184 [INFO] DEALDIAG Konto=34706330 Server=UltimaMarkets-Live 1
+2026-11-01 22:52:09,188 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
+2026-11-01 22:52:09,190 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
+2026-11-01 22:52:09,192 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
+2026-11-01 22:52:09,200 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
+2026-11-01 22:52:09,201 [INFO] LIVECHECK Modus=LIVE Server=UltimaMarkets-Live 1 Konto=***330 Waehrung=EUR Balance=112.32 Hebel=500 TradeAllowed=True
+2026-11-01 22:52:09,204 [INFO] LIVECHECK XAUUSD handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=? ask=? spread=-1 Pips
+2026-11-01 22:52:09,207 [INFO] LIVECHECK BTCUSD handelbar=4 lot 0.01-100.0 step 0.01 stops=0 digits=2 bid=77839.88 ask=77856.96 spread=170.8 Pips
+2026-11-01 22:52:09,209 [INFO] LIVECHECK Handel pausiert=False
+2026-11-01 22:52:09,210 [INFO] POSCHECK Balance=112.32 Equity=116.71 FreieMargin=112.53
+2026-11-01 22:52:09,211 [INFO] POSCHECK offen #694164624 BTCUSD BUY vol=0.03 open=77677.46 sl=77529.91 tp=78127.06 profit=4.39 magic=0
+2026-11-01 22:52:09,679 [INFO] Telegram User-Client verbunden.
+2026-11-01 22:52:09,845 [INFO] Telegram Bot-Client verbunden.
+2026-11-01 22:52:09,846 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-11-01 22:52:11,739 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-11-01 22:52:12,297 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-11-01 22:52:12,324 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-11-01 22:52:12,355 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-11-01 22:52:12,410 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-11-01 22:52:12,410 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-11-01 22:52:27,410 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-11-01 22:52:27,614 [INFO] ✅ Keine verpassten Signale
+2026-11-01 22:52:29,171 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-11-01 22:52:57,618 [INFO] Equity Guardian: Start=112.32$
