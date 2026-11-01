@@ -1911,6 +1911,11 @@ def connect_mt5() -> bool:
     _tschl = "MT5_TERMINAL_PATH_DEMO" if DEMO_MODE else "MT5_TERMINAL_PATH"
     _tpfad = (os.getenv(_tschl, "") or "").strip()
     _targs = {"path": _tpfad} if _tpfad else {}
+    # PATCH129: Das Ultima-Terminal laeuft portabel, sein
+    # Datenverzeichnis liegt neben der exe. Ohne diesen Schalter
+    # griffe MT5 auf das leere Roaming-Profil zu.
+    if _tpfad and os.getenv("MT5_TERMINAL_PORTABLE", "false").lower() == "true":
+        _targs["portable"] = True
     if _tpfad:
         log.info("MT5 Terminal laut " + _tschl + ": " + _tpfad)
     if mt5.initialize(**_targs):

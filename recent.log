@@ -1,78 +1,3 @@
-2026-10-26 18:04:20,883 [INFO] Scalp: besserer Einstieg als im Signal (38.6 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-26 18:04:20,884 [INFO] Verpasstes TRADE uebersprungen: Nachricht 17:35 ist 29.3 Min alt (> 5.0 Min) - kein Re-Fire
-2026-10-26 18:04:21,065 [INFO] ✅ Keine verpassten Signale
-2026-10-26 18:10:22,678 [INFO] Telethon Wakeup-Ping
-2026-10-26 18:14:21,077 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-26 18:14:21,335 [INFO] ✅ Keine verpassten Signale
-2026-10-26 18:20:22,953 [INFO] Telethon Wakeup-Ping
-2026-10-26 18:24:21,337 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-26 18:24:21,521 [INFO] ✅ Keine verpassten Signale
-2026-10-26 18:25:54,284 [INFO] Terminal-Neustart angefordert (Kontowechsel)
-
-══════════════════════════════════════════════════════════
-  TeleTrader AI  –  Finale Version
-  Modus: 🔴 LIVE | Phase: 3
-══════════════════════════════════════════════════════════
-
-
-======================================================
-  LIVE-MODUS AKTIV - ECHTES GELD!
-======================================================
-
-  [OK] ANTHROPIC_API_KEY gesetzt
-  [OK] RISK_PER_100=0.03 (empfohlen <= 0.07)
-  [OK] Lot-Sizing: 0.02/100$ Standard, GHP-Backup 2x
-  [OK] MAX_POS_PER_SYMBOL=6 (empfohlen <= 10)
-  [OK] TRAILING_STOP_ENABLED=true
-  [OK] MAGIC_NUMBER=88888
-
-AUTO_CONFIRM_LIVE=true – Autostart
-Live-Modus bestaetigt.
-
-2026-10-26 18:32:05,336 [ERROR] MT5 Parameter-Login fehlgeschlagen: (-10005, 'IPC timeout')
-2026-10-26 18:32:05,344 [ERROR] MT5 Fehler: (-10005, 'IPC timeout')
-2026-10-26 18:32:05,356 [ERROR] SELBSTHEILUNG: Live-Login gescheitert: (-10005, 'IPC timeout') -> DEMO_MODE=true gesetzt. Naechster Start laeuft auf dem Demokonto, danach ist /live wieder moeglich.
-❌ MT5 Verbindung fehlgeschlagen.
-
-══════════════════════════════════════════════════════════
-  TeleTrader AI  –  Finale Version
-  Modus: 🟡 DEMO | Phase: 3
-══════════════════════════════════════════════════════════
-
-2026-10-26 18:33:38,069 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $886.60 EUR
-2026-10-26 18:33:38,096 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
-2026-10-26 18:33:38,127 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
-2026-10-26 18:33:38,158 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
-2026-10-26 18:33:38,187 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
-2026-10-26 18:33:38,189 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 18:33:38,192 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 18:33:38,194 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 18:33:38,200 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
-2026-10-26 18:33:38,201 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=886.6 Hebel=500 TradeAllowed=True
-2026-10-26 18:33:38,203 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4015.59 ask=4015.91 spread=3.2 Pips
-2026-10-26 18:33:38,204 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
-2026-10-26 18:33:38,206 [INFO] LIVECHECK Handel pausiert=False
-2026-10-26 18:33:38,206 [INFO] POSCHECK Balance=886.6 Equity=886.6 FreieMargin=886.6
-2026-10-26 18:33:38,206 [INFO] POSCHECK keine offenen Positionen
-2026-10-26 18:33:38,629 [INFO] Telegram User-Client verbunden.
-2026-10-26 18:33:38,892 [INFO] Telegram Bot-Client verbunden.
-2026-10-26 18:33:38,893 [INFO] Lade Dialoge für private Kanal-Auflösung...
-2026-10-26 18:33:40,075 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
-2026-10-26 18:33:40,076 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
-2026-10-26 18:33:40,106 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
-2026-10-26 18:33:40,128 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
-✅ Bereit – überwache 3 Kanäle
-
-2026-10-26 18:33:40,183 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
-2026-10-26 18:33:40,183 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
-2026-10-26 18:33:55,183 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
-2026-10-26 18:33:55,404 [INFO] ✅ Keine verpassten Signale
-2026-10-26 18:33:56,552 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
-2026-10-26 18:33:56,639 [INFO] Command-Queue geleert (ab Update 101322877)
-2026-10-26 18:34:15,460 [INFO] MFE #422205608 XAUUSD.s: Hoch +-0.6 Punkte, Stufe 0
-2026-10-26 18:34:15,467 [INFO] MFE #422205610 XAUUSD.s: Hoch +-0.6 Punkte, Stufe 0
-2026-10-26 18:34:15,472 [INFO] MFE #422205620 XAUUSD.s: Hoch +-0.6 Punkte, Stufe 0
-2026-10-26 18:34:15,478 [INFO] MFE #422205626 XAUUSD.s: Hoch +-0.7 Punkte, Stufe 0
 2026-10-26 18:34:25,407 [INFO] Equity Guardian: Start=886.6$
 2026-10-26 18:34:25,409 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
 2026-10-26 18:35:02,000 [INFO] AUTOPATCH: patch_92_schau.py angewendet - 2026-10-26 18:35:02 PATCH92 Bild: 35416 Bytes 2026-10-26 18:35:02 PATCH92 Config: accounts.dat agents.dat assistant.ini certificates common.ini common.ini.bak common.ini.bak_70 common.ini.bak_76 common.ini.bak_83 common.
@@ -7998,3 +7923,78 @@ ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
 2026-11-01 15:39:11,379 [INFO] ✅ Keine verpassten Signale
 2026-11-01 15:39:47,380 [WARNING] Server closed the connection: [WinError 64] Network name deleted
 2026-11-01 15:39:53,587 [WARNING] Server closed the connection: [WinError 64] Network name deleted
+2026-11-01 15:45:03,000 [INFO] AUTOPATCH: patch_129_scharf.py angewendet - PATCH129 Terminal live: Ultima Markets MT5 Terminal PATCH129 Terminal demo: PU Prime MT5 Terminal PATCH129 Portable-Schalter eingesetzt PATCH129 common.ini Kandidaten: 1 PATCH129 Hinweis: keine common.ini geaendert - Ter
+2026-11-01 15:45:03,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
+2026-11-01 15:45:38,000 [INFO] AUTOPATCH: teletrader.service laeuft
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🔴 LIVE | Phase: 3
+══════════════════════════════════════════════════════════
+
+
+======================================================
+  LIVE-MODUS AKTIV - ECHTES GELD!
+======================================================
+
+  [OK] ANTHROPIC_API_KEY gesetzt
+  [OK] RISK_PER_100=0.03 (empfohlen <= 0.07)
+  [OK] Lot-Sizing: 0.02/100$ Standard, GHP-Backup 2x
+  [OK] MAX_POS_PER_SYMBOL=1 (empfohlen <= 10)
+  [OK] TRAILING_STOP_ENABLED=true
+  [OK] MAGIC_NUMBER=88888
+
+AUTO_CONFIRM_LIVE=true – Autostart
+Live-Modus bestaetigt.
+
+2026-11-01 15:45:46,506 [INFO] MT5 Terminal laut MT5_TERMINAL_PATH: C:\Program Files\Ultima Markets MT5 Terminal\terminal64.exe
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+2026-11-01 15:46:52,134 [INFO] MT5 [LIVE ⚠️] → Konto 34706330 | Balance: $105.97 EUR
+2026-11-01 15:46:52,180 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-11-01 15:46:52,210 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-11-01 15:46:52,233 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-11-01 15:46:52,246 [INFO] DEALDIAG Konto=34706330 Server=UltimaMarkets-Live 1
+2026-11-01 15:46:52,248 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
+2026-11-01 15:46:52,251 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
+2026-11-01 15:46:52,257 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
+2026-11-01 15:46:52,267 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
+2026-11-01 15:46:52,268 [INFO] LIVECHECK Modus=LIVE Server=UltimaMarkets-Live 1 Konto=***330 Waehrung=EUR Balance=105.97 Hebel=500 TradeAllowed=True
+2026-11-01 15:46:52,271 [INFO] LIVECHECK XAUUSD handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=? ask=? spread=-1 Pips
+2026-11-01 15:46:52,273 [INFO] LIVECHECK BTCUSD handelbar=4 lot 0.01-100.0 step 0.01 stops=0 digits=2 bid=? ask=? spread=-1 Pips
+2026-11-01 15:46:52,275 [INFO] LIVECHECK Handel pausiert=False
+2026-11-01 15:46:52,276 [INFO] POSCHECK Balance=105.97 Equity=105.97 FreieMargin=105.97
+2026-11-01 15:46:52,278 [INFO] POSCHECK keine offenen Positionen
+2026-11-01 15:46:52,593 [INFO] Telegram User-Client verbunden.
+2026-11-01 15:46:52,851 [INFO] Telegram Bot-Client verbunden.
+2026-11-01 15:46:52,852 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-11-01 15:46:56,412 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-11-01 15:46:58,246 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-11-01 15:46:58,309 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-11-01 15:46:58,368 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-11-01 15:46:58,528 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-11-01 15:46:58,529 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-11-01 15:47:13,530 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-11-01 15:47:13,950 [INFO] ✅ Keine verpassten Signale
+2026-11-01 15:47:15,192 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-11-01 15:47:43,954 [INFO] Equity Guardian: Start=105.97$
+2026-11-01 15:47:43,967 [WARNING] ⏸ TAGESSTOP: Equity 105.97 unter 776.39 (12% von 882.26). Handel bis morgen pausiert.
+2026-11-01 15:47:43,971 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
+2026-11-01 15:48:14,151 [WARNING] ⏸ WOCHENSTOP: Equity 105.97 unter 661.69 (25% von 882.26). Handel bis naechste Woche pausiert.
+2026-11-01 15:49:08,081 [WARNING] Algo Trading deaktiviert! Versuche GUI-Reaktivierung (Ctrl+E)...
