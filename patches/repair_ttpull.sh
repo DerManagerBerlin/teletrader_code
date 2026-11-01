@@ -53,6 +53,9 @@ sag "Manifest abrufbar: HTTP $HTTP"
 
 # 5. Wie weit ist der Bestand
 sag "applied_patches: $(wc -l < "$TT/applied_patches.txt" 2>/dev/null || echo 0) Zeilen, zuletzt $(tail -1 "$TT/applied_patches.txt" 2>/dev/null || echo keine)"
+sag "Bot-Dienst: $(systemctl is-active teletrader.service 2>/dev/null || echo unbekannt)"
+sag "push_err zuletzt: $(tail -1 "$PUB/push_err.log" 2>/dev/null || echo leer)"
+sag "sudo fuer restart: $(sudo -n systemctl is-active teletrader.service >/dev/null 2>&1 && echo ja || echo nein)"
 
 # 6. Einmal laufen lassen
 echo ""
@@ -61,9 +64,14 @@ bash "$PUB/ttpull.sh"
 RC=$?
 sag "ttpull Durchlauf beendet, rc=$RC"
 
+# 7. Sync anstossen, damit das Ergebnis sofort bei Claude ankommt
+if [ -x "$PUB/sync.sh" ] || [ -f "$PUB/sync.sh" ]; then
+    bash "$PUB/sync.sh" >/dev/null 2>&1 && echo "sync.sh gelaufen"
+fi
+
 echo ""
 echo "--- letzte Statuszeilen ---"
-tail -12 "$ST"
+tail -14 "$ST"
 echo ""
 echo "Fertig. Das Ergebnis steht auch in status.txt und erreicht Claude"
 echo "mit dem naechsten sync-Lauf (hoechstens 10 Minuten)."
