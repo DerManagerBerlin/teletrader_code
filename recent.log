@@ -1,7 +1,3 @@
-
-══════════════════════════════════════════════════════════
-  TeleTrader AI  –  Finale Version
-  Modus: 🟡 DEMO | Phase: 3
 ══════════════════════════════════════════════════════════
 
 2026-10-26 17:57:01,551 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $909.79 EUR
@@ -7941,3 +7937,64 @@ Set breakeven nowww**
 2026-11-01 15:03:24,364 [INFO] Telethon Wakeup-Ping
 2026-11-01 15:07:23,184 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-01 15:07:23,420 [INFO] ✅ Keine verpassten Signale
+2026-11-01 15:10:02,000 [INFO] AUTOPATCH: patch_124_spread.py angewendet - PATCH124 Spread-Schleuse eingesetzt PATCH124 fertig: MAX_SPREAD_PIPS=15, Gold liegt normal bei 3,2
+2026-11-01 15:10:05,000 [INFO] AUTOPATCH: patch_125_check.py angewendet - PATCH125 Modus laut .env: DEMO | Symbol XAUUSD.s PATCH125 Terminalpfad: (nicht gesetzt) PATCH125 INIT True (1, 'Success') PATCH125 TERMINAL PU Prime MT5 Terminal build 6230 connected True trade_allowed True PATCH125 KONT
+2026-11-01 15:10:05,000 [INFO] AUTOPATCH: patch_125_check.py ohne Neustart (NO_RESTART)
+2026-11-01 15:10:05,000 [INFO] AUTOPATCH: patch_126_pfad.py angewendet - PATCH126 Terminal live: Ultima Markets MT5 Terminal PATCH126 Terminal demo: PU Prime MT5 Terminal PATCH126 connect_mt5 nutzt jetzt MT5_TERMINAL_PATH PATCH126 common.ini Kandidaten: 0 PATCH126 Hinweis: keine common.ini ge
+2026-11-01 15:10:06,000 [INFO] AUTOPATCH: patch_127_erststart.py angewendet - PATCH127 Skript geschrieben PATCH127 Erststart abgekoppelt gestartet, Ergebnis in etwa 4 Minuten als ERST127
+2026-11-01 15:10:06,000 [INFO] AUTOPATCH: patch_127_erststart.py ohne Neustart (NO_RESTART)
+2026-11-01 15:10:06,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
+2026-11-01 15:10:41,000 [INFO] AUTOPATCH: teletrader.service laeuft
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-11-01 15:10:49,032 [INFO] MT5 Terminal laut MT5_TERMINAL_PATH_DEMO: C:\Program Files\PU Prime MT5 Terminal\terminal64.exe
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+2026-11-01 15:11:55,751 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $882.26 EUR
+2026-11-01 15:11:55,787 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-11-01 15:11:55,811 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-11-01 15:11:55,829 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-11-01 15:11:55,843 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
+2026-11-01 15:11:55,845 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
+2026-11-01 15:11:55,846 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
+2026-11-01 15:11:55,847 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
+2026-11-01 15:11:55,852 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
+2026-11-01 15:11:55,852 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=882.26 Hebel=500 TradeAllowed=True
+2026-11-01 15:11:55,854 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=3875.8 ask=3876.17 spread=3.7 Pips
+2026-11-01 15:11:55,855 [INFO] LIVECHECK BTCUSD handelbar=4 lot 0.01-50.0 step 0.01 stops=0 digits=2 bid=78055.78 ask=78072.74 spread=169.6 Pips
+2026-11-01 15:11:55,856 [INFO] LIVECHECK Handel pausiert=False
+2026-11-01 15:11:55,856 [INFO] POSCHECK Balance=882.26 Equity=882.26 FreieMargin=882.26
+2026-11-01 15:11:55,857 [INFO] POSCHECK keine offenen Positionen
+2026-11-01 15:11:56,151 [INFO] Telegram User-Client verbunden.
+2026-11-01 15:11:57,049 [INFO] Telegram Bot-Client verbunden.
+2026-11-01 15:11:57,049 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-11-01 15:11:58,760 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-11-01 15:11:59,387 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-11-01 15:11:59,462 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-11-01 15:11:59,571 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-11-01 15:11:59,631 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-11-01 15:11:59,631 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-11-01 15:12:14,632 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-11-01 15:12:14,838 [INFO] ✅ Keine verpassten Signale
+2026-11-01 15:12:15,897 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-11-01 15:12:44,842 [INFO] Equity Guardian: Start=882.26$

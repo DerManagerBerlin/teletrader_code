@@ -1904,7 +1904,16 @@ def connect_mt5() -> bool:
             return False
     # 1) Attach an laufende Terminal-Sitzung - loest KEINEN Login aus,
     #    kann also eine intakte Verbindung nicht abmelden.
-    if mt5.initialize():
+    # PATCH126: Terminal gezielt ansprechen. Mit zwei installierten
+    # Terminals ist es sonst Zufall, welches mt5.initialize() nimmt.
+    # Demo und Live liegen in verschiedenen Terminals, darum zwei
+    # Schluessel: sonst scheitert der Rueckfall auf Demo.
+    _tschl = "MT5_TERMINAL_PATH_DEMO" if DEMO_MODE else "MT5_TERMINAL_PATH"
+    _tpfad = (os.getenv(_tschl, "") or "").strip()
+    _targs = {"path": _tpfad} if _tpfad else {}
+    if _tpfad:
+        log.info("MT5 Terminal laut " + _tschl + ": " + _tpfad)
+    if mt5.initialize(**_targs):
         _ai = mt5.account_info()
         if _ai and int(_ai.login) == int(MT5_LOGIN):
             _ok = True
@@ -1917,7 +1926,8 @@ def connect_mt5() -> bool:
     # 2) Nur wenn kein oder falsches Konto anliegt: expliziter Login
     if not _ok:
         _ok = mt5.initialize(login=MT5_LOGIN, password=MT5_PASSWORD,
-                             server=MT5_SERVER, timeout=180000)
+                             server=MT5_SERVER, timeout=180000,
+                             **_targs)
         if not _ok:
             # PATCH78: Ein IPC-Timeout heisst nicht, dass der Login
             # scheiterte. Nachsehen, ob das Konto trotzdem steht.
@@ -1926,7 +1936,7 @@ def connect_mt5() -> bool:
             try:
                 import time as _t78
                 _t78.sleep(10)
-                if mt5.initialize():
+                if mt5.initialize(**_targs):
                     _nach = mt5.account_info()
                     if _nach and int(_nach.login) == int(MT5_LOGIN):
                         _ok = True
@@ -4955,6 +4965,27 @@ async def process_signal(sig: TradeSignal):
             log.info("SKIP Goldhunter: bereits " + str(len(gh_open)) +
                      " offene Positionen → kein Overtrading")
             return
+
+    # PATCH124: Spread-Schleuse. Zum Wochenstart und bei News reisst
+    # der Spread kurzzeitig auf ein Vielfaches auf.
+    try:
+        _msp = float(os.getenv("MAX_SPREAD_PIPS", "0") or 0)
+    except Exception:
+        _msp = 0.0
+    if _msp > 0:
+        try:
+            _sti = mt5.symbol_info_tick(sig.symbol)
+            _ssi = mt5.symbol_info(sig.symbol)
+            if _sti and _ssi and _ssi.point:
+                _spip = _ssi.point * 10
+                _spr = (float(_sti.ask) - float(_sti.bid)) / _spip
+                if _spr > _msp:
+                    log.info("SKIP Spread: " + str(sig.symbol) +
+                             " " + str(round(_spr, 1)) +
+                             " Pips > " + str(_msp) + " erlaubt")
+                    return
+        except Exception as _spe:
+            log.error("Spread-Schleuse: " + str(_spe))
 
     # PATCH118: Symbolschleuse. NUR_SYMBOLE=XAUUSD laesst nur Gold
     # durch. Mit 100 EUR ist BTC nicht handelbar: 170 Pips Spread
