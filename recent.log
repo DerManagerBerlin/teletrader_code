@@ -1,62 +1,3 @@
-2026-10-26 17:57:01,619 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
-2026-10-26 17:57:01,637 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
-2026-10-26 17:57:01,639 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 17:57:01,642 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 17:57:01,645 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 17:57:01,651 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
-2026-10-26 17:57:01,652 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=909.79 Hebel=500 TradeAllowed=True
-2026-10-26 17:57:01,654 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4021.22 ask=4021.54 spread=3.2 Pips
-2026-10-26 17:57:01,656 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
-2026-10-26 17:57:01,657 [INFO] LIVECHECK Handel pausiert=False
-2026-10-26 17:57:01,657 [INFO] POSCHECK Balance=909.79 Equity=904.24 FreieMargin=875.49
-2026-10-26 17:57:01,658 [INFO] POSCHECK offen #422205608 XAUUSD.s BUY vol=0.01 open=4022.67 sl=4016.19 tp=4029.19 profit=-1.3 magic=88888
-2026-10-26 17:57:01,658 [INFO] POSCHECK offen #422205610 XAUUSD.s BUY vol=0.01 open=4022.68 sl=4016.19 tp=4029.19 profit=-1.3 magic=88888
-2026-10-26 17:57:01,659 [INFO] POSCHECK offen #422205620 XAUUSD.s BUY vol=0.01 open=4022.69 sl=4016.19 tp=4032.19 profit=-1.31 magic=88888
-2026-10-26 17:57:01,659 [INFO] POSCHECK offen #422205626 XAUUSD.s BUY vol=0.01 open=4022.67 sl=4016.19 tp=0.0 profit=-1.3 magic=88888
-2026-10-26 17:57:02,024 [INFO] Telegram User-Client verbunden.
-2026-10-26 17:57:02,737 [INFO] Telegram Bot-Client verbunden.
-2026-10-26 17:57:02,738 [INFO] Lade Dialoge für private Kanal-Auflösung...
-2026-10-26 17:57:04,000 [INFO] AUTOPATCH: patch_91_logruhe.py angewendet - 2026-10-26 17:55:03 PATCH91 Logruhe eingebaut, Syntax ok 2026-10-26 17:55:03 PATCH91 altes Log: -rw-rw-r-- 1 alexander_lacher alexander_lacher 3451501 17:54:58 /home/alexander_lacher/teletrader/bot.log 2026-10-26 17:55:0
-2026-10-26 17:57:04,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
-2026-10-26 17:57:39,000 [INFO] AUTOPATCH: teletrader.service laeuft
-
-══════════════════════════════════════════════════════════
-  TeleTrader AI  –  Finale Version
-  Modus: 🟡 DEMO | Phase: 3
-══════════════════════════════════════════════════════════
-
-2026-10-26 17:59:02,761 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $909.79 EUR
-2026-10-26 17:59:02,798 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
-2026-10-26 17:59:02,824 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
-2026-10-26 17:59:02,860 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
-2026-10-26 17:59:02,876 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
-2026-10-26 17:59:02,878 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 17:59:02,881 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 17:59:02,884 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 17:59:02,889 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
-2026-10-26 17:59:02,890 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=909.79 Hebel=500 TradeAllowed=True
-2026-10-26 17:59:02,891 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4020.71 ask=4021.03 spread=3.2 Pips
-2026-10-26 17:59:02,892 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
-2026-10-26 17:59:02,893 [INFO] LIVECHECK Handel pausiert=False
-2026-10-26 17:59:02,893 [INFO] POSCHECK Balance=909.79 Equity=902.64 FreieMargin=873.89
-2026-10-26 17:59:02,894 [INFO] POSCHECK offen #422205608 XAUUSD.s BUY vol=0.01 open=4022.67 sl=4016.19 tp=4029.19 profit=-1.75 magic=88888
-2026-10-26 17:59:02,895 [INFO] POSCHECK offen #422205610 XAUUSD.s BUY vol=0.01 open=4022.68 sl=4016.19 tp=4029.19 profit=-1.76 magic=88888
-2026-10-26 17:59:02,895 [INFO] POSCHECK offen #422205620 XAUUSD.s BUY vol=0.01 open=4022.69 sl=4016.19 tp=4032.19 profit=-1.77 magic=88888
-2026-10-26 17:59:02,895 [INFO] POSCHECK offen #422205626 XAUUSD.s BUY vol=0.01 open=4022.67 sl=4016.19 tp=0.0 profit=-1.75 magic=88888
-2026-10-26 17:59:03,227 [INFO] Telegram User-Client verbunden.
-2026-10-26 17:59:03,373 [INFO] Telegram Bot-Client verbunden.
-2026-10-26 17:59:03,374 [INFO] Lade Dialoge für private Kanal-Auflösung...
-2026-10-26 17:59:05,277 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
-2026-10-26 17:59:05,323 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
-2026-10-26 17:59:05,370 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
-2026-10-26 17:59:05,401 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
-✅ Bereit – überwache 3 Kanäle
-
-2026-10-26 17:59:05,450 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
-2026-10-26 17:59:05,450 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
-2026-10-26 17:59:20,451 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
-2026-10-26 17:59:20,544 [INFO] Scalp: besserer Einstieg als im Signal (28.4 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-26 17:59:20,545 [INFO] Verpasstes TRADE uebersprungen: Nachricht 17:35 ist 24.3 Min alt (> 5.0 Min) - kein Re-Fire
 2026-10-26 17:59:20,762 [INFO] ✅ Keine verpassten Signale
 2026-10-26 17:59:22,004 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
 2026-10-26 17:59:50,766 [INFO] Equity Guardian: Start=909.79$
@@ -7998,3 +7939,62 @@ ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
 2026-11-01 15:23:16,255 [INFO] Telethon Wakeup-Ping
 2026-11-01 15:27:15,015 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-01 15:27:16,493 [INFO] ✅ Keine verpassten Signale
+2026-11-01 15:30:04,000 [INFO] AUTOPATCH: patch_128_login.py angewendet - PATCH128 Terminal: Ultima Markets MT5 Terminal PATCH128 Windows-Pfad: C:\Program Files\Ultima Markets MT5 Terminal\terminal64.exe PATCH128 common.ini gefunden: 1 PATCH128 Zugangsdaten vollstaendig, Konto ***330, Server U
+2026-11-01 15:30:04,000 [INFO] AUTOPATCH: patch_128_login.py ohne Neustart (NO_RESTART)
+2026-11-01 15:32:03,000 [INFO] AUTOPATCH: patch_128_login.py angewendet - PATCH128 Terminal: Ultima Markets MT5 Terminal PATCH128 Windows-Pfad: C:\Program Files\Ultima Markets MT5 Terminal\terminal64.exe PATCH128 common.ini gefunden: 0 PATCH128 Zugangsdaten vollstaendig, Konto ***330, Server U
+2026-11-01 15:32:03,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
+X connection to :99 broken (explicit kill or server shutdown).
+2026-11-01 15:32:38,000 [INFO] AUTOPATCH: teletrader.service laeuft
+
+══════════════════════════════════════════════════════════
+  TeleTrader AI  –  Finale Version
+  Modus: 🟡 DEMO | Phase: 3
+══════════════════════════════════════════════════════════
+
+2026-11-01 15:32:46,084 [INFO] MT5 Terminal laut MT5_TERMINAL_PATH_DEMO: C:\Program Files\PU Prime MT5 Terminal\terminal64.exe
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+2026-11-01 15:33:52,917 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $882.26 EUR
+2026-11-01 15:33:52,943 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
+2026-11-01 15:33:52,967 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
+2026-11-01 15:33:52,995 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
+2026-11-01 15:33:53,016 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
+2026-11-01 15:33:53,019 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
+2026-11-01 15:33:53,020 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
+2026-11-01 15:33:53,024 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
+2026-11-01 15:33:53,033 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
+2026-11-01 15:33:53,035 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=882.26 Hebel=500 TradeAllowed=True
+2026-11-01 15:33:53,037 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=3875.8 ask=3876.17 spread=3.7 Pips
+2026-11-01 15:33:53,039 [INFO] LIVECHECK BTCUSD handelbar=4 lot 0.01-50.0 step 0.01 stops=0 digits=2 bid=78038.02 ask=78055.06 spread=170.4 Pips
+2026-11-01 15:33:53,040 [INFO] LIVECHECK Handel pausiert=False
+2026-11-01 15:33:53,040 [INFO] POSCHECK Balance=882.26 Equity=882.26 FreieMargin=882.26
+2026-11-01 15:33:53,041 [INFO] POSCHECK keine offenen Positionen
+2026-11-01 15:33:53,341 [INFO] Telegram User-Client verbunden.
+2026-11-01 15:33:53,505 [INFO] Telegram Bot-Client verbunden.
+2026-11-01 15:33:53,506 [INFO] Lade Dialoge für private Kanal-Auflösung...
+2026-11-01 15:33:55,071 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
+2026-11-01 15:33:55,710 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
+2026-11-01 15:33:55,763 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
+2026-11-01 15:33:55,786 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
+✅ Bereit – überwache 3 Kanäle
+
+2026-11-01 15:33:55,843 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
+2026-11-01 15:33:55,843 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
+2026-11-01 15:34:10,846 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
+2026-11-01 15:34:11,029 [INFO] ✅ Keine verpassten Signale
+2026-11-01 15:34:12,267 [INFO] Trailing Stop aktiv | 50.0 Pips | Min-Profit: 50.0 Pips
+2026-11-01 15:34:41,033 [INFO] Equity Guardian: Start=882.26$
