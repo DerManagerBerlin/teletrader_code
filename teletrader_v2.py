@@ -4956,6 +4956,19 @@ async def process_signal(sig: TradeSignal):
                      " offene Positionen → kein Overtrading")
             return
 
+    # PATCH118: Symbolschleuse. NUR_SYMBOLE=XAUUSD laesst nur Gold
+    # durch. Mit 100 EUR ist BTC nicht handelbar: 170 Pips Spread
+    # gegen Signale mit 120 Pips Stop ist ein sicherer Verlust.
+    _nur = (os.getenv("NUR_SYMBOLE", "") or "").strip()
+    if _nur:
+        _erl = [x.strip().upper() for x in
+                _nur.replace(";", ",").split(",") if x.strip()]
+        _ssym = str(getattr(sig, "symbol", "") or "").upper()
+        if not any(x in _ssym for x in _erl):
+            log.info("SKIP Symbolschleuse: " + str(sig.symbol) +
+                     " nicht in NUR_SYMBOLE=" + _nur)
+            return
+
     # ── Doppelposition-Schutz ─────────────────────────────────────────────────
     open_positions = mt5.positions_get(symbol=sig.symbol) or []
     same_dir = [p for p in open_positions
