@@ -4979,8 +4979,19 @@ async def process_signal(sig: TradeSignal):
         _msp = 0.0
     if _msp > 0:
         try:
-            _sti = mt5.symbol_info_tick(sig.symbol)
             _ssi = mt5.symbol_info(sig.symbol)
+            # PATCH139: Symbol erst in die Marktuebersicht holen. Fuer
+            # ein nicht ausgewaehltes Symbol liefert MT5 bid=0/ask=0,
+            # und die Nullkurs-Sperre unten wuerde jedes Signal
+            # abweisen. Ein Terminal-Neustart verliert die Auswahl.
+            if _ssi is None or not _ssi.visible:
+                mt5.symbol_select(sig.symbol, True)
+                import time as _t139
+                _t139.sleep(0.5)
+                _ssi = mt5.symbol_info(sig.symbol)
+                log.info("Symbolauswahl nachgeholt: " + str(sig.symbol) +
+                         " sichtbar=" + str(getattr(_ssi, 'visible', None)))
+            _sti = mt5.symbol_info_tick(sig.symbol)
             if _sti and _ssi and _ssi.point:
                 # PATCH135: Nullkurs abfangen. Beim Wochenstart steht
                 # der Kurs kurz auf 0,0 und die Spanne waere dann
