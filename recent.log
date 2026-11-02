@@ -1,12 +1,3 @@
-2026-10-26 22:00:03,687 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $886.60 EUR
-2026-10-26 22:00:03,717 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
-2026-10-26 22:00:03,748 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
-2026-10-26 22:00:03,780 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
-2026-10-26 22:00:03,805 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
-2026-10-26 22:00:03,810 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 22:00:03,816 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 22:00:03,820 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 22:00:03,831 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
 2026-10-26 22:00:03,832 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=886.6 Hebel=500 TradeAllowed=True
 2026-10-26 22:00:03,837 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4016.65 ask=4017.01 spread=3.6 Pips
 2026-10-26 22:00:03,839 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
@@ -7998,3 +7989,12 @@ Live-Modus bestaetigt.
 2026-11-02 08:53:52,880 [INFO] Telethon Wakeup-Ping
 2026-11-02 08:54:22,339 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): '🤑🤑🤑🤑🤑🤑🤑'
 2026-11-02 08:54:22,346 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-02 08:57:45,543 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-11-02 08:57:45,607 [INFO] Scalp: besserer Einstieg als im Signal (35.9 Pips zu unseren Gunsten) - Trade wird genommen
+2026-11-02 08:57:45,608 [INFO] Verpasstes TRADE uebersprungen: Nachricht 08:50 ist 7.7 Min alt (> 5.0 Min) - kein Re-Fire
+2026-11-02 08:57:45,770 [INFO] ⏮ Verpasst [Gold Trader Mo🤴🏽(Gtmofx)] 08:48: CLOSE → Cut loss now
+2026-11-02 08:58:34,945 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'GET READYYY!!!'
+2026-11-02 08:58:34,947 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-02 08:58:34,948 [INFO] 🔁 Duplikat ignoriert aus: Gold Trader Mo🤴🏽(Gtmofx)
+2026-11-02 08:59:52,986 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): "I'm so ready, to sell again but lets just wait and be a litt"
+2026-11-02 08:59:52,988 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
