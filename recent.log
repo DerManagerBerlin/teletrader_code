@@ -1,13 +1,3 @@
-2026-10-27 01:15:12,411 [INFO] Layer-Verteilung: 5 Layer = 2x TP1 (4018.04), 1x TP2 (4021.04), 1x TP3 (4025.04) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
-
-⚡ SIGNAL [01:15:12] aus: XAUUSD SCALPING ⚡️
-  BUY XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4005.04 | TPs: [4018.04, 4021.04, 4025.04, 4029.04]
-  Verteilung: {4018.04: 2, 4021.04: 1, 4025.04: 1, 0: 1}
-2026-10-27 01:15:12,413 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 8.61 (Einstieg 4013.65 statt 4013.04)
-2026-10-27 01:15:12,416 [INFO] Lot-Sizing: Balance=825.0$  Lot=0.04  Kanal=XAUUSD SCALP
-2026-10-27 01:15:12,417 [INFO] Lot-Normalisierung XAUUSD.s: 0.008128205259093956 -> 0.01 (min 0.01, step 0.01)
-2026-10-27 01:15:12,417 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 7.71, Budget 31.34)
 2026-10-27 01:15:12,418 [INFO] Zielrisiko 3.8%: SL=8.61 -> Lot 0.04 -> 0.01 x 4 Layer = 30.84 je Signal
 2026-10-27 01:15:12,420 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (4018.04), 1x TP2 (4021.04) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
 2026-10-27 01:15:12,423 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (4018.04), 1x TP2 (4021.04) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
@@ -7998,3 +7988,13 @@ Equity: 24.08$
 2026-11-02 18:04:03,667 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
 2026-11-02 18:04:03,907 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
 2026-11-02 18:04:25,480 [INFO] Telethon Wakeup-Ping
+2026-11-02 18:08:06,581 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-11-02 18:08:06,943 [INFO] ✅ Keine verpassten Signale
+2026-11-02 18:08:48,256 [ERROR] FALLSCHIRM: Equity 27.65$ < 70% (27.94$)
+2026-11-02 18:08:48,380 [ERROR] FALLSCHIRM AUSGELOEST
+Equity unter 70% des Startkapitals!
+Alle Positionen geschlossen.
+Bot auf Phase 1 (manuell).
+Equity: 27.65$
+2026-11-02 18:09:24,638 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'Below all entriesss now'
+2026-11-02 18:09:24,640 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
