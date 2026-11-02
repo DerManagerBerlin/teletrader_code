@@ -1,28 +1,3 @@
-
-2026-10-26 20:37:02,943 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $886.60 EUR
-2026-10-26 20:37:02,967 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
-2026-10-26 20:37:02,991 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
-2026-10-26 20:37:03,016 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
-2026-10-26 20:37:03,034 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
-2026-10-26 20:37:03,036 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 20:37:03,040 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 20:37:03,042 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 20:37:03,048 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
-2026-10-26 20:37:03,048 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=886.6 Hebel=500 TradeAllowed=True
-2026-10-26 20:37:03,050 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4013.03 ask=4013.4 spread=3.7 Pips
-2026-10-26 20:37:03,052 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
-2026-10-26 20:37:03,053 [INFO] LIVECHECK Handel pausiert=False
-2026-10-26 20:37:03,053 [INFO] POSCHECK Balance=886.6 Equity=884.7 FreieMargin=855.97
-2026-10-26 20:37:03,054 [INFO] POSCHECK offen #422283920 XAUUSD.s BUY vol=0.01 open=4013.53 sl=4005.04 tp=4018.04 profit=-0.45 magic=88888
-2026-10-26 20:37:03,054 [INFO] POSCHECK offen #422283924 XAUUSD.s BUY vol=0.01 open=4013.56 sl=4005.04 tp=4018.04 profit=-0.47 magic=88888
-2026-10-26 20:37:03,054 [INFO] POSCHECK offen #422283926 XAUUSD.s BUY vol=0.01 open=4013.58 sl=4005.04 tp=4021.04 profit=-0.49 magic=88888
-2026-10-26 20:37:03,054 [INFO] POSCHECK offen #422283930 XAUUSD.s BUY vol=0.01 open=4013.58 sl=4005.04 tp=0.0 profit=-0.49 magic=88888
-2026-10-26 20:37:03,571 [INFO] Telegram User-Client verbunden.
-2026-10-26 20:37:03,796 [INFO] Telegram Bot-Client verbunden.
-2026-10-26 20:37:03,796 [INFO] Lade Dialoge für private Kanal-Auflösung...
-2026-10-26 20:37:05,508 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
-2026-10-26 20:37:06,130 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
-2026-10-26 20:37:06,157 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
 2026-10-26 20:37:06,200 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
 ✅ Bereit – überwache 3 Kanäle
 
@@ -7998,3 +7973,28 @@ Live-Modus bestaetigt.
 2026-11-02 01:57:31,954 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-02 01:57:32,197 [INFO] ✅ Keine verpassten Signale
 2026-11-02 02:03:35,309 [INFO] Telethon Wakeup-Ping
+2026-11-02 02:05:02,267 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 3909.71'
+2026-11-02 02:05:02,296 [INFO] Lot-Sizing: Balance=122.0$  Lot=0.01  Kanal=XAUUSD SCALP
+2026-11-02 02:05:02,297 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+
+⚡ SIGNAL [02:05:02] aus: XAUUSD SCALPING ⚡️
+  BUY XAUUSD | 1 Layer à 0.01 Lot
+  SL: 3901.71 | TPs: [3914.71, 3917.71, 3921.71, 3925.71]
+  Verteilung: {0: 1}
+2026-11-02 02:05:02,301 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.19 (Einstieg 3910.9 statt 3909.71)
+2026-11-02 02:05:02,305 [INFO] Lot-Sizing: Balance=122.0$  Lot=0.01  Kanal=XAUUSD SCALP
+2026-11-02 02:05:02,307 [INFO] Lot-Normalisierung XAUUSD: 0.005642107781501598 -> 0.01 (min 0.01, step 0.01)
+2026-11-02 02:05:02,311 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-02 02:05:02,315 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-02 02:05:02,868 [INFO] Runner markiert #694324395 -> runners.json
+2026-11-02 02:05:02,868 [INFO] Layer 1/1 Ticket #694324395 TP=0
+2026-11-02 02:05:02,871 [INFO] TP-Layer Map: {'tp1': [694324395]}
+2026-11-02 02:05:02,872 [INFO] Phase 3: Auto-Trade XAUUSD | 1 Tickets
+2026-11-02 02:05:02,904 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-11-02 02:05:03,446 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 3909.71'
+2026-11-02 02:05:03,459 [INFO] SKIP: XAUUSD BUY bereits 1 offene Positionen
+2026-11-02 02:06:37,627 [INFO] Ruecksetzer #694324395 0.0-20.0p vom Hoch 21.3p (Trail 30.0p)
+2026-11-02 02:07:07,657 [INFO] Ruecksetzer #694324395 23.7-23.7p vom Hoch 21.3p (Trail 30.0p)
+2026-11-02 02:07:32,199 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-11-02 02:07:32,457 [INFO] Verpasstes Signal ausfuehren [XAUUSD SCALPING ⚡️] 02:05: TRADE conf=99%
+2026-11-02 02:07:32,459 [INFO] Verpasstes Signal uebersprungen: bereits 1 Position(en) offen
