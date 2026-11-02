@@ -1,10 +1,3 @@
-2026-10-26 20:56:36,903 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
-2026-10-26 20:56:36,906 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 20:56:36,910 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 20:56:36,915 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
-2026-10-26 20:56:36,920 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
-2026-10-26 20:56:36,920 [INFO] LIVECHECK Modus=DEMO Server=PUPrime-Demo Konto=***957 Waehrung=EUR Balance=886.6 Hebel=500 TradeAllowed=True
-2026-10-26 20:56:36,922 [INFO] LIVECHECK XAUUSD.s handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=4017.3 ask=4017.67 spread=3.7 Pips
 2026-10-26 20:56:36,923 [ERROR] LIVECHECK BTCUSD.s NICHT VERFUEGBAR - Symbolname pruefen
 2026-10-26 20:56:36,924 [INFO] LIVECHECK Handel pausiert=False
 2026-10-26 20:56:36,924 [INFO] POSCHECK Balance=886.6 Equity=899.98 FreieMargin=871.25
@@ -7998,3 +7991,10 @@ Live-Modus bestaetigt.
 2026-11-02 03:13:37,460 [INFO] Telethon Wakeup-Ping
 2026-11-02 03:17:34,701 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-02 03:17:34,895 [INFO] ✅ Keine verpassten Signale
+2026-11-02 03:20:11,862 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 3901.8'
+2026-11-02 03:20:11,870 [INFO] Nachholen vorgemerkt: XAUUSD SELL Entry 3901.81 (Markt 19.4 Pips weg, Fenster 18.0)
+2026-11-02 03:20:11,871 [INFO] 🔇 NOISE: Regex: Markt 19.4 Pips GEGEN uns vom Entry 3901.81 weg (Kurs 3899.87, max 18.0 Pips)
+2026-11-02 03:20:11,901 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-11-02 03:21:07,559 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 3901.8'
+2026-11-02 03:21:07,563 [INFO] 🔇 NOISE: Regex: Markt 22.7 Pips GEGEN uns vom Entry 3901.81 weg (Kurs 3899.54, max 18.0 Pips)
+2026-11-02 03:23:37,890 [INFO] Telethon Wakeup-Ping
