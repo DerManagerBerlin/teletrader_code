@@ -1,13 +1,3 @@
-2026-10-27 07:20:05,003 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-27 07:20:05,414 [INFO] Runner markiert #422798931 -> runners.json
-2026-10-27 07:20:05,415 [INFO] Layer 3/4 Ticket #422798931 TP=4012.23
-2026-10-27 07:20:05,417 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-27 07:20:05,825 [INFO] Runner markiert #422798932 -> runners.json
-2026-10-27 07:20:05,826 [INFO] Layer 4/4 Ticket #422798932 TP=0
-2026-10-27 07:20:05,826 [INFO] TP-Layer Map: {'tp1': [422798932], 'tp2': [422798924, 422798928], 'tp3': [422798931]}
-2026-10-27 07:20:05,826 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
-2026-10-27 07:20:05,844 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-27 07:21:38,235 [INFO] Telethon Wakeup-Ping
 2026-10-27 07:24:50,076 [INFO] Ruecksetzer #422798932 0.0-8.7p vom Hoch 22.4p (Trail 30.0p)
 2026-10-27 07:25:00,086 [INFO] Ruecksetzer #422798932 0.0-14.0p vom Hoch 27.7p (Trail 30.0p)
 2026-10-27 07:25:33,603 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
@@ -7998,3 +7988,13 @@ Equity: 18.34$
 2026-11-03 05:48:26,411 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-03 05:48:26,590 [INFO] ✅ Keine verpassten Signale
 2026-11-03 05:54:52,967 [INFO] Telethon Wakeup-Ping
+2026-11-03 05:55:11,055 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 3921.1'
+2026-11-03 05:55:11,101 [INFO] Nachholen vorgemerkt: XAUUSD SELL Entry 3921.17 (Markt 18.8 Pips weg, Fenster 18.0)
+2026-11-03 05:55:11,102 [INFO] 🔇 NOISE: Regex: Markt 18.8 Pips GEGEN uns vom Entry 3921.17 weg (Kurs 3919.29, max 18.0 Pips)
+2026-11-03 05:55:11,113 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-11-03 05:55:15,903 [INFO] Signal nachgeholt: XAUUSD SELL Entry 3921.17, Kurs 3919.69 (14.8 Pips, 0.1 Min nach dem Signal)
+2026-11-03 05:55:15,917 [WARNING] Margin zu knapp: 0.21$ frei, benoetigt ~7.0$ pro Layer
+2026-11-03 05:56:03,638 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 3921.1'
+2026-11-03 05:56:03,644 [WARNING] Margin zu knapp: 0.21$ frei, benoetigt ~7.0$ pro Layer
+2026-11-03 05:58:26,593 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-11-03 05:58:26,784 [INFO] ✅ Keine verpassten Signale
