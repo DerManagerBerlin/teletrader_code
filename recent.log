@@ -1,28 +1,3 @@
-2026-10-27 09:05:09,424 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'Your sell signals brother 🔥🔥🔥🔥\n\nYes right no one does better'
-2026-10-27 09:05:09,428 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
-2026-10-27 09:05:09,429 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'And how can I learn your strategy now?'
-2026-10-27 09:05:09,431 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
-2026-10-27 09:05:36,167 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-27 09:05:36,405 [INFO] ✅ Keine verpassten Signale
-2026-10-27 09:05:38,491 [INFO] 🔁 Duplikat ignoriert aus: Gold Trader Mo🤴🏽(Gtmofx)
-2026-10-27 09:10:08,616 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4001.16'
-2026-10-27 09:10:08,632 [INFO] Lot-Sizing: Balance=795.0$  Lot=0.04  Kanal=XAUUSD SCALP
-2026-10-27 09:10:08,633 [INFO] Layer-Verteilung: 5 Layer = 2x TP1 (4006.16), 1x TP2 (4009.16), 1x TP3 (4013.16) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
-
-⚡ SIGNAL [09:10:08] aus: XAUUSD SCALPING ⚡️
-  BUY XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 3993.16 | TPs: [4006.16, 4009.16, 4013.16, 4017.16]
-  Verteilung: {4006.16: 2, 4009.16: 1, 4013.16: 1, 0: 1}
-2026-10-27 09:10:08,636 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 8.6 (Einstieg 4001.76 statt 4001.16)
-2026-10-27 09:10:08,640 [INFO] Lot-Sizing: Balance=795.0$  Lot=0.04  Kanal=XAUUSD SCALP
-2026-10-27 09:10:08,642 [INFO] Lot-Normalisierung XAUUSD.s: 0.007830404427906647 -> 0.01 (min 0.01, step 0.01)
-2026-10-27 09:10:08,643 [INFO] Layerzahl ans Risiko angepasst: 5 -> 3 (je Layer 7.72, Budget 30.21)
-2026-10-27 09:10:08,643 [INFO] Zielrisiko 3.8%: SL=8.6 -> Lot 0.04 -> 0.01 x 3 Layer = 23.15 je Signal
-2026-10-27 09:10:08,647 [INFO] Layer-Verteilung: 3 Layer = 2x TP1 (4006.16) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
-2026-10-27 09:10:08,651 [INFO] Layer-Verteilung: 3 Layer = 2x TP1 (4006.16) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
-2026-10-27 09:10:08,655 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-27 09:10:09,065 [INFO] Runner markiert #422908378 -> runners.json
-2026-10-27 09:10:09,065 [INFO] Layer 1/3 Ticket #422908378 TP=4006.16
 2026-10-27 09:10:09,068 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
 2026-10-27 09:10:09,485 [INFO] Runner markiert #422908382 -> runners.json
 2026-10-27 09:10:09,486 [INFO] Layer 2/3 Ticket #422908382 TP=4006.16
@@ -7998,3 +7973,28 @@ ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
 2026-11-03 09:27:06,632 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
 2026-11-03 09:27:27,012 [INFO] 🔁 Duplikat ignoriert aus: Gold Trader Mo🤴🏽(Gtmofx)
 2026-11-03 09:27:57,056 [INFO] Telethon Wakeup-Ping
+2026-11-03 09:30:15,801 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 3903.62'
+2026-11-03 09:30:15,813 [INFO] Lot-Sizing: Balance=882.0$  Lot=0.04  Kanal=XAUUSD SCALP
+2026-11-03 09:30:15,813 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+
+⚡ SIGNAL [09:30:15] aus: XAUUSD SCALPING ⚡️
+  BUY XAUUSD.s | 1 Layer à 0.01 Lot
+  SL: 3895.62 | TPs: [3908.62, 3911.62, 3915.62, 3919.62]
+  Verteilung: {0: 1}
+2026-11-03 09:30:15,816 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 8.46 (Einstieg 3904.08 statt 3903.62)
+2026-11-03 09:30:15,819 [INFO] Lot-Sizing: Balance=882.0$  Lot=0.04  Kanal=XAUUSD SCALP
+2026-11-03 09:30:15,821 [INFO] Lot-Normalisierung XAUUSD.s: 0.044341741026477345 -> 0.04 (min 0.01, step 0.01)
+2026-11-03 09:30:15,824 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-03 09:30:15,827 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-03 09:30:15,828 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-11-03 09:30:16,241 [INFO] Runner markiert #430791674 -> runners.json
+2026-11-03 09:30:16,241 [INFO] Layer 1/1 Ticket #430791674 TP=0
+2026-11-03 09:30:16,241 [INFO] TP-Layer Map: {'tp1': [430791674]}
+2026-11-03 09:30:16,242 [INFO] Phase 3: Auto-Trade XAUUSD.s | 1 Tickets
+2026-11-03 09:30:16,627 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-11-03 09:30:37,425 [INFO] 🔁 Duplikat ignoriert aus: Gold Trader Mo🤴🏽(Gtmofx)
+2026-11-03 09:31:56,765 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-11-03 09:31:56,876 [INFO] Nachholen vorgemerkt: XAUUSD BUY Entry 3903.62 (Markt 19.3 Pips weg, Fenster 18.0)
+2026-11-03 09:31:57,020 [INFO] ✅ Keine verpassten Signale
+2026-11-03 09:32:47,836 [INFO] Ruecksetzer #430791674 0.0-9.4p vom Hoch 22.0p (Trail 30.0p)
+2026-11-03 09:33:17,861 [INFO] Ruecksetzer #430791674 11.2-11.2p vom Hoch 22.0p (Trail 30.0p)
