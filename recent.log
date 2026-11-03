@@ -1,23 +1,3 @@
-2026-10-27 10:44:44,960 [INFO] SL-Leiter #422908384: Stufe 1 aus der Kanalmeldung (eigener Kurs hat sie nicht gedruckt)
-2026-10-27 10:44:45,066 [INFO] SL-Leiter: #422908384 TP1 erreicht -> SL auf Entry/BE (4001.72)
-2026-10-27 10:44:46,951 [INFO] Ruecksetzer #422908384 33.8-50.1p vom Hoch 43.4p (Trail 30.0p)
-2026-10-27 10:44:51,188 [INFO] MFE #422908378 XAUUSD.s: Hoch +4.4 Punkte, Stufe 0
-2026-10-27 10:44:51,196 [INFO] MFE #422908382 XAUUSD.s: Hoch +4.4 Punkte, Stufe 0
-2026-10-27 10:44:56,964 [INFO] Ruecksetzer #422908384 33.8-69.7p vom Hoch 63.0p (Trail 30.0p)
-2026-10-27 10:45:17,408 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP2 HIT! +80 PIPS 💰'
-2026-10-27 10:45:17,410 [INFO] Kanal meldet TP2 - Leiter darf die Stufe ohne eigenen Kursdruck setzen
-2026-10-27 10:45:17,411 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-27 10:45:17,415 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-27 10:45:38,425 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-27 10:45:38,965 [INFO] ✅ Keine verpassten Signale
-2026-10-27 10:45:47,492 [INFO] Trail-SL #422908384 XAUUSD.s BUY -> SL:4009.0 (+120.7p | Trail 48.6p)
-2026-10-27 10:45:50,039 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: 'SL war nicht hit.. stimmt nicht laut meinen tradingview'
-2026-10-27 10:45:50,042 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-27 10:45:50,695 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-27 10:45:57,518 [INFO] Ruecksetzer #422908384 33.8-75.2p vom Hoch 127.6p (Trail 51.0p)
-2026-10-27 10:45:57,625 [INFO] Trail-SL #422908384 XAUUSD.s BUY -> SL:4009.36 (+124.1p | Trail 51.0p)
-2026-10-27 10:46:07,636 [INFO] Ruecksetzer #422908384 33.8-81.7p vom Hoch 145.0p (Trail 58.0p)
-2026-10-27 10:46:07,734 [INFO] Trail-SL #422908384 XAUUSD.s BUY -> SL:4010.4 (+138.6p | Trail 58.0p)
 2026-10-27 10:48:26,280 [INFO] MFE #422908384 XAUUSD.s: Hoch +14.5 Punkte, Stufe 1
 2026-10-27 10:48:43,662 [INFO] Prioritaet freigegeben: XAUUSD.s (XAUUSD SCALPING ⚡️)
 2026-10-27 10:50:33,953 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP3 HIT! +120 PIPS 💰'
@@ -7998,3 +7978,23 @@ ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
 2026-11-03 10:22:04,309 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🔒 BE HIT! – Für jeden der SL auf BE gezogen hat'
 2026-11-03 10:22:04,311 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
 2026-11-03 10:22:04,314 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-11-03 10:25:04,594 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 3904.4'
+2026-11-03 10:25:04,605 [INFO] Lot-Sizing: Balance=852.0$  Lot=0.04  Kanal=XAUUSD SCALP
+2026-11-03 10:25:04,606 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+
+⚡ SIGNAL [10:25:04] aus: XAUUSD SCALPING ⚡️
+  SELL XAUUSD.s | 1 Layer à 0.01 Lot
+  SL: 3912.4 | TPs: [3899.4, 3896.4, 3892.4, 3888.4]
+  Verteilung: {0: 1}
+2026-11-03 10:25:04,607 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 8.73 (Einstieg 3903.67 statt 3904.4)
+2026-11-03 10:25:04,610 [INFO] Lot-Sizing: Balance=852.0$  Lot=0.04  Kanal=XAUUSD SCALP
+2026-11-03 10:25:04,612 [INFO] Lot-Normalisierung XAUUSD.s: 0.0414792692703321 -> 0.04 (min 0.01, step 0.01)
+2026-11-03 10:25:04,615 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-03 10:25:04,622 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-03 10:25:04,623 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
+2026-11-03 10:25:05,035 [INFO] Runner markiert #430835153 -> runners.json
+2026-11-03 10:25:05,035 [INFO] Layer 1/1 Ticket #430835153 TP=0
+2026-11-03 10:25:05,035 [INFO] TP-Layer Map: {'tp1': [430835153]}
+2026-11-03 10:25:05,037 [INFO] Phase 3: Auto-Trade XAUUSD.s | 1 Tickets
+2026-11-03 10:25:05,233 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-11-03 10:28:00,532 [INFO] Telethon Wakeup-Ping
