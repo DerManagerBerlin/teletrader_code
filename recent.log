@@ -1,8 +1,3 @@
-  SELL XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4065.71 | TPs: [4052.71, 4049.71, 4045.71, 4041.71]
-  Verteilung: {4052.71: 2, 4049.71: 1, 4045.71: 1, 0: 1}
-2026-10-27 16:30:26,674 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 8.42 (Einstieg 4057.29 statt 4057.71)
-2026-10-27 16:30:26,678 [INFO] Lot-Sizing: Balance=795.0$  Lot=0.04  Kanal=XAUUSD SCALP
 2026-10-27 16:30:26,679 [INFO] Lot-Normalisierung XAUUSD.s: 0.007997413762660261 -> 0.01 (min 0.01, step 0.01)
 2026-10-27 16:30:26,680 [INFO] Layerzahl ans Risiko angepasst: 5 -> 3 (je Layer 7.56, Budget 30.21)
 2026-10-27 16:30:26,680 [INFO] Zielrisiko 3.8%: SL=8.42 -> Lot 0.04 -> 0.01 x 3 Layer = 22.67 je Signal
@@ -7998,3 +7993,8 @@ Live-Modus bestaetigt.
 2026-11-03 14:34:46,004 [INFO] Prioritaet freigegeben: XAUUSD (XAUUSD SCALPING ⚡️)
 2026-11-03 14:34:46,090 [INFO] MFE #696241816 XAUUSD: Hoch +7.7 Punkte, Stufe 1
 2026-11-03 14:34:46,092 [INFO] prune_runners: 1 verwaiste entfernt
+2026-11-03 14:35:12,743 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🔒 BE HIT! – Für jeden der SL auf BE gezogen hat'
+2026-11-03 14:35:12,746 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-11-03 14:35:12,748 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-11-03 14:35:13,010 [INFO] ABSCHLUSS #696241816 XAUUSD SCALPIN Ergebnis 0.0
+2026-11-03 14:38:45,900 [INFO] Telethon Wakeup-Ping
