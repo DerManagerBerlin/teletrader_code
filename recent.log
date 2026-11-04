@@ -1,6 +1,3 @@
-2026-10-28 20:32:22,771 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.4 (Einstieg 4058.05 statt 4059.45)
-2026-10-28 20:32:22,775 [INFO] Lot-Sizing: Balance=772.0$  Lot=0.04  Kanal=nachgeholt
-2026-10-28 20:32:22,777 [INFO] Lot-Normalisierung XAUUSD.s: 0.0018311693138298583 -> 0.01 (min 0.01, step 0.01)
 2026-10-28 20:32:22,777 [INFO] Layerzahl ans Risiko angepasst: 5 -> 1 (je Layer 8.43, Budget 7.72)
 2026-10-28 20:32:22,778 [INFO] Zielrisiko 1.0%: SL=9.4 -> Lot 0.04 -> 0.01 x 1 Layer = 8.43 je Signal
 2026-10-28 20:32:22,781 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
@@ -7998,3 +7995,6 @@ Equity: 56.95$
 2026-11-04 20:23:40,143 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-04 20:23:40,597 [INFO] Verpasstes TRADE uebersprungen: Nachricht 20:05 ist 18.6 Min alt (> 5.0 Min) - kein Re-Fire
 2026-11-04 20:23:40,782 [INFO] ✅ Keine verpassten Signale
+2026-11-04 20:28:04,961 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🔒 BE HIT! – Für jeden der SL auf BE gezogen hat'
+2026-11-04 20:28:04,963 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-11-04 20:28:05,592 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
