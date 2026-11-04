@@ -1,27 +1,3 @@
-2026-10-28 15:08:11,758 [INFO] Streak Gold Trader : +1 (Signal 2.52)
-2026-10-28 15:14:11,156 [INFO] Telethon Wakeup-Ping
-2026-10-28 15:17:59,268 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-28 15:17:59,459 [INFO] ✅ Keine verpassten Signale
-2026-10-28 15:24:11,696 [INFO] Telethon Wakeup-Ping
-2026-10-28 15:25:09,850 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4044.77'
-2026-10-28 15:25:09,862 [INFO] Lot-Sizing: Balance=826.0$  Lot=0.04  Kanal=XAUUSD SCALP
-2026-10-28 15:25:09,863 [INFO] Layer-Verteilung: 5 Layer = 2x TP1 (4049.77), 1x TP2 (4052.77), 1x TP3 (4056.77) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
-
-⚡ SIGNAL [15:25:09] aus: XAUUSD SCALPING ⚡️
-  BUY XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4036.77 | TPs: [4049.77, 4052.77, 4056.77, 4060.77]
-  Verteilung: {4049.77: 2, 4052.77: 1, 4056.77: 1, 0: 1}
-2026-10-28 15:25:09,865 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 8.07 (Einstieg 4044.84 statt 4044.77)
-2026-10-28 15:25:09,868 [INFO] Lot-Sizing: Balance=826.0$  Lot=0.04  Kanal=XAUUSD SCALP
-2026-10-28 15:25:09,870 [INFO] Lot-Normalisierung XAUUSD.s: 0.00866412669303576 -> 0.01 (min 0.01, step 0.01)
-2026-10-28 15:25:09,870 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 7.25, Budget 31.4)
-2026-10-28 15:25:09,870 [INFO] Zielrisiko 3.8%: SL=8.07 -> Lot 0.04 -> 0.01 x 4 Layer = 28.99 je Signal
-2026-10-28 15:25:09,873 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (4049.77), 1x TP2 (4052.77) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
-2026-10-28 15:25:09,876 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (4049.77), 1x TP2 (4052.77) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
-2026-10-28 15:25:09,878 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-28 15:25:10,295 [INFO] Runner markiert #424416581 -> runners.json
-2026-10-28 15:25:10,295 [INFO] Layer 1/4 Ticket #424416581 TP=4049.77
-2026-10-28 15:25:10,298 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
 2026-10-28 15:25:10,721 [INFO] Runner markiert #424416586 -> runners.json
 2026-10-28 15:25:10,722 [INFO] Layer 2/4 Ticket #424416586 TP=4049.77
 2026-10-28 15:25:10,724 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
@@ -7998,3 +7974,27 @@ Equity: 56.95$
 2026-11-04 14:55:41,190 [INFO] Streak XAUUSD SCALP: -2 (Signal -16.49)
 2026-11-04 14:55:41,190 [WARNING] STREAK -2: XAUUSD SCALPING ⚡️ -> naechste Signale pausiert
 2026-11-04 14:59:50,674 [INFO] Telethon Wakeup-Ping
+2026-11-04 15:00:15,292 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4036.7'
+2026-11-04 15:00:15,414 [INFO] Scalp: besserer Einstieg als im Signal (7.6 Pips zu unseren Gunsten) - Trade wird genommen
+2026-11-04 15:00:15,421 [WARNING] SKIP: XAUUSD SCALPING ⚡️ hat 2 Verlustsignale in Folge -> pausiert bis 16:00
+2026-11-04 15:00:15,462 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-11-04 15:00:27,261 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4036.7'
+2026-11-04 15:00:27,265 [INFO] Scalp: besserer Einstieg als im Signal (29.7 Pips zu unseren Gunsten) - Trade wird genommen
+2026-11-04 15:00:27,268 [WARNING] SKIP: XAUUSD SCALPING ⚡️ hat 2 Verlustsignale in Folge -> pausiert bis 16:00
+2026-11-04 15:03:30,476 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-11-04 15:03:30,560 [INFO] Scalp: besserer Einstieg als im Signal (18.0 Pips zu unseren Gunsten) - Trade wird genommen
+2026-11-04 15:03:30,560 [INFO] Verpasstes Signal ausfuehren [XAUUSD SCALPING ⚡️] 15:00: TRADE conf=99%
+2026-11-04 15:03:30,570 [INFO] Lot-Sizing: Balance=76.0$  Lot=0.01  Kanal=XAUUSD SCALP
+2026-11-04 15:03:30,576 [INFO] Lot-Normalisierung XAUUSD: 0.004057640142500001 -> 0.01 (min 0.01, step 0.01)
+2026-11-04 15:03:30,580 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-04 15:03:30,584 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-04 15:03:31,051 [INFO] Runner markiert #697610683 -> runners.json
+2026-11-04 15:03:31,052 [INFO] Layer 1/1 Ticket #697610683 TP=0
+2026-11-04 15:03:31,052 [INFO] TP-Layer Map: {'tp1': [697610683]}
+2026-11-04 15:03:31,053 [INFO] Nachtraglich ausgefuhrt: 1 Layer
+2026-11-04 15:04:17,942 [INFO] 📨 Neue Nachricht aus BTC SIGNALS: '✅ BTCUSD BUY: +1200 Pips\nKurs: 79691.94  |  Full TP: 80565.5'
+2026-11-04 15:04:17,947 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 15:04:32,612 [INFO] 📨 Neue Nachricht aus BTC SIGNALS: '✅ BTCUSD BUY: +1400 Pips\nKurs: 79891.94  |  Full TP: 80565.5'
+2026-11-04 15:04:32,614 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 15:04:47,975 [INFO] 📨 Neue Nachricht aus BTC SIGNALS: '✅ BTCUSD BUY: +1600 Pips\nKurs: 80091.94  |  Full TP: 80565.5'
+2026-11-04 15:04:47,979 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
