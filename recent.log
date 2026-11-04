@@ -1,38 +1,3 @@
-2026-10-28 10:10:03,120 [INFO] Layer-Verteilung: 3 Layer = 2x TP1 (4046.8) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
-2026-10-28 10:10:03,126 [INFO] Layer-Verteilung: 3 Layer = 2x TP1 (4046.8) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
-2026-10-28 10:10:03,130 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-28 10:10:03,550 [INFO] Runner markiert #424135112 -> runners.json
-2026-10-28 10:10:03,550 [INFO] Layer 1/3 Ticket #424135112 TP=4046.8
-2026-10-28 10:10:03,553 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-28 10:10:03,970 [INFO] Runner markiert #424135114 -> runners.json
-2026-10-28 10:10:03,970 [INFO] Layer 2/3 Ticket #424135114 TP=4046.8
-2026-10-28 10:10:03,972 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-28 10:10:04,390 [INFO] Runner markiert #424135118 -> runners.json
-2026-10-28 10:10:04,391 [INFO] Layer 3/3 Ticket #424135118 TP=0
-2026-10-28 10:10:04,391 [INFO] TP-Layer Map: {'tp1': [424135112, 424135114], 'tp2': [424135118]}
-2026-10-28 10:10:04,392 [INFO] Phase 3: Auto-Trade XAUUSD.s | 3 Tickets
-2026-10-28 10:10:04,446 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-28 10:11:59,587 [INFO] MFE #423983311 XAUUSD.s: Hoch +23.7 Punkte, Stufe 1
-2026-10-28 10:12:02,616 [INFO] Ruecksetzer #424135118 7.2-26.2p vom Hoch 30.8p (Trail 30.0p)
-2026-10-28 10:13:57,593 [INFO] Telethon Wakeup-Ping
-2026-10-28 10:17:49,953 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-28 10:17:50,110 [INFO] Nachholen vorgemerkt: XAUUSD SELL Entry 4051.8 (Markt 21.7 Pips weg, Fenster 18.0)
-2026-10-28 10:17:50,335 [INFO] ✅ Keine verpassten Signale
-2026-10-28 10:22:34,485 [INFO] Runner-BE: #424135118 SL -> 4051.66
-2026-10-28 10:23:01,965 [INFO] SL-Leiter: #424135112 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-28 10:23:01,980 [INFO] SL-Leiter: #424135114 hat eigenen TP1 - Leiter laesst ihn laufen
-2026-10-28 10:23:02,097 [INFO] SL-Leiter: #424135118 TP1 erreicht -> SL auf Entry/BE (4051.64)
-2026-10-28 10:23:03,738 [INFO] Nachholen verworfen: XAUUSD.s SELL TP1 4046.8 schon durchlaufen
-2026-10-28 10:23:07,435 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
-2026-10-28 10:23:07,437 [INFO] Kanal meldet TP1 - Leiter darf die Stufe ohne eigenen Kursdruck setzen
-2026-10-28 10:23:07,438 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-28 10:23:08,098 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-28 10:23:13,743 [INFO] MFE #424135112 XAUUSD.s: Hoch +5.1 Punkte, Stufe 0
-2026-10-28 10:23:13,746 [INFO] MFE #424135114 XAUUSD.s: Hoch +5.2 Punkte, Stufe 0
-2026-10-28 10:23:13,748 [INFO] prune_runners: 2 verwaiste entfernt
-2026-10-28 10:23:57,876 [INFO] Telethon Wakeup-Ping
-2026-10-28 10:27:50,336 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-28 10:27:50,535 [INFO] ✅ Keine verpassten Signale
 2026-10-28 10:33:58,103 [INFO] Telethon Wakeup-Ping
 2026-10-28 10:37:50,539 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-28 10:37:50,807 [INFO] ✅ Keine verpassten Signale
@@ -7998,3 +7963,38 @@ Equity: 67.72$
 2026-11-04 09:08:27,940 [INFO] ABSCHLUSS #697251979 Gold Trader Mo Ergebnis 1.78
 2026-11-04 09:08:27,940 [INFO] Streak Gold Trader : +1 (Signal 1.78)
 2026-11-04 09:09:25,065 [INFO] Telethon Wakeup-Ping
+2026-11-04 09:10:07,311 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🚀 +960 PIPS!'
+2026-11-04 09:10:07,314 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-11-04 09:10:07,962 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-11-04 09:11:25,731 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'Zoneee filedd now lets go dropp!!'
+2026-11-04 09:11:25,733 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 09:11:25,733 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'All entries in Profits shortly!!'
+2026-11-04 09:11:25,735 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 09:11:25,736 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'Everything in profitttt🤑🤑🤑🚀'
+2026-11-04 09:11:25,737 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 09:11:25,738 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'Be on your desk to follow instructions properly!'
+2026-11-04 09:11:25,740 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 09:11:25,740 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'TP1 to close worst entries patience ok'
+2026-11-04 09:11:25,742 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 09:11:25,743 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'Close worst entries now lets take some profitss🤑🤑🤑'
+2026-11-04 09:11:25,744 [INFO] Take-Profits erkannt (Text) -> partial_close frac=0.5 | Gold Trader Mo🤴🏽(Gtm
+2026-11-04 09:11:25,745 [INFO] Partial-Close [Gold Trader Mo🤴🏽(Gtmofx)]: keine Position dieses Kanals (Comment+Ticket-Fallback leer)
+2026-11-04 09:11:25,745 [INFO] Take-Profits: keine offene Position dieses Kanals
+2026-11-04 09:11:25,746 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 09:11:25,746 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'ROCKETTT,   SET BREAKEVEN FOR ZERO RISK'
+2026-11-04 09:11:25,748 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 09:11:25,748 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'EVERYONE IN DEEEEP BLUESSSS????'
+2026-11-04 09:11:25,750 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 09:11:25,750 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): '100+ PIPS🤑🚀 TAKEPROFIT 3 coming'
+2026-11-04 09:11:25,752 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 09:11:25,752 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'TP4 coming now too'
+2026-11-04 09:11:25,754 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 09:11:25,754 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'TP4 smashed'
+2026-11-04 09:11:25,756 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 09:11:25,756 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'ROCKETTT 150+ PIPS, 5 TAKEPROFITS ALL DONEEEE'
+2026-11-04 09:11:25,757 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 09:12:13,727 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'THATS WHAT WE WANT TO SEE HAPPIINIESSS'
+2026-11-04 09:12:13,732 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 09:12:46,174 [INFO] 🔁 Duplikat ignoriert aus: Gold Trader Mo🤴🏽(Gtmofx)
+2026-11-04 09:13:15,341 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-11-04 09:13:15,977 [INFO] ⏮ Verpasst [Gold Trader Mo🤴🏽(Gtmofx)] 09:11: BREAKEVEN → ROCKETTT,   SET BREAKEVEN FOR ZERO RISK
