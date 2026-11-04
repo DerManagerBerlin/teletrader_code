@@ -1,9 +1,3 @@
-2026-10-28 16:55:11,208 [INFO] Nachholen vorgemerkt: XAUUSD BUY Entry 4043.75 (Markt 39.3 Pips weg, Fenster 18.0)
-2026-10-28 16:55:11,210 [INFO] 🔇 NOISE: Regex: Markt 39.3 Pips GEGEN uns vom Entry 4043.75 weg (Kurs 4047.68, max 18.0 Pips)
-2026-10-28 16:55:11,303 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-28 16:55:13,817 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4043.75'
-2026-10-28 16:55:13,820 [INFO] 🔇 NOISE: Regex: Markt 30.6 Pips GEGEN uns vom Entry 4043.75 weg (Kurs 4046.81, max 18.0 Pips)
-2026-10-28 16:55:33,169 [INFO] Signal nachgeholt: XAUUSD.s BUY Entry 4043.75, Kurs 4045.33 (15.8 Pips, 0.4 Min nach dem Signal)
 2026-10-28 16:55:33,185 [INFO] Lot-Sizing: Balance=797.0$  Lot=0.04  Kanal=nachgeholt
 2026-10-28 16:55:33,189 [INFO] Layer-Verteilung: 6 Layer = 2x TP1 (4048.75), 1x TP2 (4051.75), 1x TP3 (4055.75), 1x TP4 (4059.75) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
 
@@ -7998,3 +7992,9 @@ Equity: 56.95$
 2026-11-04 15:46:06,759 [WARNING] Risk-Cap (final): kein Layer passt ins Risiko -> uebersprungen
 2026-11-04 15:46:11,702 [INFO] Prioritaet freigegeben: XAUUSD (nachgeholt)
 2026-11-04 15:49:54,973 [INFO] Telethon Wakeup-Ping
+2026-11-04 15:52:21,015 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
+2026-11-04 15:52:21,019 [INFO] Kanal meldet TP1 - Leiter darf die Stufe ohne eigenen Kursdruck setzen
+2026-11-04 15:52:21,022 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-11-04 15:52:21,165 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-11-04 15:53:32,695 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-11-04 15:53:32,923 [INFO] ✅ Keine verpassten Signale
