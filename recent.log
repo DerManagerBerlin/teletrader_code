@@ -1,15 +1,3 @@
-2026-10-28 15:25:10,721 [INFO] Runner markiert #424416586 -> runners.json
-2026-10-28 15:25:10,722 [INFO] Layer 2/4 Ticket #424416586 TP=4049.77
-2026-10-28 15:25:10,724 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-28 15:25:11,137 [INFO] Runner markiert #424416589 -> runners.json
-2026-10-28 15:25:11,137 [INFO] Layer 3/4 Ticket #424416589 TP=4052.77
-2026-10-28 15:25:11,139 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-28 15:25:11,560 [INFO] Runner markiert #424416594 -> runners.json
-2026-10-28 15:25:11,561 [INFO] Layer 4/4 Ticket #424416594 TP=0
-2026-10-28 15:25:11,561 [INFO] TP-Layer Map: {'tp1': [424416594], 'tp2': [424416581, 424416586], 'tp3': [424416589]}
-2026-10-28 15:25:11,561 [INFO] Phase 3: Auto-Trade XAUUSD.s | 4 Tickets
-2026-10-28 15:25:11,568 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-28 15:27:59,461 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-28 15:27:59,527 [INFO] Verpasstes Signal ausfuehren [XAUUSD SCALPING ⚡️] 15:25: TRADE conf=99%
 2026-10-28 15:27:59,527 [INFO] Verpasstes Signal uebersprungen: bereits 4 Position(en) offen
 2026-10-28 15:34:12,047 [INFO] Telethon Wakeup-Ping
@@ -7998,3 +7986,15 @@ Equity: 56.95$
 2026-11-04 15:04:32,614 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
 2026-11-04 15:04:47,975 [INFO] 📨 Neue Nachricht aus BTC SIGNALS: '✅ BTCUSD BUY: +1600 Pips\nKurs: 80091.94  |  Full TP: 80565.5'
 2026-11-04 15:04:47,979 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 15:05:01,832 [INFO] Ruecksetzer #697610683 8.1-37.1p vom Hoch 27.7p (Trail 30.0p)
+2026-11-04 15:05:17,254 [INFO] 📨 Neue Nachricht aus BTC SIGNALS: '✅ BTCUSD BUY: +1900 Pips\nKurs: 80391.94  |  Full TP: 80565.5'
+2026-11-04 15:05:17,259 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 15:07:09,510 [INFO] Runner-BE: #697610683 SL -> 4038.57
+2026-11-04 15:09:04,217 [INFO] 📨 Neue Nachricht aus BTC SIGNALS: '🎯 FULL TP erreicht – BTCUSD BUY\n+2074 Pips  (+2.0R)\nAusstieg'
+2026-11-04 15:09:04,228 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-04 15:09:11,064 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
+2026-11-04 15:09:11,066 [INFO] Kanal meldet TP1 - Leiter darf die Stufe ohne eigenen Kursdruck setzen
+2026-11-04 15:09:11,069 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-11-04 15:09:11,337 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
+2026-11-04 15:09:11,484 [INFO] SL-Leiter #697610683: Stufe 1 aus der Kanalmeldung (eigener Kurs hat sie nicht gedruckt)
+2026-11-04 15:09:52,785 [INFO] Telethon Wakeup-Ping
