@@ -1,15 +1,3 @@
-2026-10-29 10:00:06,175 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-29 10:00:06,623 [INFO] Runner markiert #425626964 -> runners.json
-2026-10-29 10:00:06,625 [INFO] Layer 2/3 Ticket #425626964 TP=4033.62
-2026-10-29 10:00:06,633 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-29 10:00:07,046 [INFO] Runner markiert #425626969 -> runners.json
-2026-10-29 10:00:07,048 [INFO] Layer 3/3 Ticket #425626969 TP=0
-2026-10-29 10:00:07,049 [INFO] TP-Layer Map: {'tp1': [425626969], 'tp2': [425626960, 425626964]}
-2026-10-29 10:00:07,049 [INFO] Phase 3: Auto-Trade XAUUSD.s | 3 Tickets
-2026-10-29 10:00:07,489 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-29 10:00:09,759 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4028.62'
-2026-10-29 10:00:09,786 [INFO] Entry-Dup [XAUUSD SCALPING ⚡️]: BUY XAUUSD.s @ 4028.62 = 4028.6 vor 0 Min (Toleranz 0.4, Fenster 15 Min)
-2026-10-29 10:04:39,565 [INFO] Ruecksetzer #425626969 0.0-15.2p vom Hoch 23.0p (Trail 30.0p)
 2026-10-29 10:04:46,377 [INFO] Telethon Wakeup-Ping
 2026-10-29 10:04:59,597 [INFO] Ruecksetzer #425626969 0.0-16.9p vom Hoch 24.7p (Trail 30.0p)
 2026-10-29 10:05:30,839 [INFO] MFE #425626960 XAUUSD.s: Hoch +3.6 Punkte, Stufe 0
@@ -7998,3 +7986,15 @@ Equity: 58.51$
 2026-11-05 17:20:57,410 [INFO] Telethon Wakeup-Ping
 2026-11-05 17:24:15,455 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-05 17:24:15,805 [INFO] ✅ Keine verpassten Signale
+2026-11-05 17:30:19,332 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4113.2'
+2026-11-05 17:30:19,334 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-05 17:30:19,469 [INFO] 🔁 Duplikat ignoriert aus: SMC | GOLD TRADES ⚡️
+2026-11-05 17:30:22,796 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4113.2'
+2026-11-05 17:30:22,800 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-05 17:30:59,006 [INFO] Telethon Wakeup-Ping
+2026-11-05 17:31:24,714 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
+2026-11-05 17:31:24,720 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
+2026-11-05 17:31:24,948 [INFO] 🔁 Duplikat ignoriert aus: SMC | GOLD TRADES ⚡️
+2026-11-05 17:34:15,809 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-11-05 17:34:15,903 [INFO] Nachholen vorgemerkt: XAUUSD SELL Entry 4113.24 (Markt 24.6 Pips weg, Fenster 18.0)
+2026-11-05 17:34:16,077 [INFO] ✅ Keine verpassten Signale
