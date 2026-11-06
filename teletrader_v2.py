@@ -714,6 +714,12 @@ def _max_entry_dev(channel: str = "") -> float:
 def _regex_only_channel(channel: str) -> bool:
     """True, wenn fuer diesen Kanal der deterministische Parser statt der Claude-API
     benutzt wird (starres Template, kein API-Call/Guthaben noetig)."""
+    # PATCH145: Ohne LLM gibt es keinen zweiten Pfad. Wuerde hier
+    # False zurueckkommen, landet die Nachricht beim LLM-Parser und
+    # wird dort als Rauschen verworfen. Genau das ist passiert, als
+    # der Kanal sich umbenannt hat und "scalping" nicht mehr passte.
+    if os.getenv("LLM_AKTIV", "false").lower() != "true":
+        return True
     cn = (channel or "").lower()
     names = os.getenv("REGEX_ONLY_CHANNELS", "scalping").lower().split(",")
     return any(n.strip() and n.strip() in cn for n in names)
