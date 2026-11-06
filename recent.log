@@ -1,8 +1,3 @@
-2026-10-30 04:35:07,864 [INFO] Lot-Normalisierung XAUUSD.s: 0.008641980921922907 -> 0.01 (min 0.01, step 0.01)
-2026-10-30 04:35:07,864 [INFO] Layerzahl ans Risiko angepasst: 5 -> 4 (je Layer 7.44, Budget 32.13)
-2026-10-30 04:35:07,864 [INFO] Zielrisiko 3.8%: SL=8.32 -> Lot 0.04 -> 0.01 x 4 Layer = 29.74 je Signal
-2026-10-30 04:35:07,867 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (3999.29), 1x TP2 (4002.29) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
-2026-10-30 04:35:07,869 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (3999.29), 1x TP2 (4002.29) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
 2026-10-30 04:35:07,870 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
 2026-10-30 04:35:08,295 [INFO] Runner markiert #427033502 -> runners.json
 2026-10-30 04:35:08,296 [INFO] Layer 1/4 Ticket #427033502 TP=3999.29
@@ -7998,3 +7993,8 @@ Live-Modus bestaetigt.
 2026-11-06 19:34:04,698 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
 2026-11-06 19:34:05,367 [INFO] 🔁 Duplikat ignoriert aus: SMC | GOLD TRADES ⚡️
 2026-11-06 19:34:06,695 [INFO] SL-Leiter #700553180: Stufe 1 aus der Kanalmeldung (eigener Kurs hat sie nicht gedruckt)
+2026-11-06 19:36:04,697 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4067.6'
+2026-11-06 19:36:04,704 [INFO] Nachholen vorgemerkt: XAUUSD SELL Entry 4067.61 (Markt 49.6 Pips weg, Fenster 18.0)
+2026-11-06 19:36:04,704 [INFO] 🔇 NOISE: Regex: Markt 49.6 Pips GEGEN uns vom Entry 4067.61 weg (Kurs 4062.65, max 18.0 Pips)
+2026-11-06 19:37:51,226 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-11-06 19:37:51,385 [INFO] ✅ Keine verpassten Signale
