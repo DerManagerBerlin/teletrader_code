@@ -1,25 +1,3 @@
-2026-10-30 05:01:42,621 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
-2026-10-30 05:01:42,623 [INFO] Kanal meldet TP1 - Leiter darf die Stufe ohne eigenen Kursdruck setzen
-2026-10-30 05:01:42,623 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-30 05:01:42,728 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-30 05:02:06,101 [INFO] Runner-BE: #427033517 SL -> 3994.66
-2026-10-30 05:02:32,320 [INFO] Ruecksetzer #427033517 13.7-21.9p vom Hoch 63.9p (Trail 30.0p)
-2026-10-30 05:03:52,409 [INFO] Ruecksetzer #427033517 27.5-27.5p vom Hoch 63.9p (Trail 30.0p)
-2026-10-30 05:04:22,437 [INFO] Ruecksetzer #427033517 32.1-32.1p vom Hoch 63.9p (Trail 30.0p)
-2026-10-30 05:04:52,459 [INFO] Ruecksetzer #427033517 37.4-37.4p vom Hoch 63.9p (Trail 30.0p)
-2026-10-30 05:05:12,474 [INFO] Ruecksetzer #427033517 45.4-45.4p vom Hoch 63.9p (Trail 30.0p)
-2026-10-30 05:05:26,797 [INFO] Telethon Wakeup-Ping
-2026-10-30 05:08:54,973 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-30 05:08:55,150 [INFO] ✅ Keine verpassten Signale
-2026-10-30 05:15:26,991 [INFO] Telethon Wakeup-Ping
-2026-10-30 05:18:55,152 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-30 05:18:55,314 [INFO] ✅ Keine verpassten Signale
-2026-10-30 05:25:05,476 [INFO] MFE #427033512 XAUUSD.s: Hoch +7.5 Punkte, Stufe 1
-2026-10-30 05:25:11,509 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP2 HIT! +80 PIPS 💰'
-2026-10-30 05:25:11,511 [INFO] Kanal meldet TP2 - Leiter darf die Stufe ohne eigenen Kursdruck setzen
-2026-10-30 05:25:11,512 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-30 05:25:11,606 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-30 05:25:27,241 [INFO] Telethon Wakeup-Ping
 2026-10-30 05:27:24,430 [INFO] Trail-SL #427033517 XAUUSD.s BUY -> SL:4000.81 (+101.6p | Trail 41.0p)
 2026-10-30 05:28:04,561 [INFO] Trail-SL #427033517 XAUUSD.s BUY -> SL:4000.89 (+101.9p | Trail 41.6p)
 2026-10-30 05:28:14,671 [INFO] Trail-SL #427033517 XAUUSD.s BUY -> SL:4001.04 (+105.9p | Trail 42.5p)
@@ -7998,3 +7976,25 @@ Live-Modus bestaetigt.
 2026-11-06 20:33:07,212 [INFO] Prioritaet freigegeben: XAUUSD (SMC | GOLD TRADES ⚡️)
 2026-11-06 20:33:27,281 [INFO] ABSCHLUSS #700553180 SMC | GOLD TRA Ergebnis 0.0
 2026-11-06 20:34:06,836 [INFO] Telethon Wakeup-Ping
+2026-11-06 20:35:09,152 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4065.84'
+2026-11-06 20:35:09,170 [INFO] Lot-Sizing: Balance=204.0$  Lot=0.01  Kanal=SMC | GOLD T
+2026-11-06 20:35:09,172 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+
+⚡ SIGNAL [20:35:09] aus: SMC | GOLD TRADES ⚡️
+  BUY XAUUSD | 1 Layer à 0.01 Lot
+  SL: 4057.84 | TPs: [4070.84, 4073.84, 4077.84, 4081.84]
+  Verteilung: {0: 1}
+2026-11-06 20:35:09,176 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.16 (Einstieg 4067.0 statt 4065.84)
+2026-11-06 20:35:09,180 [INFO] Lot-Sizing: Balance=204.0$  Lot=0.01  Kanal=SMC | GOLD T
+2026-11-06 20:35:09,182 [INFO] Lot-Normalisierung XAUUSD: 0.002478261397379952 -> 0.01 (min 0.01, step 0.01)
+2026-11-06 20:35:09,185 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-06 20:35:09,189 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-06 20:35:09,659 [INFO] Runner markiert #700575861 -> runners.json
+2026-11-06 20:35:09,660 [INFO] Layer 1/1 Ticket #700575861 TP=0
+2026-11-06 20:35:09,661 [INFO] TP-Layer Map: {'tp1': [700575861]}
+2026-11-06 20:35:09,661 [INFO] Phase 3: Auto-Trade XAUUSD | 1 Tickets
+2026-11-06 20:35:09,767 [INFO] 🔁 Duplikat ignoriert aus: SMC | GOLD TRADES ⚡️
+2026-11-06 20:37:52,382 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-11-06 20:37:52,447 [INFO] Scalp: besserer Einstieg als im Signal (3.5 Pips zu unseren Gunsten) - Trade wird genommen
+2026-11-06 20:37:52,447 [INFO] Verpasstes Signal ausfuehren [SMC | GOLD TRADES ⚡️] 20:35: TRADE conf=99%
+2026-11-06 20:37:52,448 [INFO] Verpasstes Signal uebersprungen: bereits 2 Position(en) offen
