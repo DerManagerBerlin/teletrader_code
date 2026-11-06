@@ -1,33 +1,3 @@
-2026-10-30 02:25:22,488 [INFO] Telethon Wakeup-Ping
-2026-10-30 02:26:06,336 [INFO] MFE #426880062 XAUUSD.s: Hoch +6.1 Punkte, Stufe 1
-2026-10-30 02:26:06,337 [INFO] prune_runners: 1 verwaiste entfernt
-2026-10-30 02:26:27,265 [INFO] Prioritaet freigegeben: XAUUSD.s (XAUUSD SCALPING ⚡️)
-2026-10-30 02:27:06,108 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🔒 BE HIT! – Für jeden der SL auf BE gezogen hat'
-2026-10-30 02:27:06,111 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-10-30 02:27:06,715 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-10-30 02:28:51,016 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-30 02:28:51,066 [INFO] Scalp: besserer Einstieg als im Signal (25.3 Pips zu unseren Gunsten) - Trade wird genommen
-2026-10-30 02:28:51,066 [INFO] Verpasstes TRADE uebersprungen: Nachricht 02:05 ist 23.8 Min alt (> 5.0 Min) - kein Re-Fire
-2026-10-30 02:28:51,169 [INFO] ✅ Keine verpassten Signale
-2026-10-30 02:35:06,423 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4003.4'
-2026-10-30 02:35:06,436 [INFO] Lot-Sizing: Balance=839.0$  Lot=0.04  Kanal=XAUUSD SCALP
-2026-10-30 02:35:06,437 [INFO] Layer-Verteilung: 5 Layer = 2x TP1 (3998.41), 1x TP2 (3995.41), 1x TP3 (3991.41) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
-
-⚡ SIGNAL [02:35:06] aus: XAUUSD SCALPING ⚡️
-  SELL XAUUSD.s | 5 Layer à 0.01 Lot
-  SL: 4011.41 | TPs: [3998.41, 3995.41, 3991.41, 3987.41]
-  Verteilung: {3998.41: 2, 3995.41: 1, 3991.41: 1, 0: 1}
-2026-10-30 02:35:06,438 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.39 (Einstieg 4002.02 statt 4003.41)
-2026-10-30 02:35:06,441 [INFO] Lot-Sizing: Balance=839.0$  Lot=0.04  Kanal=XAUUSD SCALP
-2026-10-30 02:35:06,443 [INFO] Lot-Normalisierung XAUUSD.s: 0.007605958956847814 -> 0.01 (min 0.01, step 0.01)
-2026-10-30 02:35:06,443 [INFO] Layerzahl ans Risiko angepasst: 5 -> 3 (je Layer 8.39, Budget 31.89)
-2026-10-30 02:35:06,444 [INFO] Zielrisiko 3.8%: SL=9.39 -> Lot 0.04 -> 0.01 x 3 Layer = 25.16 je Signal
-2026-10-30 02:35:06,446 [INFO] Layer-Verteilung: 3 Layer = 2x TP1 (3998.41) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
-2026-10-30 02:35:06,449 [INFO] Layer-Verteilung: 3 Layer = 2x TP1 (3998.41) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
-2026-10-30 02:35:06,451 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
-2026-10-30 02:35:06,875 [INFO] Runner markiert #426917063 -> runners.json
-2026-10-30 02:35:06,879 [INFO] Layer 1/3 Ticket #426917063 TP=3998.41
-2026-10-30 02:35:06,891 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
 2026-10-30 02:35:07,308 [INFO] Runner markiert #426917077 -> runners.json
 2026-10-30 02:35:07,308 [INFO] Layer 2/3 Ticket #426917077 TP=3998.41
 2026-10-30 02:35:07,311 [INFO] Symbol auto-resolved: XAUUSD.s → XAUUSD.S
@@ -7998,3 +7968,33 @@ Live-Modus bestaetigt.
 2026-11-06 17:57:46,302 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-06 17:57:46,493 [INFO] ✅ Keine verpassten Signale
 2026-11-06 18:03:53,263 [INFO] Telethon Wakeup-Ping
+2026-11-06 18:05:04,252 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4061.01'
+2026-11-06 18:05:04,257 [INFO] Scalp: besserer Einstieg als im Signal (1.2 Pips zu unseren Gunsten) - Trade wird genommen
+2026-11-06 18:05:04,272 [INFO] Lot-Sizing: Balance=196.0$  Lot=0.01  Kanal=SMC | GOLD T
+2026-11-06 18:05:04,273 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+
+⚡ SIGNAL [18:05:04] aus: SMC | GOLD TRADES ⚡️
+  BUY XAUUSD | 1 Layer à 0.01 Lot
+  SL: 4053.01 | TPs: [4066.01, 4069.01, 4073.01, 4077.01]
+  Verteilung: {0: 1}
+2026-11-06 18:05:04,281 [INFO] Lot-Sizing: Balance=196.0$  Lot=0.01  Kanal=SMC | GOLD T
+2026-11-06 18:05:04,285 [INFO] Lot-Normalisierung XAUUSD: 0.0027308647650000004 -> 0.01 (min 0.01, step 0.01)
+2026-11-06 18:05:04,291 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-06 18:05:04,294 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-06 18:05:04,756 [INFO] Runner markiert #700513547 -> runners.json
+2026-11-06 18:05:04,757 [INFO] Layer 1/1 Ticket #700513547 TP=0
+2026-11-06 18:05:04,757 [INFO] TP-Layer Map: {'tp1': [700513547]}
+2026-11-06 18:05:04,758 [INFO] Phase 3: Auto-Trade XAUUSD | 1 Tickets
+2026-11-06 18:05:04,981 [INFO] 🔁 Duplikat ignoriert aus: SMC | GOLD TRADES ⚡️
+2026-11-06 18:06:01,971 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4061.01'
+2026-11-06 18:06:01,994 [INFO] SKIP: XAUUSD BUY bereits 1 offene Positionen
+2026-11-06 18:07:25,411 [INFO] Ruecksetzer #700513547 0.0-11.3p vom Hoch 21.4p (Trail 30.0p)
+2026-11-06 18:07:46,498 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-11-06 18:07:46,640 [INFO] Nachholen vorgemerkt: XAUUSD BUY Entry 4061.01 (Markt 18.3 Pips weg, Fenster 18.0)
+2026-11-06 18:07:46,952 [INFO] ✅ Keine verpassten Signale
+2026-11-06 18:08:25,484 [INFO] Ruecksetzer #700513547 15.4-15.4p vom Hoch 21.6p (Trail 30.0p)
+2026-11-06 18:08:45,512 [INFO] Ruecksetzer #700513547 19.9-19.9p vom Hoch 21.6p (Trail 30.0p)
+2026-11-06 18:08:55,603 [INFO] Ruecksetzer #700513547 26.2-26.2p vom Hoch 21.6p (Trail 30.0p)
+2026-11-06 18:09:05,624 [INFO] Ruecksetzer #700513547 30.0-30.0p vom Hoch 21.6p (Trail 30.0p)
+2026-11-06 18:09:46,212 [INFO] Ruecksetzer #700513547 33.7-33.7p vom Hoch 21.6p (Trail 30.0p)
+2026-11-06 18:09:56,369 [INFO] Ruecksetzer #700513547 36.6-36.6p vom Hoch 21.6p (Trail 30.0p)
