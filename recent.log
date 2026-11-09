@@ -1,21 +1,3 @@
-ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
-ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
-ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
-ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
-ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
-ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
-ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
-ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
-ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
-ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
-ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
-ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
-2026-11-01 15:11:55,751 [INFO] MT5 [DEMO] → Konto 700190957 | Balance: $882.26 EUR
-2026-11-01 15:11:55,787 [INFO] TERMINALCHECK Prozesse: Fehler: [WinError 2] File not found
-2026-11-01 15:11:55,811 [INFO] TERMINALCHECK Dienste: Fehler: [WinError 2] File not found
-2026-11-01 15:11:55,829 [INFO] TERMINALCHECK Timer: Fehler: [WinError 2] File not found
-2026-11-01 15:11:55,843 [INFO] DEALDIAG Konto=700190957 Server=PUPrime-Demo
-2026-11-01 15:11:55,845 [INFO] DEALDIAG Jahr: total=0 get=0 last_error=(1, 'Success')
 2026-11-01 15:11:55,846 [INFO] DEALDIAG 7Tage: total=0 get=0 last_error=(1, 'Success')
 2026-11-01 15:11:55,847 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
 2026-11-01 15:11:55,852 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
@@ -7998,3 +7980,21 @@ set breakeven
 2026-11-09 13:46:24,922 [INFO] Telethon Wakeup-Ping
 2026-11-09 13:49:24,911 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-09 13:49:25,402 [INFO] ✅ Keine verpassten Signale
+2026-11-09 13:50:05,464 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4119.8'
+2026-11-09 13:50:05,468 [INFO] Scalp: besserer Einstieg als im Signal (23.5 Pips zu unseren Gunsten) - Trade wird genommen
+2026-11-09 13:50:05,477 [INFO] Lot-Sizing: Balance=70.0$  Lot=0.01  Kanal=SMC | GOLD T
+2026-11-09 13:50:05,478 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+
+⚡ SIGNAL [13:50:05] aus: SMC | GOLD TRADES ⚡️
+  SELL XAUUSD | 1 Layer à 0.01 Lot
+  SL: 4127.85 | TPs: [4114.85, 4111.85, 4107.85, 4103.85]
+  Verteilung: {0: 1}
+2026-11-09 13:50:05,483 [INFO] Lot-Sizing: Balance=70.0$  Lot=0.01  Kanal=SMC | GOLD T
+2026-11-09 13:50:05,485 [INFO] Lot-Normalisierung XAUUSD: 0.0009735017062499999 -> 0.01 (min 0.01, step 0.01)
+2026-11-09 13:50:05,487 [INFO] Risk-Cap: SL=8.0pts → Lot auf 0.01 reduziert (10% Max)
+2026-11-09 13:50:05,487 [INFO] Kleinkonto-Cap: Layer reduziert auf 1 (Mindestlot-Boden, 10% Max)
+2026-11-09 13:50:05,487 [INFO] Kleinkonto-Cap: Layer reduziert auf 1 (Mindestlot-Boden, 10% Max)
+2026-11-09 13:50:05,489 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-09 13:50:05,492 [WARNING] Broker-Minimum zu gross: XAUUSD 0.01 Lot = $7.15 Risiko > Limit $6.96 -> uebersprungen
+2026-11-09 13:50:05,567 [INFO] 🔁 Duplikat ignoriert aus: SMC | GOLD TRADES ⚡️
+2026-11-09 13:50:26,773 [INFO] Prioritaet freigegeben: XAUUSD (SMC | GOLD TRADES ⚡️)
