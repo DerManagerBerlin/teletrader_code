@@ -1,33 +1,3 @@
-2026-10-31 20:14:38,380 [INFO] Telethon Wakeup-Ping
-2026-10-31 20:18:16,049 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-31 20:18:16,247 [INFO] ✅ Keine verpassten Signale
-2026-10-31 20:24:38,684 [INFO] Telethon Wakeup-Ping
-2026-10-31 20:28:16,251 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-31 20:28:16,450 [INFO] ✅ Keine verpassten Signale
-2026-10-31 20:34:39,054 [INFO] Telethon Wakeup-Ping
-2026-10-31 20:38:16,452 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-31 20:38:16,612 [INFO] ✅ Keine verpassten Signale
-2026-10-31 20:44:39,340 [INFO] Telethon Wakeup-Ping
-2026-10-31 20:48:16,613 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-31 20:48:16,805 [INFO] ✅ Keine verpassten Signale
-2026-10-31 20:54:39,583 [INFO] Telethon Wakeup-Ping
-2026-10-31 20:58:16,807 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-31 20:58:17,040 [INFO] ✅ Keine verpassten Signale
-2026-10-31 21:04:39,850 [INFO] Telethon Wakeup-Ping
-2026-10-31 21:08:17,043 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-31 21:08:17,247 [INFO] ✅ Keine verpassten Signale
-2026-10-31 21:14:40,273 [INFO] Telethon Wakeup-Ping
-2026-10-31 21:18:17,250 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-31 21:18:17,417 [INFO] ✅ Keine verpassten Signale
-2026-10-31 21:24:40,471 [INFO] Telethon Wakeup-Ping
-2026-10-31 21:28:17,419 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-31 21:28:17,589 [INFO] ✅ Keine verpassten Signale
-2026-10-31 21:34:40,868 [INFO] Telethon Wakeup-Ping
-2026-10-31 21:38:17,592 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-31 21:38:17,803 [INFO] ✅ Keine verpassten Signale
-2026-10-31 21:44:41,176 [INFO] Telethon Wakeup-Ping
-2026-10-31 21:48:17,805 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-10-31 21:48:18,030 [INFO] ✅ Keine verpassten Signale
 2026-10-31 21:54:41,378 [INFO] Telethon Wakeup-Ping
 2026-10-31 21:58:18,031 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-10-31 21:58:18,193 [INFO] ✅ Keine verpassten Signale
@@ -7998,3 +7968,33 @@ Equity: 34.14$
 2026-11-09 05:05:59,886 [INFO] Telethon Wakeup-Ping
 2026-11-09 05:09:12,129 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-09 05:09:12,297 [INFO] ✅ Keine verpassten Signale
+2026-11-09 05:15:11,606 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4121.8'
+2026-11-09 05:15:11,612 [INFO] Scalp: besserer Einstieg als im Signal (3.8 Pips zu unseren Gunsten) - Trade wird genommen
+2026-11-09 05:15:11,624 [INFO] Lot-Sizing: Balance=64.0$  Lot=0.01  Kanal=SMC | GOLD T
+2026-11-09 05:15:11,625 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+
+⚡ SIGNAL [05:15:11] aus: SMC | GOLD TRADES ⚡️
+  SELL XAUUSD | 1 Layer à 0.01 Lot
+  SL: 4129.81 | TPs: [4116.81, 4113.81, 4109.81, 4105.81]
+  Verteilung: {0: 1}
+2026-11-09 05:15:11,632 [INFO] Lot-Sizing: Balance=64.0$  Lot=0.01  Kanal=SMC | GOLD T
+2026-11-09 05:15:11,636 [INFO] Lot-Normalisierung XAUUSD: 0.0008940681900000001 -> 0.01 (min 0.01, step 0.01)
+2026-11-09 05:15:11,637 [INFO] Risk-Cap: SL=8.0pts → Lot auf 0.01 reduziert (10% Max)
+2026-11-09 05:15:11,637 [INFO] Kleinkonto-Cap: Layer reduziert auf 1 (Mindestlot-Boden, 10% Max)
+2026-11-09 05:15:11,638 [INFO] Kleinkonto-Cap: Layer reduziert auf 1 (Mindestlot-Boden, 10% Max)
+2026-11-09 05:15:11,640 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-09 05:15:11,642 [WARNING] RISK-CAP (final): SL=7.62pts Risiko=$7.0 > Max=$6.0 -> Lot 0.01->0.01, Layer 1->0
+2026-11-09 05:15:11,642 [WARNING] Risk-Cap (final): kein Layer passt ins Risiko -> uebersprungen
+2026-11-09 05:15:11,645 [INFO] 🔁 Duplikat ignoriert aus: SMC | GOLD TRADES ⚡️
+2026-11-09 05:15:17,131 [INFO] Prioritaet freigegeben: XAUUSD (SMC | GOLD TRADES ⚡️)
+2026-11-09 05:16:00,177 [INFO] Telethon Wakeup-Ping
+2026-11-09 05:19:12,299 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-11-09 05:19:12,359 [INFO] Scalp: besserer Einstieg als im Signal (20.0 Pips zu unseren Gunsten) - Trade wird genommen
+2026-11-09 05:19:12,360 [INFO] Verpasstes Signal ausfuehren [SMC | GOLD TRADES ⚡️] 05:15: TRADE conf=99%
+2026-11-09 05:19:12,367 [INFO] Lot-Sizing: Balance=64.0$  Lot=0.01  Kanal=SMC | GOLD T
+2026-11-09 05:19:12,370 [INFO] Lot-Normalisierung XAUUSD: 0.0008939960999999999 -> 0.01 (min 0.01, step 0.01)
+2026-11-09 05:19:12,371 [INFO] Risk-Cap: SL=8.0pts → Lot auf 0.01 reduziert (10% Max)
+2026-11-09 05:19:12,372 [INFO] Kleinkonto-Cap: Layer reduziert auf 1 (Mindestlot-Boden, 10% Max)
+2026-11-09 05:19:12,372 [INFO] Kleinkonto-Cap: Layer reduziert auf 1 (Mindestlot-Boden, 10% Max)
+2026-11-09 05:19:12,375 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-09 05:19:12,379 [WARNING] Broker-Minimum zu gross: XAUUSD 0.01 Lot = $7.17 Risiko > Limit $6.41 -> uebersprungen
