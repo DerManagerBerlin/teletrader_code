@@ -1,25 +1,3 @@
-2026-11-01 15:12:44,842 [INFO] Equity Guardian: Start=882.26$
-2026-11-01 15:17:14,849 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-01 15:17:15,013 [INFO] ✅ Keine verpassten Signale
-2026-11-01 15:23:16,255 [INFO] Telethon Wakeup-Ping
-2026-11-01 15:27:15,015 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-01 15:27:16,493 [INFO] ✅ Keine verpassten Signale
-2026-11-01 15:30:04,000 [INFO] AUTOPATCH: patch_128_login.py angewendet - PATCH128 Terminal: Ultima Markets MT5 Terminal PATCH128 Windows-Pfad: C:\Program Files\Ultima Markets MT5 Terminal\terminal64.exe PATCH128 common.ini gefunden: 1 PATCH128 Zugangsdaten vollstaendig, Konto ***330, Server U
-2026-11-01 15:30:04,000 [INFO] AUTOPATCH: patch_128_login.py ohne Neustart (NO_RESTART)
-2026-11-01 15:32:03,000 [INFO] AUTOPATCH: patch_128_login.py angewendet - PATCH128 Terminal: Ultima Markets MT5 Terminal PATCH128 Windows-Pfad: C:\Program Files\Ultima Markets MT5 Terminal\terminal64.exe PATCH128 common.ini gefunden: 0 PATCH128 Zugangsdaten vollstaendig, Konto ***330, Server U
-2026-11-01 15:32:03,000 [INFO] AUTOPATCH: Neustart ueber systemd: teletrader.service
-X connection to :99 broken (explicit kill or server shutdown).
-2026-11-01 15:32:38,000 [INFO] AUTOPATCH: teletrader.service laeuft
-
-══════════════════════════════════════════════════════════
-  TeleTrader AI  –  Finale Version
-  Modus: 🟡 DEMO | Phase: 3
-══════════════════════════════════════════════════════════
-
-2026-11-01 15:32:46,084 [INFO] MT5 Terminal laut MT5_TERMINAL_PATH_DEMO: C:\Program Files\PU Prime MT5 Terminal\terminal64.exe
-ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
-ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
-ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
 ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
 ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
 ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
@@ -7998,3 +7976,25 @@ set breakeven
 2026-11-09 14:20:11,743 [INFO] 🔁 Duplikat ignoriert aus: SMC | GOLD TRADES ⚡️
 2026-11-09 14:22:00,069 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): '**I‘m still holding those 2 entries🤑🤑**'
 2026-11-09 14:22:00,071 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-11-09 14:26:26,691 [INFO] Telethon Wakeup-Ping
+2026-11-09 14:26:41,374 [INFO] Signal nachgeholt: XAUUSD BUY Entry 4126.34, Kurs 4127.66 (13.2 Pips, 6.5 Min nach dem Signal)
+2026-11-09 14:26:41,381 [INFO] Lot-Sizing: Balance=70.0$  Lot=0.01  Kanal=nachgeholt
+2026-11-09 14:26:41,382 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+
+⚡ SIGNAL [14:26:41] aus: nachgeholt
+  BUY XAUUSD | 1 Layer à 0.01 Lot
+  SL: 4118.34 | TPs: [4131.34, 4134.34, 4138.34, 4142.34]
+  Verteilung: {0: 1}
+2026-11-09 14:26:41,384 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.32 (Einstieg 4127.66 statt 4126.34)
+2026-11-09 14:26:41,387 [INFO] Lot-Sizing: Balance=70.0$  Lot=0.01  Kanal=nachgeholt
+2026-11-09 14:26:41,389 [INFO] Lot-Normalisierung XAUUSD: 0.0008359149012875797 -> 0.01 (min 0.01, step 0.01)
+2026-11-09 14:26:41,390 [INFO] Risk-Cap: SL=9.32pts → Lot auf 0.01 reduziert (10% Max)
+2026-11-09 14:26:41,390 [INFO] Kleinkonto-Cap: Layer reduziert auf 1 (Mindestlot-Boden, 10% Max)
+2026-11-09 14:26:41,390 [INFO] Kleinkonto-Cap: Layer reduziert auf 1 (Mindestlot-Boden, 10% Max)
+2026-11-09 14:26:41,392 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-09 14:26:41,394 [WARNING] RISK-CAP (final): SL=9.32pts Risiko=$8.0 > Max=$7.0 -> Lot 0.01->0.01, Layer 1->0
+2026-11-09 14:26:41,394 [WARNING] Risk-Cap (final): kein Layer passt ins Risiko -> uebersprungen
+2026-11-09 14:26:58,445 [INFO] Prioritaet freigegeben: XAUUSD (nachgeholt)
+2026-11-09 14:29:26,019 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-11-09 14:29:26,113 [INFO] Verpasstes TRADE uebersprungen: Nachricht 14:20 ist 9.3 Min alt (> 5.0 Min) - kein Re-Fire
+2026-11-09 14:29:26,277 [INFO] ✅ Keine verpassten Signale
