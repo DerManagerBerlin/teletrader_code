@@ -1,21 +1,3 @@
-2026-11-01 17:02:09,204 [INFO] DEALDIAG 24h: total=0 get=0 last_error=(1, 'Success')
-2026-11-01 17:02:09,224 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
-2026-11-01 17:02:09,224 [INFO] LIVECHECK Modus=LIVE Server=UltimaMarkets-Live 1 Konto=***330 Waehrung=EUR Balance=105.97 Hebel=500 TradeAllowed=True
-2026-11-01 17:02:09,226 [INFO] LIVECHECK XAUUSD handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=? ask=? spread=-1 Pips
-2026-11-01 17:02:09,228 [INFO] LIVECHECK BTCUSD handelbar=4 lot 0.01-100.0 step 0.01 stops=0 digits=2 bid=? ask=? spread=-1 Pips
-2026-11-01 17:02:09,231 [INFO] LIVECHECK Handel pausiert=True
-2026-11-01 17:02:09,231 [INFO] POSCHECK Balance=105.97 Equity=105.97 FreieMargin=105.97
-2026-11-01 17:02:09,233 [INFO] POSCHECK keine offenen Positionen
-2026-11-01 17:02:09,841 [INFO] Telegram User-Client verbunden.
-2026-11-01 17:02:10,719 [INFO] Telegram Bot-Client verbunden.
-2026-11-01 17:02:10,719 [INFO] Lade Dialoge für private Kanal-Auflösung...
-2026-11-01 17:02:11,661 [INFO] ✅ Privater Kanal verbunden: XAUUSD SCALPING ⚡️
-2026-11-01 17:02:11,661 [INFO] ✅ Privater Kanal verbunden: BTC SCALPING⚡️
-2026-11-01 17:02:11,701 [INFO] ✅ Kanal verbunden: Gold Trader Mo🤴🏽(Gtmofx)
-2026-11-01 17:02:11,724 [INFO] Eingeloggt als: Dr. Alexander (ID: 769234676)
-✅ Bereit – überwache 3 Kanäle
-
-2026-11-01 17:02:11,792 [INFO] Kanal-Slots: TG_CHANNEL_1=-1003671005964 | TG_CHANNEL_2=4374931662 | TG_CHANNEL_3=Gold_trader_mo_Goldtradermofx | TG_CHANNEL_4=(leer) | TG_CHANNEL_5=(leer)
 2026-11-01 17:02:11,792 [INFO] Aufgeloeste Kanaele: XAUUSD SCALPING ⚡️, BTC SCALPING⚡️, Gold Trader Mo🤴🏽(Gtmofx)
 2026-11-01 17:02:26,793 [INFO] 🔍 Prüfe verpasste Signale (60 Min)...
 2026-11-01 17:02:27,096 [INFO] ✅ Keine verpassten Signale
@@ -7998,3 +7980,21 @@ Equity: 43.62$
 2026-11-09 23:36:48,749 [INFO] Telethon Wakeup-Ping
 2026-11-09 23:39:43,431 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-09 23:39:43,696 [INFO] ✅ Keine verpassten Signale
+2026-11-09 23:40:04,809 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4138.1'
+2026-11-09 23:40:04,825 [INFO] Lot-Sizing: Balance=87.0$  Lot=0.01  Kanal=SMC | GOLD T
+2026-11-09 23:40:04,825 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+
+⚡ SIGNAL [23:40:04] aus: SMC | GOLD TRADES ⚡️
+  SELL XAUUSD | 1 Layer à 0.01 Lot
+  SL: 4146.13 | TPs: [4133.13, 4130.13, 4126.13, 4122.13]
+  Verteilung: {0: 1}
+2026-11-09 23:40:04,827 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.33 (Einstieg 4136.8 statt 4138.13)
+2026-11-09 23:40:04,830 [INFO] Lot-Sizing: Balance=87.0$  Lot=0.01  Kanal=SMC | GOLD T
+2026-11-09 23:40:04,832 [INFO] Lot-Normalisierung XAUUSD: 0.0010502092240085828 -> 0.01 (min 0.01, step 0.01)
+2026-11-09 23:40:04,834 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-09 23:40:04,837 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-09 23:40:05,310 [INFO] Runner markiert #702125817 -> runners.json
+2026-11-09 23:40:05,311 [INFO] Layer 1/1 Ticket #702125817 TP=0
+2026-11-09 23:40:05,311 [INFO] TP-Layer Map: {'tp1': [702125817]}
+2026-11-09 23:40:05,312 [INFO] Phase 3: Auto-Trade XAUUSD | 1 Tickets
+2026-11-09 23:40:05,319 [INFO] 🔁 Duplikat ignoriert aus: SMC | GOLD TRADES ⚡️
