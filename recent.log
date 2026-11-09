@@ -1,19 +1,3 @@
-  LIVE-MODUS AKTIV - ECHTES GELD!
-======================================================
-
-  [OK] ANTHROPIC_API_KEY gesetzt
-  [OK] RISK_PER_100=0.03 (empfohlen <= 0.07)
-  [OK] Lot-Sizing: 0.02/100$ Standard, GHP-Backup 2x
-  [OK] MAX_POS_PER_SYMBOL=1 (empfohlen <= 10)
-  [OK] TRAILING_STOP_ENABLED=true
-  [OK] MAGIC_NUMBER=88888
-
-AUTO_CONFIRM_LIVE=true – Autostart
-Live-Modus bestaetigt.
-
-2026-11-01 15:45:46,506 [INFO] MT5 Terminal laut MT5_TERMINAL_PATH: C:\Program Files\Ultima Markets MT5 Terminal\terminal64.exe
-ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
-ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
 ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
 ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
 ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
@@ -7998,3 +7982,19 @@ Equity: 43.62$
 2026-11-09 15:56:33,116 [INFO] Telethon Wakeup-Ping
 2026-11-09 15:59:28,876 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-09 15:59:29,094 [INFO] ✅ Keine verpassten Signale
+2026-11-09 16:00:17,334 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4120.79'
+2026-11-09 16:00:17,339 [INFO] Scalp: besserer Einstieg als im Signal (3.1 Pips zu unseren Gunsten) - Trade wird genommen
+2026-11-09 16:00:17,348 [INFO] Lot-Sizing: Balance=57.0$  Lot=0.01  Kanal=SMC | GOLD T
+2026-11-09 16:00:17,349 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+
+⚡ SIGNAL [16:00:17] aus: SMC | GOLD TRADES ⚡️
+  BUY XAUUSD | 1 Layer à 0.01 Lot
+  SL: 4112.79 | TPs: [4125.79, 4128.79, 4132.79, 4136.79]
+  Verteilung: {0: 1}
+2026-11-09 16:00:17,406 [INFO] Signal zur Bestätigung gesendet: XAUUSD BUY
+2026-11-09 16:00:17,457 [INFO] 🔁 Duplikat ignoriert aus: SMC | GOLD TRADES ⚡️
+2026-11-09 16:00:31,521 [INFO] Prioritaet freigegeben: XAUUSD (SMC | GOLD TRADES ⚡️)
+2026-11-09 16:03:52,202 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
+2026-11-09 16:03:52,204 [INFO] Kanal meldet TP1 - Leiter darf die Stufe ohne eigenen Kursdruck setzen
+2026-11-09 16:03:52,204 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-11-09 16:03:52,774 [INFO] 🔁 Duplikat ignoriert aus: SMC | GOLD TRADES ⚡️
