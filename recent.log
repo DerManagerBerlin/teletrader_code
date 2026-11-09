@@ -1,29 +1,3 @@
-2026-11-01 03:48:24,598 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-01 03:48:24,774 [INFO] ✅ Keine verpassten Signale
-2026-11-01 03:54:52,688 [INFO] Telethon Wakeup-Ping
-2026-11-01 03:58:24,776 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-01 03:58:24,960 [INFO] ✅ Keine verpassten Signale
-2026-11-01 04:04:52,932 [INFO] Telethon Wakeup-Ping
-2026-11-01 04:08:24,963 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-01 04:08:25,159 [INFO] ✅ Keine verpassten Signale
-2026-11-01 04:14:53,438 [INFO] Telethon Wakeup-Ping
-2026-11-01 04:18:25,161 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-01 04:18:25,317 [INFO] ✅ Keine verpassten Signale
-2026-11-01 04:24:54,016 [INFO] Telethon Wakeup-Ping
-2026-11-01 04:28:25,320 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-01 04:28:25,493 [INFO] ✅ Keine verpassten Signale
-2026-11-01 04:34:54,216 [INFO] Telethon Wakeup-Ping
-2026-11-01 04:38:25,482 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-01 04:38:25,641 [INFO] ✅ Keine verpassten Signale
-2026-11-01 04:44:54,465 [INFO] Telethon Wakeup-Ping
-2026-11-01 04:48:25,643 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-01 04:48:25,831 [INFO] ✅ Keine verpassten Signale
-2026-11-01 04:54:54,869 [INFO] Telethon Wakeup-Ping
-2026-11-01 04:58:25,838 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-01 04:58:26,030 [INFO] ✅ Keine verpassten Signale
-2026-11-01 05:04:55,169 [INFO] Telethon Wakeup-Ping
-2026-11-01 05:08:26,034 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-01 05:08:26,214 [INFO] ✅ Keine verpassten Signale
 2026-11-01 05:14:55,455 [INFO] Telethon Wakeup-Ping
 2026-11-01 05:18:26,216 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-01 05:18:26,399 [INFO] ✅ Keine verpassten Signale
@@ -7998,3 +7972,29 @@ Equity: 34.14$
 2026-11-09 08:31:13,549 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'Are we all ready for a new trading week?? \n\nLets do a readyy'
 2026-11-09 08:31:13,552 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
 2026-11-09 08:31:13,554 [INFO] 🔁 Duplikat ignoriert aus: Gold Trader Mo🤴🏽(Gtmofx)
+2026-11-09 08:35:05,890 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4095.91'
+2026-11-09 08:35:05,908 [INFO] Lot-Sizing: Balance=64.0$  Lot=0.01  Kanal=SMC | GOLD T
+2026-11-09 08:35:05,909 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+
+⚡ SIGNAL [08:35:05] aus: SMC | GOLD TRADES ⚡️
+  BUY XAUUSD | 1 Layer à 0.01 Lot
+  SL: 4087.91 | TPs: [4100.91, 4103.91, 4107.91, 4111.91]
+  Verteilung: {0: 1}
+2026-11-09 08:35:05,912 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.25 (Einstieg 4097.16 statt 4095.91)
+2026-11-09 08:35:05,915 [INFO] Lot-Sizing: Balance=64.0$  Lot=0.01  Kanal=SMC | GOLD T
+2026-11-09 08:35:05,917 [INFO] Lot-Normalisierung XAUUSD: 0.0007752294486486487 -> 0.01 (min 0.01, step 0.01)
+2026-11-09 08:35:05,918 [INFO] Risk-Cap: SL=9.25pts → Lot auf 0.01 reduziert (10% Max)
+2026-11-09 08:35:05,919 [INFO] Kleinkonto-Cap: Layer reduziert auf 1 (Mindestlot-Boden, 10% Max)
+2026-11-09 08:35:05,919 [INFO] Kleinkonto-Cap: Layer reduziert auf 1 (Mindestlot-Boden, 10% Max)
+2026-11-09 08:35:05,921 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-09 08:35:05,922 [WARNING] RISK-CAP (final): SL=9.25pts Risiko=$8.0 > Max=$6.0 -> Lot 0.01->0.01, Layer 1->0
+2026-11-09 08:35:05,923 [WARNING] Risk-Cap (final): kein Layer passt ins Risiko -> uebersprungen
+2026-11-09 08:35:06,520 [INFO] 🔁 Duplikat ignoriert aus: SMC | GOLD TRADES ⚡️
+2026-11-09 08:35:20,423 [INFO] Prioritaet freigegeben: XAUUSD (SMC | GOLD TRADES ⚡️)
+2026-11-09 08:36:05,477 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 4095.91'
+2026-11-09 08:36:05,484 [INFO] Entry-Dup [SMC | GOLD TRADES ⚡️]: BUY XAUUSD @ 4095.91 = 4095.9 vor 0 Min (Toleranz 0.41, Fenster 15 Min)
+2026-11-09 08:36:07,901 [INFO] Telethon Wakeup-Ping
+2026-11-09 08:36:20,431 [INFO] Prioritaet freigegeben: XAUUSD (SMC | GOLD TRADES ⚡️)
+2026-11-09 08:39:16,572 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-11-09 08:39:16,674 [INFO] Nachholen vorgemerkt: XAUUSD BUY Entry 4095.91 (Markt 25.5 Pips weg, Fenster 18.0)
+2026-11-09 08:39:16,940 [INFO] ✅ Keine verpassten Signale
