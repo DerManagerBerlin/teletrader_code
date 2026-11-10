@@ -1,16 +1,3 @@
-2026-11-02 01:57:31,954 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-02 01:57:32,197 [INFO] ✅ Keine verpassten Signale
-2026-11-02 02:03:35,309 [INFO] Telethon Wakeup-Ping
-2026-11-02 02:05:02,267 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 3909.71'
-2026-11-02 02:05:02,296 [INFO] Lot-Sizing: Balance=122.0$  Lot=0.01  Kanal=XAUUSD SCALP
-2026-11-02 02:05:02,297 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
-
-⚡ SIGNAL [02:05:02] aus: XAUUSD SCALPING ⚡️
-  BUY XAUUSD | 1 Layer à 0.01 Lot
-  SL: 3901.71 | TPs: [3914.71, 3917.71, 3921.71, 3925.71]
-  Verteilung: {0: 1}
-2026-11-02 02:05:02,301 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.19 (Einstieg 3910.9 statt 3909.71)
-2026-11-02 02:05:02,305 [INFO] Lot-Sizing: Balance=122.0$  Lot=0.01  Kanal=XAUUSD SCALP
 2026-11-02 02:05:02,307 [INFO] Lot-Normalisierung XAUUSD: 0.005642107781501598 -> 0.01 (min 0.01, step 0.01)
 2026-11-02 02:05:02,311 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
 2026-11-02 02:05:02,315 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
@@ -7998,3 +7985,16 @@ Equity: 43.62$
 2026-11-10 07:28:11,900 [INFO] Ruecksetzer #702486577 46.7-46.7p vom Hoch 45.1p (Trail 30.0p)
 2026-11-10 07:29:55,390 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-10 07:29:55,567 [INFO] ✅ Keine verpassten Signale
+2026-11-10 07:32:42,658 [INFO] Ruecksetzer #702365472 119.9-119.9p vom Hoch 133.2p (Trail 53.3p)
+2026-11-10 07:32:42,709 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
+2026-11-10 07:32:42,713 [INFO] Kanal meldet TP1 - Leiter darf die Stufe ohne eigenen Kursdruck setzen
+2026-11-10 07:32:42,713 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-11-10 07:32:42,714 [INFO] 🔁 Duplikat ignoriert aus: SMC | GOLD TRADES ⚡️
+2026-11-10 07:32:45,359 [INFO] SL-Leiter #702486577: Stufe 1 aus der Kanalmeldung (eigener Kurs hat sie nicht gedruckt)
+2026-11-10 07:32:45,385 [INFO] SL-Leiter: #702486577 TP1 erreicht -> SL auf Entry/BE (4120.48)
+2026-11-10 07:32:52,675 [INFO] Nachholen verworfen: XAUUSD SELL TP1 4115.77 schon durchlaufen
+2026-11-10 07:33:02,681 [INFO] Ruecksetzer #702365472 121.1-121.1p vom Hoch 133.2p (Trail 53.3p)
+2026-11-10 07:34:02,830 [INFO] Ruecksetzer #702365472 122.5-122.5p vom Hoch 133.2p (Trail 53.3p)
+2026-11-10 07:34:32,866 [INFO] Ruecksetzer #702365472 126.5-126.5p vom Hoch 133.2p (Trail 53.3p)
+2026-11-10 07:34:42,883 [INFO] Ruecksetzer #702365472 131.1-131.1p vom Hoch 133.2p (Trail 53.3p)
+2026-11-10 07:34:46,123 [INFO] MFE #702365472 XAUUSD: Hoch +13.2 Punkte, Stufe 1
