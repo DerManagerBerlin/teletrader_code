@@ -1,7 +1,3 @@
-2026-11-01 22:22:08,708 [INFO] DEALEXPORT 0 Deals -> Z:\home\alexander_lacher\ttpub\deals.csv | vorhanden=True
-2026-11-01 22:22:08,709 [INFO] LIVECHECK Modus=LIVE Server=UltimaMarkets-Live 1 Konto=***330 Waehrung=EUR Balance=112.32 Hebel=500 TradeAllowed=True
-2026-11-01 22:22:08,712 [INFO] LIVECHECK XAUUSD handelbar=4 lot 0.01-100.0 step 0.01 stops=20 digits=2 bid=? ask=? spread=-1 Pips
-2026-11-01 22:22:08,716 [INFO] LIVECHECK BTCUSD handelbar=4 lot 0.01-100.0 step 0.01 stops=0 digits=2 bid=77670.39 ask=77687.43 spread=170.4 Pips
 2026-11-01 22:22:08,717 [INFO] LIVECHECK Handel pausiert=False
 2026-11-01 22:22:08,718 [INFO] POSCHECK Balance=112.32 Equity=112.32 FreieMargin=112.32
 2026-11-01 22:22:08,720 [INFO] POSCHECK keine offenen Positionen
@@ -7998,3 +7994,7 @@ Equity: 43.62$
 2026-11-10 01:50:35,042 [INFO] Nachholen verworfen: XAUUSD SELL TP1 4124.73 schon durchlaufen
 2026-11-10 01:51:02,822 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4129.7'
 2026-11-10 01:51:02,825 [INFO] 🔇 NOISE: Regex: Markt 54.8 Pips GEGEN uns vom Entry 4129.73 weg (Kurs 4124.25, max 18.0 Pips)
+2026-11-10 01:56:53,063 [INFO] Telethon Wakeup-Ping
+2026-11-10 01:59:47,036 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
+2026-11-10 01:59:47,100 [INFO] Verpasstes TRADE uebersprungen: Nachricht 01:50 ist 9.7 Min alt (> 5.0 Min) - kein Re-Fire
+2026-11-10 01:59:47,343 [INFO] ✅ Keine verpassten Signale
