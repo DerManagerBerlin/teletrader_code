@@ -1,24 +1,3 @@
-2026-11-04 15:03:30,560 [INFO] Scalp: besserer Einstieg als im Signal (18.0 Pips zu unseren Gunsten) - Trade wird genommen
-2026-11-04 15:03:30,560 [INFO] Verpasstes Signal ausfuehren [XAUUSD SCALPING ⚡️] 15:00: TRADE conf=99%
-2026-11-04 15:03:30,570 [INFO] Lot-Sizing: Balance=76.0$  Lot=0.01  Kanal=XAUUSD SCALP
-2026-11-04 15:03:30,576 [INFO] Lot-Normalisierung XAUUSD: 0.004057640142500001 -> 0.01 (min 0.01, step 0.01)
-2026-11-04 15:03:30,580 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
-2026-11-04 15:03:30,584 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
-2026-11-04 15:03:31,051 [INFO] Runner markiert #697610683 -> runners.json
-2026-11-04 15:03:31,052 [INFO] Layer 1/1 Ticket #697610683 TP=0
-2026-11-04 15:03:31,052 [INFO] TP-Layer Map: {'tp1': [697610683]}
-2026-11-04 15:03:31,053 [INFO] Nachtraglich ausgefuhrt: 1 Layer
-2026-11-04 15:04:17,942 [INFO] 📨 Neue Nachricht aus BTC SIGNALS: '✅ BTCUSD BUY: +1200 Pips\nKurs: 79691.94  |  Full TP: 80565.5'
-2026-11-04 15:04:17,947 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
-2026-11-04 15:04:32,612 [INFO] 📨 Neue Nachricht aus BTC SIGNALS: '✅ BTCUSD BUY: +1400 Pips\nKurs: 79891.94  |  Full TP: 80565.5'
-2026-11-04 15:04:32,614 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
-2026-11-04 15:04:47,975 [INFO] 📨 Neue Nachricht aus BTC SIGNALS: '✅ BTCUSD BUY: +1600 Pips\nKurs: 80091.94  |  Full TP: 80565.5'
-2026-11-04 15:04:47,979 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
-2026-11-04 15:05:01,832 [INFO] Ruecksetzer #697610683 8.1-37.1p vom Hoch 27.7p (Trail 30.0p)
-2026-11-04 15:05:17,254 [INFO] 📨 Neue Nachricht aus BTC SIGNALS: '✅ BTCUSD BUY: +1900 Pips\nKurs: 80391.94  |  Full TP: 80565.5'
-2026-11-04 15:05:17,259 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
-2026-11-04 15:07:09,510 [INFO] Runner-BE: #697610683 SL -> 4038.57
-2026-11-04 15:09:04,217 [INFO] 📨 Neue Nachricht aus BTC SIGNALS: '🎯 FULL TP erreicht – BTCUSD BUY\n+2074 Pips  (+2.0R)\nAusstieg'
 2026-11-04 15:09:04,228 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
 2026-11-04 15:09:11,064 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP1 HIT! +50 PIPS 💰\n➡️ SL auf Entry (BE)'
 2026-11-04 15:09:11,066 [INFO] Kanal meldet TP1 - Leiter darf die Stufe ohne eigenen Kursdruck setzen
@@ -7998,3 +7977,24 @@ Set breakeven for zero riskkkk now**
 2026-11-13 10:30:45,749 [INFO] 🔁 Duplikat ignoriert aus: Gold Trader Mo🤴🏽(Gtmofx)
 2026-11-13 10:33:00,413 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-13 10:33:00,619 [INFO] ✅ Keine verpassten Signale
+2026-11-13 10:35:10,176 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 3897.2'
+2026-11-13 10:35:10,203 [INFO] Lot-Sizing: Balance=995.0$  Lot=0.05  Kanal=SMC | GOLD T
+2026-11-13 10:35:10,205 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (3892.25), 1x TP2 (3889.25) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+
+⚡ SIGNAL [10:35:10] aus: SMC | GOLD TRADES ⚡️
+  SELL XAUUSD | 4 Layer à 0.01 Lot
+  SL: 3905.25 | TPs: [3892.25, 3889.25, 3885.25, 3881.25]
+  Verteilung: {3892.25: 2, 3889.25: 1, 0: 1}
+2026-11-13 10:35:10,208 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 9.71 (Einstieg 3895.54 statt 3897.25)
+2026-11-13 10:35:10,212 [INFO] Lot-Sizing: Balance=995.0$  Lot=0.05  Kanal=SMC | GOLD T
+2026-11-13 10:35:10,215 [INFO] Lot-Normalisierung XAUUSD: 0.0028317593146240873 -> 0.01 (min 0.01, step 0.01)
+2026-11-13 10:35:10,215 [INFO] Layerzahl ans Risiko angepasst: 4 -> 1 (je Layer 8.78, Budget 9.95)
+2026-11-13 10:35:10,215 [INFO] Zielrisiko 1.0%: SL=9.71 -> Lot 0.05 -> 0.01 x 1 Layer = 8.78 je Signal
+2026-11-13 10:35:10,220 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-13 10:35:10,223 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-13 10:35:10,560 [INFO] Runner markiert #390218894 -> runners.json
+2026-11-13 10:35:10,561 [INFO] Layer 1/1 Ticket #390218894 TP=0
+2026-11-13 10:35:10,561 [INFO] TP-Layer Map: {'tp1': [390218894]}
+2026-11-13 10:35:10,561 [INFO] Phase 3: Auto-Trade XAUUSD | 1 Tickets
+2026-11-13 10:39:04,571 [INFO] Ruecksetzer #390218894 2.4-23.9p vom Hoch 25.2p (Trail 30.0p)
+2026-11-13 10:39:13,422 [INFO] Telethon Wakeup-Ping
