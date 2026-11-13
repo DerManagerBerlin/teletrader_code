@@ -1,25 +1,3 @@
-2026-11-04 15:53:32,695 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-04 15:53:32,923 [INFO] ✅ Keine verpassten Signale
-2026-11-04 15:55:06,830 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP2 HIT! +80 PIPS 💰'
-2026-11-04 15:55:06,833 [INFO] Kanal meldet TP2 - Leiter darf die Stufe ohne eigenen Kursdruck setzen
-2026-11-04 15:55:06,834 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-11-04 15:55:06,975 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-11-04 15:59:55,333 [INFO] Telethon Wakeup-Ping
-2026-11-04 16:00:47,623 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '✅ TP3 HIT! +120 PIPS 💰'
-2026-11-04 16:00:47,631 [INFO] Kanal meldet TP3 - Leiter darf die Stufe ohne eigenen Kursdruck setzen
-2026-11-04 16:00:47,633 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-11-04 16:00:47,937 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-11-04 16:03:32,927 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-04 16:03:33,218 [INFO] ✅ Keine verpassten Signale
-2026-11-04 16:09:55,587 [INFO] Telethon Wakeup-Ping
-2026-11-04 16:13:33,221 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-04 16:13:33,567 [INFO] ✅ Keine verpassten Signale
-2026-11-04 16:17:17,916 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): '**5 TP‘s ALL DONE! ✔️ \n\nTP1✅\nTP2✅✅\nTP3✅✅✅\nTP4✅✅✅✅\nTP5✅✅✅✅✅**'
-2026-11-04 16:17:17,919 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
-2026-11-04 16:18:17,928 [INFO] 🔁 Duplikat ignoriert aus: Gold Trader Mo🤴🏽(Gtmofx)
-2026-11-04 16:19:55,849 [INFO] Telethon Wakeup-Ping
-2026-11-04 16:23:33,570 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-04 16:23:33,760 [INFO] ✅ Keine verpassten Signale
 2026-11-04 16:29:56,841 [INFO] Telethon Wakeup-Ping
 2026-11-04 16:30:14,578 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4040.5'
 2026-11-04 16:30:14,587 [INFO] Scalp: besserer Einstieg als im Signal (10.7 Pips zu unseren Gunsten) - Trade wird genommen
@@ -7998,3 +7976,25 @@ Set breakeven for zero riskkkk now**
 2026-11-13 11:53:58,593 [INFO] Ruecksetzer #390218894 80.9-80.9p vom Hoch 90.2p (Trail 36.1p)
 2026-11-13 11:54:06,247 [INFO] MFE #390218894 XAUUSD: Hoch +9.1 Punkte, Stufe 1
 2026-11-13 11:54:24,025 [INFO] ABSCHLUSS #390218894 SMC | GOLD TRA Ergebnis 0.0
+2026-11-13 11:55:04,702 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '🔒 BE HIT! – Für jeden der SL auf BE gezogen hat'
+2026-11-13 11:55:04,705 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-11-13 11:55:05,471 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 3896.35'
+2026-11-13 11:55:05,475 [INFO] Scalp: besserer Einstieg als im Signal (8.0 Pips zu unseren Gunsten) - Trade wird genommen
+2026-11-13 11:55:05,488 [INFO] Lot-Sizing: Balance=995.0$  Lot=0.05  Kanal=SMC | GOLD T
+2026-11-13 11:55:05,489 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (3901.35), 1x TP2 (3904.35) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+
+⚡ SIGNAL [11:55:05] aus: SMC | GOLD TRADES ⚡️
+  BUY XAUUSD | 4 Layer à 0.01 Lot
+  SL: 3888.35 | TPs: [3901.35, 3904.35, 3908.35, 3912.35]
+  Verteilung: {3901.35: 2, 3904.35: 1, 0: 1}
+2026-11-13 11:55:05,495 [INFO] Lot-Sizing: Balance=995.0$  Lot=0.05  Kanal=SMC | GOLD T
+2026-11-13 11:55:05,497 [INFO] Lot-Normalisierung XAUUSD: 0.0034370789596874997 -> 0.01 (min 0.01, step 0.01)
+2026-11-13 11:55:05,497 [INFO] Layerzahl ans Risiko angepasst: 4 -> 1 (je Layer 7.24, Budget 9.95)
+2026-11-13 11:55:05,498 [INFO] Zielrisiko 1.0%: SL=8.0 -> Lot 0.05 -> 0.01 x 1 Layer = 7.24 je Signal
+2026-11-13 11:55:05,501 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-13 11:55:05,503 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-13 11:55:05,836 [INFO] Runner markiert #390272593 -> runners.json
+2026-11-13 11:55:05,836 [INFO] Layer 1/1 Ticket #390272593 TP=0
+2026-11-13 11:55:05,837 [INFO] TP-Layer Map: {'tp1': [390272593]}
+2026-11-13 11:55:05,837 [INFO] Phase 3: Auto-Trade XAUUSD | 1 Tickets
+2026-11-13 11:59:15,939 [INFO] Telethon Wakeup-Ping
