@@ -1,30 +1,3 @@
-2026-11-04 20:50:06,216 [INFO] Lot-Sizing: Balance=84.0$  Lot=0.01  Kanal=XAUUSD SCALP
-2026-11-04 20:50:06,219 [INFO] Lot-Normalisierung XAUUSD: 0.004000233586607127 -> 0.01 (min 0.01, step 0.01)
-2026-11-04 20:50:06,223 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
-2026-11-04 20:50:06,226 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
-2026-11-04 20:50:06,689 [INFO] Runner markiert #697858755 -> runners.json
-2026-11-04 20:50:06,689 [INFO] Layer 1/1 Ticket #697858755 TP=0
-2026-11-04 20:50:06,690 [INFO] TP-Layer Map: {'tp1': [697858755]}
-2026-11-04 20:50:06,690 [INFO] Phase 3: Auto-Trade XAUUSD | 1 Tickets
-2026-11-04 20:50:06,696 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-11-04 20:50:08,978 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 4060.1'
-2026-11-04 20:50:08,990 [INFO] SKIP: XAUUSD SELL bereits 1 offene Positionen
-2026-11-04 20:50:09,469 [INFO] Telethon Wakeup-Ping
-2026-11-04 20:53:41,271 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-04 20:53:41,369 [INFO] Nachholen vorgemerkt: XAUUSD SELL Entry 4060.16 (Markt 19.1 Pips weg, Fenster 18.0)
-2026-11-04 20:53:41,556 [INFO] ✅ Keine verpassten Signale
-2026-11-04 21:00:09,758 [INFO] Telethon Wakeup-Ping
-2026-11-04 21:03:41,546 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-04 21:03:42,079 [INFO] Scalp: besserer Einstieg als im Signal (25.5 Pips zu unseren Gunsten) - Trade wird genommen
-2026-11-04 21:03:42,080 [INFO] Verpasstes TRADE uebersprungen: Nachricht 20:50 ist 13.6 Min alt (> 5.0 Min) - kein Re-Fire
-2026-11-04 21:03:42,272 [INFO] ✅ Keine verpassten Signale
-2026-11-04 21:10:10,058 [INFO] Telethon Wakeup-Ping
-2026-11-04 21:13:42,275 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-04 21:13:42,460 [INFO] ✅ Keine verpassten Signale
-2026-11-04 21:20:10,577 [INFO] Telethon Wakeup-Ping
-2026-11-04 21:23:42,468 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-04 21:23:42,655 [INFO] ✅ Keine verpassten Signale
-2026-11-04 21:30:10,984 [INFO] Telethon Wakeup-Ping
 2026-11-04 21:33:42,656 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-04 21:33:42,957 [INFO] ✅ Keine verpassten Signale
 2026-11-04 21:40:11,260 [INFO] Telethon Wakeup-Ping
@@ -7998,3 +7971,30 @@ Set breakeven for zero riskkkk now**
 2026-11-13 15:03:46,468 [INFO] Telethon Wakeup-Ping
 2026-11-13 15:07:43,349 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-13 15:07:43,585 [INFO] ✅ Keine verpassten Signale
+2026-11-13 15:10:08,213 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🔴 ICH GEHE SELL\n\n📍 Entry Zone: 3884.4'
+2026-11-13 15:10:08,222 [INFO] Scalp: besserer Einstieg als im Signal (7.2 Pips zu unseren Gunsten) - Trade wird genommen
+2026-11-13 15:10:08,241 [INFO] Lot-Sizing: Balance=1003.0$  Lot=0.01  Kanal=SMC | GOLD T
+2026-11-13 15:10:08,241 [INFO] Layer-Verteilung: 6 Layer = 2x TP1 (3879.4), 1x TP2 (3876.4), 1x TP3 (3872.4), 1x TP4 (3868.4) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+
+⚡ SIGNAL [15:10:08] aus: SMC | GOLD TRADES ⚡️
+  SELL XAUUSD | 6 Layer à 0.01 Lot
+  SL: 3892.4 | TPs: [3879.4, 3876.4, 3872.4, 3868.4]
+  Verteilung: {3879.4: 2, 3876.4: 1, 3872.4: 1, 3868.4: 1, 0: 1}
+2026-11-13 15:10:08,249 [INFO] Lot-Sizing: Balance=1003.0$  Lot=0.01  Kanal=SMC | GOLD T
+2026-11-13 15:10:08,253 [INFO] Lot-Normalisierung XAUUSD: 0.0027712643700000005 -> 0.01 (min 0.01, step 0.01)
+2026-11-13 15:10:08,254 [INFO] Layerzahl ans Risiko angepasst: 5 -> 1 (je Layer 7.24, Budget 10.03)
+2026-11-13 15:10:08,256 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-13 15:10:08,259 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-13 15:10:08,611 [INFO] Runner markiert #390574764 -> runners.json
+2026-11-13 15:10:08,612 [INFO] Layer 1/1 Ticket #390574764 TP=0
+2026-11-13 15:10:08,612 [INFO] TP-Layer Map: {'tp1': [390574764]}
+2026-11-13 15:10:08,613 [INFO] Phase 3: Auto-Trade XAUUSD | 1 Tickets
+2026-11-13 15:12:23,345 [INFO] MFE #390574764 XAUUSD: Hoch +0.1 Punkte, Stufe 0
+2026-11-13 15:12:44,195 [INFO] Prioritaet freigegeben: XAUUSD (SMC | GOLD TRADES ⚡️)
+2026-11-13 15:13:05,144 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '❌ SL HIT –80 PIPS'
+2026-11-13 15:13:05,149 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-11-13 15:13:05,806 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📚 Kurz erklärt:\nDas Signal war mit ⚠️ schwachem Volumen mark'
+2026-11-13 15:13:05,810 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
+2026-11-13 15:13:14,195 [INFO] ABSCHLUSS #390574764 SMC | GOLD TRA Ergebnis -6.68
+2026-11-13 15:13:14,196 [INFO] Streak SMC | GOLD T: -1 (Signal -6.68)
+2026-11-13 15:13:46,861 [INFO] Telethon Wakeup-Ping
