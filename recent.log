@@ -1,24 +1,3 @@
-2026-11-04 08:58:12,286 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): '🙏🏽🥇🚀🧙🏽\u200d♂️'
-2026-11-04 08:58:12,288 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
-2026-11-04 08:59:24,295 [INFO] 🔁 Duplikat ignoriert aus: Gold Trader Mo🤴🏽(Gtmofx)
-2026-11-04 08:59:24,455 [INFO] Telethon Wakeup-Ping
-2026-11-04 09:00:23,148 [INFO] 📨 Neue Nachricht aus BTC SIGNALS: '🟢 BTCUSD BUY – Trend Breakout\n\nEinstieg: 78491.94\nStopp: 774'
-2026-11-04 09:00:23,153 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
-2026-11-04 09:03:15,103 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
-2026-11-04 09:03:15,338 [INFO] ✅ Keine verpassten Signale
-2026-11-04 09:07:51,349 [INFO] MFE #697251979 XAUUSD: Hoch +2.1 Punkte, Stufe 0
-2026-11-04 09:07:51,353 [INFO] prune_runners: 1 verwaiste entfernt
-2026-11-04 09:08:04,404 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🚀 +910 PIPS!'
-2026-11-04 09:08:04,406 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-11-04 09:08:04,667 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-11-04 09:08:13,721 [INFO] Prioritaet freigegeben: XAUUSD (Gold Trader Mo🤴🏽(Gtmofx))
-2026-11-04 09:08:27,940 [INFO] ABSCHLUSS #697251979 Gold Trader Mo Ergebnis 1.78
-2026-11-04 09:08:27,940 [INFO] Streak Gold Trader : +1 (Signal 1.78)
-2026-11-04 09:09:25,065 [INFO] Telethon Wakeup-Ping
-2026-11-04 09:10:07,311 [INFO] 📨 Neue Nachricht aus XAUUSD SCALPING ⚡️: '🚀 +960 PIPS!'
-2026-11-04 09:10:07,314 [INFO] 🔇 NOISE: Regex: keine Richtung ('ICH GEHE BUY/SELL' oder '<SYMBOL> BUY/SELL')
-2026-11-04 09:10:07,962 [INFO] 🔁 Duplikat ignoriert aus: XAUUSD SCALPING ⚡️
-2026-11-04 09:11:25,731 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'Zoneee filedd now lets go dropp!!'
 2026-11-04 09:11:25,733 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
 2026-11-04 09:11:25,733 [INFO] 📨 Neue Nachricht aus Gold Trader Mo🤴🏽(Gtmofx): 'All entries in Profits shortly!!'
 2026-11-04 09:11:25,735 [INFO] 🔇 NOISE: LLM aus - nur Regex-Parser
@@ -7998,3 +7977,24 @@ Set breakeven nowww💰💰💰💰**
 2026-11-13 05:01:16,232 [INFO] ABSCHLUSS #389854195 SMC | GOLD TRA Ergebnis 0.0
 2026-11-13 05:02:51,276 [INFO] 🔍 Prüfe verpasste Signale (35 Min)...
 2026-11-13 05:02:51,422 [INFO] ✅ Keine verpassten Signale
+2026-11-13 05:05:04,817 [INFO] 📨 Neue Nachricht aus SMC | GOLD TRADES ⚡️: '📊 SCALP IDEE – XAUUSD\n\n🟢 ICH GEHE BUY\n\n📍 Entry Zone: 3913.81'
+2026-11-13 05:05:04,829 [INFO] Lot-Sizing: Balance=993.0$  Lot=0.05  Kanal=SMC | GOLD T
+2026-11-13 05:05:04,830 [INFO] Layer-Verteilung: 4 Layer = 2x TP1 (3918.81), 1x TP2 (3921.81) + 1 Runner (PARTIAL_GEWICHTE 2,1,1,1)
+
+⚡ SIGNAL [05:05:04] aus: SMC | GOLD TRADES ⚡️
+  BUY XAUUSD | 4 Layer à 0.01 Lot
+  SL: 3905.81 | TPs: [3918.81, 3921.81, 3925.81, 3929.81]
+  Verteilung: {3918.81: 2, 3921.81: 1, 0: 1}
+2026-11-13 05:05:04,832 [INFO] SL-Distanz vom Markt statt vom Signal: 8.0 -> 8.04 (Einstieg 3913.85 statt 3913.81)
+2026-11-13 05:05:04,835 [INFO] Lot-Sizing: Balance=993.0$  Lot=0.05  Kanal=SMC | GOLD T
+2026-11-13 05:05:04,837 [INFO] Lot-Normalisierung XAUUSD: 0.0034155484328358366 -> 0.01 (min 0.01, step 0.01)
+2026-11-13 05:05:04,837 [INFO] Layerzahl ans Risiko angepasst: 4 -> 1 (je Layer 7.27, Budget 9.93)
+2026-11-13 05:05:04,838 [INFO] Zielrisiko 1.0%: SL=8.04 -> Lot 0.05 -> 0.01 x 1 Layer = 7.27 je Signal
+2026-11-13 05:05:04,840 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-13 05:05:04,842 [INFO] Layer-Verteilung: 1 Layer, alle ohne festes Ziel (RUNNER_ONLY)
+2026-11-13 05:05:05,174 [INFO] Runner markiert #389885213 -> runners.json
+2026-11-13 05:05:05,175 [INFO] Layer 1/1 Ticket #389885213 TP=0
+2026-11-13 05:05:05,175 [INFO] TP-Layer Map: {'tp1': [389885213]}
+2026-11-13 05:05:05,176 [INFO] Phase 3: Auto-Trade XAUUSD | 1 Tickets
+2026-11-13 05:08:43,813 [INFO] Ruecksetzer #389885213 0.0-53.3p vom Hoch 31.3p (Trail 30.0p)
+2026-11-13 05:08:58,035 [INFO] Telethon Wakeup-Ping
